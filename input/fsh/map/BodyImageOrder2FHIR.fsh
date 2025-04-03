@@ -8,9 +8,82 @@ Usage: #definition
 * experimental = true
 * description = """CZ Imaging Order Body Model to this guide mapping"""
 
-//* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
-//* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderInformationCz"
-
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ImagingOrderInformationCz"
+* group[=].element[+].code = #Body.OrderInformation
+* group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto	
+* group[=].element[+].code = #OrderInformation.orderDetail
+* group[=].element[=].display = "A.2.1 - Order detail"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.entry.ofType(order)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.identifier
+* group[=].element[=].display = "A.2.1.1 - Identifier of order detail"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.dateTime
+* group[=].element[=].display = "A.2.1.2 - Date and time of the order placement"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.authoredOn
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.requestedExecdateTime
+* group[=].element[=].display = "A.2.1.3 - Date and time of requested execution"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.occurrenceDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.urgency
+* group[=].element[=].display = "A.2.1.4 - Urgency of the order"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.priority
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.orderText
+* group[=].element[=].display = "A.2.1.5 - Order text"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.note
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.orderText
+* group[=].element[=].display = "A.2.1.5 - Information for the patient"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.order.patientInstruction
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].display = "A.2.2 - Order reason"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.entry.ofType(orderReason)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderReason.identifier
+* group[=].element[=].display = "A.2.2.1 - Identifier of order detail"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderReason.problem
+* group[=].element[=].display = "A.2.2.2 - Date and time of the order placement"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.codeDescription.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.questionCode
+* group[=].element[=].display = "A.2.2.3 - Date and time of requested execution"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.clinicalQuestion.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.questionText
+* group[=].element[=].display = "A.2.2.4 - Urgency of the order"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.clinicalQuestion.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
+* group[=].element[=].display = "A.2.2.5 - Order text"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.reason.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.reasonText
+* group[=].element[=].display = "A.2.2.6 - Information for the patient"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.reason.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/EncounterCz"
 * group[=].element[+].code = #Body.ClinicalEvent
@@ -105,29 +178,16 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.appointment.Location.address					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageAttachmentCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AttachmentCz"
-* group[=].element[+].code = #Body.Attachment
-* group[=].element[=].display = "A.2.6 - Attachment"
-* group[=].element[=].target.code = #Composition.extension:basedOn:order					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto	
-* group[=].element[=].target.comment = "Composition.section:sectionAttachment.entry.ofType(Attachment)"	
-* group[=].element[+].code = #Attachment.attachment
-* group[=].element[=].display = "A.2.6.1 - Identifier of appointment"
-* group[=].element[=].target.code = #Composition.attachment.attachment
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenImageCz"
 * group[=].element[+].code = #Body.SpecimenInformation
-* group[=].element[=].display = "A.2.7 - Speciment information"
+* group[=].element[=].display = "A.2.6 - Speciment information"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto	
 * group[=].element[=].target.comment = "Composition.section:sectionSpecimen.entry.ofType(Specimen)"
 * group[=].element[+].code = #Specimen.identifier
-* group[=].element[=].display = "A.2.7.1 - Identifier of specimen"
+* group[=].element[=].display = "A.2.6.1 - Identifier of specimen"
 * group[=].element[=].target.code = #Composition.specimen.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
@@ -150,51 +210,73 @@ Usage: #definition
 //* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/SupportingInformationCz"
 
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AllergyIntolleranceCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AllergyIntoleranceCz"
 * group[=].element[+].code = #Body.SupportingInformation.allergyIntolerance
 * group[=].element[=].display = "A.3.1.7.1 - Allergy intolerance"
-* group[=].element[=].target.code = #Composition.extension:basedOn:order			
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionAllergyIntolerance.entry.ofType(AllergyIntolerance)"
 * group[=].element[+].code = #AllergyIntolerance.identifier
 * group[=].element[=].display = "A.3.1.7.1.1 - Identifier of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.allergyIntolerance
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #AllergyIntolerance.clinicalStatus
 * group[=].element[=].display = "A.3.1.7.1.2 - Clinical status of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.clinicalStatus
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.clinicalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #AllergyIntolerance.type
 * group[=].element[=].display = "A.3.1.7.1.3 - Type of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.type
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #AllergyIntolerance.category
 * group[=].element[=].display = "A.3.1.7.1.4 - Category of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.category
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.category
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #AllergyIntolerance.code
 * group[=].element[=].display = "A.3.1.7.1.5 - Code of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.code
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #AllergyIntolerance.note
 * group[=].element[=].display = "A.3.1.7.1.5 - Note of allergyIntolerance"
-* group[=].element[=].target.code = #Composition.specimen.note
+* group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance.note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElements"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/serviceRequestCz"
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/MedicationOrderCz"
+* group[=].element[+].code = #Body.SupportingInformation.medication
+* group[=].element[=].display = "A.3.1.5 - Medication"
+* group[=].element[=].target.code = #Composition.extension:basedOn:order			
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Composition.section:sectionMedication.entry.ofType(Medication)"
+* group[=].element[+].code = #Medication.identifier
+* group[=].element[=].display = "A.3.1.5.1 - Identifier of medication"
+* group[=].element[=].target.code = #Composition.medication.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #Medication.code
+* group[=].element[=].display = "A.3.1.5.2 - Code of Medication"
+* group[=].element[=].target.code = #Composition.medication.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Medication.amount
+* group[=].element[=].display = "A.3.1.5.3 - Amount of Medication"
+* group[=].element[=].target.code = #Composition.medication.amount
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElementsCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/DataElementsImageOrderCz"
 * group[=].element[+].code = #Body.OrderDataElements
 * group[=].element[=].display = "A.3.2 - Order/examination data elements."
 * group[=].element[=].target.code = #Composition.extension:basedOn:order			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionServiceRequest.entry.ofType(ServiceRequest)"
+* group[=].element[=].target.comment = "Composition.section:sectionOrderInformation.entry.ofType(DataElementsImageorder)"
 * group[=].element[+].code = #OrderDataElements.code
 * group[=].element[=].display = "A.3.2.1 - Examination code"
 * group[=].element[=].target.code = #Composition.ServiceRequest.code

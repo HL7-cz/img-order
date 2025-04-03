@@ -1,28 +1,49 @@
 @startmindmap
+<style>
+
+legend {
+  Padding 20
+}
+
+</style>
+
 skinparam topurl StructureDefinition-
 
-* [[BodyImageOrderCz.html Imaging Order Body]]
-** [[SupportingInformationImageOrderCz.html Order information]]
+legend left
+<b>The legend:</b>
+
+- Background color: <b><color:LightCoral>pink</color></b> - <b>Main</b>: CZ Imaging Order Examination root elements.
+- Background color: <b><color:green>green</color></b> - <b>Common</b>: Common elements of CZ Order.
+- Background color: <b><color:blue>blue</color></b> - <b>Specific</b>: Specific elements of CZ Image Order.
+end legend
+
+*[#pink] [[BodyImageOrderCz.html Imaging Order Body]]
+**[#lightgreen] [[ImageOrderInformationCz.html Order information]]
+***_ Order Details
+***_ Order Reason
+**[#lightgreen] [[EncounterCz.html Encounter]]
+**[#lightgreen] [[ImageAppointmentCz.html Appointment]]
+**[#lightgreen] [[SpecimenInformationCz.html Specimen Information]]
+**[#lightgreen] [[CoverageBodyCz.html Additional Coverage]]
+**[#lightblue] [[ImageSupportingInformationCz.html Supporting Information]]
 ***_ Biometric Data
 ***_ Weight
 ***_ Height
-***_ Medication
-***_ Other Relevant Clinical Information
-***_ Implant
 ***_ Urgent Information
 ****_ Allergy Intolerance
 ****_ Warnings
+***_ Medication
+***_ Implant
 ***_ Limitation of Patient Mobility
+***_ Other Relevant Clinical Information
 ***_ Other Information
-** [[OrderDataElementsCz.html Order Data]]
+**[#lightblue] [[OrderDataElementsCz.html Order Data]]
 ***_ Examination Code
 ***_ Name of the Examination
 ***_ Modality
 ***_ Body Part
 ***_ Laterality
 ***_ Note
-** [[CoverageBodyCz.html Additional Coverage]]
-** [[EncounterCz.html Encounter]]
-** [[AppointmentCz.html Appointment]]
-** [[OtherSupportingInformationCz.html Other Supporting Information]]
+**[#lightblue] [[PlannedCareOrdersCz.html Planned Care Orders]]
+**[#lightblue] [[OtherSupportingInformationCz.html Other Supporting Information]]
 @endmindmap

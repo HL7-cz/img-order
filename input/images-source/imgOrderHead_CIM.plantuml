@@ -1,38 +1,40 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[ImagingOrderCz.html Imaging Order Header]]
-** Imaging Order Subject
+*[#FFBBCC] [[HeaderImagingOrder.html Imaging Order Header]]
+**[#lightgreen] Imaging Order Subject
 /'    Shell we keep or not?
 ** Preferred Health Professional
 '/
-** Health Insurance and Payment Information
+**[#lightgreen] Health Insurance and Payment Information
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-** Information about Coverage
-** Imaging Order Authorship
-***_ Author
-***_ DateTime
+**[#lightgreen] Coverage Information
+/'
 ** Attestation
 ***_ Attester
 ***_ DateTime
 ** Legal authentication
 ***_ Legal authenticator
 ***_ DateTime
-** Document Metadata
+'/
+**[#lightgreen] Document Metadata
 ***_ Document ID
-***_ Document type
-***_ Document status
+***_ Document Type
+***_ Document Status
 ***_ Document date and time
-***_ Document title
-***_ Order custodian
+***_ Document Title
+***_ Order Custodian
 ***_ Confidentiality
 ***_ Language
 ***_ Version
-** Digital Signature
-***_ Electronic signature or document seal
-***_ Electronic time stamp
+**[#lightgreen] Imaging Order Author
+**[#lightgreen] Additional Recipient
+**[#lightgreen] Requested Performer
+**[#lightgreen] Digital Signature
+***_ Electronic Signature or Document Seal
+***_ Electronic Timestamp
 /' ** Intended recipient
 ** Authorship
 ***_ Author

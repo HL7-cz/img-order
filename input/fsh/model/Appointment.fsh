@@ -1,7 +1,7 @@
 Logical: ImageAppointmentCz
 Id: ImageAppointmentCz
 Title: "A.2.5 - Appointment"
-Description: """Appointment - Links to planned care orders related to this request form"""
+Description: """Appointment - Links to planned care order related to this request form"""
 
 * insert SetFmmandStatusRule ( 0, draft )
 

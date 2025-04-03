@@ -2,8 +2,11 @@
 skinparam topurl StructureDefinition-
 
 * [[ImagingOrderCz.html Imaging Order]]
-** [[HeaderImagingOrder.html Imaging Order Header]]
-** [[BodyImageOrderCz.html Imaging Order Body]]
+**[#FFBBCC] Imaging Order Header
+**[#FFBBCC] Imaging Order Body
+** Presented Forms
+** Media
+
 /'
 ** [[health-insurance-cz.html Health Insurance Provider]]
 ** [[serviceRequestCz.html Imaging Order Service Request]]

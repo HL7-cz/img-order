@@ -58,20 +58,23 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
-//* entry contains composition 1..1
-//* entry[composition].resource only CompositionImageOrderCz
+* entry contains composition 1..1
+* entry[composition].resource only CompositionImageOrderCz
 
-* entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only ServiceRequestCz
+* entry contains orderInformation 0..*
+* entry[orderInformation].resource only ImagingOrderInformationCz
+
+* entry contains dataElements 1..1
+* entry[dataElements].resource only DataElementsImageOrderCz
+
+* entry contains appointment 0..1
+* entry[appointment].resource only AppointmentCz
 
 * entry contains patient 0..1
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
-//* entry contains observation 0..*
-//* entry[observation].resource only CZ_ObservationResultImaging
-
 * entry contains specimen 0..*
-* entry[specimen].resource only SpecimenCz
+* entry[specimen].resource only SpecimenImageCz
 
 * entry contains organization 0..*
 * entry[organization].resource only CZ_OrganizationCore
@@ -82,20 +85,17 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry contains practitionerRole 0..*
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 
-//* entry contains device 0..*
-//* entry[device].resource only CZ_DeviceObserver
-
 * entry contains coverage 0..*
 * entry[coverage].resource only CoverageCz
 
-//* entry contains medication 0..*
-//* entry[medication].resource only CZ_Medication  
+* entry contains medication 0..*
+* entry[medication].resource only MedicationOrderCz  
 
-//* entry contains condition 0..*
-//* entry[condition].resource only Condition
+* entry contains condition 0..*
+* entry[condition].resource only ConditionImageCz
 
-//* entry contains carePlan 0..*
-//* entry[carePlan].resource only CarePlan
+* entry contains allergyIntolerance 0..*
+* entry[allergyIntolerance].resource only AllergyIntolleranceCz
 
-//* entry contains imagingStudy 0..*
-//* entry[imagingStudy].resource only ImagingStudy
+* entry contains attachment 0..*
+* entry[attachment].resource only AttachmentCz

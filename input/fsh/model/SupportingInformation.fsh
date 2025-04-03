@@ -1,5 +1,5 @@
 Logical: ImageSupportingInformationCz
-Id: ImageSupportingInformationImageOrderCz
+Id: ImageSupportingInformationCz
 Title: "A.3.1 - Supporting Information"
 Description: """Supporting Information - Information and data communicated by the imaging methods department that has an impact on the execution of the order or the interpretation of the examination results"""
 
@@ -18,6 +18,9 @@ Description: """Supporting Information - Information and data communicated by th
 *  otherRelevantClinicalInformation.code 0..* CodeableConcept "A.3.1.4.1 Code of other information" """Diagnoses and other clinical information that may affect the course or result of the examination or its interpretation (e.g. heart failure, claustrophobia, renal failure)""" 
 *  otherRelevantClinicalInformation.text 0..1 string "A.3.1.4.2 Text of other information" """Clinical information necessary for correct order execution or interpretation of results."""
 *  medication 0..* BackboneElement "A.3.1.5 Medication" """Medication block containing information about medication that has an impact on the course or result of the examination or its interpretation."""
+*  medication.identifier 0..* Identifier "A.3.1.5.1 Medication identifier" """Identifier of medication"""
+*  medication.code 0..* code "A.3.1.5.2 Medication code" """Code of medication"""
+*  medication.amount 0..1 Ratio "A.3.1.5.3 Ratio" """Amount of drug in package"""
 *  implant 0..* BackboneElement "A.3.1.6 Implant" """List of implants or devices that affect the course of the examination or its interpretation."""
 *  implant.type 1..1 CodeableConcept "A.3.1.6.1 Implant type" """Type of implant"""
 *  implant.identifier 0..* Identifier "A.3.1.6.2 Implant identifier" """Standardized identifier, e.g. UDI, according to EU Regulation 2017/745, ZP code according to the health insurance company catalog"""

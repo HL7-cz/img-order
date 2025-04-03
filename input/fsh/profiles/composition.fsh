@@ -38,14 +38,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
 
-* attester 0..* MS
-//  * insert SetPopulateIfKnown
-  * ^slicing.discriminator[+].type = #value
-  * ^slicing.discriminator[=].path = "$this.mode"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-
-
 * author MS
 * author only Reference(PractitionerRole or Device)
   * ^short = "Who and/or what authored the composition"
@@ -66,7 +58,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
     orderInformation 0..* MS and
     supportingInformation 1..1 MS and
     specimen 1..1 MS and
-    serviceRequest 1..1 MS and
+    dataElements 1..1 MS and
     coverage 0..* MS and
     appointment 0..1 MS
 
@@ -80,30 +72,24 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * insert SliceElement( #profile, "$this" )
   * entry contains 
       order 0..* MS and 
-      orderPlacer 0..1 MS and
       orderReason 1..1 MS 
   
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Order."
-  * entry[order] only Reference(ServiceRequest) 
-
-  * entry[orderPlacer]
-    * ^short = "Order Placer"
-    * ^definition = "This entry holds a reference to order placer."
-  * entry[orderPlacer] only Reference(PractitionerRole) 
+  * entry[order] only Reference(ImagingOrderInformationCz) 
 
   * entry[orderReason]
     * ^short = "Order Reason"
     * ^definition = "This entry holds a reference to order reason."
-  * entry[orderReason] only Reference(Observation or Condition)
+  * entry[orderReason] only Reference(ConditionImageCz)
 
 ///////////////////////////// SUPPORTING INFORMATION SECTION ////////////////////////////////////
 * section[supportingInformation]
   * ^short = "Supporting Information"
   * ^definition = "This section holds additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations."
   * code = $loinc#104987-3 "Supporting clinical information"
-
+  
   * entry MS
     * insert SliceElement( #profile, "$this" )
   * entry contains 
@@ -111,11 +97,10 @@ Description: "Clinical document used to represent a Image Order for the scope of
       weight 1..1 MS and 
       height 1..1 MS and 
       condition 0..1 MS and
-      medicationAdministration 0..* MS and
+      medication 0..1 MS and
       implants 0..* MS and
       urgentInformation 0..1 MS and
-  // omezeni pohyblivosti pacienta    
-      observation 0..* MS
+      observation 0..1 MS
 
   * entry[biometricData]
     * ^short = "Biometric data"
@@ -138,12 +123,12 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * ^short = "Condition"
     * ^definition = "This entry holds a reference to the condition."
   * entry[condition] only Reference(Condition) 
- 
-  * entry[medicationAdministration]
-    * ^short = "Medication Administration"
-    * ^definition = "This entry holds a reference to the medication."
-  * entry[medicationAdministration] only Reference(MedicationAdministration) 
 
+  * entry[medication]
+    * ^short = "Medication"
+    * ^definition = "This entry holds a reference to the medication."
+  * entry[medication] only Reference(MedicationOrderCz) 
+ 
   * entry[implants]
     * ^short = "Implants"
     * ^definition = "This entry holds a reference to the implant."
@@ -167,16 +152,16 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * insert SliceElement( #profile, $this )
   * entry contains 
       Specimen 0..* MS
-  * entry[Specimen] only Reference(Specimen)
+  * entry[Specimen] only Reference(SpecimenImageCz)
 
 
 //////////////////////////////// SERVICE REQUEST SECTION ////////////////////////////////////////
-* section[serviceRequest]
-  * ^short = "ServiceRequest"
+* section[dataElements]
+  * ^short = "Data elements of Service Request"
   * code = $loinc#64286-8 "Diagnostic imaging order"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry only Reference(ServiceRequest)
+  * entry only Reference(DataElementsImageOrderCz)
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]

@@ -1,6 +1,6 @@
 Profile: HealthInsuranceProvider
 Parent: Organization
-Id: health-insurance-cz
+Id: HealthInsuranceProvider
 Title: "Health Insurance Provider"
 Description: """
     Health Insurance Provider profile for healthcare organizations, this resource contains all information

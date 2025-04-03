@@ -1,6 +1,6 @@
-Profile: SpecimenCz
+Profile: SpecimenImageCz
 Parent: Specimen
-Id: specimenCz
+Id: SpecimenImageCz
 Title: "Specimen: Imaging Order (CZ)"
 Description: "Czech profile for a specimen in a imaging order. In some imaging order, specimen information is allowed to be minimal as many informations concerning the specimen are implied by the observations done."
 
@@ -16,7 +16,7 @@ Description: "Czech profile for a specimen in a imaging order. In some imaging o
 * subject MS
 * subject ^short = "In the initial iteration of the Czech interoperability project, this is CZ_PatientCore."
 * receivedTime MS
-* parent only Reference(SpecimenCz)
+* parent only Reference(SpecimenImageCz)
 * parent MS
 * request MS
 * collection MS

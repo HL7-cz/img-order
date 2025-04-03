@@ -2,11 +2,9 @@
 
 ### Introduction
 
-This implementation guide is based on [FHIR version R4]. Specify a set of rules that will be used for HL7 FHIR to define how to represent Imaging Order in the Czech national context, in line with European eHN guidelines.
+This implementation guide is based on [FHIR version R4](https://hl7.org/fhir/R4/). Specify a set of rules that will be used for HL7 FHIR to define how to represent Imaging Order in the Czech national context, in line with European eHN guidelines.
 
-Its main objective is to define the content components and the preferred structure to be used to construct a imaging order.The purpose of this standard is to define the representation of the imaging order as a patient's medical record for the purpose of electronic exchange of health information between individuals, healthcare providers and infrastructure in the Czech Republic. 
-
-This includes both jurisdictional and cross-border scenarios.
+Its main objective is to define the content components and the preferred structure to be used to construct a imaging order. The purpose of this standard is to define the representation of the imaging order as a patient's medical record for the purpose of electronic exchange of health information between individuals, healthcare providers and infrastructure in the Czech Republic. 
 
 This guide does not describe how to exchange this message.
 
@@ -22,13 +20,13 @@ This guide is divided into several pages which are listed at the top of each pag
   
 #### Included Areas
 
-This document addresses the functional specification of an imaging examination order form, its structure and the coding systems suitable for its creation.
+This document addresses the functional specification of an imaging examination order, its structure and the value sets suitable for its creation.
 
-The term Imaging Examination Order refers to a request for an examination defined by one of the modalities listed in the [following table](index.html#modality-table). Given the cardinality of 1..* it is possible to request two modalities simultaneously (typically in the case of hybrid methods such as PET/CT - i.e. PT+CT).
+The term Imaging Examination Order refers to a request for an examination defined by one of the modalities listed in the [following table](index.html#modality-table). Given the cardinality of `1..*` it is possible to request two modalities simultaneously - typically in the case of hybrid methods such as **PET/CT** (i.e. PT + CT).
 
 ##### Modality Table
 
-| DICOM Modality   | Meaning in English           | Czech Interpretation      |
+| DICOM Modality    | Meaning in English           | Czech Interpretation      |
 | ----------------- | ---------------------------- | ------------------------- |
 | BMD               | Bone Mineral Densitometry    | Denzitometrie             |
 | CT                | Computed Tomography          | CT                        |
@@ -45,7 +43,7 @@ The term Imaging Examination Order refers to a request for an examination define
 
 #### Excluded Areas
 
-The functional specification does not address the overall ecosystem of order forms and their transmission methods. Additionally, order forms for imaging examinations outside the field of radiology (e.g. keratometry) are not included.
+The functional specification does not address the overall ecosystem of order and their transmission methods. Additionally, order for imaging examinations outside the field of radiology (e.g. keratometry) are not included.
   
 ### Information Models
 
@@ -53,7 +51,7 @@ Basic Sections of the Imaging Order
 
 #### Conceptual view
 
-Imaging Order could be divided into several parts: document header and body.
+Imaging Order could be divided into several parts: document header and body and optionally it could also have various attachments, such as media or presented form.
 
 ##### Imaging Order Parts
 
@@ -75,13 +73,11 @@ Imaging Order could be divided into several parts: document header and body.
 
 ### References
 
-The paper form template for an electronic referral is the paper referral form for Examination/Treatment Type Z. The specifications for the content of the paper referral are provided in "příloha č. 1 v části 2 k vyhlášce č. 444/2024 Sb., o zdravotnické dokumentaci, k 19.2.2025".
+The paper form template for an electronic referral is the paper referral form for Examination/Treatment Type Z. The specifications for the content of the paper referral are provided in `příloha č. 1 v části 2 k vyhlášce č. 444/2024 Sb., o zdravotnické dokumentaci, k 19.2.2025`.
 
 * Related specifications:
   * {{hl7XtEHR}}
-    * This specification has adopted many of the design patterns defined in this IG.
-  * {{hl7EuImg}}
-    * This specification has adopted many of the design patterns defined in this IG.
+    * This specification has inspired many of the design patterns defined in this IG.
   * {{czLabOrder}}
     * This specification has many of together design patterns defined in this IG.
   * {{czImg}}
