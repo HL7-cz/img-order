@@ -22,8 +22,8 @@ Description: "Data elements used to represent a Imaging Order for the scope of t
 * code.coding[Laterality] MS
 * code.coding[Laterality] from $sct
 
-* performer only Reference(Device)
-* performer.type from $dicomModalityType
+* performer only Reference(CZ_DeviceObserver)
+* performer.type from CZDicomMDLTY
 * bodySite MS
 * bodySite from $sctBodySite
 * text 1..

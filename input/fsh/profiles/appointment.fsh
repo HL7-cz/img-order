@@ -17,4 +17,4 @@ Description: "Czech profile for appointment. "
 * minutesDuration 1..
 * comment 1..
 * patientInstruction 1..
-* participant.actor only Reference(Location)
+* participant.actor only Reference(CZ_LocationCore)

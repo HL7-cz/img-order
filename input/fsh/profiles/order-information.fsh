@@ -10,6 +10,6 @@ Description: "Order information for the scope of the Czech national interoperabi
 * priority
 * note
 * patientInstruction
-* insurance only Reference(CoverageCz)
+* insurance only Reference(CZ_Coverage)
 * reasonReference only Reference(ConditionImageCz)
 * basedOn only Reference(DataElementsImageOrderCz)

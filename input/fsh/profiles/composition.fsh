@@ -27,10 +27,10 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^comment = ""
 
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(CZ_PatientCore)
 
 * custodian MS
-* custodian only Reference(Organization)
+* custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Order"
 
 * encounter MS
@@ -39,7 +39,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
 //  * insert SetPopulateIfKnown
 
 * author MS
-* author only Reference(PractitionerRole or Device)
+* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
   * ^short = "Who and/or what authored the composition"
 
 * date MS
@@ -127,12 +127,12 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * entry[medication]
     * ^short = "Medication"
     * ^definition = "This entry holds a reference to the medication."
-  * entry[medication] only Reference(MedicationOrderCz) 
+  * entry[medication] only Reference(CZ_MedicationStatement) 
  
   * entry[implants]
     * ^short = "Implants"
     * ^definition = "This entry holds a reference to the implant."
-  * entry[implants] only Reference(Device) 
+  * entry[implants] only Reference(CZ_MedicalDevice) 
 
   * entry[urgentInformation]
     * ^short = "Urgent information"
@@ -152,7 +152,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * insert SliceElement( #profile, $this )
   * entry contains 
       Specimen 0..* MS
-  * entry[Specimen] only Reference(SpecimenImageCz)
+  * entry[Specimen] only Reference(CZ_Specimen)
 
 
 //////////////////////////////// SERVICE REQUEST SECTION ////////////////////////////////////////
@@ -168,7 +168,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^short = "ServiceRequest"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry only Reference(Coverage)
+  * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
 * section[appointment]

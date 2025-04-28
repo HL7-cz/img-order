@@ -74,7 +74,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains specimen 0..*
-* entry[specimen].resource only SpecimenImageCz
+* entry[specimen].resource only CZ_Specimen
 
 * entry contains organization 0..*
 * entry[organization].resource only CZ_OrganizationCore
@@ -86,16 +86,16 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 
 * entry contains coverage 0..*
-* entry[coverage].resource only CoverageCz
+* entry[coverage].resource only CZ_Coverage
 
 * entry contains medication 0..*
-* entry[medication].resource only MedicationOrderCz  
+* entry[medication].resource only CZ_MedicationStatement  
 
 * entry contains condition 0..*
 * entry[condition].resource only ConditionImageCz
 
 * entry contains allergyIntolerance 0..*
-* entry[allergyIntolerance].resource only AllergyIntolleranceCz
+* entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 
 * entry contains attachment 0..*
 * entry[attachment].resource only AttachmentCz
