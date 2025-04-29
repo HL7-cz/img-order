@@ -64,9 +64,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry contains orderInformation 0..*
 * entry[orderInformation].resource only ImagingOrderInformationCz
 
-* entry contains dataElements 1..1
-* entry[dataElements].resource only DataElementsImageOrderCz
-
 * entry contains appointment 0..1
 * entry[appointment].resource only AppointmentCz
 

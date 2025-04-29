@@ -66,7 +66,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * section[orderInformation]
   * ^short = "Order Information"
   * ^definition = "This section holds information related to the order for the imaging study."
-  * code = $loinc#100828-3 "Portable medical order administrative information"
+  * code = $loinc#64286-8 "Diagnostic imaging order"
 
   * entry MS
     * insert SliceElement( #profile, "$this" )
@@ -155,17 +155,9 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * entry[Specimen] only Reference(CZ_Specimen)
 
 
-//////////////////////////////// SERVICE REQUEST SECTION ////////////////////////////////////////
-* section[dataElements]
-  * ^short = "Data elements of Service Request"
-  * code = $loinc#64286-8 "Diagnostic imaging order"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry only Reference(DataElementsImageOrderCz)
-
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
-  * ^short = "ServiceRequest"
+  * ^short = "Coverage"
   * entry MS
     * insert SliceElement( #profile, $this )
   * entry only Reference(CZ_Coverage)
