@@ -86,7 +86,7 @@ Since the right to choose one's doctor freely is established by law, a patient m
 
 The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](index.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
 
-In the clinical information section ([A.3.1](StructureDefinition-ImageSupportingInformationImageOrderCz.html)), it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
+In the clinical information section ([A.3.1](StructureDefinition-OtherSupportingInformationCz.html)), it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
 
 This approach can also be applied to PET/MR examinations.
 

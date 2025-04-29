@@ -1,6 +1,6 @@
 //============== ALIAS ===============
 // Code systems
-Alias: $orpha = https://www.orpha.net
+Alias: $orpha = https://www.orphadata.com/
 Alias: $loinc =  http://loinc.org
 Alias: $hl7CoverageType = http://hl7.org/fhir/ValueSet/coverage-type
 Alias: $sct = http://snomed.info/sct

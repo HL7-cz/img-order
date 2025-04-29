@@ -174,7 +174,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.address
-* group[=].element[=].display = "A.2.5.7 - Address of the workplace "
+* group[=].element[=].display = "A.2.5.7 - Address of the workplace"
 * group[=].element[=].target.code = #Composition.appointment.Location.address					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
@@ -270,13 +270,13 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElementsCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/DataElementsImageOrderCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ImagingOrderInformationCz"
 * group[=].element[+].code = #Body.OrderDataElements
 * group[=].element[=].display = "A.3.2 - Order/examination data elements."
 * group[=].element[=].target.code = #Composition.extension:basedOn:order			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionOrderInformation.entry.ofType(DataElementsImageorder)"
+* group[=].element[=].target.comment = "Composition.section:sectionOrderInformation.entry.ofType(ImagingOrderInformationCz)"
 * group[=].element[+].code = #OrderDataElements.code
 * group[=].element[=].display = "A.3.2.1 - Examination code"
 * group[=].element[=].target.code = #Composition.ServiceRequest.code
@@ -307,3 +307,4 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.ServiceRequest.note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
+//TODO Care plan and other supporting information

@@ -58,7 +58,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
     orderInformation 0..* MS and
     supportingInformation 1..1 MS and
     specimen 1..1 MS and
-    dataElements 1..1 MS and
     coverage 0..* MS and
     appointment 0..1 MS
 
