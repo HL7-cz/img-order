@@ -18,9 +18,9 @@ Description: "Data elements used to represent a Imaging Order for the scope of t
     Laterality 0..1 
 
 * code.coding[ImagingProcedure] MS
-* code.coding[ImagingProcedure] from $sct 
+* code.coding[ImagingProcedure] from CZImagingProcedure 
 * code.coding[Laterality] MS
-* code.coding[Laterality] from $sct
+* code.coding[Laterality] from $czlaterality
 
 * performer only Reference(CZ_DeviceObserver)
 * performer.type from CZDicomMDLTY

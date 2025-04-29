@@ -26,19 +26,19 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If treated as one of the Patient identifiers; this applies in some jurisdictions."
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/PayerCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/HealthInsuranceProvider"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_Coverage"
 * group[=].element[+].code = #Header.payer.insuranceCode
 * group[=].element[=].display = "A.1.3.1 - Health insurance code"
-* group[=].element[=].target.code = #HealthInsuranceProvider.identifier
+* group[=].element[=].target.code = #Coverage.payor.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.payer.insuranceName
 * group[=].element[=].display = "A.1.3.2 - Health insurance name"
-* group[=].element[=].target.code = #HealthInsuranceProvider.name
+* group[=].element[=].target.code = #Coverage.payor.name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageOrderCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_Coverage"
 * group[=].element[+].code = #Header.coverage
 * group[=].element[=].display = "A.1.4 - Information about coverage"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					

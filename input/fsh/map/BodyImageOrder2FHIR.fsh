@@ -108,7 +108,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageBodyCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_Coverage"
 * group[=].element[+].code = #Body.coverage
 * group[=].element[=].display = "A.2.4 - Information about additional coverage"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
@@ -179,7 +179,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenImageCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_Specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.6 - Speciment information"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
@@ -210,7 +210,7 @@ Usage: #definition
 //* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/SupportingInformationCz"
 
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AllergyIntoleranceCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_AllergyIntolerance"
 * group[=].element[+].code = #Body.SupportingInformation.allergyIntolerance
 * group[=].element[=].display = "A.3.1.7.1 - Allergy intolerance"
 * group[=].element[=].target.code = #Composition.supportingInformation.allergyIntolerance			
@@ -247,7 +247,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/MedicationOrderCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/CZ_MedicationStatement"
 * group[=].element[+].code = #Body.SupportingInformation.medication
 * group[=].element[=].display = "A.3.1.5 - Medication"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order			

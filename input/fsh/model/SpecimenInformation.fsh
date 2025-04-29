@@ -11,8 +11,8 @@ Description:  """Information about specimen"""
 * material 0..1 CodeableConcept "A.2.6.3 - Material" """Specimen material. 
 - Preferred system(s): SNOMED CT
 - Preferred system(s): NCLPMAT"""
-* collectionDate 1..1 dateTime "A.2.6.4 - Date and time of collection or end of collection and time of collection " """The date and time of collection, or the time of completion of collection and the time of collection of the material."""
-* transportDate 0..1 dateTime "A.2.6.5 - Date and time of commencement of transport of the sample to the laboratory " """Date and time of commencement of transport of the sample to the laboratory"""
+* collectionDate 1..1 dateTime "A.2.6.4 - Date and time of collection or end of collection and time of collection" """The date and time of collection, or the time of completion of collection and the time of collection of the material."""
+* transportDate 0..1 dateTime "A.2.6.5 - Date and time of commencement of transport of the sample to the laboratory" """Date and time of commencement of transport of the sample to the laboratory"""
 * type 0..1 CodeableConcept "A.2.6.6 - Sample type" """Entities collected for examination.
 - Preferred system(s): SNOMED CT"""
 * anatomicLocation 0..1 CodeableConcept "A.2.6.7 - Anatomic location" """Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left 
