@@ -21,7 +21,7 @@ end legend
 **[#lightgreen] [[ImageOrderInformationCz.html Order information]]
 ***_ Order Details
 ***_ Order Reason
-**[#lightgreen] [[EncounterCz.html Encounter]]
+**[#lightgreen] [[ClinicalEventCz..html Clinical Event]]
 **[#lightgreen] [[ImageAppointmentCz.html Appointment]]
 **[#lightgreen] [[SpecimenInformationCz.html Specimen Information]]
 **[#lightgreen] [[CoverageBodyCz.html Additional Coverage]]
@@ -37,6 +37,13 @@ end legend
 ***_ Limitation of Patient Mobility
 ***_ Other Relevant Clinical Information
 ***_ Other Information
+**[#lightblue] [[OrderDataElementsCz.html Order Data]]
+***_ Examination Code
+***_ Name of the Examination
+***_ Modality
+***_ Body Part
+***_ Laterality
+***_ Note
 **[#lightblue] [[PlannedCareOrdersCz.html Planned Care Orders]]
 **[#lightblue] [[OtherSupportingInformationCz.html Other Supporting Information]]
 @endmindmap
