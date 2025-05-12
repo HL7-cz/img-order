@@ -56,7 +56,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * section.text MS
 * section contains
     orderInformation 0..* MS and
-    supportingInformation 1..1 MS and
     specimen 1..1 MS and
     coverage 0..* MS and
     appointment 0..1 MS
@@ -82,66 +81,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * ^short = "Order Reason"
     * ^definition = "This entry holds a reference to order reason."
   * entry[orderReason] only Reference(ConditionImageCz)
-
-///////////////////////////// SUPPORTING INFORMATION SECTION ////////////////////////////////////
-* section[supportingInformation]
-  * ^short = "Supporting Information"
-  * ^definition = "This section holds additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations."
-  * code = $loinc#104987-3 "Supporting clinical information"
-  
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
-  * entry contains 
-      biometricData 1..1 MS and 
-      weight 1..1 MS and 
-      height 1..1 MS and 
-      condition 0..1 MS and
-      medication 0..1 MS and
-      implants 0..* MS and
-      urgentInformation 0..1 MS and
-      observation 0..1 MS
-
-  * entry[biometricData]
-    * ^short = "Biometric data"
-    * ^definition = "This entry holds a reference to the observation about Biometric data."
-  * entry[biometricData] only Reference(Observation)  
-
-  * entry[weight]
-    * ^short = "Weight"
-    * ^definition = "This entry represents information about subject's weight."
-//    * code = http://loinc.org#29463-7
-  * entry[weight] only Reference(Observation)  
-
-  * entry[height]
-    * ^short = "Height"
-    * ^definition = "This entry represents information about subject's height."
-//    * code = http://loinc.org#3138-5
-  * entry[height] only Reference(Observation)  
-
-  * entry[condition]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the condition."
-  * entry[condition] only Reference(Condition) 
-
-  * entry[medication]
-    * ^short = "Medication"
-    * ^definition = "This entry holds a reference to the medication."
-  * entry[medication] only Reference(CZ_MedicationStatement) 
- 
-  * entry[implants]
-    * ^short = "Implants"
-    * ^definition = "This entry holds a reference to the implant."
-  * entry[implants] only Reference(CZ_MedicalDevice) 
-
-  * entry[urgentInformation]
-    * ^short = "Urgent information"
-    * ^definition = "This entry holds a reference to the implant."
-  * entry[urgentInformation] only Reference(AllergyIntolerance) 
-
-  * entry[observation]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the other observation."
-  * entry[observation] only Reference(Observation) 
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
