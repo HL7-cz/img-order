@@ -94,5 +94,11 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry contains allergyIntolerance 0..*
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 
+* entry contains carePlan 0..*
+* entry[carePlan].resource only CarePlanImageCz
+
+* entry contains observation 0..*
+* entry[observation].resource only ObservationImageCz
+
 * entry contains attachment 0..*
 * entry[attachment].resource only AttachmentCz

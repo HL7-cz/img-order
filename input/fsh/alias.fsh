@@ -5,6 +5,7 @@ Alias: $loinc =  http://loinc.org
 Alias: $hl7CoverageType = http://hl7.org/fhir/ValueSet/coverage-type
 Alias: $sct = http://snomed.info/sct
 Alias: $dicomModalityType = http://terminology.hl7.org/CodeSystem/dicomMDLTY
+Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus

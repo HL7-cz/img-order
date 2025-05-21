@@ -58,7 +58,9 @@ Description: "Clinical document used to represent a Image Order for the scope of
     orderInformation 0..* MS and
     specimen 1..1 MS and
     coverage 0..* MS and
-    appointment 0..1 MS
+    appointment 0..1 MS and
+    carePlan 0..1 MS and
+    observation 0..* MS
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
@@ -105,4 +107,18 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^short = "Appointment"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry only Reference(Appointment)
+  * entry only Reference(AppointmentCz)
+
+  /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
+* section[carePlan]
+  * ^short = "Care Plan"
+  * entry MS
+    * insert SliceElement( #profile, $this )
+  * entry only Reference(CarePlanImageCz)
+
+    /////////////////////////////////// OBSERVATION SECTION /////////////////////////////////////////
+* section[observation]
+  * ^short = "Observation"
+  * entry MS
+    * insert SliceElement( #profile, $this )
+  * entry only Reference(ObservationImageCz)
