@@ -82,6 +82,9 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry contains practitionerRole 0..*
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 
+* entry contains bodyWeight 0..*
+* entry[bodyWeight].resource only BodyWeightCz
+
 * entry contains coverage 0..*
 * entry[coverage].resource only CZ_Coverage
 

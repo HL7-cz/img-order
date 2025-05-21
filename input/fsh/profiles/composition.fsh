@@ -60,13 +60,12 @@ Description: "Clinical document used to represent a Image Order for the scope of
     coverage 0..* MS and
     appointment 0..1 MS and
     carePlan 0..1 MS and
-    observation 0..* MS
+    supportingInformation 0..* MS
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
   * ^short = "Order Information"
   * ^definition = "This section holds information related to the order for the imaging study."
-  * code = $loinc#64286-8 "Diagnostic imaging order"
 
   * entry MS
     * insert SliceElement( #profile, "$this" )
@@ -87,7 +86,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
   * ^short = "Specimen"
-  * code = $loinc#31208-2 "Specimen"
   * entry MS
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -117,8 +115,58 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * entry only Reference(CarePlanImageCz)
 
     /////////////////////////////////// OBSERVATION SECTION /////////////////////////////////////////
-* section[observation]
-  * ^short = "Observation"
+* section[supportingInformation]
+  * ^short = "Supporting Information"
+  * ^definition = "This section holds additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations."
+  
   * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry only Reference(ObservationImageCz)
+    * insert SliceElement( #profile, "$this" )
+  * entry contains 
+      biometricData 1..1 MS and 
+      weight 1..1 MS and 
+      height 1..1 MS and 
+      condition 0..1 MS and
+      medication 0..1 MS and
+      implants 0..* MS and
+      urgentInformation 0..1 MS and
+      observation 0..1 MS
+
+  * entry[biometricData]
+    * ^short = "Biometric data"
+    * ^definition = "This entry holds a reference to the observation about Biometric data."
+  * entry[biometricData] only Reference(ObservationImageCz)  
+
+  * entry[weight]
+    * ^short = "Weight"
+    * ^definition = "This entry represents information about subject's weight."
+  * entry[weight] only Reference(BodyWeightCz)  
+
+  * entry[height]
+    * ^short = "Height"
+    * ^definition = "This entry represents information about subject's height."
+  * entry[height] only Reference(ObservationImageCz)  
+
+  * entry[condition]
+    * ^short = "Condition"
+    * ^definition = "This entry holds a reference to the condition."
+  * entry[condition] only Reference(ConditionImageCz) 
+
+  * entry[medication]
+    * ^short = "Medication"
+    * ^definition = "This entry holds a reference to the medication."
+  * entry[medication] only Reference(CZ_MedicationStatement) 
+ 
+  * entry[implants]
+    * ^short = "Implants"
+    * ^definition = "This entry holds a reference to the observation about implant."
+  * entry[implants] only Reference(ObservationImageCz) 
+
+  * entry[urgentInformation]
+    * ^short = "Urgent information"
+    * ^definition = "This entry holds a reference to the implant."
+  * entry[urgentInformation] only Reference(CZ_AllergyIntolerance) 
+
+  * entry[observation]
+    * ^short = "Condition"
+    * ^definition = "This entry holds a reference to the other observation."
+  * entry[observation] only Reference(ObservationImageCz) 
