@@ -4,7 +4,7 @@ Usage: #example
 Description: "Patient, contact information and practitioner"
 
 * identifier[RC][+].system = "https://ncez.mzcr.cz/fhir/sid/rcis"
-* identifier[RC][=].value = "27161264528"
+* identifier[RC][=].value = "2716126452"
 * identifier[RC][=].use = #official
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"

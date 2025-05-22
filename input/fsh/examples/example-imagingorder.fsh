@@ -10,7 +10,7 @@ Description: "Imaging order for Magnetic Resonance"
 * category = $sct#363679005 	"Imaging"
 * performer = Reference(MRDevice)
 * subject = Reference(Mracena)
-* bodySite = $sct#6757004 "Right knee"
+* bodySite = $sct#72696002 "Knee region structure (body structure)"
 * code.coding[Laterality] = $sct#24028007 "Right"
 * code.coding[ImagingProcedure] = $sct#19741000087109 "MR arthrography of right knee"
 * text.status = #additional

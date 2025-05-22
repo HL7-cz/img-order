@@ -45,31 +45,35 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * date MS
   * ^short = "Date the order was created."
 
-* section MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "code"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-* section.entry MS
+* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[0].path = "entry"
+* section ^slicing.ordered = false
+* section ^slicing.rules = #open
+* section ^short = "{short}"
+* section ^definition = "{def}"
+* section.entry
 * section.code 1..1 MS  // LOINC code for the section
 * section.title MS
 * section.text MS
 * section contains
     orderInformation 0..* MS and
-    specimen 1..1 MS and
-    coverage 0..* MS and
-    appointment 0..1 MS and
-    carePlan 0..1 MS and
-    supportingInformation 0..* MS and
-    medicalDevices 1..1
+    specimen 0..1 and
+    coverage 0..* and
+    appointment 0..1 and
+    carePlan 0..1 and
+    medicalDevices 0..*
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
   * ^short = "Order Information"
   * ^definition = "This section holds information related to the order for the imaging study."
+  * code = $loinc#55115-0 "Requested imaging studies information Document"
 
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
+  * entry
+    * ^slicing.discriminator.type = #profile
+    * ^slicing.discriminator.path = "resolve()"
+    * ^slicing.rules = #open
+    * ^slicing.ordered = false
   * entry contains 
       order 0..* MS and 
       orderReason 1..1 MS 
@@ -86,89 +90,31 @@ Description: "Clinical document used to represent a Image Order for the scope of
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
-  * ^short = "Specimen"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      Specimen 0..* MS
-  * entry[Specimen] only Reference(CZ_Specimen)
+  * ^short = "Specimen source identified"
+  * entry 0..
+  * entry only Reference(CZ_Specimen)
 
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
-  * ^short = "Coverage"
-  * entry MS
-    * insert SliceElement( #profile, $this )
+  * ^short = "Coverage type"
+  * entry 0..
   * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
 * section[appointment]
   * ^short = "Appointment"
-  * entry MS
-    * insert SliceElement( #profile, $this )
+  * entry 0..
   * entry only Reference(AppointmentCz)
 
   /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
 * section[carePlan]
   * ^short = "Care Plan"
-  * entry MS
-    * insert SliceElement( #profile, $this )
+  * entry 0..
   * entry only Reference(CarePlanImageCz)
-
-    /////////////////////////////////// OBSERVATION SECTION /////////////////////////////////////////
-* section[supportingInformation]
-  * ^short = "Supporting Information"
-  * ^definition = "This section holds additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations."
-  
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
-  * entry contains 
-      biometricData 1..1 MS and 
-      weight 1..1 MS and 
-      height 1..1 MS and 
-      condition 0..1 MS and
-      medication 0..1 MS and
-      urgentInformation 0..1 MS and
-      observation 0..1 MS
-
-  * entry[biometricData]
-    * ^short = "Biometric data"
-    * ^definition = "This entry holds a reference to the observation about Biometric data."
-  * entry[biometricData] only Reference(ObservationImageCz)  
-
-  * entry[weight]
-    * ^short = "Weight"
-    * ^definition = "This entry represents information about subject's weight."
-  * entry[weight] only Reference(BodyWeightCz)  
-
-  * entry[height]
-    * ^short = "Height"
-    * ^definition = "This entry represents information about subject's height."
-  * entry[height] only Reference(BodyHeightCz)  
-
-  * entry[condition]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the condition."
-  * entry[condition] only Reference(ConditionImageCz) 
-
-  * entry[medication]
-    * ^short = "Medication"
-    * ^definition = "This entry holds a reference to the medication."
-  * entry[medication] only Reference(CZ_MedicationStatement) 
- 
-  * entry[urgentInformation]
-    * ^short = "Urgent information"
-    * ^definition = "This entry holds a reference to the urgent information such as allergies."
-  * entry[urgentInformation] only Reference(CZ_AllergyIntolerance) 
-
-  * entry[observation]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the other observation."
-  * entry[observation] only Reference(ObservationImageCz) 
 
  /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
 * section[medicalDevices]
   * ^short = "Medical Devices and implants"
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
+  * entry 0..
   * entry only Reference(DeviceUseStatementCz)

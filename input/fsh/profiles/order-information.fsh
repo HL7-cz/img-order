@@ -25,17 +25,17 @@ Description: "Order information for the scope of the Czech national interoperabi
     ImagingProcedure 0..1 and 
     Laterality 0..1 
 
-* code.coding[ImagingProcedure] MS
+* code.coding[ImagingProcedure]
 * code.coding[ImagingProcedure] from CZImagingProcedure 
-* code.coding[Laterality] MS
+* code.coding[Laterality]
 * code.coding[Laterality] from $czlaterality
 
 * performer only Reference(CZ_DeviceObserver)
 * performer.type from CZDicomMDLTY
-* bodySite MS
-* bodySite from $sctBodySite
+* bodySite
+* bodySite from $sctBodySite (preferred)
 * text 1..
 * note 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatement or CZ_AllergyIntolerance or CZ_MedicalDevice or ObservationImageCz or CarePlanImageCz)
+* supportingInfo only Reference(CZ_MedicationStatement or BodyHeightCz or BodyHeightCz or ConditionImageCz or CZ_AllergyIntolerance or CZ_MedicalDevice or ObservationImageCz or CarePlanImageCz)
 

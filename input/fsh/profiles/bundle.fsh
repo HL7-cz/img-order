@@ -52,59 +52,51 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * response ..0
 * signature ^short = "Digital Signature of this order"
 
+* entry 1..
 * entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[0].path = "resource"
-// * entry ^slicing.ordered = true => changed on 2023-07-19  to be checked
-* entry ^slicing.ordered = false
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #open
+* entry ^short = "Entry resource in the Image order bundle"
+* entry ^definition = "An entry resource included in the Image order document bundle resource."
+* entry ^comment = "Must contain the Image Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Image Order Composition profile."
+* entry.fullUrl 1..
+* entry contains
+    composition 1..1 and
+    patient 1..1 and
+    orderInformation 0..* and
+    appointment 0..1 and
+    specimen 0..* and
+    practitionerRole 0..* and
+    bodyWeight 0..* and
+    bodyHeight 0..* and
+    coverage 0..* and
+    medication 0..* and
+    condition 0..* and
+    allergyIntolerance 0..* and
+    carePlan 0..* and
+    observation 0..* and
+    attachment 0..*
 
-* entry contains composition 1..1
 * entry[composition].resource only CompositionImageOrderCz
-
-* entry contains orderInformation 0..*
-* entry[orderInformation].resource only ImagingOrderInformationCz
-
-* entry contains appointment 0..1
-* entry[appointment].resource only AppointmentCz
-
-* entry contains patient 0..1
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
-
-* entry contains specimen 0..*
+* entry[orderInformation].resource only ImagingOrderInformationCz
+* entry[appointment].resource only AppointmentCz
 * entry[specimen].resource only CZ_Specimen
-
-* entry contains organization 0..*
-* entry[organization].resource only CZ_OrganizationCore
-
-* entry contains practitioner 0..*
-* entry[practitioner].resource only CZ_PractitionerCore
-
-* entry contains practitionerRole 0..*
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
-
-* entry contains bodyWeight 0..*
 * entry[bodyWeight].resource only BodyWeightCz
-
-* entry contains bodyHeight 0..*
 * entry[bodyHeight].resource only BodyHeightCz
-
-* entry contains coverage 0..*
 * entry[coverage].resource only CZ_Coverage
-
-* entry contains medication 0..*
 * entry[medication].resource only CZ_MedicationStatement  
-
-* entry contains condition 0..*
 * entry[condition].resource only ConditionImageCz
-
-* entry contains allergyIntolerance 0..*
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
-
-* entry contains carePlan 0..*
 * entry[carePlan].resource only CarePlanImageCz
-
-* entry contains observation 0..*
 * entry[observation].resource only ObservationImageCz
-
-* entry contains attachment 0..*
 * entry[attachment].resource only AttachmentCz
+
+* signature ^short = "Report Digital Signature"
+  * type ^short = "Digital Signature Purposes"
+  * when ^short = "When was signed"
+  * who ^short = "Who signed."
+  * data ^short = "Signature content"
