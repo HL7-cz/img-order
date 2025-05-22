@@ -60,7 +60,8 @@ Description: "Clinical document used to represent a Image Order for the scope of
     coverage 0..* MS and
     appointment 0..1 MS and
     carePlan 0..1 MS and
-    supportingInformation 0..* MS
+    supportingInformation 0..* MS and
+    medicalDevices 1..1
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
@@ -127,7 +128,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
       height 1..1 MS and 
       condition 0..1 MS and
       medication 0..1 MS and
-      implants 0..* MS and
       urgentInformation 0..1 MS and
       observation 0..1 MS
 
@@ -144,7 +144,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * entry[height]
     * ^short = "Height"
     * ^definition = "This entry represents information about subject's height."
-  * entry[height] only Reference(ObservationImageCz)  
+  * entry[height] only Reference(BodyHeightCz)  
 
   * entry[condition]
     * ^short = "Condition"
@@ -156,17 +156,19 @@ Description: "Clinical document used to represent a Image Order for the scope of
     * ^definition = "This entry holds a reference to the medication."
   * entry[medication] only Reference(CZ_MedicationStatement) 
  
-  * entry[implants]
-    * ^short = "Implants"
-    * ^definition = "This entry holds a reference to the observation about implant."
-  * entry[implants] only Reference(ObservationImageCz) 
-
   * entry[urgentInformation]
     * ^short = "Urgent information"
-    * ^definition = "This entry holds a reference to the implant."
+    * ^definition = "This entry holds a reference to the urgent information such as allergies."
   * entry[urgentInformation] only Reference(CZ_AllergyIntolerance) 
 
   * entry[observation]
     * ^short = "Condition"
     * ^definition = "This entry holds a reference to the other observation."
   * entry[observation] only Reference(ObservationImageCz) 
+
+ /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
+* section[medicalDevices]
+  * ^short = "Medical Devices and implants"
+  * entry MS
+    * insert SliceElement( #profile, "$this" )
+  * entry only Reference(DeviceUseStatementCz)

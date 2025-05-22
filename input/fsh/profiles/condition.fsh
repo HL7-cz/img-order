@@ -13,9 +13,9 @@ Description: "Condition for Imaging Order for the scope of the Czech national in
     codeDescription 0..1 and 
     clinicalQuestion 0..1 and 
     reason 0..1 
-* code.coding[codeDescription] MS
-//* code.coding[codeDescription] from  MKN-10 a Orpha
+* code.coding[codeDescription] from $mkn-10-problem-list
+* code.coding[codeDescription].system = $mkn-10
 * code.coding[clinicalQuestion] MS
-//* code.coding[clinicalQuestion] from $sct // blize nespecifikovano
+* code.coding[clinicalQuestion] from $sct // blize nespecifikovano
 * code.coding[reason] MS
-//* code.coding[reason] from $sct //243796009
+* code.coding[reason] from $sct //243796009

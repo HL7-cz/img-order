@@ -34,13 +34,9 @@ Description: "Observation for Imaging Order for the scope of the Czech national 
   * code 1..
 * valueQuantity
 * valueCodeableConcept
-//* valueCodeableConcept.coding[0] = $iccc3#081
-//* valueCodeableConcept.coding[+] = $icd10#C41.9 -- u nas a MKN-10 a OrphaCode?
 * status
 * effectiveDateTime
 * performer
 * performer.identifier
 * performer.display
 * note
-
-//TODO body weight and height, other relevant clinical information, implants (procedure nebo skrze DeviceUsement?)
