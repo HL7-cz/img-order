@@ -33,8 +33,13 @@ Usage: #example
 * entry[7].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
 * entry[7].resource = KralikClinicalQuestion
 
-* entry[8].fullUrl = "urn:uuid:9c4aa4d3-0b8a-4e8c-9435-5b8025b08fba"
-* entry[8].resource = cz-kralikinsurance-example
+* entry[8].fullUrl = "urn:uuid:0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
+* entry[8].resource = KralikDiagnosis
+
+* entry[9].fullUrl = "urn:uuid:9c4aa4d3-0b8a-4e8c-9435-5b8025b08fba"
+* entry[9].resource = cz-kralikinsurance-example
+
+
 
 Instance: Composition-kralik-rtg
 InstanceOf: CompositionImageOrderCz
@@ -165,6 +170,15 @@ Description: "Example of body weight of Patient Kralik"
 * valueQuantity.code = #kg
 * status = #final
 * effectiveDateTime = 2025-05-20
+
+Instance: KralikDiagnosis
+InstanceOf: ConditionImageCz
+Usage: #inline
+Description: "Condition - Diagnosis"
+* id = "0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* code.coding[diagnosis].code = #S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding[diagnosis].display = "Otevřená rána jiných částí hlavy"
 
 Instance: KralikReason
 InstanceOf: ConditionImageCz
