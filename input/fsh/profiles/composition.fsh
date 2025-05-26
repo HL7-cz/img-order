@@ -45,52 +45,41 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * date MS
   * ^short = "Date the order was created."
 
+* section 1..
+* obeys text-or-section
+
 * section ^slicing.discriminator[0].type = #value
-* section ^slicing.discriminator[0].path = "entry"
+* section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
-* section ^short = "{short}"
-* section ^definition = "{def}"
-* section.entry
-* section.code 1..1 MS  // LOINC code for the section
-* section.title MS
-* section.text MS
+* section ^short = "Sections composing the Image Order"
+* section ^definition = "The root of the sections that make up the Image Order composition."
+
 * section contains
-    orderInformation 0..* MS and
+    orderInformation 1..* and
     specimen 0..1 and
     coverage 0..* and
     appointment 0..1 and
     carePlan 0..1 and
-    medicalDevices 0..*
+    medicalDevices 0..* and
+    attachments 0..*
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
   * ^short = "Order Information"
   * ^definition = "This section holds information related to the order for the imaging study."
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
-
-  * entry
-    * ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "resolve()"
-    * ^slicing.rules = #open
-    * ^slicing.ordered = false
-  * entry contains 
-      order 0..* MS and 
-      orderReason 1..1 MS 
-  
-  * entry[order]
-    * ^short = "Order reference"
-    * ^definition = "This entry holds a reference to the order for the Imaging Order."
-  * entry[order] only Reference(ImagingOrderInformationCz) 
-
-  * entry[orderReason]
-    * ^short = "Order Reason"
-    * ^definition = "This entry holds a reference to order reason."
-  * entry[orderReason] only Reference(ConditionImageCz)
+  * entry 0..
+  * entry only Reference(ImagingOrderInformationCz or ConditionImageCz) 
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
-  * ^short = "Specimen source identified"
+  * ^short = "Specimen-related information panel"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#68992-7 "Specimen-related information panel"
   * entry 0..
   * entry only Reference(CZ_Specimen)
 
@@ -98,23 +87,52 @@ Description: "Clinical document used to represent a Image Order for the scope of
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
   * ^short = "Coverage type"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#87520-3 "Coverage type"
   * entry 0..
   * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
 * section[appointment]
   * ^short = "Appointment"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#56446-8 "Appointment summary Document"
   * entry 0..
   * entry only Reference(AppointmentCz)
 
   /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
 * section[carePlan]
   * ^short = "Care Plan"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#18776-5 "Plan of care note"
   * entry 0..
   * entry only Reference(CarePlanImageCz)
 
  /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
 * section[medicalDevices]
   * ^short = "Medical Devices and implants"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#97813-0 "Implant component"
   * entry 0..
   * entry only Reference(DeviceUseStatementCz)
+
+ /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
+// -------------------------------------------------------------
+* section[attachments]
+  * ^short = "Library of attachments"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#77599-9 "Additional documentation"
+  * entry 0..
+  * entry only Reference(AttachmentCz)
+
+/// ========= INVARIANTS =========
+
+Invariant: text-or-section
+Description: "A Composition SHALL have either text, at least one section, or both."
+Expression: "text.exists() or section.exists()"
+Severity: #error

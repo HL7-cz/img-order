@@ -51,17 +51,18 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * request ..0
   * response ..0
 * signature ^short = "Digital Signature of this order"
+* signature only CZ_Signature
 
 * entry 1..
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "Entry resource in the Image order bundle"
 * entry ^definition = "An entry resource included in the Image order document bundle resource."
 * entry ^comment = "Must contain the Image Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Image Order Composition profile."
-* entry.fullUrl 1..
 * entry contains
     composition 1..1 and
     patient 1..1 and
@@ -69,8 +70,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
     appointment 0..1 and
     specimen 0..* and
     practitionerRole 0..* and
-    bodyWeight 0..* and
-    bodyHeight 0..* and
     coverage 0..* and
     medication 0..* and
     condition 0..* and
@@ -85,8 +84,6 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry[appointment].resource only AppointmentCz
 * entry[specimen].resource only CZ_Specimen
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
-* entry[bodyWeight].resource only BodyWeightCz
-* entry[bodyHeight].resource only BodyHeightCz
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatement  
 * entry[condition].resource only ConditionImageCz

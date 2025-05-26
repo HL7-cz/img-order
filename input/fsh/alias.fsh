@@ -16,6 +16,7 @@ Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $czlaterality = https://hl7.cz/fhir/core/ValueSet/laterality-cz-lab
 Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
 
 // Extensions:
 Alias: $hl7Supportinginfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo

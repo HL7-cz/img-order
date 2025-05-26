@@ -198,7 +198,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.material	
 * group[=].element[=].display = "A.2.7.3 - Type of material"
-* group[=].element[=].target.code = #Composition.specimen.extension:material
+* group[=].element[=].target.code = #Composition.specimen.type
 * group[=].element[=].target.display = "Type of material"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collectionDate	
@@ -228,7 +228,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.instrument
 * group[=].element[=].display = "A.2.7.9 - Instrument"
-* group[=].element[=].target.code = #Composition.specimen.extension:instrument
+* group[=].element[=].target.code = #Composition.specimen.subject
 * group[=].element[=].target.display = "Device, instrument, physical object (drain, electrode, catheter, etc.)."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.procedure
@@ -238,14 +238,16 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.sourceDevice
 * group[=].element[=].display = "A.2.7.11 - Source Device"
-* group[=].element[=].target.code = #Composition.specimen.extension:sourceDevice
+* group[=].element[=].target.code = #Composition.specimen.subject.type
 * group[=].element[=].target.display = "If the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Device or Location"
 * group[=].element[+].code = #Specimen.samplingPoint
 * group[=].element[=].display = "A.2.7.12 - Sampling point"
-* group[=].element[=].target.code = #Composition.specimen.extension:samplingPoint
+* group[=].element[=].target.code = #Composition.specimen.subject.type
 * group[=].element[=].target.display = "The area where the material was collected; refers to the environment, not the patient."
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Location"
 * group[=].element[+].code = #Specimen.Note
 * group[=].element[=].display = "A.2.7.13 - Note"
 * group[=].element[=].target.code = #Composition.specimen.note

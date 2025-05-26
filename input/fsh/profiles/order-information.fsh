@@ -35,7 +35,6 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite
 * bodySite from $sctBodySite (preferred)
 * text 1..
-* note 1..
 * supportingInfo 0..*
 * supportingInfo only Reference(CZ_MedicationStatement or BodyHeightCz or BodyHeightCz or ConditionImageCz or CZ_AllergyIntolerance or CZ_MedicalDevice or ObservationImageCz or CarePlanImageCz)
 
