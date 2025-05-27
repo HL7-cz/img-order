@@ -34,13 +34,13 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^short = "Organization that manages the Imaging Order"
 
 * encounter MS
-* encounter only Reference(Encounter)
+* encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
 
 * author MS
 * author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
-  * ^short = "Who and/or what authored the composition"
+  * ^short = "Who and/or what authored the Image order"
 
 * date MS
   * ^short = "Date the order was created."
@@ -100,7 +100,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^extension[0].valueString = "Section"
   * code = $loinc#56446-8 "Appointment summary Document"
   * entry 0..
-  * entry only Reference(AppointmentCz)
+  * entry only Reference(CZ_Appointment)
 
   /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
 * section[carePlan]
@@ -109,7 +109,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^extension[0].valueString = "Section"
   * code = $loinc#18776-5 "Plan of care note"
   * entry 0..
-  * entry only Reference(CarePlanImageCz)
+  * entry only Reference(CZ_CarePlanImage)
 
  /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
 * section[medicalDevices]

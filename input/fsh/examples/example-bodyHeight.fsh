@@ -15,3 +15,4 @@ Description: "Example of body height of Patient Mracena"
 * valueQuantity.code = #cm
 * status = #final
 * effectiveDateTime = 2020-06-01
+* performer = Reference(practitionerExample)

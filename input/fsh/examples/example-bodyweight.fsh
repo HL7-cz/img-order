@@ -15,3 +15,4 @@ Description: "Example of body weight of Patient Mracena"
 * valueQuantity.code = #kg
 * status = #final
 * effectiveDateTime = 2020-06-01
+* performer = Reference(practitionerExample)

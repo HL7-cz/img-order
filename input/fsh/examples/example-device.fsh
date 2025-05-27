@@ -3,4 +3,4 @@ InstanceOf: CZ_DeviceObserver
 Usage: #example
 Description: "Magnetic Resonance device"
 
-* type = #MR
+* type = $sct#90003000 "Magnetic resonance imaging unit"

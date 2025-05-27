@@ -32,13 +32,14 @@ Usage: #example
 * entry[7].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
 * entry[7].resource = WeightKralik
 
-* entry[8].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
-* entry[8].resource = practitionerKeller
+* entry[8].fullUrl = "urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9"
+* entry[8].resource = HeightKralik
 
-* entry[9].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
-* entry[9].resource = practitionerPavlicek
+* entry[9].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
+* entry[9].resource = practitionerKeller
 
-
+* entry[10].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
+* entry[10].resource = practitionerPavlicek
 
 Instance: Composition-kralik-rtg
 InstanceOf: CompositionImageOrderCz
@@ -130,6 +131,7 @@ InstanceOf: BodyHeightCz
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
+* id = "c4123c75-4559-41d9-8153-c6d0fb577de9"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -173,7 +175,7 @@ Description: "Imaging order for Plain X-ray"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging"
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(RGDevice)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * insurance = Reference(cz-kralikinsurance-example)
@@ -188,7 +190,7 @@ Description: "Imaging order for Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
-* supportingInfo = Reference(HeightKralik)
+* supportingInfo = Reference(urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9)
 * supportingInfo = Reference(urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 
@@ -214,6 +216,7 @@ Usage: #inline
 Description: "Condition - Diagnosis"
 * id = "0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* category = $hl7-condition-category-cs#encounter-diagnosis
 * code.coding[diagnosis].code = #S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "Otevřená rána jiných částí hlavy"
 
@@ -223,6 +226,7 @@ Usage: #inline
 Description: "Condition - Reason"
 * id = "152e92a5-c0a6-418f-8b2d-620a8ef40205"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* category = $hl7-condition-category-cs#problem-list-item
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: KralikClinicalQuestion
@@ -231,6 +235,7 @@ Usage: #inline
 Description: "Condition - Clinical question"
 * id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* category = $hl7-condition-category-cs#encounter-diagnosis
 * code.text = "Trauma skeletu?"
 
 Instance: cz-pdfkralikrgt-example

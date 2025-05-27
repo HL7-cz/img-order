@@ -81,14 +81,14 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry[composition].resource only CompositionImageOrderCz
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 * entry[orderInformation].resource only ImagingOrderInformationCz
-* entry[appointment].resource only AppointmentCz
+* entry[appointment].resource only CZ_Appointment
 * entry[specimen].resource only CZ_Specimen
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatement  
 * entry[condition].resource only ConditionImageCz
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
-* entry[carePlan].resource only CarePlanImageCz
+* entry[carePlan].resource only CZ_CarePlanImage
 * entry[observation].resource only ObservationImageCz
 * entry[attachment].resource only AttachmentCz
 

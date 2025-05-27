@@ -5,7 +5,6 @@ Description: "ValueSet for imaging procedure in the Czech Imaging project, using
 * ^url = "https://hl7.cz/fhir/img-order/ValueSet/cz-imaging-procedure"
 
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 2, trial-use)
 //* $sct#764977005 "24 hour radionuclide imaging of whole body using radioisotope labelled human immunoglobulin G"
 * $sct#432422008 "Ablation of cyst of kidney using ultrasound guidance"
 * $sct#241145009 "Air contrast swallow"

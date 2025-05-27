@@ -6,6 +6,7 @@ Description: "Condition for Imaging Order for the scope of the Czech national in
 
 * identifier
 * subject
+* category from $hl7-condition-category
 * code MS
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"

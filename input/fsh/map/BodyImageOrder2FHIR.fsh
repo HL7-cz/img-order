@@ -85,7 +85,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/EncounterCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-encounter"
 * group[=].element[+].code = #Body.ClinicalEvent
 * group[=].element[=].display = "A.2.3 - Information about clinical event"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
@@ -99,7 +99,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Encounter.type
 * group[=].element[=].display = "A.2.3.2 - Type of clinical event"
-* group[=].element[=].target.code = #Composition.encounter.identifier
+* group[=].element[=].target.code = #Composition.encounter.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Encounter.otherInformation
@@ -131,7 +131,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Body.coverage.comment
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageAppointmentCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AppointmentCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-appointment"
 * group[=].element[+].code = #Body.Appointment
 * group[=].element[=].display = "A.2.5 - Information about appointment"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
@@ -516,21 +516,21 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OtherSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/CarePlanImageCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-carePlanImage"
 * group[=].element[+].code = #Body.PlannedCareOrdersCz
 * group[=].element[=].display = "A.3.3 - Order/examination data elements."
-* group[=].element[=].target.code = #Composition.CarePlanImageCz			
+* group[=].element[=].target.code = #Composition.carePlan			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "Composition.section:sectionCarePlan"
 * group[=].element[+].code = #PlannedCareOrdersCz.identifier
 * group[=].element[=].display = "A.3.3.1 - Identifier"
-* group[=].element[=].target.code = #Composition.CarePlanImageCz.code
+* group[=].element[=].target.code = #Composition.carePlan.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #PlannedCareOrdersCz.name
 * group[=].element[=].display = "A.3.3.2 Title of the observation"
-* group[=].element[=].target.code = #Composition.CarePlanImageCz.title
+* group[=].element[=].target.code = #Composition.carePlan.title
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OtherSupportingInformationCz"
