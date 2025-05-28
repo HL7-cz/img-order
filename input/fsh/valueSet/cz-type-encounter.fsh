@@ -1,4 +1,5 @@
 ValueSet: TypeEncounterCzVs
+Id: typeEncounter-cz-vs
 Title: "TypeEncounter (CZ)"
 Description: "Type encouter - Typ KU"
 * ^language = #cs

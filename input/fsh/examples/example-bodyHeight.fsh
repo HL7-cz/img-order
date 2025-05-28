@@ -1,5 +1,5 @@
 Instance: ExampleBodyHeight
-InstanceOf: BodyHeightCz
+InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient"
 Description: "Example of body height of Patient Mracena"

@@ -1,6 +1,6 @@
-Profile: ObservationImageCz
+Profile: CZ_ObservationImage
 Parent: Observation
-Id: ObservationImageCz
+Id: cz-observationImage
 Title: "Observation: Imaging Order (CZ)"
 Description: "Observation for Imaging Order for the scope of the Czech national interoperability project."
 

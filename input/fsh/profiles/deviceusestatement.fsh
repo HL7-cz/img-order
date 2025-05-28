@@ -1,6 +1,6 @@
-Profile: DeviceUseStatementCz
+Profile: CZ_DeviceUseStatement
 Parent: DeviceUseStatement
-Id: DeviceUseStatementCz
+Id: cz-deviceUseStatement
 Title: "Czech DeviceUseStatement"
 Description: "This profile represents the constraints applied to the DeviceUseStatement resource for the purpose of this guide. A device used by or implanted on the patient is described in the image order as an instance of a Device resource constrained by this profile."
 
@@ -12,7 +12,7 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * timing[x].extension contains $data-absent-reason named data-absent-reason 0..1 
 * timing[x].extension[data-absent-reason] ^definition = "Provides a reason why the timing is missing."
 * reasonCode ^short = "Why is used (code)"
-* reasonReference only Reference ( ConditionImageCz or ObservationImageCz or Media or DiagnosticReport or DocumentReference)
+* reasonReference only Reference ( CZ_ConditionImage or CZ_ObservationImage or Media or DiagnosticReport or DocumentReference)
   * ^short = "Why is used (details)"
 * device only Reference(CZ_MedicalDevice)
 * bodySite

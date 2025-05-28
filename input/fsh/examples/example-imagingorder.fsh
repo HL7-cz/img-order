@@ -1,5 +1,5 @@
 Instance: cz-imagingorder-example
-InstanceOf: ImagingOrderInformationCz
+InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
 Description: "Imaging order for Magnetic Resonance"
 

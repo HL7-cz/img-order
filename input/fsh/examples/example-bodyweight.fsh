@@ -1,5 +1,5 @@
 Instance: ExampleBodyWeight
-InstanceOf: BodyWeightCz
+InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient"
 Description: "Example of body weight of Patient Mracena"

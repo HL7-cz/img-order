@@ -1,6 +1,6 @@
-Profile: ConditionImageCz
+Profile: CZ_ConditionImage
 Parent: Condition
-Id: ConditionImageCz
+Id: cz-conditionImage
 Title: "Condition: Imaging Order (CZ)"
 Description: "Condition for Imaging Order for the scope of the Czech national interoperability project."
 

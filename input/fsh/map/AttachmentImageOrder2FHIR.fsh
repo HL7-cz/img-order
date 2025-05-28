@@ -9,7 +9,7 @@ Usage: #definition
 * description = """CZ Imaging Order Attachment Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/PresentedFormCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AttachmentCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "B - Presented Form"
 * group[=].element[=].target.code = #Content
@@ -46,7 +46,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/MediaCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/AttachmentCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #Media
 * group[=].element[=].display = "C - Media attachments"
 * group[=].element[=].target.code = #content

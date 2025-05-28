@@ -1,6 +1,6 @@
-Profile: AttachmentCz
+Profile: CZ_Attachment
 Parent: Media
-Id: AttachmentCz
+Id: cz-attachment
 Title: "Attachment: Imaging Order (CZ)"
 Description: "Czech profile for attachment. "
 

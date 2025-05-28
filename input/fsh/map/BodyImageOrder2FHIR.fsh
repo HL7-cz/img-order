@@ -9,7 +9,7 @@ Usage: #definition
 * description = """CZ Imaging Order Body Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ImagingOrderInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-ImagingOrderInformation"
 * group[=].element[+].code = #Body.OrderInformation
 * group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
 * group[=].element[=].target.code = #Composition.sectionOrderInformation					
@@ -324,14 +324,14 @@ Usage: #definition
 * group[=].element[=].target.display = "Organization of the sample collector (healthcare provider)."
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ObservationImageCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.SupportingInformation.biometricData
 * group[=].element[=].display = "A.3.1.1 - Biometric data"
 * group[=].element[=].target.code = #Composition.sectionOrderInformation.order.supportingInfo.observation			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/bodyweightcz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bodyweight"
 * group[=].element[+].code = #Body.SupportingInformation.weight
 * group[=].element[=].display = "A.3.1.2 - Weight"
 * group[=].element[=].target.code = #Composition.sectionOrderInformation.order.supportingInfo.bodyWeight			
@@ -353,7 +353,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/bodyheightcz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bodyheight"
 * group[=].element[+].code = #Body.SupportingInformation.height
 * group[=].element[=].display = "A.3.1.3 - Height"
 * group[=].element[=].target.code = #Composition.sectionOrderInformation.order.supportingInfo.bodyHeight			
@@ -375,7 +375,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ConditionImageCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.SupportingInformation.otherRelevantClinicalInformation
 * group[=].element[=].display = "A.3.1.4 - Other Relevant Clinical Information"
 * group[=].element[=].target.code = #Composition.sectionOrderInformation.order.supportingInfo.condition			
@@ -414,7 +414,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/DeviceUseStatementCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-deviceUseStatement"
 * group[=].element[+].code = #Body.SupportingInformation.implant
 * group[=].element[=].display = "A.3.1.6 - Implant"
 * group[=].element[=].target.code = #Composition.medicalDevices
@@ -478,13 +478,13 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElementsCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ImagingOrderInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #Body.OrderDataElements
 * group[=].element[=].display = "A.3.2 - Order/examination data elements."
 * group[=].element[=].target.code = #Composition.extension:basedOn:order			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionOrderInformation.entry.ofType(ImagingOrderInformationCz)"
+* group[=].element[=].target.comment = "Composition.section:sectionOrderInformation.entry.ofType(CZ_ImagingOrderInformation)"
 * group[=].element[+].code = #OrderDataElements.code
 * group[=].element[=].display = "A.3.2.1 - Examination code"
 * group[=].element[=].target.code = #Composition.ServiceRequest.code
@@ -534,7 +534,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OtherSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/ObservationImageCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.OtherSupportingInformationCz
 * group[=].element[=].display = "A.3.4 - Order/examination data elements."
 * group[=].element[=].target.code = #Composition.ObservationImageCz			

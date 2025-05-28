@@ -1,9 +1,9 @@
 //==========================
 // PROFILE
 //==========================
-Profile: CompositionImageOrderCz
+Profile: CZ_CompositionImageOrder
 Parent: Composition
-Id: CompositionImageOrderCz
+Id: cz-compositionImageOrder
 Title: "Composition: Image Order (CZ)"
 Description: "Clinical document used to represent a Image Order for the scope of this guide."
 * ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
@@ -72,7 +72,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
   * entry 0..
-  * entry only Reference(ImagingOrderInformationCz or ConditionImageCz) 
+  * entry only Reference(CZ_ImagingOrderInformation or CZ_ConditionImage) 
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
@@ -118,7 +118,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^extension[0].valueString = "Section"
   * code = $loinc#97813-0 "Implant component"
   * entry 0..
-  * entry only Reference(DeviceUseStatementCz)
+  * entry only Reference(CZ_DeviceUseStatement)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
@@ -128,7 +128,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^extension[0].valueString = "Section"
   * code = $loinc#77599-9 "Additional documentation"
   * entry 0..
-  * entry only Reference(AttachmentCz)
+  * entry only Reference(CZ_Attachment)
 
 /// ========= INVARIANTS =========
 

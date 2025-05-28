@@ -1,5 +1,5 @@
 Instance: BundleKralikRTG
-InstanceOf: BundleImageOrderCz
+InstanceOf: CZ_BundleImageOrder
 Title: "Bundle: RTG Patient Kralik"
 Description: "Example of Image order (Bundle) including a RTG order"
 Usage: #example
@@ -42,7 +42,7 @@ Usage: #example
 * entry[10].resource = practitionerPavlicek
 
 Instance: Composition-kralik-rtg
-InstanceOf: CompositionImageOrderCz
+InstanceOf: CZ_CompositionImageOrder
 Description: "Example of Image order (Composition) including a RTG order"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
@@ -127,7 +127,7 @@ Description: "Patient, contact information"
 * communication[=].preferred = true
 
 Instance: HeightKralik
-InstanceOf: BodyHeightCz
+InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
@@ -147,7 +147,7 @@ Description: "Example of body height of Patient Kralik"
 * performer = Reference (urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c)
 
 Instance: WeightKralik
-InstanceOf: BodyWeightCz
+InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
@@ -167,7 +167,7 @@ Description: "Example of body weight of Patient Kralik"
 * performer = Reference (urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c)
 
 Instance: cz-kralikrgt-example
-InstanceOf: ImagingOrderInformationCz
+InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
@@ -211,7 +211,7 @@ Description: "Example of insurance organisation"
 * identifier[KP].value = "111"
 
 Instance: KralikDiagnosis
-InstanceOf: ConditionImageCz
+InstanceOf: CZ_ConditionImage
 Usage: #inline
 Description: "Condition - Diagnosis"
 * id = "0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
@@ -221,7 +221,7 @@ Description: "Condition - Diagnosis"
 * code.text = "Otevřená rána jiných částí hlavy"
 
 Instance: KralikReason
-InstanceOf: ConditionImageCz
+InstanceOf: CZ_ConditionImage
 Usage: #inline
 Description: "Condition - Reason"
 * id = "152e92a5-c0a6-418f-8b2d-620a8ef40205"
@@ -230,7 +230,7 @@ Description: "Condition - Reason"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: KralikClinicalQuestion
-InstanceOf: ConditionImageCz
+InstanceOf: CZ_ConditionImage
 Usage: #inline
 Description: "Condition - Clinical question"
 * id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
@@ -239,7 +239,7 @@ Description: "Condition - Clinical question"
 * code.text = "Trauma skeletu?"
 
 Instance: cz-pdfkralikrgt-example
-InstanceOf: AttachmentCz
+InstanceOf: CZ_Attachment
 Usage: #example
 Description: "Imaging order for Plain X-ray"
 * id = "af6df099-793b-4872-bac4-6ed1c1f016cb"

@@ -1,6 +1,6 @@
-Profile: BodyHeightCz
-Parent: ObservationImageCz
-Id: bodyheightcz
+Profile: CZ_BodyHeight
+Parent: CZ_ObservationImage
+Id: cz-bodyheight
 Title: "Czech BodyHeight"
 Description: "Profile of body height for the scope of the Czech national interoperability project."
 * subject

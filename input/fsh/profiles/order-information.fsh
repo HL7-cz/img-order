@@ -1,6 +1,6 @@
-Profile: ImagingOrderInformationCz
+Profile: CZ_ImagingOrderInformation
 Parent: ServiceRequest
-Id: ImagingOrderInformationCz
+Id: cz-imagingOrderInformation
 Title: "Order Information: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
@@ -14,7 +14,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 
 * subject only Reference(CZ_PatientCore)
 * insurance only Reference(CZ_Coverage)
-* reasonReference only Reference(ConditionImageCz)
+* reasonReference only Reference(CZ_ConditionImage)
 
 * code 
 * code MS
@@ -36,5 +36,5 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from $sctBodySite (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatement or BodyHeightCz or BodyHeightCz or ConditionImageCz or CZ_AllergyIntolerance or CZ_MedicalDevice or ObservationImageCz or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or CZ_ConditionImage or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 

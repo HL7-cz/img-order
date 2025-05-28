@@ -142,7 +142,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/DocumentMetadataCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/BundleImageOrderCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bundleImageOrder"
 * group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.8.1 - Document ID"
 * group[=].element[=].target.code = #Bundle.identifier					
@@ -156,7 +156,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If it is when this particular version of  this order has been assembled into a Bundle."
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/HeaderImagingOrder"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/CompositionImageOrderCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-compositionImageOrder"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 * group[=].element[=].target.code = #Composition.subject		

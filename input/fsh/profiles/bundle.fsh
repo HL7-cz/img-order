@@ -20,9 +20,9 @@ Severity:    #error
 //==========================
 // PROFILE
 //==========================
-Profile: BundleImageOrderCz
+Profile: CZ_BundleImageOrder
 Parent: Bundle
-Id: BundleImageOrderCz
+Id: cz-bundleImageOrder
 Title: "Bundle: Image Order (CZ)"
 Description: "Clinical document used to represent a Image Order for the scope of this guide."
 * ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
@@ -78,19 +78,19 @@ Description: "Clinical document used to represent a Image Order for the scope of
     observation 0..* and
     attachment 0..*
 
-* entry[composition].resource only CompositionImageOrderCz
+* entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
-* entry[orderInformation].resource only ImagingOrderInformationCz
+* entry[orderInformation].resource only CZ_ImagingOrderInformation
 * entry[appointment].resource only CZ_Appointment
 * entry[specimen].resource only CZ_Specimen
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatement  
-* entry[condition].resource only ConditionImageCz
+* entry[condition].resource only CZ_ConditionImage
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanImage
-* entry[observation].resource only ObservationImageCz
-* entry[attachment].resource only AttachmentCz
+* entry[observation].resource only CZ_ObservationImage
+* entry[attachment].resource only CZ_Attachment
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

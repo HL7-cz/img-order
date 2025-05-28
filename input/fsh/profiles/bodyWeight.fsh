@@ -1,6 +1,6 @@
-Profile: BodyWeightCz
-Parent: ObservationImageCz
-Id: bodyweightcz
+Profile: CZ_BodyWeight
+Parent: CZ_ObservationImage
+Id: cz-bodyweight
 Title: "Czech BodyWeight"
 Description: "Profile of body weight for the scope of the Czech national interoperability project."
 * subject
