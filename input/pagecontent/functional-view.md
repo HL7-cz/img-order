@@ -10,11 +10,11 @@ Alias: Requesting Physician, Requisitioner, Ordering Physician, Clinician. This 
 
 A physical person undergoing medical examination, in this context, the person for whom the imaging referral is issued.
 
-**Sending NIS/RIS**
+**Sending HIS/RIS**
 
 The information system (IS) of the ordering entity, where the referral for the imaging examination is created. It provides full support during its completion, automatically fills in known fields and offers assistance (such as selection from dropdown lists, etc.) for specifying the values needed for the different parts of the referral.
 
-**Receiving NIS/RIS**
+**Receiving HIS/RIS**
 
 The IS of the receiving healthcare facility, where the imaging referral is received and where the examination will be conducted or redirected to another specialized department.
 
@@ -36,7 +36,7 @@ A physician who, besides the Ordering Physician, will receive the report as the 
 
 The referring physician creates an order for a chest X-ray, either by selecting the specific procedure "Chest X-ray" or by combining the modality X-ray (DX, direct radiography) with the body part chest. In addition to specifying the type of examination, the order must include the patient's height, weight, mobility restrictions, diagnosis, and the clinical question the examination aims to answer. The physician does not specify "sent to" and is indifferent to which healthcare facility performs the examination. The patient decides where to present the order and can either be examined immediately or scheduled for a later appointment.
 
-The order intake requires the NIS/RIS to have the capability to generalize the requested examination to the level of procedures performed, taking into account variations between modalities.
+The order intake requires the HIS/RIS to have the capability to generalize the requested examination to the level of procedures performed, taking into account variations between modalities.
 
 > In the scenario described above, the clinician can send a request for an X-ray of the lungs, from which the SNOMED CT code can be used to deduce its parent category, which is an X-ray of the chest. This allows the specific requested examination (lung X-ray) to be translated into a standard examination (chest X-ray). As a result, even an unusual request for a heart X-ray can be processed, as its parent category is also a chest X-ray.
 
