@@ -86,7 +86,7 @@ Since the right to choose one's doctor freely is established by law, a patient m
 
 The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](index.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
 
-In the clinical information section ([A.3.1](StructureDefinition-OtherSupportingInformationCz.html)), it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
+In the clinical information section, it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
 
 This approach can also be applied to PET/MR examinations.
 
@@ -116,8 +116,6 @@ For a referral for imaging examination, selecting the examination modality accor
 
 In cases where the examination is not performed due to medical or technical reasons, or if the patient did not attend or refused the indicated examination (e.g. an X-ray of the skull to rule out intracranial bleeding, claustrophobia in MRI, space limitations due to the patient's size, or the patient did not attend the examination due to death at the healthcare facility), a traditional referral is used. This referral includes the anticipated imaging modality according to DICOM, but does not result in an imaging examination. Instead, it generates a consultation text, which serves as the report of the examination outcome.
 
-This approach allows for documentation and communication regarding the circumstances and reasons for the non-performance or refusal of the examination, ensuring that necessary clinical information is captured and shared with relevant healthcare professionals.
-
 ---
 
 #### Use Case: Order Acceptance by Facilities Using a More General Examination List
@@ -126,8 +124,6 @@ This approach allows for documentation and communication regarding the circumsta
 
 When the referring physician creates a referral for an MRI of the pituitary gland in their system, but the examining healthcare facility operates with a broader categorization, allowing only an order for a brain MRI, the referral must be able to be accepted based on SNOMED CT hierarchy. This structure allows the system to infer that the concept of an MRI of the pituitary gland is a subset of an MRI of the brain and thus converts the referral accordingly.
 
-In this scenario, it is crucial for the examining facility to clearly see the original coded information, including its textual representation, indicating that the original request was for an MRI of the pituitary gland. This transparency ensures that the healthcare professionals conducting the MRI are aware of the specific focus and clinical intent of the examination, allowing them to tailor their approach to meet the patient's diagnostic needs effectively.
+In this scenario, it is crucial for the examining facility to clearly see the original coded information, including its textual representation, indicating that the original request was for an MRI of the pituitary gland. 
 
 The referring physician's system must support the complete catalog of examinations and body parts. However, it is acceptable for the system to offer only a subset, especially in the case of a directed referral, where the examining healthcare facility could and should publish a list of examinations they perform (a whitelist) or do not perform (a blacklist), as well as the modalities they have available.
-
-This approach ensures that the referring physician can make informed and efficient choices tailored to the capabilities and offerings of the designated healthcare facility. It promotes a smoother workflow by aligning referral options with the actual services available at the facility, thus minimizing miscommunication and improving the coordination of patient care.

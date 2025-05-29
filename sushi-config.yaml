@@ -67,6 +67,10 @@ pages:
     title: Introduction
   functional-view.md:
     title: Functional view
+  general-semantics-cs.md:
+    title: Úvod do problematiky
+  functional-view-cs.md:
+    title: Funkční specifikace
   artifacts.xml:
     title: Summary artifacts
 # profiles-and-extensions.md:
@@ -146,11 +150,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 menu:
   Home: index.html
   Introduction:
-    General Semantics: general-semantics.html
+    General semantics: general-semantics.html
     Content: general-semantics.html#content
+    Obecná sémantika: general-semantics-cs.html
+    Obsah: general-semantics-cs.html#obsah
   Functional view:
-    System Actors: functional-view.html
+    Actors: functional-view.html
     Use Cases: functional-view.html#use-cases
+    Aktéři: functional-view-cs.html
+    Případy užití: functional-view-cs.html#případy-užití
   Artifacts:
     Profile artifacts: artifacts.html
   About:
