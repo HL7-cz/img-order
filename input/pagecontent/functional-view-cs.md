@@ -1,4 +1,4 @@
-### Actors
+### Aktéři
 
 <br>
 
@@ -50,6 +50,7 @@ Objednavatel vytvoří žádanku na ultrazvuk břicha, do které uvede všechny 
 Ve srovnání se stávajícím žádankou je nově pouze informace o mobilitě pacienta (viz výše, opět zdůvodnění možnosti přístupu pacienta k modalitě – bezbariérové vstupy, časová náročnost atd).
 
 ##### Scénář: CT břicha
+
 Objednavatel vytvoří žádanku na CT břicha, do které uvede všechny povinné informace. Pokud se nejedná o vyšetření typicky prováděné bez intravenózní kontrastní látky (CT mozku, skeletu, ledvin na močové kameny), je požadováno uvést i další relevantní informace, které by mohly ovlivnit vyšetření (např. renální selhání, neklid pacienta) nebo kontraindikovat intravenózní podání kontrastní látky (alergie či léky interagující s jodovou kontrastní látkou). V případě, že není požadované specifické místo provedení vyšetření, na žádance opět nemusí být uvedeno “odeslán ad” (viz výše i níže).  
 
 Ve srovnání se stávajícím žádankou je nově pouze informace o mobilitě pacienta (opět např. z důvodu absence bezbariérového vstupu, nedostatku personálu na polohování či přesouvání pacienta, časová náročnost atd.). 
@@ -103,6 +104,7 @@ Tento postup lze uplatnit i na jiné vaskulární či nevaskulární intervence.
 #### Případy užití: Konzultace
 
 ##### Scénař: Přijatá obecná konzultace
+
 Indikující lékař vyžaduje konzultovat ZZ ohledně správného diagnostického zobrazení dané patologie (např. optimální modalita, časování kontroly, specificita a senzitivita vyšetření v daném specifickém případě, využití kontrastní látky) nebo indikující lékař konzultuje správnosti indikace a proveditelnost intervenčního výkonu (např. drenáž žlučových cest, indikující lékař se informuje, zdali je u daného pacienta vhodné provést na základě předchozích vyšetření, existuje přístupová cesta, nejsou kontraindikace výkonu). 
 
 V daných případech vzhledem k tomu, že výstup není zobrazovací metoda, ale pouze text konzultace, doporučujeme využít obecnou konziliární žádanku typu K (specifikace které není součástí dokumentu). Doporučujeme, aby NIS přímo umožňovaly přepnutí mezi žádankou na zobrazovací vyšetření a obecnou konzultaci tak aby nebylo nutné znovu zadávat již jednou zadané informace (například anamnézu či klin. otázku). 
@@ -120,6 +122,7 @@ V případě, že z medicínských, technických důvodů není vyšetření pro
 #### Případ užití: Přijetí žádanky zařízením, které interně používá obecnější seznam vyšetření
 
 ##### Scénář
+
 Indikující lékař vytvoří ve svém systému žádanku na MR hypofýzy, ale vyšetřující ZZ pracuje s hrubší granularitou a umožňuje objednat jen mozek. Žádanku musí jít přijmout na základě SNOMED-CT hran, které umožní odvodit, že koncept MR hypofýzy je podřazen MR mozku a podle toho vytvoří příslušnou žádanku.
 
 V tom případě musí být pro vyšetřující zřetelně viditelná i informace o původní kódované informaci (včetně textové reprezentace), tedy že původně byla požadována MR hypofýzy. 

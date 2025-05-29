@@ -69,7 +69,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     orderInformation 0..* and
     appointment 0..1 and
     specimen 0..* and
-    practitionerRole 0..* and
+    practitioner 0..* and
     coverage 0..* and
     medication 0..* and
     condition 0..* and
@@ -83,7 +83,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[orderInformation].resource only CZ_ImagingOrderInformation
 * entry[appointment].resource only CZ_Appointment
 * entry[specimen].resource only CZ_Specimen
-* entry[practitionerRole].resource only CZ_PractitionerRoleCore
+* entry[practitioner].resource only CZ_PractitionerCore
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatement  
 * entry[condition].resource only CZ_ConditionImage

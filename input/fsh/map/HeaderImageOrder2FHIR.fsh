@@ -12,13 +12,13 @@ Usage: #definition
 //* targetUri = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-composition-imaging"
 				
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/SubjectCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-base"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 * group[=].element[=].target.code = #Patient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-base')"
+* group[=].element[=].target.comment = "Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core')"
 * group[=].element[+].code = #Header.payer.insuranceNumber
 * group[=].element[=].display = "A.1.3.3 - Health insurance number"
 * group[=].element[=].target.code = #Patient.identifier
@@ -56,89 +56,88 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AuthorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * group[=].element[+].code = #Header.author
 * group[=].element[=].display = "A.1.5 - Author (by whom the Imaging Order was/were authored)"
-* group[=].element[=].target.code = #PractitionerRole
+* group[=].element[=].target.code = #Practitioner
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole)"
+* group[=].element[=].target.comment = "Composition.author.resolve().ofType(Practitioner)"
 * group[=].element[+].code = #Header.author.identifier
 * group[=].element[=].display = "A.1.5.1 - Author identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.code = #Practitioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.author.name
 * group[=].element[=].display = "A.1.5.2 - Author name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.code = #Practitioner.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If PractitionerRole"
 * group[=].element[+].code = #Header.author.organizationID
 * group[=].element[=].display = "A.1.5.3 - Author organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.code = #Practitioner.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If Organization"
+* group[=].element[=].target.comment = "ID Organization"
 * group[=].element[+].code = #Header.author.organization
 * group[=].element[=].display = "A.1.5.4 - Author organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.code = #Practitioner.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/RequestedPerformerCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"					
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"					
 * group[=].element[+].code = #Header.requestedPerformer
 * group[=].element[=].display = "A.1.6 - Requested Performer"
-* group[=].element[=].target.code = #PractitionerRole
+* group[=].element[=].target.code = #Practitioner
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where requestedPerformer.mode = 'professional' AND Composition.requestedPerformer.party.resolve().ofType(PractitionerRole)"
+* group[=].element[=].target.comment = "where requestedPerformer.mode = 'professional' AND Composition.requestedPerformer.party.resolve().ofType(Practitioner)"
 * group[=].element[+].code = #Header.requestedPerformer.identifier
 * group[=].element[=].display = "A.1.6.1 - Requested Performer identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.code = #Practitioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.requestedPerformer.name
 * group[=].element[=].display = "A.1.6.2 - Requested Performer name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.code = #Practitioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.requestedPerformer.organizationID
 * group[=].element[=].display = "A.1.6.3 - Requested Performer organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.code = #Practitioner.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.requestedPerformer.organization
 * group[=].element[=].display = "A.1.6.4 - Requested Performer organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.code = #Practitioner.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AdditionalRecipientCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"				
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"				
 * group[=].element[+].code = #Header.additionalRecipient
 * group[=].element[=].display = "A.1.7 - Additional Recipient"
-* group[=].element[=].target.code = #PractitionerRole					
+* group[=].element[=].target.code = #Practitioner					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where additionalRecipient.mode = 'legal' AND Composition.additionalRecipient.party.resolve().ofType(PractitionerRole)"
+* group[=].element[=].target.comment = "where additionalRecipient.mode = 'legal' AND Composition.additionalRecipient.party.resolve().ofType(Practitioner)"
 * group[=].element[+].code = #Header.additionalRecipient.identifier
 * group[=].element[=].display = "A.1.7.1 - Additional Recipient identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.code = #Practitioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.additionalRecipient.name
 * group[=].element[=].display = "A.1.7.2 - Additional Recipient name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.code = #Practitioner.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.additionalRecipient.organizationID
 * group[=].element[=].display = "A.1.7.3 - Additional Recipient organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.code = #Practitioner.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.additionalRecipient.organization
 * group[=].element[=].display = "A.1.7.4 - Additional Recipient organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.code = #Practitioner.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/DocumentMetadataCz"
