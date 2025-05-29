@@ -105,10 +105,11 @@ Tato požadovaná sekce zahrnuje datové elementy požadovaného vyšetření, a
 
 3)	Modalita – vycházející z mezinárodního číselníku DICOM modalit. Limitací je fakt, že např. skiagram lze provést celkem třemi způsoby (DICOM modalitami):
 
-    - RTG – konvenční snímek na film, který je následně skenován,
-    - Computed radiography (CR) ze stroje s nepřímou digitalizací a 
-    - DX ze stroje s přímou digitalizací
-        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka dicom_modality](index.html#modality-table)
+   - RTG – konvenční snímek na film, který je následně skenován,
+   - Computed radiography (CR) ze stroje s nepřímou digitalizací a 
+   - DX ze stroje s přímou digitalizací
+
+        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka dicom_modality](index.html#modality-table).
 
 4)	Část těla – část číselníku SNOMED-CT definovaná DICOM standardem. Důvodem je, že kompletní sada hodnot SNOMED-CT obsahuje i obecné části těla (např. šlacha), což pro zobrazovací vyšetření není užitečné, my potřebujeme vědět, zda je ta šlacha na ruce nebo na noze
 
