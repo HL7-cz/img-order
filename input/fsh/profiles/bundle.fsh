@@ -23,13 +23,13 @@ Severity:    #error
 Profile: CZ_BundleImageOrder
 Parent: Bundle
 Id: cz-bundleImageOrder
-Title: "Bundle: Image Order (CZ)"
-Description: "Clinical document used to represent a Image Order for the scope of this guide."
-* ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+Title: "Bundle: Imaging Order (CZ)"
+Description: "Clinical document used to represent a Imaging Order for the scope of this guide."
+* ^purpose = "Imaging order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
-* . ^short = "Image Order Bundle"
-* . ^definition = "Image Order Bundle. \r\nA container for a collection of resources in the inmaging order document."
+* . ^short = "Imaging Order Bundle"
+* . ^definition = "Imaging Order Bundle. \r\nA container for a collection of resources in the inmaging order document."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -60,9 +60,9 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
-* entry ^short = "Entry resource in the Image order bundle"
-* entry ^definition = "An entry resource included in the Image order document bundle resource."
-* entry ^comment = "Must contain the Image Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Image Order Composition profile."
+* entry ^short = "Entry resource in the Imaging order bundle"
+* entry ^definition = "An entry resource included in the Imaging order document bundle resource."
+* entry ^comment = "Must contain the Imaging Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Imaging Order Composition profile."
 * entry contains
     composition 1..1 and
     patient 1..1 and

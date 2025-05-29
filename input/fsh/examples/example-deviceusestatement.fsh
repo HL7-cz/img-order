@@ -1,7 +1,7 @@
 Instance: example-deviceusestatement-cz
 InstanceOf: CZ_DeviceUseStatement
 Title: "Example DeviceUseStatement for Implanted Pacemaker"
-Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the image order."
+Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
 
 * status = #active
 

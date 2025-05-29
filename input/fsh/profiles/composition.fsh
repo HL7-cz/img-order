@@ -4,13 +4,13 @@
 Profile: CZ_CompositionImageOrder
 Parent: Composition
 Id: cz-compositionImageOrder
-Title: "Composition: Image Order (CZ)"
-Description: "Clinical document used to represent a Image Order for the scope of this guide."
-* ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+Title: "Composition: Imaging Order (CZ)"
+Description: "Clinical document used to represent a Imaging Order for the scope of this guide."
+* ^purpose = "Imaging order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
-* . ^short = "Image Order Composition"
-* . ^definition = "Image Order Composition. \r\n\r\n A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^short = "Imaging Order Composition"
+* . ^definition = "Imaging Order Composition. \r\n\r\n A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -40,7 +40,7 @@ Description: "Clinical document used to represent a Image Order for the scope of
 
 * author MS
 * author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
-  * ^short = "Who and/or what authored the Image order"
+  * ^short = "Who and/or what authored the Imaging order"
 
 * date MS
   * ^short = "Date the order was created."
@@ -52,12 +52,12 @@ Description: "Clinical document used to represent a Image Order for the scope of
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
-* section ^short = "Sections composing the Image Order"
-* section ^definition = "The root of the sections that make up the Image Order composition."
+* section ^short = "Sections composing the Imaging Order"
+* section ^definition = "The root of the sections that make up the Imaging Order composition."
 
 * section contains
     orderInformation 1..* and
-    specimen 0..1 and
+    specimen 0..* and
     coverage 0..* and
     appointment 0..1 and
     carePlan 0..1 and

@@ -2,7 +2,7 @@ Profile: CZ_DeviceUseStatement
 Parent: DeviceUseStatement
 Id: cz-deviceUseStatement
 Title: "Czech DeviceUseStatement"
-Description: "This profile represents the constraints applied to the DeviceUseStatement resource for the purpose of this guide. A device used by or implanted on the patient is described in the image order as an instance of a Device resource constrained by this profile."
+Description: "This profile represents the constraints applied to the DeviceUseStatement resource for the purpose of this guide. A device used by or implanted on the patient is described in the imaging order as an instance of a Device resource constrained by this profile."
 
 * text ^short = "Device usage description"
 * subject only Reference(CZ_PatientCore)

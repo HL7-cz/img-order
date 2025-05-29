@@ -14,7 +14,7 @@ legend left
 
 - Background color: <b><color:LightCoral>pink</color></b> - <b>Main</b>: CZ Imaging Order Examination root elements.
 - Background color: <b><color:green>green</color></b> - <b>Common</b>: Common elements of CZ Order.
-- Background color: <b><color:blue>blue</color></b> - <b>Specific</b>: Specific elements of CZ Image Order.
+- Background color: <b><color:blue>blue</color></b> - <b>Specific</b>: Specific elements of CZ Imaging Order.
 end legend
 
 *[#pink] [[BodyImageOrderCz.html Imaging Order Body]]
