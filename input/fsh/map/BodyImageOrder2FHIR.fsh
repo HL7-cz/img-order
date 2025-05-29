@@ -50,38 +50,36 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.sectionOrderInformation.order.patientInstruction
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
+* group[=].element[+].code = #OrderInformation.orderReason
 * group[=].element[=].display = "A.2.2 - Order reason"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.entry.ofType(orderReason)
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #OrderInformation.orderReason.identifier
-* group[=].element[=].display = "A.2.2.1 - Identifier of order detail"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.identifier
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.entry.ofType(conditionImage)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderReason.problem
-* group[=].element[=].display = "A.2.2.2 - Date and time of the order placement"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.codeDescription.coding
+* group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.conditionImage.coding
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.questionCode
-* group[=].element[=].display = "A.2.2.3 - Date and time of requested execution"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.clinicalQuestion.coding
+* group[=].element[=].display = "A.2.2.2 - Clinical question by code"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.conditionImage.coding
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.questionText
-* group[=].element[=].display = "A.2.2.4 - Urgency of the order"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.clinicalQuestion.text
+* group[=].element[=].display = "A.2.2.3 - Clinical question by text"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.conditionImage.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
-* group[=].element[=].display = "A.2.2.5 - Order text"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.reason.coding
+* group[=].element[=].display = "A.2.2.4 - Reason for ordering by code"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.conditionImage.coding
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.reasonText
-* group[=].element[=].display = "A.2.2.6 - Information for the patient"
-* group[=].element[=].target.code = #Composition.sectionOrderInformation.orderReason.reason.text
+* group[=].element[=].display = "A.2.2.6 - Reason for order by text"
+* group[=].element[=].target.code = #Composition.sectionOrderInformation.conditionImage.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
@@ -181,145 +179,145 @@ Usage: #definition
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenInformationCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
-* group[=].element[=].display = "A.2.7 - Speciment information"
+* group[=].element[=].display = "A.2.6 - Speciment information"
 * group[=].element[=].target.code = #Composition.extension:basedOn:order					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto	
 * group[=].element[=].target.comment = "Composition.section:sectionSpecimen.entry.ofType(Specimen)"
 * group[=].element[+].code = #Specimen.identifier
-* group[=].element[=].display = "A.2.7.1 - Identifier of specimen"
+* group[=].element[=].display = "A.2.6.1 - Identifier of specimen"
 * group[=].element[=].target.code = #Composition.specimen.identifier
 * group[=].element[=].target.display = "Identifier of specimen"
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Specimen.species	
-* group[=].element[=].display = "A.2.7.2 - Species of animal patient"
+* group[=].element[=].display = "A.2.6.2 - Species of animal patient"
 * group[=].element[=].target.code = #Composition.specimen.subject.species
 * group[=].element[=].target.display = "Species of animal patient"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.material	
-* group[=].element[=].display = "A.2.7.3 - Type of material"
+* group[=].element[=].display = "A.2.6.3 - Type of material"
 * group[=].element[=].target.code = #Composition.specimen.type
 * group[=].element[=].target.display = "Type of material"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collectionDate	
-* group[=].element[=].display = "A.2.7.4 - Date and time of collection"
+* group[=].element[=].display = "A.2.6.4 - Date and time of collection"
 * group[=].element[=].target.code = #Composition.specimen.collection.collectionDate
 * group[=].element[=].target.display = "Date and time of collection"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.transportDate	
-* group[=].element[=].display = "A.2.7.5 - Date and time of transport"
+* group[=].element[=].display = "A.2.6.5 - Date and time of transport"
 * group[=].element[=].target.code = #Composition.specimen.collection.receivedTime
 * group[=].element[=].target.display = "Date and time of commencement of transport of the sample to the laboratory"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.type
-* group[=].element[=].display = "A.2.7.6 - Sample type"
+* group[=].element[=].display = "A.2.6.6 - Sample type"
 * group[=].element[=].target.code = #Composition.specimen.type
 * group[=].element[=].target.display = "Entities collected for examination."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.anatomicLocation
-* group[=].element[=].display = "A.2.7.7 - Anatomic location"
+* group[=].element[=].display = "A.2.6.7 - Anatomic location"
 * group[=].element[=].target.code = #Composition.specimen.collection.bodySite
 * group[=].element[=].target.display = "Anatomic location (body location, laterality) where the material is collected"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.morphology
-* group[=].element[=].display = "A.2.7.8 - Morphology"
+* group[=].element[=].display = "A.2.6.8 - Morphology"
 * group[=].element[=].target.code = #Composition.specimen.collection.extension:bodySite:bodyStructure.morphology
 * group[=].element[=].target.display = "Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.instrument
-* group[=].element[=].display = "A.2.7.9 - Instrument"
+* group[=].element[=].display = "A.2.6.9 - Instrument"
 * group[=].element[=].target.code = #Composition.specimen.subject
 * group[=].element[=].target.display = "Device, instrument, physical object (drain, electrode, catheter, etc.)."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.procedure
-* group[=].element[=].display = "A.2.7.10 - Collection procedure"
+* group[=].element[=].display = "A.2.6.10 - Collection procedure"
 * group[=].element[=].target.code = #Composition.specimen.collection.method
 * group[=].element[=].target.display = "Sampling procedure - for cases where it is relevant to the results."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.sourceDevice
-* group[=].element[=].display = "A.2.7.11 - Source Device"
+* group[=].element[=].display = "A.2.6.11 - Source Device"
 * group[=].element[=].target.code = #Composition.specimen.subject.type
 * group[=].element[=].target.display = "If the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Device or Location"
 * group[=].element[+].code = #Specimen.samplingPoint
-* group[=].element[=].display = "A.2.7.12 - Sampling point"
+* group[=].element[=].display = "A.2.6.12 - Sampling point"
 * group[=].element[=].target.code = #Composition.specimen.subject.type
 * group[=].element[=].target.display = "The area where the material was collected; refers to the environment, not the patient."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Location"
 * group[=].element[+].code = #Specimen.Note
-* group[=].element[=].display = "A.2.7.13 - Note"
+* group[=].element[=].display = "A.2.6.13 - Note"
 * group[=].element[=].target.code = #Composition.specimen.note
 * group[=].element[=].target.display = "Note on the material in free text"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.container
-* group[=].element[=].display = "A.2.7.14 - Container"
+* group[=].element[=].display = "A.2.6.14 - Container"
 * group[=].element[=].target.code = #Composition.specimen.container
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.container.type
-* group[=].element[=].display = "A.2.7.14.1 - Type"
+* group[=].element[=].display = "A.2.6.14.1 - Type"
 * group[=].element[=].target.code = #Composition.specimen.container.type
 * group[=].element[=].target.display = "Type of sampling container - tube, sampling bag, etc. including chemical additives."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.container.count
-* group[=].element[=].display = "A.2.7.14.2 - Count"
+* group[=].element[=].display = "A.2.6.14.2 - Count"
 * group[=].element[=].target.code = #Composition.specimen.container.specimenQuantity
 * group[=].element[=].target.display = "Number of containers with one identical sample (e.g. in case the sample volume does not fit into one container)"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.container.deviceId
-* group[=].element[=].display = "A.2.7.14.3 - Device id"
+* group[=].element[=].display = "A.2.6.14.3 - Device id"
 * group[=].element[=].target.code = #Composition.specimen.container.extension:Device:identifier
 * group[=].element[=].target.display = "Unique machine-readable container identifier."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.container.label
-* group[=].element[=].display = "A.2.7.14.4 - Label"
+* group[=].element[=].display = "A.2.6.14.4 - Label"
 * group[=].element[=].target.code = #Composition.specimen.collector.description
 * group[=].element[=].target.display = "Human readable container identifier."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.additionalData
-* group[=].element[=].display = "A.2.7.15 - Additional formalised sample data"
+* group[=].element[=].display = "A.2.6.15 - Additional formalised sample data"
 * group[=].element[=].target.code = #Composition.specimen.extension:additionalData
 * group[=].element[=].target.display = "Additional formalised sample data"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.additionalData.date
-* group[=].element[=].display = "A.2.7.15.1 - Date"
+* group[=].element[=].display = "A.2.6.15.1 - Date"
 * group[=].element[=].target.code = #Composition.specimen.extension:additionalData.data
 * group[=].element[=].target.display = "Date of discovery of the data, to be indicated if different from the date of the order."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.additionalData.code
-* group[=].element[=].display = "A.2.7.15.2 - Code"
+* group[=].element[=].display = "A.2.6.15.2 - Code"
 * group[=].element[=].target.code = #Composition.specimen.extension:additionalData.code
 * group[=].element[=].target.display = "Observation code identifying the significance of the data (collection time interval, volume of material collected; density; condition of material, type of collection, etc.)"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.additionalData.value
-* group[=].element[=].display = "A.2.7.15.3 - Data value"
+* group[=].element[=].display = "A.2.6.15.3 - Data value"
 * group[=].element[=].target.code = #Composition.specimen.extension:additionalData.value
 * group[=].element[=].target.display = "Data value including unit of measurement."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collector
-* group[=].element[=].display = "A.2.7.16 - Collector"
+* group[=].element[=].display = "A.2.6.16 - Collector"
 * group[=].element[=].target.code = #Composition.specimen.collector
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collector.identifier
-* group[=].element[=].display = "A.2.7.16.1 - Identifier of the sample collector"
+* group[=].element[=].display = "A.2.6.16.1 - Identifier of the sample collector"
 * group[=].element[=].target.code = #Composition.specimen.collector.identifier
 * group[=].element[=].target.display = "Identifier of the sample collector – this refers either to an internal identifier assigned by the healthcare provider or (preferably) a national ID of the healthcare professional, such as a license or registration number. If the sample is not collected by a healthcare professional but, for example, by the patient themselves, an appropriate personal identifier should be used instead."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collector.name
-* group[=].element[=].display = "A.2.7.16.2 - Name of the sample collector"
+* group[=].element[=].display = "A.2.6.16.2 - Name of the sample collector"
 * group[=].element[=].target.code = #Composition.specimen.collector.name
 * group[=].element[=].target.display = "Name of the sample collector"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collector.contact
-* group[=].element[=].display = "A.2.7.16.3 - Contact information of the sample collector"
+* group[=].element[=].display = "A.2.6.16.3 - Contact information of the sample collector"
 * group[=].element[=].target.code = #Composition.specimen.collector.address
 * group[=].element[=].target.display = "Contact information of the sample collector (address and telecommunication data)."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Specimen.collector
-* group[=].element[=].display = "A.2.7.16.4 - Organization of the sample collector"
+* group[=].element[=].display = "A.2.6.16.4 - Organization of the sample collector"
 * group[=].element[=].target.code = #Composition.specimen.collector.organization
 * group[=].element[=].target.display = "Organization of the sample collector (healthcare provider)."
 * group[=].element[=].target.equivalence = #equivalent

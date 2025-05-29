@@ -3,7 +3,7 @@ Id: MediaCz
 Title: "C - Media"
 Description: """Media - Media attachments."""
 
-* media 1..* Base "A - Media" """Media attachment"""
+* media 1..* Base "C - Media" """Media attachment"""
 * media.contentType 0..1 CodeableConcept "C.1 Type of content" """Type of content - MIME type is required"""
 * media.language 0..1 CodeableConcept "C.2 Language of content" """Language of content - HL7 valueset of languages is required"""
 * media.data 1..1 base64Binary "C.3 Data of content" """Data inline, base64ed"""
