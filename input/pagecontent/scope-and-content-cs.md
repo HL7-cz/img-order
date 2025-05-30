@@ -1,9 +1,34 @@
-V oboru zobrazovacích metod se pro archivaci a výměnu dat standardně používá protokol a formát Digital Imaging and Communications in Medicine (DICOM). Tento definuje např. jednotlivé obrazové modality a je využit k archivaci dat v systému Picture archiving and communication system (PACS). 
-DICOM je propojen se systémem klinické terminologie SNOMED-CT (viz samostatná podkapitola níže). Ostatní standardy a číselníky sdílí zobrazovací metody s ostatními dokumenty pacientské dokumentace (MKN-10, HL-7 atp.).
+### Oblasti řešení
 
-### Obecná sémantika v národním kontextu
+#### Zahrnuté oblasti
 
-#### Entity
+Tento dokument se zabývá funkční specifikací žádanky na zobrazovací vyšetření, její strukturou a kódovými systémy, které by bylo vhodné použít pro její vytvoření.
+Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření, které je definováno jednou z modalit z [následující tabulky](scope-and-content-cs.html#modality-table). Vzhledem ke kardinalitě 1..* je možné požadovat současně dvě modality typicky v případě hybridních metod jako je **PET/CT** (tedy PT + CT).
+
+##### Modality Table
+
+| DICOM Modality    | Meaning in English           | Czech Interpretation      |
+| ----------------- | ---------------------------- | ------------------------- |
+| BMD               | Bone Mineral Densitometry    | Denzitometrie             |
+| CT                | Computed Tomography          | CT                        |
+| DX                | Digital Radiography          | RTG (skiagrafie)          |
+| IO                | Intra-oral Radiography       | Intraorální snímek        |
+| MR                | Magnetic Resonance           | MR                        |
+| MG                | Mammography                  | Mamografie                |
+| NM                | Nuclear Medicine             | Metody nukleární medicíny |
+| PX                | Panoramic X-Ray              | OPG                       |
+| PT                | Positron Emission Tomography | PET                       |
+| RF                | Radiofluoroscopy             | Skiaskopie                |
+| US                | Ultrasound                   | UZ                        |
+| XA                | X-Ray Angiography            | DSA (angiografie)         |
+
+#### Nazahrnuté oblasti
+
+Funkční specifikace neřeší celkový ekosystém žádanek a způsob jejího přenosu. Nejsou dále zahrnuty žádanky na obrazové vyšetření mimo odbornost radiologie (např. keratometrie).
+
+### Obsah
+
+#### Subjekty
 
 ---
 
@@ -36,9 +61,9 @@ Typ zdravotnického prostředku. Přednostně se uvádí pomocí kódu SNOMED CT
 
 Komponentou v kontextu tohoto dokumentu rozumíme část datové struktury, která je společná více objektům. Například biometrické údaje jako je váha a výška by měly být užívány a definovány shodně v propouštěcí i ambulantní zprávě a stejně tak i v žádance na obrazové vyšetření.
 
-### Obsah
+### Struktura obrazové žádanky
 
-#### Administrativní údaje - hlavička
+#### Hlavička obrazové žádanky
 
 **Identifikace pacienta**
 
@@ -77,7 +102,7 @@ Obsahuje další informace o dokumentu žádanky jako např.: Správce dokumentu
 
 Obsahem této sekce je elektronický podpis dokumentu dle zákona `327/2011 §54a`.
 
-#### Tělo dokumentu
+#### Tělo obrazové žádanky
 
 **Informace o objednávce**
 

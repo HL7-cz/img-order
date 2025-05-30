@@ -1,4 +1,12 @@
-### Aktéři
+
+
+### Stavový management
+
+
+
+### Scénaře
+
+#### Aktéři
 
 <br>
 
@@ -26,11 +34,7 @@ Zdravotnické zařízení, poskytovatel zdravotnické péče, ve kterém je žá
 
 Lékař, kterému bude, kromě Objednatele, zaslán nález, jakož výsledek vyšetření obrazovou metodou. Nález je dle zákona standardně odesílán k Objednateli. V případě lékařské potřeby je možné nález směřovat i na jiného zdravotnického pracovníka než jen na Objednatele, a to na Dodatečného příjemce nálezu. 
 
-### Případy užití
-
----
-
-#### Případy užití: Neadresná žádanka
+#### Neadresná žádanka
 
 ##### Scénář: Prostý snímek hrudníku
 
@@ -64,7 +68,7 @@ Indikující lékař vytvoří žádanku na mamografii, do které uvede všechny
 
 ---
 
-#### Případy užití: Adresná žádanka
+#### Adresná žádanka
 
 ##### Scénář: MR cíleným protokolem
 
@@ -92,7 +96,7 @@ Tento postup lze uplatnit i na PET/MR vyšetření.
 
 ##### Scenario: Angioplastika periferních tepen
 
-Indikující lékař vytvoří žádanku na angioplastiku periferních tepen, která se obvykle provádí na základě předchozí domluvy ([scénář 3.2.3.1](functional-view.html#scenario-received-general-consultation), obecná konzultace, specifikace daného není součástí tohoto dokumentu) na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky, a to včetně koagulačních parametrů (INR, počet trombocytů). 
+Indikující lékař vytvoří žádanku na angioplastiku periferních tepen, která se obvykle provádí na základě předchozí domluvy ([scénář 3.2.3.1](workflow-cs.html#scénař-přijatá-obecná-konzultace), obecná konzultace, specifikace daného není součástí tohoto dokumentu) na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky, a to včetně koagulačních parametrů (INR, počet trombocytů). 
 
 Žádanka bude adresována pracovišti, které výkon provádí. Do přílohy žádanky je možné připojit výsledky předchozích vyšetření a zejména písemné vyjádření schvalující provedení tohoto výkonu (např. zápis mezioborové komise či konzultace jinou odborností). Navíc tato žádanka obsahuje i informaci o lateralitě, kterou je nutno předat. Jako příklad může posloužit angioplastika tepny a. tibialis anterior vlevo (SNOMED kód 312643005 a přesná “levá” s kódem code 2014100008710).
 Druhá uvedená varianta je přesnějším kódem, který by se měl použít. Nicméně patrně bude potřeba vypracovat i koncept, který z prvního kódu a levostranné laterality odvodí kód druhý. Přesnou implementaci bude nutné ověřit na funkčním prototypu.
@@ -101,7 +105,7 @@ Tento postup lze uplatnit i na jiné vaskulární či nevaskulární intervence.
 
 ---
 
-#### Případy užití: Konzultace
+#### Konzultace
 
 ##### Scénař: Přijatá obecná konzultace
 
@@ -119,7 +123,7 @@ V případě, že z medicínských, technických důvodů není vyšetření pro
 
 ---
 
-#### Případ užití: Přijetí žádanky zařízením, které interně používá obecnější seznam vyšetření
+#### Přijetí žádanky zařízením, které interně používá obecnější seznam vyšetření
 
 ##### Scénář
 

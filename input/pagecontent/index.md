@@ -13,10 +13,11 @@ This guide does not describe how to exchange this message.
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Introduction](general-semantics.html): This page provides guidance on using the profile defined in this guide. 
-- [Functional view](functional-view.html): These page contains information about actors and transactions. 
+- [Introduction]: This segment contains general information about Imaging order. 
+- [Functional]: This segment contains information about logical models, use cases, workflow and terminology. 
+- [Implementation]: This segment contains information about maps, examples and obligations.
+- [About]: This segment contains pages about authors, dependencies, copyright and downloads.
 - [Artifacts](artifacts.html): This page provides a list of the FHIR artifacts defined as part of this implementation guide.
-- [Downloads](downloads.html): This page provides links to downloadable artefacts.
   
 #### Included Areas
 

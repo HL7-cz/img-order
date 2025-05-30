@@ -1,6 +1,10 @@
-### Actors
+### Status management
 
 <br>
+
+### Scenarios
+
+#### Actors
 
 **Referring Physician**
 
@@ -26,11 +30,7 @@ The healthcare facility, the provider of medical care, where the referral is rec
 
 A physician who, besides the Ordering Physician, will receive the report as the result of the imaging examination. By law, the report is typically sent to the Ordering Physician. However, for medical necessity, the report can also be directed to another healthcare professional besides the Ordering Physician, known as the Additional Recipient of the Report.
 
-### Use Cases
-
----
-
-#### Use Case: Non-specific Order
+#### Non-specific Order
 
 ##### Scenario: Chest X-ray
 
@@ -64,7 +64,7 @@ The order can be either specific or non-specific and mobility information is gen
 
 ---
 
-#### Use Case: Specific Order
+#### Specific Order
 
 ##### Scenario: MR with a Targeted Protocol
 
@@ -92,7 +92,7 @@ This approach can also be applied to PET/MR examinations.
 
 ##### Scenario: Peripheral Artery Angioplasty
 
-The referring physician creates a referral for peripheral artery angioplasty, which is typically performed based on prior agreement ([scenario 3.2.3.1](functional-view.html#scenario-received-general-consultation), general consultation, specifics of which are not part of this document) at the collaborating facility. In addition to the mandatory information, the referral includes details that could affect the procedure and the administration of iodinated contrast material, including coagulation parameters such as INR and platelet count.
+The referring physician creates a referral for peripheral artery angioplasty, which is typically performed based on prior agreement ([scenario 3.2.3.1](workflow.html#scenario-received-general-consultation), general consultation, specifics of which are not part of this document) at the collaborating facility. In addition to the mandatory information, the referral includes details that could affect the procedure and the administration of iodinated contrast material, including coagulation parameters such as INR and platelet count.
 
 The referral will be addressed to the facility that performs the procedure. It is possible to attach the results of previous examinations to the referral, particularly any written statements approving the procedure (e.g. records from a multidisciplinary committee or consultation with another specialty). Additionally, this referral includes information about laterality, which must be conveyed. For example, the angioplasty of the left anterior tibial artery can be specified (SNOMED code 312643005 with the specific "left" code 20141000087109).
 
@@ -102,7 +102,7 @@ This procedure can also be applied to other vascular or non-vascular interventio
 
 ---
 
-#### Use Case: Consultation
+#### Consultation
 
 ##### Scenario: Received General Consultation
 
@@ -118,7 +118,7 @@ In cases where the examination is not performed due to medical or technical reas
 
 ---
 
-#### Use Case: Order Acceptance by Facilities Using a More General Examination List
+#### Order Acceptance by Facilities Using a More General Examination List
 
 ##### Scenario
 

@@ -1,11 +1,36 @@
 
-In the field of medical imaging, the Digital Imaging and Communications in Medicine (DICOM) protocol and format are standardly used for data archiving and exchange. This defines, for example, individual imaging modalities and is used for data archiving in the Picture Archiving and Communication System (PACS).
+### Scope
 
-DICOM is linked to the SNOMED-CT clinical terminology system. Other standards and nomenclatures are shared by imaging methods with other patient documentation documents: MKN-10 (national representation of international ICD-10), HL7, LOINC and the like.
+#### Included Areas
 
-### General Semantics in National Context
+This document addresses the functional specification of an imaging examination order, its structure and the value sets suitable for its creation.
 
-#### Entities
+The term Imaging Examination Order refers to a request for an examination defined by one of the modalities listed in the [following table](scope-and-content-cs.html#modality-table). Given the cardinality of `1..*` it is possible to request two modalities simultaneously - typically in the case of hybrid methods such as **PET/CT** (i.e. PT + CT).
+
+##### Modality Table
+
+| DICOM Modality    | Meaning in English           | Czech Interpretation      |
+| ----------------- | ---------------------------- | ------------------------- |
+| BMD               | Bone Mineral Densitometry    | Denzitometrie             |
+| CT                | Computed Tomography          | CT                        |
+| DX                | Digital Radiography          | RTG (skiagrafie)          |
+| IO                | Intra-oral Radiography       | Intraorální snímek        |
+| MR                | Magnetic Resonance           | MR                        |
+| MG                | Mammography                  | Mamografie                |
+| NM                | Nuclear Medicine             | Metody nukleární medicíny |
+| PX                | Panoramic X-Ray              | OPG                       |
+| PT                | Positron Emission Tomography | PET                       |
+| RF                | Radiofluoroscopy             | Skiaskopie                |
+| US                | Ultrasound                   | UZ                        |
+| XA                | X-Ray Angiography            | DSA (angiografie)         |
+
+#### Excluded Areas
+
+The functional specification does not address the overall ecosystem of order and their transmission methods. Additionally, order for imaging examinations outside the field of radiology (e.g. keratometry) are not included.
+
+### Content
+
+#### Subject
 
 ---
 
@@ -37,9 +62,9 @@ This profile presents the requirements for the Device within the context of the 
 
 In the context of this document, a component refers to a part of the data structure that is common to multiple objects. For example, biometric data such as weight and height should be consistently used and defined in both discharge and outpatient reports, as well as in imaging examination order forms.
 
-### Content
+### Imaging Order structure
 
-#### Order Form Header
+#### Imaging Order Header
 
 **Patient Identification**
 
@@ -78,7 +103,7 @@ Contains additional information about the request document such as: Document adm
 
 The content of this section is the electronic signature of the document according to Act `327/2011 §54a`.
 
-#### Body of the Order Form
+#### Body of the Imaging Order
 
 **Order Information**
 
