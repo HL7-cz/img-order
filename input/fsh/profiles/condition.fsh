@@ -1,21 +1,21 @@
-Profile: ConditionImageCz
+Profile: CZ_ConditionImage
 Parent: Condition
-Id: ConditionImageCz
+Id: cz-conditionImage
 Title: "Condition: Imaging Order (CZ)"
 Description: "Condition for Imaging Order for the scope of the Czech national interoperability project."
 
-*  identifier
+* identifier
+* subject
+* category from $hl7-condition-category
 * code MS
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains 
-    codeDescription 0..1 and 
-    clinicalQuestion 0..1 and 
+    diagnosis 0..1 and 
     reason 0..1 
-* code.coding[codeDescription] MS
-//* code.coding[codeDescription] from  MKN-10 a Orpha
-* code.coding[clinicalQuestion] MS
-//* code.coding[clinicalQuestion] from $sct // blize nespecifikovano
-* code.coding[reason] MS
-//* code.coding[reason] from $sct //243796009
+* code.coding[diagnosis] from $mkn-10-problem-list
+* code.coding[diagnosis].system = $mkn-10 
+* code.coding[reason] from $sct-condition-code
+* code.coding[reason].system = "http://snomed.info/sct" (exactly)
+

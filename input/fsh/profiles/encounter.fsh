@@ -1,6 +1,6 @@
-Profile: EncounterCz
+Profile: CZ_Encounter
 Parent: Encounter
-Id: EncounterCz
+Id: cz-encounter
 Title: "Encounter (CZ)"
 Description: "Czech profile for encounter. "
 
@@ -11,4 +11,4 @@ Description: "Czech profile for encounter. "
 
 * identifier 1..
 * type 0..
-* text 1..
+* type from TypeEncounterCzVs

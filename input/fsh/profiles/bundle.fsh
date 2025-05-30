@@ -20,16 +20,16 @@ Severity:    #error
 //==========================
 // PROFILE
 //==========================
-Profile: BundleImageOrderCz
+Profile: CZ_BundleImageOrder
 Parent: Bundle
-Id: BundleImageOrderCz
-Title: "Bundle: Image Order (CZ)"
-Description: "Clinical document used to represent a Image Order for the scope of this guide."
-* ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+Id: cz-bundleImageOrder
+Title: "Bundle: Imaging Order (CZ)"
+Description: "Clinical document used to represent a Imaging Order for the scope of this guide."
+* ^purpose = "Imaging order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
-* . ^short = "Image Order Bundle"
-* . ^definition = "Image Order Bundle. \r\nA container for a collection of resources in the inmaging order document."
+* . ^short = "Imaging Order Bundle"
+* . ^definition = "Imaging Order Bundle. \r\nA container for a collection of resources in the inmaging order document."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -51,51 +51,49 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * request ..0
   * response ..0
 * signature ^short = "Digital Signature of this order"
+* signature only CZ_Signature
 
+* entry 1..
 * entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[0].path = "resource"
-// * entry ^slicing.ordered = true => changed on 2023-07-19  to be checked
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
+* entry ^short = "Entry resource in the Imaging order bundle"
+* entry ^definition = "An entry resource included in the Imaging order document bundle resource."
+* entry ^comment = "Must contain the Imaging Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Imaging Order Composition profile."
+* entry contains
+    composition 1..1 and
+    patient 1..1 and
+    orderInformation 0..* and
+    appointment 0..1 and
+    specimen 0..* and
+    practitioner 0..* and
+    coverage 0..* and
+    medication 0..* and
+    condition 0..* and
+    allergyIntolerance 0..* and
+    carePlan 0..* and
+    observation 0..* and
+    attachment 0..*
 
-* entry contains composition 1..1
-* entry[composition].resource only CompositionImageOrderCz
-
-* entry contains orderInformation 0..*
-* entry[orderInformation].resource only ImagingOrderInformationCz
-
-* entry contains dataElements 1..1
-* entry[dataElements].resource only DataElementsImageOrderCz
-
-* entry contains appointment 0..1
-* entry[appointment].resource only AppointmentCz
-
-* entry contains patient 0..1
+* entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
-
-* entry contains specimen 0..*
-* entry[specimen].resource only SpecimenImageCz
-
-* entry contains organization 0..*
-* entry[organization].resource only CZ_OrganizationCore
-
-* entry contains practitioner 0..*
+* entry[orderInformation].resource only CZ_ImagingOrderInformation
+* entry[appointment].resource only CZ_Appointment
+* entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
+* entry[coverage].resource only CZ_Coverage
+* entry[medication].resource only CZ_MedicationStatement  
+* entry[condition].resource only CZ_ConditionImage
+* entry[allergyIntolerance].resource only CZ_AllergyIntolerance
+* entry[carePlan].resource only CZ_CarePlanImage
+* entry[observation].resource only CZ_ObservationImage
+* entry[attachment].resource only CZ_Attachment
 
-* entry contains practitionerRole 0..*
-* entry[practitionerRole].resource only CZ_PractitionerRoleCore
-
-* entry contains coverage 0..*
-* entry[coverage].resource only CoverageCz
-
-* entry contains medication 0..*
-* entry[medication].resource only MedicationOrderCz  
-
-* entry contains condition 0..*
-* entry[condition].resource only ConditionImageCz
-
-* entry contains allergyIntolerance 0..*
-* entry[allergyIntolerance].resource only AllergyIntolleranceCz
-
-* entry contains attachment 0..*
-* entry[attachment].resource only AttachmentCz
+* signature ^short = "Report Digital Signature"
+  * type ^short = "Digital Signature Purposes"
+  * when ^short = "When was signed"
+  * who ^short = "Who signed."
+  * data ^short = "Signature content"

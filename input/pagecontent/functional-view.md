@@ -10,11 +10,11 @@ Alias: Requesting Physician, Requisitioner, Ordering Physician, Clinician. This 
 
 A physical person undergoing medical examination, in this context, the person for whom the imaging referral is issued.
 
-**Sending NIS/RIS**
+**Sending HIS/RIS**
 
 The information system (IS) of the ordering entity, where the referral for the imaging examination is created. It provides full support during its completion, automatically fills in known fields and offers assistance (such as selection from dropdown lists, etc.) for specifying the values needed for the different parts of the referral.
 
-**Receiving NIS/RIS**
+**Receiving HIS/RIS**
 
 The IS of the receiving healthcare facility, where the imaging referral is received and where the examination will be conducted or redirected to another specialized department.
 
@@ -36,7 +36,7 @@ A physician who, besides the Ordering Physician, will receive the report as the 
 
 The referring physician creates an order for a chest X-ray, either by selecting the specific procedure "Chest X-ray" or by combining the modality X-ray (DX, direct radiography) with the body part chest. In addition to specifying the type of examination, the order must include the patient's height, weight, mobility restrictions, diagnosis, and the clinical question the examination aims to answer. The physician does not specify "sent to" and is indifferent to which healthcare facility performs the examination. The patient decides where to present the order and can either be examined immediately or scheduled for a later appointment.
 
-The order intake requires the NIS/RIS to have the capability to generalize the requested examination to the level of procedures performed, taking into account variations between modalities.
+The order intake requires the HIS/RIS to have the capability to generalize the requested examination to the level of procedures performed, taking into account variations between modalities.
 
 > In the scenario described above, the clinician can send a request for an X-ray of the lungs, from which the SNOMED CT code can be used to deduce its parent category, which is an X-ray of the chest. This allows the specific requested examination (lung X-ray) to be translated into a standard examination (chest X-ray). As a result, even an unusual request for a heart X-ray can be processed, as its parent category is also a chest X-ray.
 
@@ -86,7 +86,7 @@ Since the right to choose one's doctor freely is established by law, a patient m
 
 The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](index.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
 
-In the clinical information section ([A.3.1](StructureDefinition-ImageSupportingInformationImageOrderCz.html)), it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
+In the clinical information section, it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
 
 This approach can also be applied to PET/MR examinations.
 
@@ -116,8 +116,6 @@ For a referral for imaging examination, selecting the examination modality accor
 
 In cases where the examination is not performed due to medical or technical reasons, or if the patient did not attend or refused the indicated examination (e.g. an X-ray of the skull to rule out intracranial bleeding, claustrophobia in MRI, space limitations due to the patient's size, or the patient did not attend the examination due to death at the healthcare facility), a traditional referral is used. This referral includes the anticipated imaging modality according to DICOM, but does not result in an imaging examination. Instead, it generates a consultation text, which serves as the report of the examination outcome.
 
-This approach allows for documentation and communication regarding the circumstances and reasons for the non-performance or refusal of the examination, ensuring that necessary clinical information is captured and shared with relevant healthcare professionals.
-
 ---
 
 #### Use Case: Order Acceptance by Facilities Using a More General Examination List
@@ -126,8 +124,6 @@ This approach allows for documentation and communication regarding the circumsta
 
 When the referring physician creates a referral for an MRI of the pituitary gland in their system, but the examining healthcare facility operates with a broader categorization, allowing only an order for a brain MRI, the referral must be able to be accepted based on SNOMED CT hierarchy. This structure allows the system to infer that the concept of an MRI of the pituitary gland is a subset of an MRI of the brain and thus converts the referral accordingly.
 
-In this scenario, it is crucial for the examining facility to clearly see the original coded information, including its textual representation, indicating that the original request was for an MRI of the pituitary gland. This transparency ensures that the healthcare professionals conducting the MRI are aware of the specific focus and clinical intent of the examination, allowing them to tailor their approach to meet the patient's diagnostic needs effectively.
+In this scenario, it is crucial for the examining facility to clearly see the original coded information, including its textual representation, indicating that the original request was for an MRI of the pituitary gland. 
 
 The referring physician's system must support the complete catalog of examinations and body parts. However, it is acceptable for the system to offer only a subset, especially in the case of a directed referral, where the examining healthcare facility could and should publish a list of examinations they perform (a whitelist) or do not perform (a blacklist), as well as the modalities they have available.
-
-This approach ensures that the referring physician can make informed and efficient choices tailored to the capabilities and offerings of the designated healthcare facility. It promotes a smoother workflow by aligning referral options with the actual services available at the facility, thus minimizing miscommunication and improving the coordination of patient care.

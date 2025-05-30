@@ -1,16 +1,16 @@
 //==========================
 // PROFILE
 //==========================
-Profile: CompositionImageOrderCz
+Profile: CZ_CompositionImageOrder
 Parent: Composition
-Id: CompositionImageOrderCz
-Title: "Composition: Image Order (CZ)"
-Description: "Clinical document used to represent a Image Order for the scope of this guide."
-* ^purpose = "Image order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+Id: cz-compositionImageOrder
+Title: "Composition: Imaging Order (CZ)"
+Description: "Clinical document used to represent a Imaging Order for the scope of this guide."
+* ^purpose = "Imaging order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
-* . ^short = "Image Order Composition"
-* . ^definition = "Image Order Composition. \r\n\r\n A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^short = "Imaging Order Composition"
+* . ^definition = "Imaging Order Composition. \r\n\r\n A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -27,152 +27,112 @@ Description: "Clinical document used to represent a Image Order for the scope of
   * ^comment = ""
 
 * subject 1..1 MS
-* subject only Reference(Patient)
+* subject only Reference(CZ_PatientCore)
 
 * custodian MS
-* custodian only Reference(Organization)
+* custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Order"
 
 * encounter MS
-* encounter only Reference(Encounter)
+* encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
 
 * author MS
-* author only Reference(PractitionerRole or Device)
-  * ^short = "Who and/or what authored the composition"
+* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
+  * ^short = "Who and/or what authored the Imaging order"
 
 * date MS
   * ^short = "Date the order was created."
 
-* section MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "code"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-* section.entry MS
-* section.code 1..1 MS  // LOINC code for the section
-* section.title MS
-* section.text MS
+* section 1..
+* obeys text-or-section
+
+* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[0].path = "code"
+* section ^slicing.ordered = false
+* section ^slicing.rules = #open
+* section ^short = "Sections composing the Imaging Order"
+* section ^definition = "The root of the sections that make up the Imaging Order composition."
+
 * section contains
-    orderInformation 0..* MS and
-    supportingInformation 1..1 MS and
-    specimen 1..1 MS and
-    dataElements 1..1 MS and
-    coverage 0..* MS and
-    appointment 0..1 MS
+    orderInformation 1..* and
+    specimen 0..* and
+    coverage 0..* and
+    appointment 0..1 and
+    carePlan 0..1 and
+    medicalDevices 0..* and
+    attachments 0..*
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
   * ^short = "Order Information"
   * ^definition = "This section holds information related to the order for the imaging study."
-  * code = $loinc#100828-3 "Portable medical order administrative information"
-
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
-  * entry contains 
-      order 0..* MS and 
-      orderReason 1..1 MS 
-  
-  * entry[order]
-    * ^short = "Order reference"
-    * ^definition = "This entry holds a reference to the order for the Imaging Order."
-  * entry[order] only Reference(ImagingOrderInformationCz) 
-
-  * entry[orderReason]
-    * ^short = "Order Reason"
-    * ^definition = "This entry holds a reference to order reason."
-  * entry[orderReason] only Reference(ConditionImageCz)
-
-///////////////////////////// SUPPORTING INFORMATION SECTION ////////////////////////////////////
-* section[supportingInformation]
-  * ^short = "Supporting Information"
-  * ^definition = "This section holds additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations."
-  * code = $loinc#104987-3 "Supporting clinical information"
-  
-  * entry MS
-    * insert SliceElement( #profile, "$this" )
-  * entry contains 
-      biometricData 1..1 MS and 
-      weight 1..1 MS and 
-      height 1..1 MS and 
-      condition 0..1 MS and
-      medication 0..1 MS and
-      implants 0..* MS and
-      urgentInformation 0..1 MS and
-      observation 0..1 MS
-
-  * entry[biometricData]
-    * ^short = "Biometric data"
-    * ^definition = "This entry holds a reference to the observation about Biometric data."
-  * entry[biometricData] only Reference(Observation)  
-
-  * entry[weight]
-    * ^short = "Weight"
-    * ^definition = "This entry represents information about subject's weight."
-//    * code = http://loinc.org#29463-7
-  * entry[weight] only Reference(Observation)  
-
-  * entry[height]
-    * ^short = "Height"
-    * ^definition = "This entry represents information about subject's height."
-//    * code = http://loinc.org#3138-5
-  * entry[height] only Reference(Observation)  
-
-  * entry[condition]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the condition."
-  * entry[condition] only Reference(Condition) 
-
-  * entry[medication]
-    * ^short = "Medication"
-    * ^definition = "This entry holds a reference to the medication."
-  * entry[medication] only Reference(MedicationOrderCz) 
- 
-  * entry[implants]
-    * ^short = "Implants"
-    * ^definition = "This entry holds a reference to the implant."
-  * entry[implants] only Reference(Device) 
-
-  * entry[urgentInformation]
-    * ^short = "Urgent information"
-    * ^definition = "This entry holds a reference to the implant."
-  * entry[urgentInformation] only Reference(AllergyIntolerance) 
-
-  * entry[observation]
-    * ^short = "Condition"
-    * ^definition = "This entry holds a reference to the other observation."
-  * entry[observation] only Reference(Observation) 
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#55115-0 "Requested imaging studies information Document"
+  * entry 0..
+  * entry only Reference(CZ_ImagingOrderInformation or CZ_ConditionImage) 
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]
-  * ^short = "Specimen"
-  * code = $loinc#31208-2 "Specimen"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      Specimen 0..* MS
-  * entry[Specimen] only Reference(SpecimenImageCz)
+  * ^short = "Specimen-related information panel"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#68992-7 "Specimen-related information panel"
+  * entry 0..
+  * entry only Reference(CZ_Specimen)
 
-
-//////////////////////////////// SERVICE REQUEST SECTION ////////////////////////////////////////
-* section[dataElements]
-  * ^short = "Data elements of Service Request"
-  * code = $loinc#64286-8 "Diagnostic imaging order"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry only Reference(DataElementsImageOrderCz)
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
-  * ^short = "ServiceRequest"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry only Reference(Coverage)
+  * ^short = "Coverage type"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#87520-3 "Coverage type"
+  * entry 0..
+  * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
 * section[appointment]
   * ^short = "Appointment"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry only Reference(Appointment)
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#56446-8 "Appointment summary Document"
+  * entry 0..
+  * entry only Reference(CZ_Appointment)
+
+  /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
+* section[carePlan]
+  * ^short = "Care Plan"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#18776-5 "Plan of care note"
+  * entry 0..
+  * entry only Reference(CZ_CarePlanImage)
+
+ /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
+* section[medicalDevices]
+  * ^short = "Medical Devices and implants"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#97813-0 "Implant component"
+  * entry 0..
+  * entry only Reference(CZ_DeviceUseStatement)
+
+ /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
+// -------------------------------------------------------------
+* section[attachments]
+  * ^short = "Library of attachments"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#77599-9 "Additional documentation"
+  * entry 0..
+  * entry only Reference(CZ_Attachment)
+
+/// ========= INVARIANTS =========
+
+Invariant: text-or-section
+Description: "A Composition SHALL have either text, at least one section, or both."
+Expression: "text.exists() or section.exists()"
+Severity: #error
