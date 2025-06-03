@@ -104,7 +104,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #ClinicalEvent.otherInformation
 * group[=].element[=].display = "A.2.3.3 - Other information about clinical event"
-* group[=].element[=].target.code = #CZ_Encounter.text
+* group[=].element[=].target.code = #CZ_Encounter.type.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageBodyCz"

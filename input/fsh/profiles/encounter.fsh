@@ -7,5 +7,6 @@ Description: "Czech profile for encounter. "
 * insert SetFmmandStatusRule ( 0, draft )
 
 * identifier 1..
-* type 0..
-* type from $v2-0007
+* status
+* class
+* text
