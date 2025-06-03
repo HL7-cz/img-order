@@ -1,7 +1,7 @@
 Profile: CZ_Appointment
 Parent: Appointment
 Id: cz-appointment
-Title: "Appointment (CZ)"
+Title: "Appointment: Imaging Order (CZ)"
 Description: "Czech profile for appointment. "
 
 * . ^short = "Imaging Order"

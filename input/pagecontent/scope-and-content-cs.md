@@ -3,11 +3,12 @@
 #### Zahrnuté oblasti
 
 Tento dokument se zabývá funkční specifikací žádanky na zobrazovací vyšetření, její strukturou a kódovými systémy, které by bylo vhodné použít pro její vytvoření.
-Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření, které je definováno jednou z modalit z [následující tabulky](scope-and-content-cs.html#modality-table). Vzhledem ke kardinalitě 1..* je možné požadovat současně dvě modality typicky v případě hybridních metod jako je **PET/CT** (tedy PT + CT).
 
-##### Modality Table
+Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření, které je definováno jednou z modalit z [následující tabulky](scope-and-content-cs.html#tabulka-typů-modalit). Vzhledem ke kardinalitě `1..*` je možné požadovat současně dvě modality typicky v případě hybridních metod jako je **PET/CT** (tedy PT + CT).
 
-| DICOM Modality    | Meaning in English           | Czech Interpretation      |
+##### Tabulka typů modalit
+
+| DICOM modalita    | Význam v angličtině          | Česká interpretace        |
 | ----------------- | ---------------------------- | ------------------------- |
 | BMD               | Bone Mineral Densitometry    | Denzitometrie             |
 | CT                | Computed Tomography          | CT                        |
@@ -27,6 +28,32 @@ Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření,
 Funkční specifikace neřeší celkový ekosystém žádanek a způsob jejího přenosu. Nejsou dále zahrnuty žádanky na obrazové vyšetření mimo odbornost radiologie (např. keratometrie).
 
 ### Obsah
+
+#### Informační modely
+
+Základní oddíly zobrazovacího řádu
+
+##### Koncepční pohled
+
+Obrazovou žádanku lze rozdělit do několika částí: záhlaví a tělo dokumentu a volitelně může mít i různé přílohy, jako jsou média nebo prezentovaná forma.
+
+###### Součásti obrazové žádanky
+
+<figure>
+  {% include imgOrder_CIM-CZ.svg %}
+</figure>
+
+###### Hlavička obrazové žádanky
+
+<figure>
+  {% include imgOrderHead_CIM-CZ.svg %}
+</figure>
+
+###### Tělo obrazové žádanky
+
+<figure>
+  {% include imgOrderBody_CIM-CZ.svg %}
+</figure>
 
 #### Subjekty
 
@@ -72,6 +99,7 @@ V tomto oddílu nalezneme zákldaní údaje o pacientovi jako je jeho identifik�
 **Kontaktní informace pacienta**
 
 Oddíl obsahuje kontaktní informace osob, které mohou poskytovat dodatečné informace o pacientovi. Může zde být i kontakt na jiného lékaře. Tato informace je zvláště potřebná u pacientů se vzácným onemocněním.
+
 Typ kontaktní osoby rozlišuje emergentní kontakty, zákonné zástupce a ostatní osoby se vztahem k pacientovi. Jde o definici kontaktních osob, na které je možné se obracet kvůli přípravě pacienta na vyšetření či v jiných případech.
 
 **Zdravotní pojištění**
@@ -108,9 +136,13 @@ Obsahem této sekce je elektronický podpis dokumentu dle zákona `327/2011 §54
 
 Tato požadovaná sekce zahrnuje povinný identifikátor žádanky ([A.2.1.1](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderDetails.identifier)), datum a čas jejího vytvoření ([A.2.1.2](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderDetails.dateTime)) – pokud je založena sekce informací, musí tyto informace obsahovat. Mezi volitelné položky patří urgentnost objednávky (z pohledu indikujícího lékaře) vyjádřená mezinárodním kódem ze sytému HL7 ([Request Priority](https://hl7.org/fhir/valueset-request-priority.html)) ([A.2.1.4](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderDetails.urgency)), který může nabývat hodnot routine (běžná priorita), urgent (spěchá), asap (co možná nejdříve) a stat (status iminens, STATIM). Další volitelnou položkou je datum a čas požadovaného vyšetření  ([A.2.1.3](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderDetails.requestedExecdateTime)), zde se nejedná o termín skutečného objednání, otevírá se zde možnost např. zaslat žádanku s prosbou o objednání na den, kdy má pacient ambulantní klinickou kontrolu.
 
+Další požadavky / podrobné specifikace zkoušky ([A.2.1.5](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderDetails.orderText)) je další volitelné pole, které může obsahovat další informace pro objednávku. To může zahrnovat například požadavek odesílajícího lékaře na použití specifického dohodnutého protokolu nebo provedení vyšetření na konkrétním přístroji MRI.
+
+Poslední volitelnou položkou jsou informace pro pacienta, jako jsou požadavky na lačno, vysazení léků, rady ohledně klaustrofobie atd.
+
 **Odůvodnění vyšetření (důvod objednávky)**
 
-Tato požadovaná sekce zahrnuje indikační diagnózu, která je vyžadována zdravotními pojišťovnami k proplacení služby. Další položky zahrnují klinickou otázku (věta tázací, měla by končit otazníkem a mělo by možné na ni na základě obrazového vyšetření odpovědět) případně zadanou i kódem SNOMED-CT a důvod objednávky (v podstatě odpovídá stručné epikríze, opět s možností zadat tutéž informaci pomocí kódu). Výhodou zadávání kódem by v budoucnu mohlo být provázání s již zadanými informacemi v NIS, Indikující lékař by tedy reálně tyto informace zadávat podruhé nemusel. 
+Tato požadovaná sekce zahrnuje indikační diagnózu ([A.2.2.1](StructureDefinition-ImageOrderInformationCz-definitions.html#key_ImageOrderInformationCz.orderReason.problem)), která je vyžadována zdravotními pojišťovnami k proplacení služby. Další položky zahrnují klinickou otázku (věta tázací, měla by končit otazníkem a mělo by možné na ni na základě obrazového vyšetření odpovědět) případně zadanou i kódem SNOMED-CT a důvod objednávky (v podstatě odpovídá stručné epikríze, opět s možností zadat tutéž informaci pomocí kódu). Výhodou zadávání kódem by v budoucnu mohlo být provázání s již zadanými informacemi v NIS, Indikující lékař by tedy reálně tyto informace zadávat podruhé nemusel. 
 
 **Termín vyšetření (návštěvy)**
 
@@ -134,14 +166,13 @@ Tato požadovaná sekce zahrnuje datové elementy požadovaného vyšetření, a
    - Computed radiography (CR) ze stroje s nepřímou digitalizací a 
    - DX ze stroje s přímou digitalizací
 
-        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka dicom_modality](index.html#modality-table).
+        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka typů modalit](scope-and-content-cs.html#tabulka-typů-modalit).
 
 4)	Část těla – část číselníku SNOMED-CT definovaná DICOM standardem. Důvodem je, že kompletní sada hodnot SNOMED-CT obsahuje i obecné části těla (např. šlacha), což pro zobrazovací vyšetření není užitečné, my potřebujeme vědět, zda je ta šlacha na ruce nebo na noze
 
 5)	Lateralita – na rozdíl od číselníku DASTA nezná SNOMED-CT/FHIR koncept “oboustrannosti”, ale v případě vyšetření obou stran by měly být vytvořeny zvlášť hodnoty pro levou a pravou stranu
 
 6)	Poznámka – prostor pro poznámku k vyšetření volným textem, může obsahovat přesnější specifikaci požadovaného vyšetření volným textem, či zvláštní přání klinika (např. na MR: Prosím o zhotovení i frontálních vrstev ve FLAIR skloněné podle hippokampů).
-
 
 **Termín vyšetření (návštěvy)**
 

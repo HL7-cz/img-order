@@ -1,6 +1,24 @@
 ### Status management
 
-<br>
+An Imaging Order is an HL7 FHIR resource designed for requesting imaging procedures. It includes essential clinical context such as the ordering provider's information, details about the requested procedure (e.g., CT, MRI, X-ray), relevant clinical indications or reasons for the study, and status information about the order's lifecycle (e.g., draft, active or completed).
+
+Imaging order status value set is comprised from following status codes ( [RequestStatus](https://hl7.org/fhir/R4/valueset-request-status.html) )
+
+| Code             | Display          | Definition                                                                                                                                                                                                                                                        |
+| ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| draft            | Draft            | The request has been created but is not yet complete or ready for action.                                                                                                                                                                                         |
+| active           | Active           | The request is in force and ready to be acted upon.                                                                                                                                                                                                               |
+| on-hold          | On Hold          | The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.                                                                                                                                       |
+| revoked          | Revoked          | The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions. No further activity should occur.                                                                                             |
+| completed        | Completed        | The activity described by the request has been fully performed. No further activity will occur.                                                                                                                                                                   |
+| entered-in-error | Entered in Error | This request should never have existed and should be considered 'void'. (It is possible that real-world decisions were based on it. If real-world activity has occurred, the status should be "revoked" rather than "entered-in-error".).                         |
+| unknown          | Unknown          | The authoring/source system does not know which of the status values currently applies for this request. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which. |
+
+Fulfilling the following state diagram:
+
+<figure>
+  {% include imgOrder_StatusMan.svg %}
+</figure>
 
 ### Scenarios
 
@@ -84,7 +102,7 @@ Since the right to choose one's doctor freely is established by law, a patient m
 
 ##### Scenario: PET/CT
 
-The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](index.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
+The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](scope-and-content-cs.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
 
 In the clinical information section, it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
 

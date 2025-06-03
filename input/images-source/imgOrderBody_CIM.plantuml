@@ -12,20 +12,20 @@ skinparam topurl StructureDefinition-
 legend left
 <b>The legend:</b>
 
-- Background color: <b><color:LightCoral>pink</color></b> - <b>Main</b>: CZ Imaging Order Examination root elements.
-- Background color: <b><color:green>green</color></b> - <b>Common</b>: Common elements of CZ Order.
-- Background color: <b><color:blue>blue</color></b> - <b>Specific</b>: Specific elements of CZ Imaging Order.
+- Background color: <b><color:#EEEEAE>yellow</color></b> - <b>Main</b>: CZ Imaging Order Examination root elements.
+- Background color: <b><color:#TECHNOLOGY>green</color></b> - <b>Common</b>: Common elements of CZ Order.
+- Background color: <b><color:#APPLICATION>blue</color></b> - <b>Specific</b>: Specific elements of CZ Imaging Order.
 end legend
 
-*[#pink] [[BodyImageOrderCz.html Imaging Order Body]]
-**[#lightgreen] [[ImageOrderInformationCz.html Order information]]
+*[#EEEEAE] [[BodyImageOrderCz.html Imaging Order Body]]
+**[#TECHNOLOGY] [[ImageOrderInformationCz.html Order information]]
 ***_ Order Details
 ***_ Order Reason
-**[#lightgreen] [[ClinicalEventCz.html Clinical Event]]
-**[#lightgreen] [[ImageAppointmentCz.html Appointment]]
-**[#lightgreen] [[SpecimenInformationCz.html Specimen Information]]
-**[#lightgreen] [[CoverageBodyCz.html Additional Coverage]]
-**[#lightblue] [[ImageSupportingInformationCz.html Supporting Information]]
+**[#TECHNOLOGY] [[ClinicalEventCz.html Clinical Event]]
+**[#TECHNOLOGY] [[ImageAppointmentCz.html Appointment]]
+**[#TECHNOLOGY] [[SpecimenInformationCz.html Specimen Information]]
+**[#TECHNOLOGY] [[CoverageBodyCz.html Additional Coverage]]
+**[#APPLICATION] [[ImageSupportingInformationCz.html Supporting Information]]
 ***_ Biometric Data
 ***_ Weight
 ***_ Height
@@ -37,13 +37,13 @@ end legend
 ***_ Limitation of Patient Mobility
 ***_ Other Relevant Clinical Information
 ***_ Other Information
-**[#lightblue] [[OrderDataElementsCz.html Order Data]]
+**[#APPLICATION] [[OrderDataElementsCz.html Order Data]]
 ***_ Examination Code
 ***_ Name of the Examination
 ***_ Modality
 ***_ Body Part
 ***_ Laterality
 ***_ Note
-**[#lightblue] [[PlannedCareOrdersCz.html Planned Care Orders]]
-**[#lightblue] [[OtherSupportingInformationCz.html Other Supporting Information]]
+**[#APPLICATION] [[PlannedCareOrdersCz.html Planned Care Orders]]
+**[#APPLICATION] [[OtherSupportingInformationCz.html Other Supporting Information]]
 @endmindmap

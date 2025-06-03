@@ -1,7 +1,7 @@
 Profile: CZ_ImagingOrderInformation
 Parent: ServiceRequest
 Id: cz-imagingOrderInformation
-Title: "Order Information: Imaging Order (CZ)"
+Title: "Service Reuquest: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
 * identifier 1..

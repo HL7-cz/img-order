@@ -1,7 +1,7 @@
 Profile: CZ_BodyWeight
 Parent: CZ_ObservationImage
 Id: cz-bodyweight
-Title: "Czech BodyWeight"
+Title: "Body Weight: Imaging Order (CZ)"
 Description: "Profile of body weight for the scope of the Czech national interoperability project."
 * subject
 * code.coding[LOINC] = $loinc#29463-7 //Body weight

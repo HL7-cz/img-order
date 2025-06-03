@@ -1,0 +1,50 @@
+@startuml
+state "Draft" as draft
+'draft : ..koncept
+state "Active" as active
+'active : ..aktivní
+state "On Hold" as on_hold
+'on_hold : ..pozastaveno
+state "Revoked" as revoked
+'revoked : ..zrušeno
+state "Completed" as completed
+'completed : ..dokončeno
+state "Entered in Error" as entered_in_error
+'entered_in_error : ..zadáno chybně
+state fork_state <<fork>>
+state join_state1 <<join>>
+state join_state2 <<join>>
+state join_state3 <<join>>
+
+[*] --> draft : Create
+
+draft --> fork_state
+fork_state --> active : Submitted
+fork_state --> join_state2 : Cancelled
+
+'draft --> active : Odesláno
+active --> on_hold : Suspend
+on_hold --> active : Resume
+
+active --> join_state2 : Cancel
+on_hold --> join_state2 : Cancel from suspend
+join_state2 --> revoked
+
+'draft --> join_state1
+active --> join_state1
+on_hold --> join_state1
+revoked --> join_state1
+completed --> join_state1
+join_state1 --> entered_in_error : Error
+
+active --> join_state3
+on_hold --> join_state3
+join_state3 --> completed : Completed
+
+/'
+completed --> [*]
+revoked --> [*]
+entered_in_error --> [*]
+'/
+
+@enduml

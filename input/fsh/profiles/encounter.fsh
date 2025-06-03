@@ -1,7 +1,7 @@
 Profile: CZ_Encounter
 Parent: Encounter
 Id: cz-encounter
-Title: "Encounter (CZ)"
+Title: "Encounter: Imaging Order (CZ)"
 Description: "Czech profile for encounter. "
 
 * insert SetFmmandStatusRule ( 0, draft )

@@ -1,5 +1,6 @@
-V oboru zobrazovacích metod se pro archivaci a výměnu dat standardně používá protokol a formát Digital Imaging and Communications in Medicine (DICOM). Tento definuje např. jednotlivé obrazové modality a je využit k archivaci dat v systému Picture archiving and communication system (PACS). 
-DICOM je propojen se systémem klinické terminologie SNOMED-CT (viz samostatná podkapitola níže). Ostatní standardy a číselníky sdílí zobrazovací metody s ostatními dokumenty pacientské dokumentace (MKN-10, HL-7 atp.).
+V oboru zobrazovacích metod se pro archivaci a výměnu dat standardně používá protokol a formát Digital Imaging and Communications in Medicine (DICOM). Tento definuje např. jednotlivé obrazové modality a je využit k archivaci dat v systému Picture archiving and communication system (PACS).
+
+DICOM je propojen se systémem klinické terminologie SNOMED-CT. Ostatní standardy a číselníky sdílí zobrazovací metody s ostatními dokumenty pacientské dokumentace (MKN-10, HL-7 atp.).
 
 <div>
 <img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="70%">

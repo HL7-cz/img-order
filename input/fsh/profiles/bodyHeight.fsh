@@ -1,7 +1,7 @@
 Profile: CZ_BodyHeight
 Parent: CZ_ObservationImage
 Id: cz-bodyheight
-Title: "Czech BodyHeight"
+Title: "Body Height: Imaging Order (CZ)"
 Description: "Profile of body height for the scope of the Czech national interoperability project."
 * subject
 * code.coding[LOINC] = $loinc#8302-2  //Body height

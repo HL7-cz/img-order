@@ -1,0 +1,49 @@
+@startmindmap
+<style>
+
+legend {
+  Padding 20
+}
+
+</style>
+
+skinparam topurl StructureDefinition-
+
+legend left
+<b>Legenda:</b>
+
+- Barva podkladu: <b><color:#EEEEAE>žlutá</color></b> - <b>Klíčové</b>: Kořenové prvky obrazové žádanky (CZ).
+- Barva podkladu: <b><color:#TECHNOLOGY>zelená</color></b> - <b>Základní</b>: Společné prvky objednávky (CZ).
+- Barva podkladu: <b><color:#APPLICATION>modrá</color></b> - <b>Konkrétní</b>: Specifické prvky obrazové žádanky (CZ).
+end legend
+
+*[#EEEEAE] [[BodyImageOrderCz.html Tělo obrazové žádanky]]
+**[#TECHNOLOGY] [[ImageOrderInformationCz.html Informace o žádance]]
+***_ Informace o objednávce
+***_ Odůvodnění vyšetření
+**[#TECHNOLOGY] [[ClinicalEventCz.html Klinická událost]]
+**[#TECHNOLOGY] [[ImageAppointmentCz.html Termín vyšetření]]
+**[#TECHNOLOGY] [[SpecimenInformationCz.html Informace o vzorku]]
+**[#TECHNOLOGY] [[CoverageBodyCz.html Úhrada]]
+**[#APPLICATION] [[ImageSupportingInformationCz.html Klinické informace]]
+***_ Biometrické údaje
+***_ Váha
+***_ Výška
+***_ Urgentní informace
+****_ Alergie a intolerance
+****_ Varování
+***_ Medikace
+***_ Implantáty
+***_ Omezení pohyblivosti pacienta
+***_ Další relevantní klinické informace
+***_ Další formalizované údaje
+**[#APPLICATION] [[OrderDataElementsCz.html Datové elementy objednávky vyšetření]]
+***_ Kod vyšetření
+***_ Název vyšetření
+***_ Modalita
+***_ Část těla
+***_ Lateralita
+***_ Poznámka
+**[#APPLICATION] [[PlannedCareOrdersCz.html Odkazy na objednávky plánované péče navazující na tuto žádanku ]]
+**[#APPLICATION] [[OtherSupportingInformationCz.html Ostatní podpůrné informace ]]
+@endmindmap

@@ -5,7 +5,7 @@
 
 This document addresses the functional specification of an imaging examination order, its structure and the value sets suitable for its creation.
 
-The term Imaging Examination Order refers to a request for an examination defined by one of the modalities listed in the [following table](scope-and-content-cs.html#modality-table). Given the cardinality of `1..*` it is possible to request two modalities simultaneously - typically in the case of hybrid methods such as **PET/CT** (i.e. PT + CT).
+The term Imaging Examination Order refers to a request for an examination defined by one of the modalities listed in the [following table](scope-and-content.html#modality-table). Given the cardinality of `1..*` it is possible to request two modalities simultaneously - typically in the case of hybrid methods such as **PET/CT** (i.e. PT + CT).
 
 ##### Modality Table
 
@@ -29,6 +29,32 @@ The term Imaging Examination Order refers to a request for an examination define
 The functional specification does not address the overall ecosystem of order and their transmission methods. Additionally, order for imaging examinations outside the field of radiology (e.g. keratometry) are not included.
 
 ### Content
+
+#### Information Models
+
+Basic Sections of the Imaging Order
+
+##### Conceptual view
+
+Imaging Order could be divided into several parts: document header and body and optionally it could also have various attachments, such as media or presented form.
+
+###### Imaging Order Parts
+
+<figure>
+  {% include imgOrder_CIM.svg %}
+</figure>
+
+###### Imaging Order Header
+
+<figure>
+  {% include imgOrderHead_CIM.svg %}
+</figure>
+
+###### Imaging Order Body
+
+<figure>
+  {% include imgOrderBody_CIM.svg %}
+</figure>
 
 #### Subject
 
@@ -73,6 +99,7 @@ This section contains records about the patient such as his identifiers, name or
 **Patient Contact Information**
 
 The section contains contact information for people who can provide additional information about the patient. There may also be a contact for another doctor. This information is especially necessary for patients with rare diseases.
+
 The type of contact person distinguishes between emergency contacts, legal representatives and other persons related to patients. This is a definition of contact persons who can be contacted to prepare the patient for the examination or in other cases.
 
 **Health Insurance**
@@ -139,7 +166,7 @@ This required section includes the data elements of the requested examination an
    - Computed radiography (CR) from a machine with indirect digitalization
    - DX from a machine with direct digitalization
 
-        > Given the decline of RTG and CR, it can be assumed for order purposes that the requested examination is DX. If the examination is performed with a different X-ray modality, it should not be an issue, as secondary modalities would also be mapped to X-ray/plain films. The mapping of DICOM attributes is handled by the [dicom_modality table](index.html#modality-table).
+        > Given the decline of RTG and CR, it can be assumed for order purposes that the requested examination is DX. If the examination is performed with a different X-ray modality, it should not be an issue, as secondary modalities would also be mapped to X-ray/plain films. The mapping of DICOM attributes is handled by the [dicom_modality table](scope-and-content.html#modality-table).
 
 4) Body Part – A part of the SNOMED CT registry defined by the DICOM standard. The reason is that the complete set of SNOMED CT values contains general body parts (e.g. tendon), which are not useful for imaging examinations. We need to know whether the tendon is on the hand or the foot.
 

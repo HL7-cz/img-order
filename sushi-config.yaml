@@ -63,6 +63,8 @@ dependencies:
 pages:
   index.md:
     title: Home
+  index-cs.md:
+    title: Home
   scope-and-content.md:
     title: Scope and content
   scope-and-content-cs.md:
@@ -91,10 +93,10 @@ pages:
     title: Logical models
   logical-models-cs.md:
     title: Datová sada - logické modely
-  mapping-2-profile.md:
+  model-map.md:
     title: Model maps
-  mapping-2-profile-cs.md:
-    title: Model mapování  
+  model-map-cs.md:
+    title: Mapování logického modelu
   obligations.md:
     title: Obligations
   obligations-cs.md:
@@ -190,7 +192,9 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
+  Home:
+    Home (en): index.html
+    Home (cs): index-cs.html
   Introduction:
     Scope and content (en): scope-and-content.html
     Scope and content (cs): scope-and-content-cs.html
@@ -206,8 +210,8 @@ menu:
     Terminology considerations (en): terminology-considerations.html
     Terminology considerations (cs): terminology-considerations-cs.html
   Implementation:
-    Mapping to profiles (en): mapping-2-profile.html
-    Mapping to profiles (cs): mapping-2-profile-cs.html
+    Mapping to profiles (en): model-map.html
+    Mapping to profiles (cs): model-map-cs.html
     Examples (en): examples.html
     Examples (cs): examples-cs.html
     Obligations (en): obligations.html
