@@ -97,8 +97,8 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Encounter.type
 * group[=].element[=].display = "A.2.3.2 - Type of clinical event"
-* group[=].element[=].target.code = #CZ_Encounter.type
-* group[=].element[=].target.display = ""
+* group[=].element[=].target.code = #Composition.type
+* group[=].element[=].target.display = "FHIR Document Type Codes (LOINC) or Typ_KU (DASTA)"
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Encounter.otherInformation
 * group[=].element[=].display = "A.2.3.3 - Other information about clinical event"

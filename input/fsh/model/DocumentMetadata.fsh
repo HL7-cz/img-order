@@ -4,7 +4,7 @@ Title: "A.1.8 - Document metadata"
 Description: """Document metadata"""
 
 * identifier 1..1 Identifier "A.1.8.1 - Document ID" """Unique identifier of the document"""
-* type 1..1 CodeableConcept "A.1.8.2 - Document type" """Identifies the type of document at hand, e.g. Imaging order."""
+* category 1..1 CodeableConcept "A.1.8.2 - Document category" """Identifies the category of document at hand, e.g. Imaging order."""
 * status 1..1 CodeableConcept "A.1.8.3 - Document status" """The status of the Imaging order. E.g., preliminary, final."""
 * dateTime 1..1 dateTime "A.1.8.4 - Order date and time" """Date and time of the Imaging order creation."""
 * title 1..1 string "A.1.8.5 - Document title" """Document title of the Imaging order."""

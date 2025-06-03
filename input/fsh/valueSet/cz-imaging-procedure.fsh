@@ -1,8 +1,9 @@
-ValueSet: CZImagingProcedure
-Id: cz-imaging-procedure
+ValueSet: CZ_ImagingProcedureVs
+Id: cz-imaging-procedure-vs
 Title: "CZ Imaging Procedure"
 Description: "ValueSet for imaging procedure in the Czech Imaging project, using SNOMED CT."
-* ^url = "https://hl7.cz/fhir/img-order/ValueSet/cz-imaging-procedure"
+
+* ^url = "https://hl7.cz/fhir/img-order/ValueSet/cz-imaging-procedure-vs"
 
 * insert SNOMEDCopyrightForVS
 //* $sct#764977005 "24 hour radionuclide imaging of whole body using radioisotope labelled human immunoglobulin G"

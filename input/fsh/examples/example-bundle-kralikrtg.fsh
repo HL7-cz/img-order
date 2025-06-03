@@ -52,7 +52,7 @@ Usage: #example
 * author[+].display = "Bc. Miroslav PAVLÍČEK MBA"
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = http://loinc.org#18748-4 "Diagnostic imaging study"
+* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 

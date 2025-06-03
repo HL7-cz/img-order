@@ -1,11 +1,9 @@
-CodeSystem:     TypeEncounterCzCs
-Id:	            typeEncounter-cz-cs
-Title:	       "Codesystem of Encounter Type"
-Description:   "Codesystem of Encounter Type. Code for encounter type (Typ KU)."
+CodeSystem:     CZ_TypeClinicalEventCs
+Id:	            cz-typeClinicalEvent-cs
+Title:	       "Codesystem of Clinical Event Type"
+Description:   "Codesystem of Clinical Event Type. Code for Clinical Event type (Typ KU)."
 
 * ^language = #cs
-* ^identifier.system = "urn:ietf:rfc:3986"
-//* ^identifier.value = "urn:oid:1.2.203.24341.11.2.10.2.1"
 * ^version = "1.0"
 * ^status = #active
 * ^date = "2025-01-17"
@@ -13,7 +11,7 @@ Description:   "Codesystem of Encounter Type. Code for encounter type (Typ KU)."
 * ^publisher = "UZIS"
 * ^caseSensitive = true
 * ^content = #complete
-* ^url = "https://hl7.cz/fhir/img-order/CodeSystem/typeEncounter-cz-cs"
+* ^url = "https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * #AMB.ANAM "anamnéza vytvořená v ambulanci"

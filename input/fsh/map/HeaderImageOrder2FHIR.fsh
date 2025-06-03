@@ -227,9 +227,9 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
-* group[=].element[+].code = #Header.documentMetadata.type
-* group[=].element[=].display = "A.1.8.2 - Document type"
-* group[=].element[=].target.code = #Composition.type					
+* group[=].element[+].code = #Header.documentMetadata.category
+* group[=].element[=].display = "A.1.8.2 - Document category"
+* group[=].element[=].target.code = #Composition.category					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Header.documentMetadata.status

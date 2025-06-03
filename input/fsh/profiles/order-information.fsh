@@ -26,7 +26,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     Laterality 0..1 
 
 * code.coding[ImagingProcedure]
-* code.coding[ImagingProcedure] from CZImagingProcedure 
+* code.coding[ImagingProcedure] from CZ_ImagingProcedureVs 
 * code.coding[Laterality]
 * code.coding[Laterality] from $czlaterality
 
