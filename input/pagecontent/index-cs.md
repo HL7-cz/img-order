@@ -22,9 +22,9 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
   - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech. 
   - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o terminologii. 
 - Implementation:
-  - [Mapování logického modelu](mapping-2-profile-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové žádanky.
-  - [Příklady](mapping-2-profile-cs.html): Tento segment obsahuje informace o příkladech.
-  - [Povinnosti](mapping-2-profile-cs.html): Tento segment obsahuje informace o povinnostech.
+  - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové žádanky.
+  - [Příklady](examples-cs.html): Tento segment obsahuje informace o příkladech.
+  - [Povinnosti](obligations-cs.html): Tento segment obsahuje informace o povinnostech.
 - About:
   - [Autoři](authors-cs.html): Tento segment obsahuje informace o autorech.
   - [Downloads](downloads-cs.html): Tento segment obsahuje informace o možnostech stahování obsahu implementační specifikace.

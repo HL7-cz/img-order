@@ -22,9 +22,9 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Logical models](logical-models.html): This segment contains information about logical models. 
   - [Terminology considerations](terminology-considerations.html): This segment contains information about terminology. 
 - Implementation:
-  - [Mapping to profiles](mapping-2-profile.html): This segment contains information about logical model maps to profiles.
-  - [Examples](mapping-2-profile.html): This segment contains information about examples.
-  - [Obligations](mapping-2-profile.html): This segment contains information about obligations.
+  - [Mapping to profiles](model-map.html): This segment contains information about logical model maps to profiles.
+  - [Examples](examples.html): This segment contains information about examples.
+  - [Obligations](obligations.html): This segment contains information about obligations.
 - About:
   - [Authors](authors.html): This segment contains informaction about authors.
   - [Downloads](downloads.html): This segment contains informaction about downloads.

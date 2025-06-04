@@ -1,21 +1,20 @@
+All examples can be found in the [**artifacts**](artifacts.html) page.
 
+### Imaging order example
 
-<table  style="border-collapse: collapse; width: 100%" border="1" >
-<thead>
-<tr style="text-align: center;">
-<td><strong>Name</strong></td>
-<td><strong>Title</strong></td>
-<td><strong>Description</strong></td>
-</tr>
-</thead>
-<tbody>
+The main example [**Bundle Kralik RTG**](Bundle-BundleKralikRTG.html) contains a picture request form for patient Králík. This request form also includes an attachment in the form of a PDF file.
 
-{% for sd_hash in site.data.structuredefinitions | sort: "title" -%}
-  {%- assign sd = sd_hash[1] -%}
-  {%- if sd.kind  == "Example" -%}
-  <tr><td><a href="{{sd.path}}">{{sd.name}}</a></td><td>{{sd.title}}</td><td>{{sd.description}}</td></tr>
-  {%- endif -%}
-{%- endfor -%}
+### Examples of profiles
 
-</tbody>
-</table>
+ - Example of [**Appointment**](Appointment-AppointmentExample.html)
+ - Example of [**Body height**](Observation-ExampleBodyHeight.html)
+ - Example of [**Body weight**](Observation-ExampleBodyWeight.html)
+ - Example of [**Care plan**](CarePlan-CarePlanExample.html)
+ - Example of [**Device - Magnetic resonance**](Device-MRDevice.html)
+ - Example of [**Device - Radiographic unit**](Device-e33c93c6-3dd0-4595-9f15-63b9302861d1.html)
+ - Example of [**Device use statement - implant**](DeviceUseStatement-example-deviceusestatement-cz.html)
+ - Example of [**Encounter**](Encounter-EncounterExample.html)
+ - Example of [**Patient**](Patient-Mracena.html)
+ - Example of [**Practioner**](Practitioner-practitionerExample.html)
+ - Example of [**Service request - imaging order**](ServiceRequest-cz-imagingorder-example.html)
+

@@ -26,7 +26,7 @@ class "Requested Performer" <<LogicalModel>> [[StructureDefinition-RequestedPerf
 class "Identification" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
 class "Related contact information of the Patient/subject" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
 '/
-class "cz-coverage" <<Profile>> [[StructureDefinition-cz-coverage.html]]
+class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundleImageOrder" <<Profile>> [[StructureDefinition-cz-bundleImageOrder.html]]
