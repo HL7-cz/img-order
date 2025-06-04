@@ -1,3 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<blockquote class="stu-note">
+<b>Informative for this version of the guide</b>
+<p>The use cases have been added to this version of the guide only as informative material. The output must be consulted with the professional community - it is possible that a revision will take place in the near future, which will cause changes to the content!</p>
+</blockquote>
+</div>
+
 ### Summary of Key Differences
 
 | Request Type | Intended For               | Purpose                                          |

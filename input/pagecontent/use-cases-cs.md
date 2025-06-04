@@ -1,3 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<blockquote class="stu-note"> 
+<b>Informativní pro tuto verzi průvodce</b> 
+<p>Do této verze příručky byly příklady užití přidány pouze jako informativní materiál. Výstup je nutné konzultovat s odbornou veřejností - je možné, že v blízké době ještě proběhne revize, která zapříčíní změny obsahu!</p> 
+</blockquote>
+</div>
+
 ### Shrnutí klíčových rozdílů
 
 | Typ žádanky | Komu je určena                | Účel                                     |

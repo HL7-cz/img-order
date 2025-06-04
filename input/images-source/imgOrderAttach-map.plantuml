@@ -1,0 +1,43 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Presented Form" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
+note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "Media" <<LogicalModel>> [[StructureDefinition-MediaCz.html]]
+note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+
+"Presented Form" -- "Media"
+
+"Presented Form" <|. "cz-attachment"
+"Media" <|. "cz-attachment"
+
+/'
+"Imaging Order Header" <|. "cz-patient-core"
+"Imaging Order Header" <|. "cz-attachment"
+"Imaging Order Header" <|. "cz-practitioner-core"
+'/
+
+"Presented Form" -r[hidden]-> "Media"
+"Presented Form" -d[hidden]-> "cz-attachment"
+"Media" -d[hidden]-> "cz-attachment"
+
+@enduml

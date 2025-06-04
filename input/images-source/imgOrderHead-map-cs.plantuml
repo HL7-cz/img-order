@@ -14,7 +14,7 @@ legend right
 endlegend
 class "Hlavička žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-HeaderImagingOrder.html]]
 note top #EEEEAE [[ConceptMap-HeaderImagingOrder2FHIR-cz.html]]
-Concept Map
+Concept Mapa
 endnote
 /'
 class "Additional Recipient" <<LogicalModel>> [[StructureDefinition-AdditionalRecipientCz.html]]

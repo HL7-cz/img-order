@@ -1,3 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<blockquote class="stu-note"> 
+<b>Informativní pro tuto verzi průvodce - Stavový management</b> 
+<p>Do této verze příručky byl stavový management přidán pouze jako informativní materiál. Výstup je nutné konzultovat s odbornou veřejností - je možné, že v blízké době ještě proběhne revize, která zapříčíní změny obsahu!</p> 
+</blockquote>
+</div>
+
 ### Stavový management
 
 Žádanka na obrazové vyšetření je zdroj HL7 FHIR určený pro vyžádání zobrazovacích procedur. Zahrnuje základní klinický kontext, jako jsou informace o poskytovateli objednávky, podrobnosti o požadovaném postupu (např. CT, MRI, rentgen), relevantní klinické indikace nebo důvody pro studii a stavové informace o životním cyklu objednávky (např. koncept, aktivní nebo dokončený).

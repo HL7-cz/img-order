@@ -1,3 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<blockquote class="stu-note">
+<b>Informative for this version of the guide - Status management</b>
+<p>The Status management have been added to this version of the guide only as informative material. The output must be consulted with the professional community - it is possible that a revision will take place in the near future, which will cause changes to the content!</p>
+</blockquote>
+</div>
+
 ### Status management
 
 An Imaging Order is an HL7 FHIR resource designed for requesting imaging procedures. It includes essential clinical context such as the ordering provider's information, details about the requested procedure (e.g., CT, MRI, X-ray), relevant clinical indications or reasons for the study, and status information about the order's lifecycle (e.g., draft, active or completed).
