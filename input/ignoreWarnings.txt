@@ -2,3 +2,24 @@
 # Concept Maps Groups Source and Target  are not Code Systems
 %not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
 %not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# A definition for CodeSystem 'url' could not be found
+A definition for CodeSystem 'http://snomed.info/sct' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the code cannot be validated
+
+# URL does not resolve
+URL value 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' does not resolve
+URL value 'https://homolka.cz/nis' does not resolve
+URL value 'https://hl7europe.org/example-identifier' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/krzp' does not resolve
+URL value 'https://mkn10.uzis.cz' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj' does not resolve
+URL value 'http://hospital.cz/nis' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/rid' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/rcis' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/kp' does not resolve
+URL value 'https://www.homolka.cz/' does not resolve

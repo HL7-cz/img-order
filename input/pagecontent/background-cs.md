@@ -3,7 +3,7 @@ V oboru zobrazovacích metod se pro archivaci a výměnu dat standardně použí
 DICOM je propojen se systémem klinické terminologie SNOMED-CT. Ostatní standardy a číselníky sdílí zobrazovací metody s ostatními dokumenty pacientské dokumentace (MKN-10, HL-7 atp.).
 
 <div>
-<img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+<img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="40%">
 <p><strong>Obr. 1: Papírová žádanka</strong></p>
 <p> </p>
 </div>

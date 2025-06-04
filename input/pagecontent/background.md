@@ -3,7 +3,7 @@ In the field of medical imaging, the Digital Imaging and Communications in Medic
 DICOM is linked to the SNOMED-CT clinical terminology system. Other standards and nomenclatures are shared by imaging methods with other patient documentation documents: MKN-10 (national representation of international ICD-10), HL7, LOINC and the like.
 
 <div>
-<img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+<img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="40%">
 <p><strong>Fig. 1: Paper Imaging order form</strong></p>
 <p> </p>
 </div>
