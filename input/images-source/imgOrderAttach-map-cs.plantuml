@@ -15,7 +15,7 @@ endlegend
 
 class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
 note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
-Concept Map
+Concept Mapa
 endnote
 
 class "Média" <<LogicalModel>> [[StructureDefinition-MédiaCz.html]]

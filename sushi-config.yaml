@@ -126,6 +126,14 @@ pages:
     title: Header Model map
   Header-map-cs.html:
     title: Mapování logického modelu hlavičky
+  Body-map.html:
+    title: Body Model map
+  Body-map-cs.html:
+    title: Mapování logického modelu těla
+  Attachment-map.html:
+    title: Presented Form and Media Model map
+  Attachment-map-cs.html:
+    title: Mapování logického modelu vizuální podoby dokumentu a medií
 
 #
 # The parameters property represents IG.definition.parameter. Rather
