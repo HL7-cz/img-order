@@ -22,7 +22,7 @@ class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.ht
 class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-appointment" <<Profile>> [[StructureDefinition-cz-appointment.html]]
-class "cz-specimen" <<Profile>> [[Shttps://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
+class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
 class "cz-observationImage" <<Profile>> [[StructureDefinition-cz-observationImage.html]]
 class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
 class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
