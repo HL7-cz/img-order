@@ -1,0 +1,43 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Hlavička žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-HeaderImagingOrder.html]]
+note top #EEEEAE [[ConceptMap-HeaderImagingOrder2FHIR-cz.html]]
+Concept Mapa
+endnote
+/'
+class "Additional Recipient" <<LogicalModel>> [[StructureDefinition-AdditionalRecipientCz.html]]
+class "Author" <<LogicalModel>> [[StructureDefinition-AuthorCz.html]]
+class "Information about coverage" <<LogicalModel>> [[StructureDefinition-CoverageOrderCz.html]]
+class "Document metadata" <<LogicalModel>> [[StructureDefinition-DocumentMetadataCz.html]]
+class "Health insurance and payment information" <<LogicalModel>> [[StructureDefinition-PayerCz.html]]
+class "Requested Performer" <<LogicalModel>> [[StructureDefinition-RequestedPerformerCz.html]]
+class "Identification" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
+class "Related contact information of the Patient/subject" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
+'/
+class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+class "cz-bundleImageOrder" <<Profile>> [[StructureDefinition-cz-bundleImageOrder.html]]
+class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositionImageOrder.html]]
+"Hlavička žádanky obrazového vyšetření" <|. "cz-compositionImageOrder"
+"Hlavička žádanky obrazového vyšetření" <|. "cz-bundleImageOrder"
+"Hlavička žádanky obrazového vyšetření" <|. "cz-patient-core"
+"Hlavička žádanky obrazového vyšetření" <|. "cz-coverage"
+"Hlavička žádanky obrazového vyšetření" <|. "cz-practitioner-core"
+"cz-bundleImageOrder" -d[hidden]-> "cz-compositionImageOrder"
+"cz-compositionImageOrder" -d[hidden]-> "cz-patient-core"
+"cz-patient-core" -d[hidden]-> "cz-coverage"
+"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+@enduml

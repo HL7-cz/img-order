@@ -1,7 +1,7 @@
 Profile: CZ_ImagingOrderInformation
 Parent: ServiceRequest
 Id: cz-imagingOrderInformation
-Title: "Order Information: Imaging Order (CZ)"
+Title: "Service Reuquest: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
 * identifier 1..
@@ -26,7 +26,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     Laterality 0..1 
 
 * code.coding[ImagingProcedure]
-* code.coding[ImagingProcedure] from CZImagingProcedure 
+* code.coding[ImagingProcedure] from CZ_ImagingProcedureVs 
 * code.coding[Laterality]
 * code.coding[Laterality] from $czlaterality
 

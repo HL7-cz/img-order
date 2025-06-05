@@ -26,24 +26,28 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Status of the Order"
   * ^comment = ""
 
-* subject 1..1 MS
+* subject 1..1 
 * subject only Reference(CZ_PatientCore)
 
-* custodian MS
+* custodian 
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Order"
 
-* encounter MS
+* encounter 
 * encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
 
-* author MS
+* author
 * author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
   * ^short = "Who and/or what authored the Imaging order"
 
-* date MS
+* date
   * ^short = "Date the order was created."
+
+* type from CZ_TypeClinicalEventVs
+
+* category from $DocumentClassValueSet
 
 * section 1..
 * obeys text-or-section

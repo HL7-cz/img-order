@@ -1,4 +1,4 @@
-ValueSet: CZProvisionCode
+ValueSet: CZ_ProvisionCodeVs
 Id: cz-provision-code
 Title: "CZ Provision Code"
 Description: "ValueSet for provision codes in the Czech Imaging project, using Orphacode."

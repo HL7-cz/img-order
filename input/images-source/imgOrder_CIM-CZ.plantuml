@@ -1,0 +1,27 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[ImagingOrderCz.html Žádanka obrazového vyšetření]]
+**[#EEEEAE] [[HeaderImagingOrder.html Hlavička obrazové žádanky]]
+**[#EEEEAE] [[BodyImageOrderCz.html Tělo obrazové žádanky]]
+** [[PresentedFormCz.html Vizuální podoba dokumentu]]
+** [[MediaCz.html Média]]
+
+/'
+** [[health-insurance-cz.html Health Insurance Provider]]
+** [[serviceRequestCz.html Imaging Order Service Request]]
+***_ Order identifier
+***_ Status of a service order.
+***_ Kind of service request.
+*** [[CoverageCz.html Associated insurance coverage]]
+*** [[specimenCz.html Sample for analysis]]
+****_ External Identifier
+****_ Status
+****_ Type
+****_ Subject
+****_ Received Time (DateTime)
+****_ Collection
+****_ Processing
+****_ Container
+'/
+@endmindmap

@@ -1,0 +1,43 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+
+class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
+note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "Média" <<LogicalModel>> [[StructureDefinition-MediaCz.html]]
+note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+
+"Vizuální podoba dokumentu" -- "Média"
+
+"Vizuální podoba dokumentu" <|. "cz-attachment"
+"Média" <|. "cz-attachment"
+
+/'
+"Imaging Order Header" <|. "cz-patient-core"
+"Imaging Order Header" <|. "cz-attachment"
+"Imaging Order Header" <|. "cz-practitioner-core"
+'/
+
+"Vizuální podoba dokumentu" -r[hidden]-> "Média"
+"Vizuální podoba dokumentu" -d[hidden]-> "cz-attachment"
+"Média" -d[hidden]-> "cz-attachment"
+
+@enduml

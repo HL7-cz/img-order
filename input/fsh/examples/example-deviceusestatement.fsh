@@ -1,6 +1,6 @@
 Instance: example-deviceusestatement-cz
 InstanceOf: CZ_DeviceUseStatement
-Title: "Example DeviceUseStatement for Implanted Pacemaker"
+Title: "Example DeviceUseStatement for Implant"
 Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
 
 * status = #active
@@ -12,7 +12,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 * timingPeriod.end = "2024-12-01"
 
 * device = Reference(pacemaker-001)
-* device.display = "Implantable Pacemaker"
+* device.display = "Implant"
 
 * reasonCode[0] = $sct#27885002 "Complete atrioventricular block"
 * reasonCode[0].text = "Complete AV block"
@@ -45,8 +45,9 @@ Description: "A sample Device resource for an implantable pacemaker, referenced 
 
 * status = #active
 
-* type = $sct#706004007 "Implantable cardiac pacemaker"
-* type.text = "Implantable Pacemaker"
+* type.coding.code = #40388003
+* type.coding.system = $sct
+* type.text = "Implant"
 
 * patient = Reference(Mracena)
 * patient.display = "Mracena"

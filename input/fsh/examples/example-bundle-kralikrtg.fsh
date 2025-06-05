@@ -52,7 +52,7 @@ Usage: #example
 * author[+].display = "Bc. Miroslav PAVLÍČEK MBA"
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = http://loinc.org#18748-4 "Diagnostic imaging study"
+* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
@@ -135,7 +135,8 @@ Description: "Example of body height of Patient Kralik"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $sct#1153637007
+* code.coding[SNOMEDCT].code = #1153637007
+* code.coding[SNOMEDCT].system = $sct
 * code.coding[LOINC] = $loinc#8302-2
 * code.coding[NCLP] = $nclp#20411
 * valueQuantity.value = 180
@@ -155,7 +156,8 @@ Description: "Example of body weight of Patient Kralik"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $sct#27113001
+* code.coding[SNOMEDCT].code = #27113001
+* code.coding[SNOMEDCT].system = $sct
 * code.coding[LOINC] = $loinc#29463-7
 * code.coding[NCLP] = $nclp#20042
 * valueQuantity.value = 80

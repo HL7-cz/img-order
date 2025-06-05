@@ -1,6 +1,35 @@
-### Actors
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<blockquote class="stu-note">
+<b>Informative for this version of the guide - Status management</b>
+<p>The Status management have been added to this version of the guide only as informative material. The output must be consulted with the professional community - it is possible that a revision will take place in the near future, which will cause changes to the content!</p>
+</blockquote>
+</div>
 
-<br>
+### Status management
+
+An Imaging Order is an HL7 FHIR resource designed for requesting imaging procedures. It includes essential clinical context such as the ordering provider's information, details about the requested procedure (e.g., CT, MRI, X-ray), relevant clinical indications or reasons for the study, and status information about the order's lifecycle (e.g., draft, active or completed).
+
+Imaging order status value set is comprised from following status codes ( [RequestStatus](https://hl7.org/fhir/R4/valueset-request-status.html) )
+
+| Code             | Display          | Definition                                                                                                                                                                                                                                                        |
+| ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| draft            | Draft            | The request has been created but is not yet complete or ready for action.                                                                                                                                                                                         |
+| active           | Active           | The request is in force and ready to be acted upon.                                                                                                                                                                                                               |
+| on-hold          | On Hold          | The request (and any implicit authorization to act) has been temporarily withdrawn but is expected to resume in the future.                                                                                                                                       |
+| revoked          | Revoked          | The request (and any implicit authorization to act) has been terminated prior to the known full completion of the intended actions. No further activity should occur.                                                                                             |
+| completed        | Completed        | The activity described by the request has been fully performed. No further activity will occur.                                                                                                                                                                   |
+| entered-in-error | Entered in Error | This request should never have existed and should be considered 'void'. (It is possible that real-world decisions were based on it. If real-world activity has occurred, the status should be "revoked" rather than "entered-in-error".).                         |
+| unknown          | Unknown          | The authoring/source system does not know which of the status values currently applies for this request. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which. |
+
+Fulfilling the following state diagram:
+
+<figure>
+  {% include imgOrder_StatusMan.svg %}
+</figure>
+
+### Scenarios
+
+#### Actors
 
 **Referring Physician**
 
@@ -26,11 +55,7 @@ The healthcare facility, the provider of medical care, where the referral is rec
 
 A physician who, besides the Ordering Physician, will receive the report as the result of the imaging examination. By law, the report is typically sent to the Ordering Physician. However, for medical necessity, the report can also be directed to another healthcare professional besides the Ordering Physician, known as the Additional Recipient of the Report.
 
-### Use Cases
-
----
-
-#### Use Case: Non-specific Order
+#### Non-specific Order
 
 ##### Scenario: Chest X-ray
 
@@ -64,7 +89,7 @@ The order can be either specific or non-specific and mobility information is gen
 
 ---
 
-#### Use Case: Specific Order
+#### Specific Order
 
 ##### Scenario: MR with a Targeted Protocol
 
@@ -84,7 +109,7 @@ Since the right to choose one's doctor freely is established by law, a patient m
 
 ##### Scenario: PET/CT
 
-The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](index.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
+The referring physician creates a referral for a PET/CT scan (selecting both PET and CT from the [DICOM modalities](scope-and-content.html#modality-table)), which is usually conducted at a collaborating facility. In addition to the mandatory information, the physician includes details that could influence the course of the examination and the administration of iodinated contrast material. Although the referral can be addressed to the collaborating facility, the examination can also be performed at another healthcare facility that offers this examination, according to the patient's right to choose freely.
 
 In the clinical information section, it is appropriate to include details that could affect the interpretation of the examination, such as the date of the last radiotherapy or chemotherapy session, the date of the last surgery, or the date of the last local ablation treatment, etc.
 
@@ -92,7 +117,7 @@ This approach can also be applied to PET/MR examinations.
 
 ##### Scenario: Peripheral Artery Angioplasty
 
-The referring physician creates a referral for peripheral artery angioplasty, which is typically performed based on prior agreement ([scenario 3.2.3.1](functional-view.html#scenario-received-general-consultation), general consultation, specifics of which are not part of this document) at the collaborating facility. In addition to the mandatory information, the referral includes details that could affect the procedure and the administration of iodinated contrast material, including coagulation parameters such as INR and platelet count.
+The referring physician creates a referral for peripheral artery angioplasty, which is typically performed based on prior agreement ([scenario 3.2.3.1](workflow.html#scenario-received-general-consultation), general consultation, specifics of which are not part of this document) at the collaborating facility. In addition to the mandatory information, the referral includes details that could affect the procedure and the administration of iodinated contrast material, including coagulation parameters such as INR and platelet count.
 
 The referral will be addressed to the facility that performs the procedure. It is possible to attach the results of previous examinations to the referral, particularly any written statements approving the procedure (e.g. records from a multidisciplinary committee or consultation with another specialty). Additionally, this referral includes information about laterality, which must be conveyed. For example, the angioplasty of the left anterior tibial artery can be specified (SNOMED code 312643005 with the specific "left" code 20141000087109).
 
@@ -102,7 +127,7 @@ This procedure can also be applied to other vascular or non-vascular interventio
 
 ---
 
-#### Use Case: Consultation
+#### Consultation
 
 ##### Scenario: Received General Consultation
 
@@ -118,7 +143,7 @@ In cases where the examination is not performed due to medical or technical reas
 
 ---
 
-#### Use Case: Order Acceptance by Facilities Using a More General Examination List
+#### Order Acceptance by Facilities Using a More General Examination List
 
 ##### Scenario
 

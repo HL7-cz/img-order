@@ -9,7 +9,7 @@ name: HL7CzImagingOrderImplementationGuide
 title: HL7 Czech Imaging Order IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.2
+version: 0.0.3
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -63,20 +63,78 @@ dependencies:
 pages:
   index.md:
     title: Home
-  general-semantics.md:
-    title: Introduction
-  functional-view.md:
-    title: Functional view
-  general-semantics-cs.md:
-    title: Úvod do problematiky
-  functional-view-cs.md:
-    title: Funkční specifikace
+  index-cs.md:
+    title: Home
+  scope-and-content.md:
+    title: Scope and content
+  scope-and-content-cs.md:
+    title: Oblasti a obsah
+  background.md:
+    title: Background
+  background-cs.md:
+    title: Background
+  authors.md:
+    title: Authors
+  authors-cs.md:
+    title: Autoři
+  copyright.md:
+    title: Copyright
+  copyright-cs.md:
+    title: Autorská práva
+  dependencies.md:
+    title: Dependencies
+  dependencies-cs.md:
+    title: Závislosti
+  examples.md:
+    title: Examples
+  examples-cs.md:
+    title: Příklady
+  logical-models.md:
+    title: Logical models
+  logical-models-cs.md:
+    title: Datová sada - logické modely
+  model-map.md:
+    title: Model maps
+  model-map-cs.md:
+    title: Mapování logického modelu
+  obligations.md:
+    title: Obligations
+  obligations-cs.md:
+    title: Obligations
+  terminology-considerations.md:
+    title: Terminology considerations
+  terminology-considerations-cs.md:
+    title: Terminologické aspekty  
+  use-cases.md:
+    title: Use cases
+  use-cases-cs.md:
+    title: Příklady užití
+  workflow.md:
+    title: Workflow  
+  workflow-cs.md:
+    title: Workflow 
   artifacts.xml:
-    title: Summary artifacts
+    title: Artifacts
 # profiles-and-extensions.md:
 #   title: Profiles and extensions
   downloads.md:
     title: Download
+  downloads-cs.md:
+    title: Download
+# === MAP ====
+  Header-map.html:
+    title: Header Model map
+  Header-map-cs.html:
+    title: Mapování logického modelu hlavičky
+  Body-map.html:
+    title: Body Model map
+  Body-map-cs.html:
+    title: Mapování logického modelu těla
+  Attachment-map.html:
+    title: Presented Form and Media Model map
+  Attachment-map-cs.html:
+    title: Mapování logického modelu vizuální podoby dokumentu a medií
+
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -148,21 +206,40 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
+  Home:
+    Home (en): index.html
+    Home (cs): index-cs.html
   Introduction:
-    General semantics: general-semantics.html
-    Content: general-semantics.html#content
-    Obecná sémantika: general-semantics-cs.html
-    Obsah: general-semantics-cs.html#obsah
-  Functional view:
-    Actors: functional-view.html
-    Use Cases: functional-view.html#use-cases
-    Aktéři: functional-view-cs.html
-    Případy užití: functional-view-cs.html#případy-užití
-  Artifacts:
-    Profile artifacts: artifacts.html
+    Scope and content (en): scope-and-content.html
+    Scope and content (cs): scope-and-content-cs.html
+    Background (en): background.html
+    Background (cs): background-cs.html
+  Functional:
+    Use cases (en): use-cases.html
+    Use cases (cs): use-cases-cs.html
+    Workflow (en): workflow.html
+    Workflow (cs): workflow-cs.html
+    Logical models (en): logical-models.html
+    Logical models (cs): logical-models-cs.html
+    Terminology considerations (en): terminology-considerations.html
+    Terminology considerations (cs): terminology-considerations-cs.html
+  Implementation:
+    Mapping to profiles (en): model-map.html
+    Mapping to profiles (cs): model-map-cs.html
+    Examples (en): examples.html
+    Examples (cs): examples-cs.html
+    Obligations (en): obligations.html
+    Obligations (cs): obligations-cs.html
   About:
-    Downloads: downloads.html
+    Authors (en): authors.html
+    Authors (cs): authors-cs.html
+    Downloads (en): downloads.html
+    Downloads (cs): downloads-cs.html
+    Dependencies (en): dependencies.html
+    Dependencies (cs): dependencies-cs.html
+    Copyright (en): copyright.html
+    Copyright (cs): copyright-cs.html
+  Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

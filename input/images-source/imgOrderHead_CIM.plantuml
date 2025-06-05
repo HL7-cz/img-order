@@ -1,16 +1,16 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-*[#FFBBCC] [[HeaderImagingOrder.html Imaging Order Header]]
-**[#lightgreen] Imaging Order Subject
+*[#EEEEAE] [[HeaderImagingOrder.html Imaging Order Header]]
+**[#TECHNOLOGY] [[SubjectCz.html Imaging Order Subject]]
 /'    Shell we keep or not?
 ** Preferred Health Professional
 '/
-**[#lightgreen] Health Insurance and Payment Information
+**[#TECHNOLOGY] [[PayerCz.html Health Insurance and Payment Information]]
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-**[#lightgreen] Coverage Information
+**[#TECHNOLOGY] [[CoverageOrderCz.html Coverage Information]]
 /'
 ** Attestation
 ***_ Attester
@@ -19,7 +19,7 @@ skinparam topurl StructureDefinition-
 ***_ Legal authenticator
 ***_ DateTime
 '/
-**[#lightgreen] Document Metadata
+**[#TECHNOLOGY] [[DocumentMetadataCz.html Document Metadata]]
 ***_ Document ID
 ***_ Document Type
 ***_ Document Status
@@ -29,10 +29,10 @@ skinparam topurl StructureDefinition-
 ***_ Confidentiality
 ***_ Language
 ***_ Version
-**[#lightgreen] Imaging Order Author
-**[#lightgreen] Additional Recipient
-**[#lightgreen] Requested Performer
-**[#lightgreen] Digital Signature
+**[#TECHNOLOGY] [[AuthorCz.html Imaging Order Author]]
+**[#TECHNOLOGY] [[RequestedPerformerCz.html Requested Performer]]
+**[#TECHNOLOGY] [[AdditionalRecipientCz.html Additional Recipient]]
+**[#TECHNOLOGY] [[digitalSignatureCz.html Digital Signature]]
 ***_ Electronic Signature or Document Seal
 ***_ Electronic Timestamp
 /' ** Intended recipient
