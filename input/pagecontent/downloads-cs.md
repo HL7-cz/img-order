@@ -2,7 +2,7 @@
 
 Implementační příručka lze nahrát [zde](full-ig.zip).
 
-### NPM Archiv and definice
+### NPM Archiv a definice
 
 Následující soubor obsahuje všechny valuesety, profily, extenze, stránky a url apod. definované části této Implementační příručky:
 
@@ -14,7 +14,9 @@ Kromě toho existují definiční soubory specifické pro daný formát:
 - [JSON](definitions.json.zip)
 - [TTL](definitions.ttl.zip)
 
-Existují také specifické archivy pro specifikace R4 a R4B FHIR:
+Tyto soubory by měly být první volbou při generování jakýchkoli implementačních artefaktů, protože obsahují všechna pravidla o tom, proč jsou tyto profily platné.
+
+Existují také balíčky pro specifikace R4 a R4B FHIR:
 
 #### R4 NPM archiv a definice
 
