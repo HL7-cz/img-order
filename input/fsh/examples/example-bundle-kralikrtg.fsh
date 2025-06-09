@@ -8,38 +8,35 @@ Usage: #example
 * type = #document
 * timestamp = "2025-05-20T12:02:00+01:00"
 
-* entry[0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[0].resource = Composition-kralik-rtg
+* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].resource = Composition-kralik-rtg
 
-* entry[1].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
-* entry[1].resource = patient_kralik
+* entry[patient].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
+* entry[patient].resource = patient_kralik
 
-* entry[2].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[2].resource = cz-kralikrgt-example
+* entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[orderInformation].resource = cz-kralikrgt-example
 
-* entry[3].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
-* entry[3].resource = cz-pdfkralikrgt-example
+* entry[attachment].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
+* entry[attachment].resource = cz-pdfkralikrgt-example
 
-* entry[4].fullUrl = "urn:uuid:152e92a5-c0a6-418f-8b2d-620a8ef40205"
-* entry[4].resource = KralikReason
+* entry[clinicalQuestion][0].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
+* entry[clinicalQuestion][=].resource = KralikClinicalQuestion
 
-* entry[5].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* entry[5].resource = KralikClinicalQuestion
+* entry[observation][0].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
+* entry[observation][=].resource = WeightKralik
 
-* entry[6].fullUrl = "urn:uuid:0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
-* entry[6].resource = KralikDiagnosis
+* entry[observation][+].fullUrl = "urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9"
+* entry[observation][=].resource = HeightKralik
 
-* entry[7].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
-* entry[7].resource = WeightKralik
+* entry[practitioner][0].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
+* entry[practitioner][=].resource = practitionerKeller
 
-* entry[8].fullUrl = "urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9"
-* entry[8].resource = HeightKralik
+* entry[practitioner][+].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
+* entry[practitioner][=].resource = practitionerPavlicek
 
-* entry[9].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
-* entry[9].resource = practitionerKeller
-
-* entry[10].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
-* entry[10].resource = practitionerPavlicek
+* entry[device].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
+* entry[device].resource = RGDevice
 
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
@@ -58,9 +55,11 @@ Usage: #example
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
-* section[orderInformation].entry[1] = Reference(urn:uuid:0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee)
-* section[orderInformation].entry[2] = Reference(urn:uuid:152e92a5-c0a6-418f-8b2d-620a8ef40205)
-* section[orderInformation].entry[3] = Reference(urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35)
+* section[clinicalQuestion].title = "Clinical question"
+* section[clinicalQuestion].code = $loinc#75328-5	"Prognosis"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question</div>" 
+* section[clinicalQuestion].text.status = #generated
+* section[clinicalQuestion].entry[0] = Reference(urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35)
 * section[attachments].title = "Additional documentation"
 * section[attachments].code = $loinc#77599-9 "Additional documentation"
 * section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>" 
@@ -71,7 +70,6 @@ Instance: practitionerKeller
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
-* id = "1377d81b-a473-46e4-9d42-ba8c2fd1412c"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 * name.use = #usual
@@ -85,7 +83,6 @@ Instance: practitionerPavlicek
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
-* id = "984dcf34-1924-45a8-8ec5-3d100b67d9be"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456788"
 * name.use = #usual
@@ -131,7 +128,6 @@ InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
-* id = "c4123c75-4559-41d9-8153-c6d0fb577de9"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -152,7 +148,6 @@ InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
-* id = "d65e3423-e250-412c-8e4d-94c29490593c"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -171,14 +166,14 @@ Description: "Example of body weight of Patient Kralik"
 Instance: cz-kralikrgt-example
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
+Title: "Imaging order for Plain X-ray"
 Description: "Imaging order for Plain X-ray"
-* id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * identifier[+].system = "https://www.homolka.cz/"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
-* performer = Reference(RGDevice)
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * insurance = Reference(cz-kralikinsurance-example)
 * bodySite = $sct#6757004 "Right knee"
@@ -188,18 +183,21 @@ Description: "Imaging order for Plain X-ray"
 * bodySite = $sct#12921003 "Pelvis"
 * bodySite = $sct#287579007 "Right hip"
 * bodySite = $sct#287679003 "Left hip"
-* code.coding[ImagingProcedure] = $sct#168537006 "Plain X-ray"
+* code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo = Reference(urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9)
 * supportingInfo = Reference(urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c)
+* reasonCode.coding[diagnosis].code = #S01.8 "Otevřená rána jiných částí hlavy"
+* reasonCode.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 
 Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage
 Description: "Example of coverage"
 Usage: #example
+Title: "Coverage - Healthcare insurance company"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * payor = Reference(cz-pojistovna-example)
@@ -208,33 +206,16 @@ Instance: cz-pojistovna-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation"
+Title: "Organization - Healthcare insurance company"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
 
-Instance: KralikDiagnosis
-InstanceOf: CZ_ConditionImage
-Usage: #inline
-Description: "Condition - Diagnosis"
-* id = "0d21bc16-76f7-48a4-a727-bfdd5bc0e8ee"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* category = $hl7-condition-category-cs#encounter-diagnosis
-* code.coding[diagnosis].code = #S01.8 "Otevřená rána jiných částí hlavy"
-* code.text = "Otevřená rána jiných částí hlavy"
-
-Instance: KralikReason
-InstanceOf: CZ_ConditionImage
-Usage: #inline
-Description: "Condition - Reason"
-* id = "152e92a5-c0a6-418f-8b2d-620a8ef40205"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* category = $hl7-condition-category-cs#problem-list-item
-* code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
-
 Instance: KralikClinicalQuestion
-InstanceOf: CZ_ConditionImage
-Usage: #inline
-Description: "Condition - Clinical question"
+InstanceOf: CZ_ClinicalQuestion
+Usage: #example
+Description: "Clinical question"
+Title: "Clinical question in text form"
 * id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category = $hl7-condition-category-cs#encounter-diagnosis

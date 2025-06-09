@@ -61,6 +61,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 * section contains
     orderInformation 1..* and
+    clinicalQuestion 1..* and
     specimen 0..* and
     coverage 0..* and
     appointment 0..1 and
@@ -76,7 +77,17 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
   * entry 0..
-  * entry only Reference(CZ_ImagingOrderInformation or CZ_ConditionImage) 
+  * entry only Reference(CZ_ImagingOrderInformation) 
+
+///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
+* section[clinicalQuestion]
+  * ^short = "Clinical question"
+  * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#75328-5	"Prognosis"
+  * entry 1..
+  * entry only Reference(CZ_ClinicalQuestion) 
 
 ///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
 * section[specimen]

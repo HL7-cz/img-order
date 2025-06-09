@@ -51,6 +51,39 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.patientInstruction
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderReason
+* group[=].element[=].display = "A.2.2 - Order reason"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)"
+* group[=].element[+].code = #OrderInformation.orderReason.problem
+* group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
+* group[=].element[=].display = "A.2.2.4 - Reason for ordering by code"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.reasonText
+* group[=].element[=].display = "A.2.2.6 - Reason for order by text"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalQuestion"
+* group[=].element[+].code = #OrderInformation.orderDetail.questionCode
+* group[=].element[=].display = "A.2.2.2 - Clinical question by code"
+* group[=].element[=].target.code = #CZ_ClinicalQuestion.coding
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #OrderInformation.orderDetail.questionText
+* group[=].element[=].display = "A.2.2.3 - Clinical question by text"
+* group[=].element[=].target.code = #CZ_ClinicalQuestion.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #OrderInformation.orderReason
@@ -62,26 +95,6 @@ Usage: #definition
 * group[=].element[+].code = #OrderInformation.orderReason.problem
 * group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
 * group[=].element[=].target.code = #CZ_ConditionImage.coding
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #OrderInformation.orderDetail.questionCode
-* group[=].element[=].display = "A.2.2.2 - Clinical question by code"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #OrderInformation.orderDetail.questionText
-* group[=].element[=].display = "A.2.2.3 - Clinical question by text"
-* group[=].element[=].target.code = #CZ_ConditionImage.text
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
-* group[=].element[=].display = "A.2.2.4 - Reason for ordering by code"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #OrderInformation.orderDetail.reasonText
-* group[=].element[=].display = "A.2.2.6 - Reason for order by text"
-* group[=].element[=].target.code = #CZ_ConditionImage.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
