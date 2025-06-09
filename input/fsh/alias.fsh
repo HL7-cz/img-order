@@ -22,6 +22,7 @@ Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
 Alias: $FHIRDocumentTypeCodes = http://hl7.org/fhir/ValueSet/doc-typecodes
 Alias: $DocumentClassValueSet = http://hl7.org/fhir/ValueSet/document-classcodes
+Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
 
 // Extensions:
 Alias: $hl7Supportinginfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
