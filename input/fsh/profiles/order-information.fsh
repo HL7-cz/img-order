@@ -14,8 +14,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 
 * subject only Reference(CZ_PatientCore)
 * insurance only Reference(CZ_Coverage)
-* reasonReference only Reference(Condition)
-
+* specimen only Reference(CZ_Specimen)
 * code 
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
