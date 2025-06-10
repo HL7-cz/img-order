@@ -84,19 +84,6 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ClinicalQuestion.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
-* group[=].element[+].code = #OrderInformation.orderReason
-* group[=].element[=].display = "A.2.2 - Order reason"
-* group[=].element[=].target.code = #Composition.section:OrderInformation
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "#Composition.OrderInformation.entry.ofType(CZ_ConditionImage)"
-* group[=].element[+].code = #OrderInformation.orderReason.problem
-* group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-encounter"
 * group[=].element[+].code = #Body.ClinicalEvent
@@ -195,10 +182,9 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.6 - Speciment information"
-* group[=].element[=].target.code = #Composition.section:Specimen					
+* group[=].element[=].target.code = #Composition.section:OrderInformation.specimen.ofType(CZ_Specimen)				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto	
-* group[=].element[=].target.comment = "Composition.section:Specimen.entry.ofType(CZ_Specimen)"
 * group[=].element[+].code = #SpecimenInformation.identifier
 * group[=].element[=].display = "A.2.6.1 - Identifier of specimen"
 * group[=].element[=].target.code = #CZ_Specimen.identifier
@@ -391,17 +377,17 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.SupportingInformation.otherRelevantClinicalInformation
 * group[=].element[=].display = "A.3.1.2 - Other Relevant Clinical Information"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_ConditionImage)		
+* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(Condition)		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #SupportingInformation.otherRelevantClinicalInformation.code
 * group[=].element[=].display = "A.3.1.2.1 - Code"
-* group[=].element[=].target.code = #CZ_ConditionImage.code.coding
+* group[=].element[=].target.code = #Condition.code.coding
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.otherRelevantClinicalInformation.text
 * group[=].element[=].display = "A.3.1.2.2 - Text"
-* group[=].element[=].target.code = #CZ_ConditionImage.code.text
+* group[=].element[=].target.code = #Condition.code.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"

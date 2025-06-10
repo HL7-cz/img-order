@@ -6,7 +6,7 @@ Parent: Composition
 Id: cz-compositionImageOrder
 Title: "Composition: Imaging Order (CZ)"
 Description: "Clinical document used to represent a Imaging Order for the scope of this guide."
-* ^purpose = "Imaging order bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+* ^purpose = "Imaging order bundle is an electronic health record extract containing order for imaging observation from a subject of care, comprising at least the required elements of the imaging dataset."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Order Composition"
@@ -62,7 +62,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * section contains
     orderInformation 1..* and
     clinicalQuestion 1..* and
-    specimen 0..* and
     coverage 0..* and
     appointment 0..1 and
     carePlan 0..1 and
@@ -88,16 +87,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * code = $loinc#75328-5	"Prognosis"
   * entry 1..
   * entry only Reference(CZ_ClinicalQuestion) 
-
-///////////////////////////////////// SPECIMEN SECTION //////////////////////////////////////////
-* section[specimen]
-  * ^short = "Specimen-related information panel"
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-  * ^extension[0].valueString = "Section"
-  * code = $loinc#68992-7 "Specimen-related information panel"
-  * entry 0..
-  * entry only Reference(CZ_Specimen)
-
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
