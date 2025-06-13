@@ -263,9 +263,9 @@ Usage: #definition
 * group[=].element[=].target.display = "Type of sampling container - tube, sampling bag, etc. including chemical additives."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.container.count
-* group[=].element[=].display = "A.2.6.14.2 - Count"
+* group[=].element[=].display = "A.2.6.14.2 - Specimen quantity"
 * group[=].element[=].target.code = #CZ_Specimen.container.specimenQuantity
-* group[=].element[=].target.display = "Number of containers with one identical sample (e.g. in case the sample volume does not fit into one container)"
+* group[=].element[=].target.display = "Specimen quantity within container."
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.container.deviceId
 * group[=].element[=].display = "A.2.6.14.3 - Device id"
@@ -279,24 +279,32 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.additionalData
 * group[=].element[=].display = "A.2.6.15 - Additional formalised sample data"
-* group[=].element[=].target.code = #CZ_Specimen.extension:additionalData
+* group[=].element[=].target.code = #CZ_Specimen.collection
 * group[=].element[=].target.display = "Additional formalised sample data"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.additionalData.date
 * group[=].element[=].display = "A.2.6.15.1 - Date"
-* group[=].element[=].target.code = #CZ_Specimen.extension:additionalData.data
+* group[=].element[=].target.code = #CZ_Specimen.collection.collectedDateTime
 * group[=].element[=].target.display = "Date of discovery of the data, to be indicated if different from the date of the order."
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #SpecimenInformation.additionalData.code
-* group[=].element[=].display = "A.2.6.15.2 - Code"
-* group[=].element[=].target.code = #CZ_Specimen.extension:additionalData.code
-* group[=].element[=].target.display = "Observation code identifying the significance of the data (collection time interval, volume of material collected; density; condition of material, type of collection, etc.)"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.additionalData.value
 * group[=].element[=].display = "A.2.6.15.3 - Data value"
-* group[=].element[=].target.code = #CZ_Specimen.extension:additionalData.value
-* group[=].element[=].target.display = "Data value including unit of measurement."
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target[+].code = #CZ_Specimen.collection.collectedPeriod
+* group[=].element[=].target[=].display = "Data value including unit of measurement."
+* group[=].element[=].target[=].comment = "If #SpecimenInformation.additionalData.code = 08017 or 09056 (NCLPPOL - Čas odběru v minutách nebo sekundách)"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #CZ_Specimen.collection.quantity
+* group[=].element[=].target[=].display = "Data value including unit of measurement."
+* group[=].element[=].target[=].comment = "If #SpecimenInformation.additionalData.code = 03142 (NCLPPOL - Objem)"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #CZ_Specimen.condition
+* group[=].element[=].target[=].display = "Data value including unit of measurement."
+* group[=].element[=].target[=].comment = "If #SpecimenInformation.additionalData.code = 20293 (NCLPPOL - Stav materiálu)"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #CZ_Specimen.note
+* group[=].element[=].target[=].display = "Data value including unit of measurement."
+* group[=].element[=].target[=].comment = "If #SpecimenInformation.additionalData.code = 20206 (NCLPPOL - Poznámky-specifikace-jiné)"
+* group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.collector
 * group[=].element[=].display = "A.2.6.16 - Collector"
 * group[=].element[=].target.code = #CZ_Specimen.collector

@@ -34,7 +34,7 @@ Description:  """Information about specimen"""
 * container.type 0..1 CodeableConcept "A.2.6.14.1 - Type" """Type of sampling container - tube, sampling bag, etc. including chemical additives.
  - Preferred system(s): SNOMED CT
  - Preferred system(s): NCLPONP"""
-* container.count 0..1 integer "A.2.6.14.2 - Count" """Number of containers with one identical sample (e.g. in case the sample volume does not fit into one container)"""
+* container.specimenQuantity 0..1 integer "A.2.6.14.2 - Specimen Quantity" """Quantity of specimen within container"""
 * container.deviceId 1..1 Identifier "A.2.6.14.3 - Device Id" """Unique machine-readable container identifier.
  - Preferred system(s): UDI"""
 * container.label 0..1 Identifier "A.2.6.14.4 - Label" """Human readable container identifier."""
@@ -42,7 +42,7 @@ Description:  """Information about specimen"""
 * additionalData 0..1 BackboneElement "A.2.6.15 - Additional formalised sample data" """ """
 * additionalData.date 0..1 date "A.2.6.15.1 - Date" """Date of discovery of the data, to be indicated if different from the date of the order."""
 * additionalData.code 1..1 CodeableConcept "A.2.6.15.2 - Code" """Observation code identifying the significance of the data (collection time interval, volume of material collected; density; condition of material, type of collection, etc.)
- - Preferred system(s): NČLP"""
+ - Preferred system(s): NČLPPOL (valueset https://www.dastacr.cz/dasta/hypertext/_TRIDAK_202503012241ISLOD.htm)"""
 * additionalData.value 0..1 Narrative "A.2.6.15.3 - Data value" """Data value including unit of measurement."""
 
 * collector 0..1 BackboneElement "A.2.6.16 - Collector" """"""
