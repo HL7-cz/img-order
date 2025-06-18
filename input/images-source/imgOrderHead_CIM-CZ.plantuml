@@ -1,7 +1,7 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-*[#EEEEAE] [[HeaderImagingOrder.html Hlavička obrazového vyšetření]]
+*[#EEEEAE] [[HeaderImagingOrder.html Hlavička obrazové žádanky]]
 **[#TECHNOLOGY] [[SubjectCz.html Identifikace pacienta]]
 /'    Shell we keep or not?
 ** Preferred Health Professional
