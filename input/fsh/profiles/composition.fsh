@@ -84,7 +84,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#75328-5	"Prognosis"
+  * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
   * entry 1..
   * entry only Reference(CZ_ClinicalQuestion) 
 
