@@ -56,7 +56,7 @@ Usage: #example
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[clinicalQuestion].title = "Clinical question"
-* section[clinicalQuestion].code = $loinc#75328-5	"Prognosis"
+* section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question</div>" 
 * section[clinicalQuestion].text.status = #generated
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35)
