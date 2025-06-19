@@ -78,7 +78,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * entry 0..
   * entry only Reference(CZ_ImagingOrderInformation) 
 
-///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
+///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
   * ^short = "Clinical question"
   * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
