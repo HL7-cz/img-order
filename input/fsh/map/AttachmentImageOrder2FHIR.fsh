@@ -12,7 +12,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "A.3 - Presented Form"
-* group[=].element[=].target.code = #Media.content
+* group[=].element[=].target.code = #CZ_Attachment.content
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PresentedForm.contentType
@@ -45,39 +45,39 @@ Usage: #definition
 * group[=].element[=].target.code = #content.creation				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/MediaCz"
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/Attachment"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
-* group[=].element[+].code = #Media
-* group[=].element[=].display = "A.4 - Media attachments"
-* group[=].element[=].target.code = #Media.content
+* group[=].element[+].code = #Attachment
+* group[=].element[=].display = "A.4 - Additional attachments"
+* group[=].element[=].target.code = #CZ_Attachment.content
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Media.contentType
+* group[=].element[+].code = #Attachment.contentType
 * group[=].element[=].display = "A.4.1 - Content type of media attachments"
 * group[=].element[=].target.code = #content.contentType					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Media.language
+* group[=].element[+].code = #Attachment.language
 * group[=].element[=].display = "A.4.2 - Language of media attachments"
 * group[=].element[=].target.code = #content.language					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Media.data
+* group[=].element[+].code = #Attachment.data
 * group[=].element[=].display = "A.4.3 - Data of media attachments"
 * group[=].element[=].target.code = #content.data					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Media.url
+* group[=].element[+].code = #Attachment.url
 * group[=].element[=].display = "A.4.4 - URL of media attachments"
 * group[=].element[=].target.code = #content.url					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Media.title
+* group[=].element[+].code = #Attachment.title
 * group[=].element[=].display = "A.4.5 - Title of media attachments"
 * group[=].element[=].target.code = #content.title					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Media.creation
+* group[=].element[+].code = #Attachment.creation
 * group[=].element[=].display = "A.4.6 - Date and time of creation"
 * group[=].element[=].target.code = #content.creation				
 * group[=].element[=].target.display = ""
