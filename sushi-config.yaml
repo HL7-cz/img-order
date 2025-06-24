@@ -131,9 +131,9 @@ pages:
   Body-map-cs.html:
     title: Mapování logického modelu těla
   Attachment-map.html:
-    title: Presented Form and Media Model map
+    title: Presented Form and Attachment Model map
   Attachment-map-cs.html:
-    title: Mapování logického modelu vizuální podoby dokumentu a medií
+    title: Mapování logického modelu vizuální podoby dokumentu a příloh
 
 #
 # The parameters property represents IG.definition.parameter. Rather

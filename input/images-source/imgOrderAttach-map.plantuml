@@ -18,17 +18,17 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Map
 endnote
 
-class "Media" <<LogicalModel>> [[StructureDefinition-MediaCz.html]]
+class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
 note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Map
 endnote
 
 class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 
-"Presented Form" -- "Media"
+"Presented Form" -- "Attachments"
 
 "Presented Form" <|. "cz-attachment"
-"Media" <|. "cz-attachment"
+"Attachments" <|. "cz-attachment"
 
 /'
 "Imaging Order Header" <|. "cz-patient-core"
@@ -36,8 +36,8 @@ class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 "Imaging Order Header" <|. "cz-practitioner-core"
 '/
 
-"Presented Form" -r[hidden]-> "Media"
+"Presented Form" -r[hidden]-> "Attachments"
 "Presented Form" -d[hidden]-> "cz-attachment"
-"Media" -d[hidden]-> "cz-attachment"
+"Attachments" -d[hidden]-> "cz-attachment"
 
 @enduml
