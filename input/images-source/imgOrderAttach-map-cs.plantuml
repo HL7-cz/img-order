@@ -18,17 +18,17 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote
 
-class "Média" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
+class "Přílohy" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
 note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote
 
 class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 
-"Vizuální podoba dokumentu" -- "Média"
+"Vizuální podoba dokumentu" -- "Přílohy"
 
 "Vizuální podoba dokumentu" <|. "cz-attachment"
-"Média" <|. "cz-attachment"
+"Přílohy" <|. "cz-attachment"
 
 /'
 "Imaging Order Header" <|. "cz-patient-core"
@@ -36,8 +36,8 @@ class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 "Imaging Order Header" <|. "cz-practitioner-core"
 '/
 
-"Vizuální podoba dokumentu" -r[hidden]-> "Média"
+"Vizuální podoba dokumentu" -r[hidden]-> "Přílohy"
 "Vizuální podoba dokumentu" -d[hidden]-> "cz-attachment"
-"Média" -d[hidden]-> "cz-attachment"
+"Přílohy" -d[hidden]-> "cz-attachment"
 
 @enduml
