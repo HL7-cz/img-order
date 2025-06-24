@@ -1,7 +1,4 @@
 @startuml
-left to right direction
-skinparam linetype ortho
-
 state "Draft" as draft
 draft : ..koncept
 state "Active" as active
@@ -19,30 +16,30 @@ state join_state1 <<join>>
 state join_state2 <<join>>
 state join_state3 <<join>>
 
-[*] --> draft : <back:#APPLICATION> Vytvoření </back>
+[*] --> draft : Vytvoření
 
 draft --> fork_state
-fork_state --> active : <back:#TECHNOLOGY> Odesláno </back>
-fork_state --> join_state2 
+fork_state --> active : Odesláno
+fork_state --> join_state2 : Zrušeno
 
 'draft --> active : Odesláno
-active --> on_hold
-on_hold --> active
+active --> on_hold : Pozastavit
+on_hold --> active : Obnovit
 
-active --> join_state2
-on_hold --> join_state2
-join_state2 --> revoked : <back:#EEEEAE> Zrušeno </back>
+active --> join_state2 : Zrušit
+on_hold --> join_state2 : Zrušit z pozastavení
+join_state2 --> revoked
 
 'draft --> join_state1
 active --> join_state1
 on_hold --> join_state1
 revoked --> join_state1
 completed --> join_state1
-join_state1 --> entered_in_error : <back:#FF7E70> Chyba </back>
+join_state1 --> entered_in_error : Chyba
 
 active --> join_state3
 on_hold --> join_state3
-join_state3 --> completed : <back:#TECHNOLOGY> Dokončeno </back>
+join_state3 --> completed : Vyšetření dokončeno
 
 /'
 completed --> [*]
