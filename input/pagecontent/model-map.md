@@ -5,4 +5,4 @@ This page lists the pages documenting with a graphical representation the maps b
 | [Header](StructureDefinition-HeaderImagingOrder.html)      | [Header-map.html](Header-map.html)         |
 | [Body](StructureDefinition-BodyImageOrderCz.html)            | [Body-map.html](Body-map.html)             |
 | [Presented form](StructureDefinition-PresentedFormCz.html) | [Attachment-map.html](Attachment-map.html) |
-| [Media](StructureDefinition-MediaCz.html)                  | [Attachment-map.html](Attachment-map.html) |
+| [Attachments](StructureDefinition-AttachmentsCz.html)                  | [Attachment-map.html](Attachment-map.html) |

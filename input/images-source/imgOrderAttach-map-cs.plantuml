@@ -18,7 +18,7 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote
 
-class "Média" <<LogicalModel>> [[StructureDefinition-MediaCz.html]]
+class "Média" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
 note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote
