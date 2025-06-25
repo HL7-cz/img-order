@@ -1,4 +1,7 @@
 @startuml
+left to right direction
+skinparam linetype ortho
+
 state "Draft" as draft
 'draft : ..koncept
 state "Active" as active
@@ -16,30 +19,30 @@ state join_state1 <<join>>
 state join_state2 <<join>>
 state join_state3 <<join>>
 
-[*] --> draft : Create
+[*] --> draft : <back:#APPLICATION> Create </back>
 
 draft --> fork_state
-fork_state --> active : Submitted
-fork_state --> join_state2 : Cancelled
+fork_state --> active : <back:#TECHNOLOGY> Submitted </back>
+fork_state --> join_state2 
 
 'draft --> active : Odesláno
-active --> on_hold : Suspend
-on_hold --> active : Resume
+active --> on_hold
+on_hold --> active
 
-active --> join_state2 : Cancel
-on_hold --> join_state2 : Cancel from suspend
-join_state2 --> revoked
+active --> join_state2
+on_hold --> join_state2
+join_state2 --> revoked : <back:#EEEEAE> Revoked </back>
 
 'draft --> join_state1
 active --> join_state1
 on_hold --> join_state1
 revoked --> join_state1
 completed --> join_state1
-join_state1 --> entered_in_error : Error
+join_state1 --> entered_in_error : <back:#FF7E70> Error </back>
 
 active --> join_state3
 on_hold --> join_state3
-join_state3 --> completed : Completed
+join_state3 --> completed : <back:#TECHNOLOGY> Completed </back>
 
 /'
 completed --> [*]
