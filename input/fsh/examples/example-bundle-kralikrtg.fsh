@@ -8,35 +8,38 @@ Usage: #example
 * type = #document
 * timestamp = "2025-05-20T12:02:00+01:00"
 
-* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition].resource = Composition-kralik-rtg
+* entry[composition][0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition][=].resource = Composition-kralik-rtg
 
-* entry[patient].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
-* entry[patient].resource = patient_kralik
+* entry[patient][+].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
+* entry[patient][=].resource = patient_kralik
 
-* entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[orderInformation].resource = cz-kralikrgt-example
+* entry[orderInformation][+].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[orderInformation][=].resource = cz-kralikrgt-example
 
-* entry[attachment].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
-* entry[attachment].resource = cz-pdfkralikrgt-example
+* entry[attachment][+].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
+* entry[attachment][=].resource = cz-pdfkralikrgt-example
 
-* entry[clinicalQuestion][0].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
+* entry[clinicalQuestion][+].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
 * entry[clinicalQuestion][=].resource = KralikClinicalQuestion
 
-* entry[observation][0].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
+* entry[observation][+].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
 * entry[observation][=].resource = WeightKralik
 
 * entry[observation][+].fullUrl = "urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9"
 * entry[observation][=].resource = HeightKralik
 
-* entry[practitioner][0].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
+* entry[practitioner][+].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
 * entry[practitioner][=].resource = practitionerKeller
 
 * entry[practitioner][+].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
 * entry[practitioner][=].resource = practitionerPavlicek
 
-* entry[device].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
-* entry[device].resource = RGDevice
+* entry[device][+].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
+* entry[device][=].resource = RGDevice
+
+* entry[condition][+].fullUrl = "urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce"
+* entry[condition][=].resource = KralikCondition
 
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
@@ -168,6 +171,7 @@ InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
 Title: "Imaging order for Plain X-ray"
 Description: "Imaging order for Plain X-ray"
+* id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * identifier[+].system = "https://www.homolka.cz/"
 * identifier[=].value = "6609024"
 * status = #active
@@ -189,8 +193,7 @@ Description: "Imaging order for Plain X-ray"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo = Reference(urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9)
 * supportingInfo = Reference(urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c)
-* reasonCode.coding[diagnosis].code = #S01.8 "Otevřená rána jiných částí hlavy"
-* reasonCode.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 
 Instance: cz-kralikinsurance-example
@@ -220,6 +223,16 @@ Title: "Clinical question in text form"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category = $hl7-condition-category-cs#encounter-diagnosis
 * code.text = "Trauma skeletu?"
+
+Instance: KralikCondition
+InstanceOf: CZ_ConditionImage
+Usage: #example
+Description: "Condition"
+Title: "Reason in code form"
+* id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
+* code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: cz-pdfkralikrgt-example
 InstanceOf: CZ_Attachment
