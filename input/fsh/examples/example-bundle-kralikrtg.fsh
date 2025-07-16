@@ -20,9 +20,6 @@ Usage: #example
 * entry[attachment][+].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
 * entry[attachment][=].resource = cz-pdfkralikrgt-example
 
-* entry[clinicalQuestion][+].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* entry[clinicalQuestion][=].resource = KralikClinicalQuestion
-
 * entry[observation][+].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
 * entry[observation][=].resource = WeightKralik
 
@@ -60,9 +57,8 @@ Usage: #example
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question</div>" 
-* section[clinicalQuestion].text.status = #generated
-* section[clinicalQuestion].entry[0] = Reference(urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35)
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>" 
+* section[clinicalQuestion].text.status = #additional
 * section[attachments].title = "Additional documentation"
 * section[attachments].code = $loinc#77599-9 "Additional documentation"
 * section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>" 
@@ -214,16 +210,6 @@ Title: "Organization - Healthcare insurance company"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
-
-Instance: KralikClinicalQuestion
-InstanceOf: CZ_ClinicalQuestion
-Usage: #example
-Description: "Clinical question"
-Title: "Clinical question in text form"
-* id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* category = $hl7-condition-category-cs#encounter-diagnosis
-* code.text = "Trauma skeletu?"
 
 Instance: KralikCondition
 InstanceOf: CZ_ConditionImage

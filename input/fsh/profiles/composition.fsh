@@ -85,8 +85,10 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-  * entry 1..
-  * entry only Reference(CZ_ClinicalQuestion) 
+  * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * text 1..
+  * entry 0..
+  * entry only Reference(CZ_ConditionImage) 
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]

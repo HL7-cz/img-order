@@ -7,5 +7,5 @@ Description: """Předpokládaný zpracovatel žádanky (u neadresné žádanky n
 
 * id 1..* Identifier "A.1.6.1 -ID zpracovatele" """Identifikátor, který se vztahuje na tuto osobu v této roli."""
 * jmeno 1..1 HumanName "A.1.6.2 - Jméno zpracovatele" """Jméno a příjmení osoby zpracovatele žádanky."""
-* IDOrganizace 0..* Identifier "A.1.6.3 - ID organizace zpracovatele" """Identifikátor organizace zpracovatele, který se používá k identifikaci organizace v různých informačních systémech."""
+* idOrganizace 0..* Identifier "A.1.6.3 - ID organizace zpracovatele" """Identifikátor organizace zpracovatele, který se používá k identifikaci organizace v různých informačních systémech."""
 * organizace 1..1 Base "A.1.6.4 - Organizace zpracovatele" """Název, identifikační a kontaktní údaje zdravotnického zařízení zpracovatele, případně také pracoviště zpracovatele."""

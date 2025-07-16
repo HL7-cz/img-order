@@ -3,7 +3,7 @@ Id: logDocumentMetadataCz
 Title: "A.1.8 - Metadata dokumentu"
 Description: """Metadata dokumentu"""
 
-* IDDokumentu 1..1 Identifier "A.1.8.1 - ID dokumentu" """Identifikátor dokumentu"""
+* idDokumentu 1..1 Identifier "A.1.8.1 - ID dokumentu" """Identifikátor dokumentu"""
 * kategorie 1..1 CodeableConcept "A.1.8.2 - Kategorie" """Kategorie elektronického zdravotního záznamu (EHR)."""
 * stav 1..1 CodeableConcept "A.1.8.3 - Stav" """Stav dokumentu (předběžný, finální, doplněný, opravený atp.)."""
 * datumACas 1..1 dateTime "A.1.8.4 - Datum a čas vytvoření" """Datum a čas vytvoření dokumentu."""

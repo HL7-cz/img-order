@@ -75,14 +75,14 @@ Usage: #definition
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalQuestion"
 * group[=].element[+].code = #OrderInformation.orderDetail.questionCode
-* group[=].element[=].display = "A.2.2.2 - Clinical question by code"
-* group[=].element[=].target.code = #CZ_ClinicalQuestion.coding
-* group[=].element[=].target.display = ""
+* group[=].element[=].display = "A.2.2.2 - Clinical question in code form"
+* group[=].element[=].target.code = #Composition.section:ClinicalQuestion.entry.ofType(CZ_Condition).code
+* group[=].element[=].target.display = "In code form"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.questionText
-* group[=].element[=].display = "A.2.2.3 - Clinical question by text"
-* group[=].element[=].target.code = #CZ_ClinicalQuestion.text
-* group[=].element[=].target.display = ""
+* group[=].element[=].display = "A.2.2.3 - A clinical question in text form"
+* group[=].element[=].target.code = #Composition.section:ClinicalQuestion.text
+* group[=].element[=].target.display = "In text form"
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-encounter"
