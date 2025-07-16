@@ -1,4 +1,4 @@
-Logical: PayerOrderCz
+Logical: LogEnPayerOrderCz
 Id: PayerCz
 Title: "A.1.3 - Health insurance and payment information"
 Description: """Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""

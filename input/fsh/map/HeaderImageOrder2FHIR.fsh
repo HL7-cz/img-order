@@ -79,9 +79,9 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.author.organizationID
-* group[=].element[=].display = "A.1.5.3 - Author organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization.identifier					
+* group[=].element[+].code = #Header.author.address
+* group[=].element[=].display = "A.1.5.3 - Author address"
+* group[=].element[=].target.code = #CZ_PractitionerCore.address					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "ID Organization"
@@ -118,11 +118,6 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Header.requestedPerformer.dateTime
-* group[=].element[=].display = "A.1.6.5 - Requested date and time"
-* group[=].element[=].target.code = #CZ_PractitionerCore.time					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equal
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AdditionalRecipientCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"				
 * group[=].element[+].code = #Header.additionalRecipient

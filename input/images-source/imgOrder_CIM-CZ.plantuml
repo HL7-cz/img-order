@@ -1,11 +1,11 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[ImagingOrderCz.html Žádanka obrazového vyšetření]]
-**[#EEEEAE] [[HeaderImagingOrder.html Hlavička obrazové žádanky]]
-**[#EEEEAE] [[BodyImageOrderCz.html Tělo obrazové žádanky]]
-** [[PresentedFormCz.html Vizuální podoba dokumentu]]
-** [[AttachmentsCz.html Přílohy]]
+* [[logImagingOrderCz.html Žádanka obrazového vyšetření]]
+**[#EEEEAE] [[logHeaderImagingOrder.html Hlavička obrazové žádanky]]
+**[#EEEEAE] [[logBodyImageOrderCz.html Tělo obrazové žádanky]]
+** [[logPresentedFormCz.html Vizuální podoba dokumentu]]
+** [[logAttachmentsCz.html Přílohy]]
 
 /'
 ** [[health-insurance-cz.html Health Insurance Provider]]
