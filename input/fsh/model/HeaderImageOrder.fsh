@@ -1,4 +1,4 @@
-Logical: HeaderImagingOrderCz
+Logical: LogEnHeaderImagingOrderCz
 Id: HeaderImagingOrder
 Title: "A.1 - Imaging Order header data element"
 Description: """Imaging Order - Imaging Order header data element - A.1"""
@@ -12,4 +12,4 @@ Description: """Imaging Order - Imaging Order header data element - A.1"""
 * requestedPerformer 0..1 RequestedPerformerCz "A.1.6 - Requested Performer (processing person)" """Person who is requested to process document."""
 * additionalRecipient 0..* AdditionalRecipientCz "A.1.7 - Additional Recipient (additional recipients of the finding)" """Additional recipients of the finding in addition to the author"""
 * documentMetadata 1..1 DocumentMetadataCz "A.1.8 - Document metadata" """Document metadata"""
-* digitalSignature 0..1 DigitalSignatureCz "A.1.9 - Digital signature" """Digital signature"""
+* digitalSignature 1..* digitalSignatureCz "A.1.9 - Digital signature" """Digital signature"""

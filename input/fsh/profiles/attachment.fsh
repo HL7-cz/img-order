@@ -1,5 +1,5 @@
 Profile: CZ_Attachment
-Parent: Media
+Parent: DocumentReference
 Id: cz-attachment
 Title: "Attachment: Imaging Order (CZ)"
 Description: "Czech profile for attachment. "
@@ -9,9 +9,9 @@ Description: "Czech profile for attachment. "
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* content
-* content.contentType MS
-* content.language MS
-* content.url MS
-* content.title MS
-* content.creation MS
+* content.attachment
+* content.attachment.contentType MS
+* content.attachment.language MS
+* content.attachment.url MS
+* content.attachment.title MS
+* content.attachment.creation MS

@@ -5,7 +5,7 @@ Title: "Condition: Imaging Order (CZ)"
 Description: "Condition for Imaging Order for the scope of the Czech national interoperability project."
 
 * identifier
-* subject
+* subject only Reference(CZ_PatientCore or Group)
 * category from $hl7-condition-category
 * code MS
 * code.coding ^slicing.discriminator[0].type = #value
@@ -13,9 +13,12 @@ Description: "Condition for Imaging Order for the scope of the Czech national in
 * code.coding ^slicing.rules = #open
 * code.coding contains 
     diagnosis 0..1 and 
-    reason 0..1 
+    condition 0..1 
 * code.coding[diagnosis] from $mkn-10-problem-list
 * code.coding[diagnosis].system = $mkn-10 
-* code.coding[reason] from $sct-condition-code
-* code.coding[reason].system = "http://snomed.info/sct" (exactly)
+* code.coding[condition] from $sct-condition-code
+* code.coding[condition].system = "http://snomed.info/sct" (exactly)
+
+* recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
+* asserter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
 

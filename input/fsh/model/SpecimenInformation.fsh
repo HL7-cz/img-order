@@ -1,4 +1,4 @@
-Logical: SpecimenInformationCz				
+Logical: LogEnSpecimenInformationCz				
 Id: SpecimenInformationCz
 Title: "A.2.6 - Specimen Information"				
 Description:  """Information about specimen"""
@@ -30,7 +30,7 @@ Description:  """Information about specimen"""
  - Preferred system(s): SNOMED CT (environment)"""
 * note 0..1 string "A.2.6.13 - Note" """Note on the material in free text"""
 
-* container 0..* BackboneElement "A.2.6.14 - Container" """"""
+* container 0..* Base "A.2.6.14 - Container" """"""
 * container.type 0..1 CodeableConcept "A.2.6.14.1 - Type" """Type of sampling container - tube, sampling bag, etc. including chemical additives.
  - Preferred system(s): SNOMED CT
  - Preferred system(s): NCLPONP"""
@@ -39,14 +39,14 @@ Description:  """Information about specimen"""
  - Preferred system(s): UDI"""
 * container.label 0..1 Identifier "A.2.6.14.4 - Label" """Human readable container identifier."""
 
-* additionalData 0..1 BackboneElement "A.2.6.15 - Additional formalised sample data" """ """
+* additionalData 0..1 Base "A.2.6.15 - Additional formalised sample data" """ """
 * additionalData.date 0..1 date "A.2.6.15.1 - Date" """Date of discovery of the data, to be indicated if different from the date of the order."""
 * additionalData.code 1..1 CodeableConcept "A.2.6.15.2 - Code" """Observation code identifying the significance of the data (collection time interval, volume of material collected; density; condition of material, type of collection, etc.)
  - Preferred system(s): NČLPPOL (valueset https://www.dastacr.cz/dasta/hypertext/_TRIDAK_202503012241ISLOD.htm)"""
-* additionalData.value 0..1 Narrative "A.2.6.15.3 - Data value" """Data value including unit of measurement."""
+* additionalData.value 0..1 Quantity "A.2.6.15.3 - Data value" """Data value including unit of measurement."""
 
-* collector 0..1 BackboneElement "A.2.6.16 - Collector" """"""
+* collector 0..1 Base "A.2.6.16 - Collector" """"""
 * collector.identifier 1..* Identifier "A.2.6.16.1 - Identifier of the sample collector" """Identifier of the sample collector – this refers either to an internal identifier assigned by the healthcare provider or (preferably) a national ID of the healthcare professional, such as a license or registration number. If the sample is not collected by a healthcare professional but, for example, by the patient themselves, an appropriate personal identifier should be used instead."""
 * collector.name 1..1 HumanName "A.2.6.16.2 - Name of the sample collector" """Name of the sample collector"""
 * collector.contact 1..1 ContactPoint "A.2.6.16.3 - Contact information of the sample collector" """Contact information of the sample collector (address and telecommunication data)."""
-* collector.organization 0..1 Organization "A.2.6.16.4 - Organization of the sample collector" """Organization of the sample collector (healthcare provider)."""
+* collector.organization 0..1 Base "A.2.6.16.4 - Organization of the sample collector" """Organization of the sample collector (healthcare provider)."""

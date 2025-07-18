@@ -1,4 +1,4 @@
-Logical: OtherSupportingInformationCz
+Logical: LogEnOtherSupportingInformationCz
 Id: OtherSupportingInformationCz
 Title: "A.3.4 - Other Supporting Information"
 Description: """Other Supporting Information - Links to other supporting information related to this request form"""

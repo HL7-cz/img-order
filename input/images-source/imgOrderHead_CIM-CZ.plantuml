@@ -1,16 +1,16 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-*[#EEEEAE] [[HeaderImagingOrder.html Hlavička obrazové žádanky]]
-**[#TECHNOLOGY] [[SubjectCz.html Identifikace pacienta]]
+*[#EEEEAE] [[logHeaderImagingOrder.html Hlavička obrazové žádanky]]
+**[#TECHNOLOGY] [[logSubjectCz.html Identifikace pacienta]]
 /'    Shell we keep or not?
 ** Preferred Health Professional
 '/
-**[#TECHNOLOGY] [[PayerCz.html Zdravotní pojištění]]
+**[#TECHNOLOGY] [[logPayerCz.html Zdravotní pojištění]]
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-**[#TECHNOLOGY] [[CoverageOrderCz.html Úhrada]]
+**[#TECHNOLOGY] [[logCoverageOrderCz.html Úhrada]]
 /'
 ** Attestation
 ***_ Attester
@@ -19,7 +19,7 @@ skinparam topurl StructureDefinition-
 ***_ Legal authenticator
 ***_ DateTime
 '/
-**[#TECHNOLOGY] [[DocumentMetadataCz.html Metadata dokumentu]]
+**[#TECHNOLOGY] [[logDocumentMetadataCz.html Metadata dokumentu]]
 ***_ ID dokumentu
 ***_ Kategorie dokumentu
 ***_ Stav žádanky
@@ -29,10 +29,10 @@ skinparam topurl StructureDefinition-
 ***_ Důvěrnost dokumentu
 ***_ Jazyk dokumentu
 ***_ Verze dokumentu
-**[#TECHNOLOGY] [[AuthorCz.html Objednatel]]
-**[#TECHNOLOGY] [[RequestedPerformerCz.html Zpracovatel]]
-**[#TECHNOLOGY] [[AdditionalRecipientCz.html Příjemce nálezu]]
-**[#TECHNOLOGY] [[digitalSignatureCz.html Elektronické podpisy]]
+**[#TECHNOLOGY] [[logAuthorCz.html Objednatel]]
+**[#TECHNOLOGY] [[logRequestedPerformerCz.html Zpracovatel]]
+**[#TECHNOLOGY] [[logAdditionalRecipientCz.html Příjemce nálezu]]
+**[#TECHNOLOGY] [[logdigitalSignatureCz.html Elektronické podpisy]]
 ***_ Elektronický podpis nebo pečeť dokumentu
 ***_ Časové razítko
 /' ** Intended recipient

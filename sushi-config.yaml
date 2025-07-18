@@ -9,11 +9,11 @@ name: HL7CzImagingOrderImplementationGuide
 title: HL7 Czech Imaging Order IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.3
+version: 0.1.0-ballot
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -37,7 +37,7 @@ publisher:
 #     version: 1.0.0
 dependencies:
   hl7.fhir.cz.core: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 0.1.0-ballot
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -321,7 +321,34 @@ menu:
 #     resources:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
-#
+groups:
+  czech-logical-model:
+    name:  Czech logical model (Informative)
+    description: Logical model in czech language. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/logAdditionalRecipientCz
+      - StructureDefinition/logImageAppointmentCz
+      - StructureDefinition/logAttachmentsCz
+      - StructureDefinition/logAuthorCz
+      - StructureDefinition/logBodyImageOrderCz
+      - StructureDefinition/logClinicalEventCz
+      - StructureDefinition/logCoverageOrderCz
+      - StructureDefinition/logCoverageBodyCz
+      - StructureDefinition/logdigitalSignatureCz
+      - StructureDefinition/logDocumentMetadataCz
+      - StructureDefinition/logHeaderImagingOrder
+      - StructureDefinition/logImagingOrderCz
+      - StructureDefinition/logOrderDataElementsCz
+      - StructureDefinition/logImageOrderInformationCz
+      - StructureDefinition/logOtherSupportingInformationCz
+      - StructureDefinition/logPayerCz
+      - StructureDefinition/logPlannedCareOrdersCz
+      - StructureDefinition/logPresentedFormCz
+      - StructureDefinition/logRequestedPerformerCz
+      - StructureDefinition/logSpecimenInformationCz
+      - StructureDefinition/logSubjectCz
+      - StructureDefinition/logImageSupportingInformationCz
+
 #
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
