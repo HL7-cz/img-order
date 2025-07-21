@@ -225,3 +225,16 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/digitalSignatureCz"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bundleImageOrder"
+* group[=].element[+].code = #Header.digitalSignatureCz.digitalSignature
+* group[=].element[=].display = "A.1.9.1 - Electronic signature or document seal"
+* group[=].element[=].target.code = #Bundle.signature.data		
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.digitalSignatureCz.timestamp
+* group[=].element[=].display = "A.1.9.2 - Electronic time stamp"
+* group[=].element[=].target.code = #Bundle.signature.when					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = ""
