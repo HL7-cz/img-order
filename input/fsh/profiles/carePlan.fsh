@@ -1,4 +1,4 @@
-/*
+
 Profile: CZ_CarePlanImage
 Parent: CarePlan
 Id: cz-carePlanImage
@@ -7,4 +7,3 @@ Description: "Care plan for Imaging Order for the scope of the Czech national in
 
 * identifier
 * title
-*/
