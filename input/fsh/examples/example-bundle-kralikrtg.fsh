@@ -52,16 +52,16 @@ Usage: #example
 * type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>" 
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[attachments].title = "Additional documentation"
 * section[attachments].code = $loinc#77599-9 "Additional documentation"
-* section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>" 
+* section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>"
 * section[attachments].text.status = #generated
 * section[attachments].entry[0] = Reference(urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb)
 
