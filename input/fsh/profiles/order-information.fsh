@@ -5,10 +5,10 @@ Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
 * extension contains $service-request-body-structure-r5 named bodyStructure-R5 0..*
-//* extension[bodyStructure-R5].extension[bodyStructure] ^short = "Body Structure"
+* extension[bodyStructure-R5] ^short = "Body Structure to be imaged"
+
 * identifier 1..
 * category 1..
-
 
 * authoredOn 1..
 * occurrenceDateTime
