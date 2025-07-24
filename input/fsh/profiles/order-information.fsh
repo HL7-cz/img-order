@@ -9,6 +9,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier 1..
 * category 1..
 
+
 * authoredOn 1..
 * occurrenceDateTime
 * priority
