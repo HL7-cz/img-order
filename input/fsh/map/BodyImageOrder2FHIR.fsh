@@ -73,7 +73,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageOrderInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalQuestion"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #OrderInformation.orderDetail.questionCode
 * group[=].element[=].display = "A.2.2.2 - Clinical question in code form"
 * group[=].element[=].target.code = #Composition.section:ClinicalQuestion.entry.ofType(CZ_Condition).code
