@@ -9,7 +9,7 @@ Description: """Imaging Order - Imaging Order subject data element - A.1.1 and A
 * subjectIdentification.given 1..* string "A.1.1.1 - Given name" """The given name/first name of the patient (also known as forename or first name). This field can contain more than one element."""
 * subjectIdentification.family 1..* string "A.1.1.2 - Family name/surname" """The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."""
 * subjectIdentification.birthDate 1..1 dateTime "A.1.1.3 - Date of birth" """Complete date, following the ISO 8601."""
-* subjectIdentification.deathDate 1..1 dateTime "A.1.1.4 - Date of death" """Complete date, following the ISO 8601."""
+* subjectIdentification.deathDate 0..1 dateTime "A.1.1.4 - Date of death" """Complete date, following the ISO 8601."""
 * subjectIdentification.identifier 1..* Identifier "A.1.1.5 - National healthcare patient ID" """An identifier of the patient that is unique within a defined scope. Example: National ID (birth number) for a Czech patient. Multiple identifiers could be provided"""
 * subjectIdentification.nationality 0..* CodeableConcept "A.1.1.6 - Nationality" """Nationality of the patient."""
 * subjectIdentification.gender 1..1 CodeableConcept "A.1.1.7 - Gender" """This field must contain a recognised valid value for administrative gender. If different, physiological gender should be communicated elsewhere in the relevant clinical information section."""
