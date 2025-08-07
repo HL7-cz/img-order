@@ -58,7 +58,7 @@ This required section includes the indicative diagnosis ([A.2.2.1](StructureDefi
 
 This mandatory section includes confirmed information from the examining healthcare facility about the appointment, such as when the patient is scheduled, where they need to go, and may include free text comments (e.g. MRI on the 2nd floor of the main building). The use of these structures assumes that it will be possible, after the order has been received by the examining healthcare facility, to "supplement" this information or create an updated version of the order form that includes this information.
 
-**Clinical Information (Anamnesis)**
+**Clinical Information**
 
 This required section includes biometric data (weight and height), other clinically relevant information in free text or optionally with an MKN-10 code (e.g. claustrophobia in an MRI order) or Orphacode, medication information (relevant, for example, before a contrast examination on CT), implant information (for MRI) and urgent information (allergies, intolerances or any other warnings in free text). The urgent information module is a component common to other models. Additional formalized data can help convey any information about the patient (e.g. week of gestation before a gynecological ultrasound examination). Additionally, clinical information should include any patient limitations (e.g. wheelchair-bound, bedridden, blind, hearing impaired).
 

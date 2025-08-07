@@ -527,38 +527,38 @@ Usage: #definition
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElementsCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #Body.OrderDataElements
-* group[=].element[=].display = "A.3.2 - Order/examination data elements."
+* group[=].element[=].display = "A.3.2.1 - Order/examination data elements."
 * group[=].element[=].target.code = #Composition.section:OrderInformation			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)"
 * group[=].element[+].code = #OrderDataElements.code
-* group[=].element[=].display = "A.3.2.1 - Examination code"
+* group[=].element[=].display = "A.3.2.1.1 - Examination code"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.name
-* group[=].element[=].display = "A.3.2.2 Name of the examination"
+* group[=].element[=].display = "A.3.2.1.2 Name of the examination"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.modality
-* group[=].element[=].display = "A.3.2.3 - Modality"
+* group[=].element[=].display = "A.3.2.1.3 - Modality"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.modality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.bodyPart
-* group[=].element[=].display = "A.3.2.4 - Body Part"
+* group[=].element[=].display = "A.3.2.1.4 - Body Part"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.bodyPart
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.laterality
-* group[=].element[=].display = "A.3.2.5 - Laterality"
+* group[=].element[=].display = "A.3.2.1.5 - Laterality"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.laterality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.note
-* group[=].element[=].display = "A.3.2.6 - Examination note"
+* group[=].element[=].display = "A.3.2.1.6 - Examination note"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	

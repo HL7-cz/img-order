@@ -30,7 +30,7 @@ The following is a list of the codesystems and valueset used:
 | A.3.1.3     | Kód omezení pohyblivosti pacienta | 418305009/129015001/160685001                    |
 | A.2.2.2     | Klinická otázka kódem             |                                                  |
 | A.2.2.4     | Důvod objednávky kódem            | 243796009                                        |
-| A.3.2.1     | Kód požadovaného vyšetření        | 363679005 - Imaging (procedure)                  |
+| A.3.2.1.1   | Kód požadovaného vyšetření        | 363679005 - Imaging (procedure)                  |
 | A.3.2.4     | Požadované vyšetření – část těla  | Body structure                                   |
 | A.3.2.5     | Lateralita                        | left 7771000, right 24028007, bilateral 51440002 |
 | A.2.6.6     | Typ vzorku                        |                                                  |
