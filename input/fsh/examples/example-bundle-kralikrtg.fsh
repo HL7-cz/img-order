@@ -106,7 +106,8 @@ Description: "Patient, contact information"
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
-* name.prefix = "Mudr., Ing., MBA, Ph.D."
+* name.prefix = "MUDr., Ing."
+* name.suffix = "MBA, Ph.D."
 * gender = #male
 * birthDate = "1985-01-12"
 * address[+].use = #home
