@@ -26,14 +26,14 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Status of the Order"
   * ^comment = ""
 
-* subject 1..1 
+* subject 1..1
 * subject only Reference(CZ_PatientCore)
 
-* custodian 
+* custodian
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Order"
 
-* encounter 
+* encounter
 * encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
@@ -76,19 +76,20 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
   * entry 0..
-  * entry only Reference(CZ_ImagingOrderInformation) 
+  * entry only Reference(CZ_ImagingOrderInformation)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
   * ^short = "Clinical question"
-  * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
+  * ^definition = "This section holds information about the clinical question or questions that the imaging service is intended to answer."
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * text 1..
+  * text ^short = "Clinical question text"
   * entry 0..
-  * entry only Reference(CZ_ConditionImage) 
+  * entry only Reference(CZ_ConditionImage)
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]

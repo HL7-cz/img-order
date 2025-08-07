@@ -86,7 +86,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[coverage].resource only CZ_Coverage
-* entry[medication].resource only CZ_MedicationStatement  
+* entry[medication].resource only CZ_MedicationStatement
 * entry[condition].resource only CZ_ConditionImage
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanImage
