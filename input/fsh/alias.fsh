@@ -26,6 +26,6 @@ Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
 
 // Extensions:
 Alias: $hl7Supportinginfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason|4.0.1
 Alias: $clinical_event_type = https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalEventType
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure

@@ -10,3 +10,4 @@ Description: "Czech profile for encounter. "
 * status
 * class
 * text
+* serviceProvider only Reference(CZ_OrganizationCore)

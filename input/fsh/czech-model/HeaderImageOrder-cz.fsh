@@ -4,7 +4,7 @@ Title: "A.1 - Hlavička dokumentu"
 Description: """Záhlaví dokumentu s administrativními údaji"""
 
 * subjekt 1..1 logSubjectCz "A.1.1 - Identifikace pacienta and A.1.2 Kontaktní informace pacienta/subjektu" """Identifikace pacienta/subjektu a jeho kontaktních informací"""
-* zdravotniPojisteni 1..1 logPayerCz "A.1.3 - Zdravotní pojištění" """Informace o zdravotním pojištění."""
+* zdravotniPojisteni 0..1 logPayerCz "A.1.3 - Zdravotní pojištění" """Informace o zdravotním pojištění."""
 * uhrada 1..1 logCoverageOrderCz "A.1.4 - Úhrada" """Informace o způsobu úhrady objednávky vyšetření."""
 * objednatel 1..* logAuthorCz "A.1.5 - Objednatel" """Objednatel provedení zdravotní služby."""
 * zpracovatel 0..1 logRequestedPerformerCz "A.1.6 - Zpracovatel" """Předpokládaný zpracovatel žádanky (u neadresné žádanky nebude zpracovatel uveden)."""

@@ -14,7 +14,7 @@ Description:  """Informace o objednávce a Odůvodnění vyšetření (důvod ob
 * detailyObjednavky.textObjednavky 0..1 string "A.2.1.5 - Text objednávky" """Textový popis objednávky či doplňující požadavky, specifické pro jednotlivé typy objednávek, pokud je nelze vyjádřit formalizovaně."""				
 * detailyObjednavky.infoProPacienta 0..1 string "A.2.1.6 - Informace pro pacienta" """Instrukce pro pacienta související s objednávkou. Např. na lačno apod."""	
 
-* duvodObjednavky 0..1 Base "A.2.2 - Odůvodnění vyšetření (důvod objednávky)" """Odůvodnění vyšetření (důvod objednávky)"""				
+* duvodObjednavky 1..1 Base "A.2.2 - Odůvodnění vyšetření (důvod objednávky)" """Odůvodnění vyšetření (důvod objednávky)"""				
 * duvodObjednavky.problem 1..* CodeableConcept "A.2.2.1 - Popis problému / diagnózy / stavu – indikační diagnóza" """Důvod vystavení objednávky k vyšetření vyjádřený strukturovaným textem a/nebo kódem.
 - Preferovaný systém: MKN-10
 - Preferovaný systém: Orphacode"""	

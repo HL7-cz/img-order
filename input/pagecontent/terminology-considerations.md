@@ -30,7 +30,7 @@ Následuje seznam použitých kódovacích systémů a číselníků:
 | A.3.1.3     | Limitation of patient mobility code | 418305009/129015001/160685001                    |
 | A.2.2.2     | Clinical question by code           |                                                  |
 | A.2.2.4     | Reason for ordering by code         | 243796009                                        |
-| A.3.2.1     | Examination code                    | 363679005 - Imaging (procedure)                  |
+| A.3.2.1.1   | Examination code                    | 363679005 - Imaging (procedure)                  |
 | A.3.2.4     | Body Part                           | Body structure                                   |
 | A.3.2.5     | Laterality                          | left 7771000, right 24028007, bilateral 51440002 |
 | A.2.6.6     | Specimen type                       |                                                  |

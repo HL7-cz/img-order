@@ -39,13 +39,17 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //  * insert SetPopulateIfKnown
 
 * author
-* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
+* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver)
   * ^short = "Who and/or what authored the Imaging order"
 
 * date
   * ^short = "Date the order was created."
 
-* type from CZ_TypeClinicalEventVs
+* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains loinc 1..1
+  * coding[loinc] = $loinc#18748-4 "Diagnostic imaging study"
 
 * category from $DocumentClassValueSet
 

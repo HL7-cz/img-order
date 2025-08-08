@@ -106,7 +106,8 @@ Description: "Patient, contact information"
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
-* name.prefix = "Mudr., Ing., MBA, Ph.D."
+* name.prefix = "MUDr., Ing."
+* name.suffix = "MBA, Ph.D."
 * gender = #male
 * birthDate = "1985-01-12"
 * address[+].use = #home
@@ -128,6 +129,7 @@ InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
+* id = "c4123c75-4559-41d9-8153-c6d0fb577de9"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -148,6 +150,7 @@ InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
+* id = "d65e3423-e250-412c-8e4d-94c29490593c"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
