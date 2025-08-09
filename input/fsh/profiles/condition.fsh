@@ -14,8 +14,8 @@ Description: "Condition for Imaging Order for the scope of the Czech national in
 * code.coding contains 
     diagnosis 0..1 and 
     condition 0..1 
-* code.coding[diagnosis] from $mkn-10-problem-list
-* code.coding[diagnosis].system = $mkn-10 
+* code.coding[diagnosis] from $mkn10vs
+* code.coding[diagnosis].system = "https://terminology.uzis.cz/CodeSystem/Mkn10_5" 
 * code.coding[condition] from $sct-condition-code
 * code.coding[condition].system = "http://snomed.info/sct" (exactly)
 

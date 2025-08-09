@@ -77,7 +77,8 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     carePlan 0..* and
     observation 0..* and
     device 0..* and
-    attachment 0..*
+    attachment 0..* and
+    organisation 0..*
 
 * entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
@@ -93,6 +94,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[observation].resource only CZ_ObservationImage
 * entry[device].resource only CZ_DeviceObserver
 * entry[attachment].resource only CZ_Attachment
+* entry[organisation].resource only CZ_OrganizationCore
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
