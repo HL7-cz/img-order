@@ -4,11 +4,11 @@ Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
-* extension contains $service-request-body-structure-r5 named bodyStructure-R5 0..*
-* extension[bodyStructure-R5] ^short = "Body Structure to be imaged"
-
 * identifier 1..
 * category 1..
+
+* extension contains $bodySite-reference named bodySite 0..1
+* extension[bodySite].valueReference only Reference(BodyStructureCz)
 
 * authoredOn 1..
 * occurrenceDateTime
@@ -24,8 +24,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore
 or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 * performer.type from $sct-device-type
-* bodySite
-* bodySite from $sctBodySite (preferred)
+* bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
 * supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
@@ -35,7 +34,7 @@ or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_
 * reasonCode.coding contains
     diagnosis 0..1 and
     reason 0..1
-* reasonCode.coding[diagnosis] from $mkn-10-problem-list (preferred)
-* reasonCode.coding[diagnosis].system = $mkn-10
+* reasonCode.coding[diagnosis] from $mkn10vs (preferred)
+* reasonCode.coding[diagnosis].system = "https://terminology.uzis.cz/CodeSystem/Mkn10_5"
 * reasonCode.coding[reason] from $sct-condition-code (preferred)
 * reasonCode.coding[reason].system = "http://snomed.info/sct" (exactly)

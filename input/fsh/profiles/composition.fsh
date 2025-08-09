@@ -49,7 +49,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * coding 1..*
     * insert SliceElement( #value, $this )
   * coding contains loinc 1..1
-  * coding[loinc] = $loinc#18748-4 "Diagnostic imaging study"
+  * coding[loinc] = $loinc#18748-4
 
 * category from $DocumentClassValueSet
 

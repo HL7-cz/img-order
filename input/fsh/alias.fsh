@@ -1,22 +1,22 @@
 //============== ALIAS ===============
 // Code systems
-Alias: $orpha = https://www.orphadata.com/
+Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $hl7CoverageType = http://hl7.org/fhir/ValueSet/coverage-type
 Alias: $sct = http://snomed.info/sct
 Alias: $dicomModalityType = http://terminology.hl7.org/CodeSystem/dicomMDLTY
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $UCUM = http://unitsofmeasure.org
-Alias: $nclp = https://www.dastacr.cz/dasta/hypertext/DSBFV.htm
-Alias: $mkn-10 = https://mkn10.uzis.cz
+Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
+Alias: $mkn10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
+Alias: $mkn10vs = https://terminology.uzis.cz/ValueSet/Mkn10_5
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $czlaterality = https://hl7.cz/fhir/core/ValueSet/laterality-cz-lab
-Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
 Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
@@ -29,3 +29,4 @@ Alias: $hl7Supportinginfo = http://hl7.org/fhir/StructureDefinition/workflow-sup
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason|4.0.1
 Alias: $clinical_event_type = https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalEventType
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
+Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0

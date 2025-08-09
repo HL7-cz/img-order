@@ -30,7 +30,7 @@ Description: "Observation for Imaging Order for the scope of the Czech national 
 * code.coding[NCLP]
   * ^short = "NCLP code for the observation"
   * system 1..
-  * system = "https://www.dastacr.cz/dasta/hypertext/DSBFV.htm" (exactly)
+  * system = "https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL" (exactly)
   * code 1..
 * valueQuantity
 * valueCodeableConcept
