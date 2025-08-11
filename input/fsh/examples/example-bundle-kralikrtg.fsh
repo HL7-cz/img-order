@@ -17,17 +17,11 @@ Usage: #example
 * entry[orderInformation][+].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
 * entry[orderInformation][=].resource = cz-kralikrgt-example
 
+* entry[coverage][+].fullUrl = "urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c"
+* entry[coverage][=].resource = cz-kralikinsurance-example
+
 * entry[attachment][+].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
 * entry[attachment][=].resource = cz-pdfkralikrgt-example
-
-* entry[observation][+].fullUrl = "urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c"
-* entry[observation][=].resource = WeightKralik
-
-* entry[observation][+].fullUrl = "urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9"
-* entry[observation][=].resource = HeightKralik
-
-* entry[practitioner][+].fullUrl = "urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c"
-* entry[practitioner][=].resource = practitionerKeller
 
 * entry[practitioner][+].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
 * entry[practitioner][=].resource = practitionerPavlicek
@@ -38,6 +32,9 @@ Usage: #example
 * entry[condition][+].fullUrl = "urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * entry[condition][=].resource = KralikCondition
 
+* entry[organisation][+].fullUrl = "urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308"
+* entry[organisation][=].resource = cz-pojistovna-example
+
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
 Description: "Example of Imaging order (Composition) including a RTG order"
@@ -46,10 +43,10 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
-* author[+].display = "Bc. Miroslav PAVLÍČEK MBA"
+* author = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
+* type = $loinc#18748-4 "Diagnostic imaging study"
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
@@ -82,6 +79,7 @@ Instance: practitionerPavlicek
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
+* id = "984dcf34-1924-45a8-8ec5-3d100b67d9be"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456788"
 * name.use = #usual
@@ -129,7 +127,6 @@ InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
-* id = "c4123c75-4559-41d9-8153-c6d0fb577de9"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -143,14 +140,13 @@ Description: "Example of body height of Patient Kralik"
 * valueQuantity.code = #cm
 * status = #final
 * effectiveDateTime = 2025-05-20
-* performer = Reference (urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c)
+* performer = Reference (practitionerKeller)
 
 Instance: WeightKralik
 InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
-* id = "d65e3423-e250-412c-8e4d-94c29490593c"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -164,7 +160,7 @@ Description: "Example of body weight of Patient Kralik"
 * valueQuantity.code = #kg
 * status = #final
 * effectiveDateTime = 2025-05-20
-* performer = Reference (urn:uuid:1377d81b-a473-46e4-9d42-ba8c2fd1412c)
+* performer = Reference (practitionerKeller)
 
 Instance: cz-kralikrgt-example
 InstanceOf: CZ_ImagingOrderInformation
@@ -172,14 +168,14 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray"
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier[+].system = "https://www.homolka.cz/"
+* identifier.system = "http://hospital.org/ris-order"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* insurance = Reference(cz-kralikinsurance-example)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#6757004 "Right knee"
 * bodySite = $sct#62175007 "Right leg"
 * bodySite = $sct#731788002 "LS Spine"
@@ -191,8 +187,8 @@ Description: "Imaging order for Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
-* supportingInfo = Reference(urn:uuid:c4123c75-4559-41d9-8153-c6d0fb577de9)
-* supportingInfo = Reference(urn:uuid:d65e3423-e250-412c-8e4d-94c29490593c)
+* supportingInfo[0] = Reference(WeightKralik)
+* supportingInfo[+] = Reference(HeightKralik)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 
@@ -201,15 +197,17 @@ InstanceOf: CZ_Coverage
 Description: "Example of coverage"
 Usage: #example
 Title: "Coverage - Healthcare insurance company"
+* id = "92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* payor = Reference(cz-pojistovna-example)
+* payor = Reference(urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308)
 
 Instance: cz-pojistovna-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation"
 Title: "Organization - Healthcare insurance company"
+* id = "35e78cc9-6fe2-42a8-8553-83a3f86ce308"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
@@ -221,7 +219,7 @@ Description: "Condition"
 Title: "Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding = $mkn10#S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: cz-pdfkralikrgt-example
