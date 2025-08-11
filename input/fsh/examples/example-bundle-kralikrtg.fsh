@@ -46,7 +46,7 @@ Usage: #example
 * author = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
+* type = $loinc#18748-4 "Diagnostic imaging study"
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"

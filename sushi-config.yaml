@@ -10,7 +10,7 @@ title: HL7 Czech Imaging Order IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.1.0-ballot
-language: cs
+#language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
