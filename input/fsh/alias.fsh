@@ -32,3 +32,5 @@ Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent
 Alias: $clinical_event_type = https://hl7.cz/fhir/img-order/StructureDefinition/cz-clinicalEventType
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
+Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
