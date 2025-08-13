@@ -9,7 +9,7 @@ Description: "Patient, contact information and practitioner"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
@@ -22,12 +22,12 @@ Description: "Patient, contact information and practitioner"
 * address[=].type = #physical
 * address[=].text = "Malé náměstí 13a, 150 00, Praha 5"
 * address[=].line[+] = "Malé náměstí 13a"
-* address[=].line[=].extension[streetName].valueString = "Malé náměstí"
-* address[=].line[=].extension[houseNumber].valueString = "13a"
+//* address[=].line[=].extension[streetName].valueString = "Malé náměstí"
+//* address[=].line[=].extension[houseNumber].valueString = "13a"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
-  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true

@@ -100,7 +100,7 @@ Description: "Patient, contact information"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
@@ -112,12 +112,12 @@ Description: "Patient, contact information"
 * address[=].type = #physical
 * address[=].text = "Pod Hroudou 8, 190 00 Praha 9 - Prosek"
 * address[=].line[+] = "Pod Hroudou 8"
-* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
-* address[=].line[=].extension[houseNumber].valueString = "8"
+//* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
+//* address[=].line[=].extension[houseNumber].valueString = "8"
 * address[=].city = "Praha"
 * address[=].postalCode = "19000"
 * address[=].country = "CZ"
-  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -191,6 +191,7 @@ Description: "Imaging order for Plain X-ray"
 * supportingInfo[+] = Reference(HeightKralik)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
 
 Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage

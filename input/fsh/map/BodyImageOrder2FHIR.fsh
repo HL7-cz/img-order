@@ -549,12 +549,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.bodyPart
 * group[=].element[=].display = "A.3.2.1.4 - Body Part"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.bodyPart
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.extension:bodySite.location
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.laterality
 * group[=].element[=].display = "A.3.2.1.5 - Laterality"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.laterality
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.extension:bodySite.extension:laterality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #OrderDataElements.note
