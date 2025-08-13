@@ -162,6 +162,20 @@ Description: "Example of body weight of Patient Kralik"
 * effectiveDateTime = 2025-05-20
 * performer = Reference (practitionerKeller)
 
+Instance: MobilityKralik
+InstanceOf: CZ_PatientMobility
+Usage: #example
+Title: "Patient mobility of patient Kralik"
+Description: "Example of patient mobility of Patient Kralik"
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+//* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+//* category.coding.code = #vital-signs
+* code = $sct#710828008 "Assessment of ability to walk"
+* valueCodeableConcept = $sct#282147000 "Does not walk"
+* status = #final
+* effectiveDateTime = 2025-05-20
+* performer = Reference (practitionerKeller)
+
 Instance: cz-kralikrgt-example
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
@@ -189,6 +203,7 @@ Description: "Imaging order for Plain X-ray"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(WeightKralik)
 * supportingInfo[+] = Reference(HeightKralik)
+* supportingInfo[+] = Reference(MobilityKralik)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
