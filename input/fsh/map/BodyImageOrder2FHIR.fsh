@@ -498,23 +498,23 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-potientMobility"
 * group[=].element[+].code = #Body.SupportingInformation.limitationOfPatientMobility
 * group[=].element[=].display = "A.3.1.6 - Limitation of patient mobility"
 * group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #SupportingInformation.otherInformation.dateTime
+* group[=].element[+].code = #SupportingInformation.imitationOfPatientMobility.dateTime
 * group[=].element[=].display = "A.3.1.6.1 - Date and time of information"
 * group[=].element[=].target.code = #CZ_PatientMobility.valueDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #SupportingInformation.otherInformation.code
+* group[=].element[+].code = #SupportingInformation.imitationOfPatientMobility.code
 * group[=].element[=].display = "A.3.1.6.1 - Code of information"
 * group[=].element[=].target.code = #CZ_PatientMobility.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #SupportingInformation.otherInformation.value
+* group[=].element[+].code = #SupportingInformation.imitationOfPatientMobility.value
 * group[=].element[=].display = "A.3.1.6.2 - Value of information"
 * group[=].element[=].target.code = #CZ_PatientMobility.valueCodeableConcept
 * group[=].element[=].target.equivalence = #equivalent

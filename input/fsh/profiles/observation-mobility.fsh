@@ -1,8 +1,8 @@
 Profile: CZ_PatientMobility
 Parent: Observation
 Id: cz-potientMobility
-Title: "Patient im/mobility: Imaging Order (CZ)"
-Description: "Profile of patient im/mobility observation for the scope of the Czech national interoperability project."
+Title: "Patient mobility: Imaging Order (CZ)"
+Description: "Profile of patient mobility observation for the scope of the Czech national interoperability project."
 
 * identifier
 * title
