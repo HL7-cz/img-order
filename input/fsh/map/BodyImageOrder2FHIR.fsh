@@ -506,22 +506,22 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.SupportingInformation.otherInformation
 * group[=].element[=].display = "A.3.1.6 - Limitation of patient mobility"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)		
+* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #SupportingInformation.otherInformation.dateTime
 * group[=].element[=].display = "A.3.1.6.1 - Date and time of information"
-* group[=].element[=].target.code = #CZ_ObservationImage.valueDateTime
+* group[=].element[=].target.code = #CZ_PatientMobility.valueDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.otherInformation.code
 * group[=].element[=].display = "A.3.1.6.1 - Code of information"
-* group[=].element[=].target.code = #CZ_ObservationImage.code
+* group[=].element[=].target.code = #CZ_PatientMobility.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.otherInformation.value
 * group[=].element[=].display = "A.3.1.6.2 - Value of information"
-* group[=].element[=].target.code = #CZ_ObservationImage.valueQuantity
+* group[=].element[=].target.code = #CZ_PatientMobility.valueCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OrderDataElementsCz"
