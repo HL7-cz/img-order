@@ -1,7 +1,7 @@
 ValueSet: CZ_MobilityTypeVs
 Id: cz-mobility-type
 Title: "CZ Mobility Type"
-Description: "This value set includes all patient im/mobility types for imaging order."
+Description: "This value set includes all patient mobility types for imaging order."
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
 
