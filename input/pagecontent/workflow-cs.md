@@ -102,11 +102,11 @@ Ve srovnání se stávajícím žádankou je nově pouze informace o mobilitě p
 
 ##### Scénař: Odmítnutá adresná žádanka
 
-Indikující lékař vyjádří přání, ve kterém ZZ by mělo být vyšetření provedeno, ale toto pracoviště z nějakého důvodu nemůže vyšetření v požadovaném termínu provést (servis stroje či jiná technická odstávka, vyš. již neprovádí, ...). V tomto případě lze adresnost žádanky ignorovat a vyšetření provést na libovolném ZZ. 
+Indikující lékař vyjádří přání, ve kterém ZZ by mělo být vyšetření provedeno, ale toto pracoviště z nějakého důvodu nemůže vyšetření v požadovaném termínu provést (servis stroje či jiná technická odstávka, vyš. již neprovádí, ...). V takovém případě je nutné původní žádanku zrušit a vystavit žádanku novou.
 
 ##### Scénář: vyšetření v jiném ZZ
 
-Vzhledem k tomu, že je uzákoněna svobodná volba lékaře, může se pacient rozhodnout ignorovat doporučení konkrétního ZZ pro jeho vyšetření a vydat se "jinam". V tom případě zvolené ZZ musí mít možnost přijmout i žádanku určenou pro jiné ZZ.
+Vzhledem k tomu, že je uzákoněna svobodná volba lékaře, může se pacient rozhodnout ignorovat doporučení konkrétního ZZ pro jeho vyšetření a vydat se “jinam”. V tom případě zvolené ZZ musí mít možnost přijmout i žádanku určenou pro jiné ZZ. Pokud již proběhla objednávka v původně zvoleném ZZ, žádanku by nemělo jít použít v jiném ZZ, dokud ji původní ZZ neuvolní zpět do stavu „active“. 
 
 ##### Scénář: PET/CT
 
