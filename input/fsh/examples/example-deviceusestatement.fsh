@@ -1,11 +1,12 @@
-Instance: example-deviceusestatement-cz
+Instance: cz-deviceusestatement-example
 InstanceOf: CZ_DeviceUseStatement
 Title: "Example DeviceUseStatement for Implant"
 Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
+* id = "b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
 
 * status = #active
 
-* subject = Reference(Mracena)
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * subject.display = "Fiona XXX_Swart"
 
 * timingPeriod.start = "2022-03-15"

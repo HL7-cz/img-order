@@ -38,3 +38,11 @@ or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_
 * reasonCode.coding[diagnosis].system = "https://terminology.uzis.cz/CodeSystem/Mkn10_5"
 * reasonCode.coding[reason] from $sct-condition-code (preferred)
 * reasonCode.coding[reason].system = "http://snomed.info/sct" (exactly)
+
+* orderDetail.coding ^slicing.discriminator[0].type = #value
+* orderDetail.coding ^slicing.discriminator[0].path = "system"
+* orderDetail.coding ^slicing.rules = #open
+* orderDetail.coding contains
+    modality 1..*
+* orderDetail.coding[modality] from CZ_ModalityVs (preferred)  
+* orderDetail.coding[modality].system = $dicomwithoutversion

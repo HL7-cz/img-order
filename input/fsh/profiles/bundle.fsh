@@ -76,9 +76,11 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     allergyIntolerance 0..* and
     carePlan 0..* and
     observation 0..* and
+    deviceUse 0..* and
     device 0..* and
     attachment 0..* and
-    organisation 0..*
+    organisation 0..* and
+    encounter 0..*
 
 * entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
@@ -92,9 +94,11 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanImage
 * entry[observation].resource only CZ_ObservationImage
+* entry[deviceUse].resource only CZ_DeviceUseStatement
 * entry[device].resource only CZ_DeviceObserver
 * entry[attachment].resource only CZ_Attachment
 * entry[organisation].resource only CZ_OrganizationCore
+* entry[encounter].resource only CZ_Encounter
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

@@ -35,6 +35,12 @@ Usage: #example
 * entry[organisation][+].fullUrl = "urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308"
 * entry[organisation][=].resource = cz-pojistovna-example
 
+* entry[encounter][+].fullUrl = "urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9"
+* entry[encounter][=].resource = cz-encounter-example
+
+* entry[deviceUse][+].fullUrl = "urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
+* entry[deviceUse][=].resource = cz-deviceusestatement-example
+
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
 Description: "Example of Imaging order (Composition) including a RTG order"
@@ -47,6 +53,7 @@ Usage: #example
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
 * type = $loinc#18748-4 "Diagnostic imaging study"
+* encounter = Reference(urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9)
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
@@ -56,6 +63,11 @@ Usage: #example
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
+* section[medicalDevices].title = "Medical Devices and implants"
+* section[medicalDevices].code = $loinc#97813-0 "Implant component"
+* section[medicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Implants</div>"
+* section[medicalDevices].text.status = #generated
+* section[medicalDevices].entry[0] = Reference(urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375)
 * section[attachments].title = "Additional documentation"
 * section[attachments].code = $loinc#77599-9 "Additional documentation"
 * section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>"
@@ -100,7 +112,7 @@ Description: "Patient, contact information"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
@@ -112,12 +124,12 @@ Description: "Patient, contact information"
 * address[=].type = #physical
 * address[=].text = "Pod Hroudou 8, 190 00 Praha 9 - Prosek"
 * address[=].line[+] = "Pod Hroudou 8"
-* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
-* address[=].line[=].extension[houseNumber].valueString = "8"
+//* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
+//* address[=].line[=].extension[houseNumber].valueString = "8"
 * address[=].city = "Praha"
 * address[=].postalCode = "19000"
 * address[=].country = "CZ"
-  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -162,6 +174,20 @@ Description: "Example of body weight of Patient Kralik"
 * effectiveDateTime = 2025-05-20
 * performer = Reference (practitionerKeller)
 
+Instance: MobilityKralik
+InstanceOf: CZ_PatientMobility
+Usage: #example
+Title: "Patient mobility of patient Kralik"
+Description: "Example of patient mobility of Patient Kralik"
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+//* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+//* category.coding.code = #vital-signs
+* code = $sct#710828008 "Assessment of ability to walk"
+* valueCodeableConcept = $sct#282147000 "Does not walk"
+* status = #final
+* effectiveDateTime = 2025-05-20
+* performer = Reference (practitionerKeller)
+
 Instance: cz-kralikrgt-example
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
@@ -189,8 +215,10 @@ Description: "Imaging order for Plain X-ray"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(WeightKralik)
 * supportingInfo[+] = Reference(HeightKralik)
+* supportingInfo[+] = Reference(MobilityKralik)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
 
 Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage
