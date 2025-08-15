@@ -37,5 +37,4 @@ Description: "An example of the organization with logo extension"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
 // Rozšíření organization-logo aliasované jako cz-organization-logo
-* extension[logo].url = $cz-organization-logo
-* extension[logo].valueReference.reference = "#attachment-logo-FN-Motol"
+* extension[logo].valueReference = Reference(logoFNMotol)
