@@ -10,6 +10,10 @@ The Imaging order holds the following sections in this order:
 
 General information on the order. Most of the information elements in this part of the order overlap with other clinical orders. The document header includes information on the patient, source organization, author, attester and custodian of the order. 
 
+**Clinical Encounter (Encounter)**
+
+This optional section allows for linking the order form to a specific clinical encounter, such as an outpatient visit during which the order was created. Although this information is not crucial for the examination itself, it provides a way to connect the order with outpatient or other reports that may contain relevant information not included on the order form by the clinician. This linkage can enhance the context and understanding of the patient's clinical situation and ensure all pertinent details are considered in the diagnostic or treatment process.
+
 #### Body of the Imaging Order
 
 **Order Information**

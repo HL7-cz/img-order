@@ -14,6 +14,7 @@ classDiagram
   CZ_BundleImageOrder *-- "0..*" CZ_ImagingOrderInformation
   CZ_BundleImageOrder *-- "0..*" CZ_ConditionImage
   CZ_BundleImageOrder *-- "0..*" CZ_Coverage
+  CZ_BundleImageOrder *-- "0..*" CZ_Encounter
   CZ_BundleImageOrder *-- "0..1" CZ_Appointment
   CZ_BundleImageOrder *-- "0..*" CZ_CarePlanImage
   CZ_BundleImageOrder *-- "0..*" CZ_PractionerCore
@@ -26,6 +27,7 @@ classDiagram
   CZ_CompositionImageOrder --> CZ_ImagingOrderInformation: section[orderInformation]
   CZ_CompositionImageOrder --> CZ_ConditionImage: section[clinicalQuestion]
   CZ_CompositionImageOrder --> CZ_PractionerCore: author[author]
+  CZ_CompositionImageOrder --> CZ_Encounter: encounter
   CZ_CompositionImageOrder --> CZ_OrganizationCore: custodian
   CZ_CompositionImageOrder --> CZ_PatientCore: subject
   CZ_CompositionImageOrder --> CZ_Coverage: section[coverage]
