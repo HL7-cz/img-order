@@ -11,7 +11,6 @@
 | ----------- | ----------------------------- | ---------------------------------------- |
 | Neadresná   | Libovolnému pracovišti        | Provedení nového vyšetření               |
 | Adresná     | Konkrétnímu pracovišti/lékaři | Provedení nového vyšetření               |
-| Konzultační | Konkrétnímu pracovišti/lékaři | Odborný názor na již provedená vyšetření |
 
 ### Obrazová žádanka neadresná
 
@@ -28,11 +27,3 @@ Tato žádanka je adresována konkrétnímu radiologickému pracovišti nebo dok
 Pro pacienta to znamená plynulejší cestu k vyšetření, jelikož už nemusí sám složitě hledat vhodné radiologické pracoviště. Zároveň se zjednodušuje komunikace mezi jeho ošetřujícím lékařem a konkrétním radiologickým oddělením. Na druhou stranu je však nutné počítat s menší flexibilitou pacienta při výběru místa a času, kdy se vyšetření provede.
 
 > Scénáře pro adresnou žádanku jsou dostupné [zde](workflow-cs.html#adresná-žádanka).
-
-### Obrazová žádanka konzultační
-
-Konzultační žádanka neslouží primárně k provedení nového obrazového vyšetření, ale k žádosti o odborný názor (konzultaci) od radiologa na již provedená vyšetření. Obvykle se používá, když ošetřující lékař potřebuje druhý názor, upřesnění nálezu, nebo chce prodiskutovat další diagnostický či léčebný postup na základě existujících snímků (např. re-popis již provedeného CT nebo MR, diskuse o dalším postupu u složitého případu).
-
-Umožňuje multidisciplinární přístup k diagnostice, vede k přesnější interpretaci nálezů a optimalizaci léčby. Vyžaduje, aby pacient měl k dispozici předchozí obrazovou dokumentaci.
-
-> Scénáře pro adresnou žádanku jsou dostupné [zde](workflow-cs.html#konzultace).

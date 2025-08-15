@@ -34,3 +34,4 @@ Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDef
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
 Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
+Alias: $cz-organization-logo = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo

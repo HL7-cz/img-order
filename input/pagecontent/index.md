@@ -25,6 +25,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Mapping to profiles](model-map.html): This segment contains information about logical model maps to profiles.
   - [Examples](examples.html): This segment contains information about examples.
   - [Obligations](obligations.html): This segment contains information about obligations.
+  - [Implementation notes](implementation-notes.html): This segment contains information for implementation.
 - About:
   - [Authors](authors.html): This segment contains informaction about authors.
   - [Downloads](downloads.html): This segment contains informaction about downloads.

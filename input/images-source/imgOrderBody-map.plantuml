@@ -19,7 +19,7 @@ endnote
 
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
-class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
+class "cz-encounter" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-appointment" <<Profile>> [[StructureDefinition-cz-appointment.html]]
 class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]

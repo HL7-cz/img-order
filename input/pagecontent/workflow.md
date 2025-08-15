@@ -101,11 +101,11 @@ Compared to the existing referral form, the new addition is information regardin
 
 ##### Scenario: Rejected Specific Order
 
-The referring physician may express a preference for which healthcare facility the examination should be conducted at; however, if this facility is unable to perform the examination within the desired timeframe (due to reasons such as machine maintenance, other technical downtimes, or the examination no longer being offered), the designation on the referral can be disregarded. In such cases, the examination can be conducted at any available healthcare facility.
+The referring physician expresses a preference for the healthcare facility where the examination should be performed, but this facility is unable to perform the examination on the requested date for some reason (machine maintenance or other technical shutdown, the examination is no longer performed there, etc.). In such a case, it is necessary to cancel the original request and create a new order.
 
 ##### Scenario: Examination at a Different Facility
 
-Since the right to choose one's doctor freely is established by law, a patient may decide to ignore the recommendation of a specific healthcare facility for their examination and opt to go "elsewhere". In such a case, the chosen healthcare facility must have the capability to accept a referral that was originally intended for a different facility.
+Given that the free choice of physician is legally established, a patient may decide to ignore the recommendation for a specific healthcare facility for their examination and go 'elsewhere.' In that case, the chosen facility must be able to accept a request intended for a different facility. If an appointment has already been made at the originally selected facility, the request should not be usable at another facility until the original facility releases it back into an 'active' status.
 
 ##### Scenario: PET/CT
 

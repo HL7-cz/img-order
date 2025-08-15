@@ -257,6 +257,13 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent		
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AuthorCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-encounter"					
+* group[=].element[+].code = #AuthorCz.organization
+* group[=].element[=].display = "A.1.5.4 - Author organisation"
+* group[=].element[=].target.code = #CZ_Encounter.serviceProvider					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/RequestedPerformerCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"					
 * group[=].element[+].code = #Header.requestedPerformer

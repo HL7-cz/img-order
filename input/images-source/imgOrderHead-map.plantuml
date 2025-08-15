@@ -26,6 +26,7 @@ class "Requested Performer" <<LogicalModel>> [[StructureDefinition-RequestedPerf
 class "Identification" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
 class "Related contact information of the Patient/subject" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
 '/
+class "cz-encounter" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
@@ -36,8 +37,10 @@ class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositio
 "Imaging Order Header" <|. "cz-patient-core"
 "Imaging Order Header" <|. "cz-coverage"
 "Imaging Order Header" <|. "cz-practitioner-core"
+"Imaging Order Header" <|. "cz-encounter"
 "cz-bundleImageOrder" -d[hidden]-> "cz-compositionImageOrder"
 "cz-compositionImageOrder" -d[hidden]-> "cz-patient-core"
 "cz-patient-core" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-practitioner-core" -d[hidden]-> "cz-encounter"
 @enduml
