@@ -6,8 +6,8 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 
 * status = #active
 
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* subject.display = "Fiona XXX_Swart"
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+//* subject.display = "Fiona XXX_Swart"
 
 * timingPeriod.start = "2022-03-15"
 * timingPeriod.end = "2024-12-01"

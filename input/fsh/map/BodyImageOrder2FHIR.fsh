@@ -85,7 +85,7 @@ Usage: #definition
 * group[=].element[=].target.display = "In text form"
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ClinicalEventCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-encounter"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-encounter"
 * group[=].element[+].code = #Body.ClinicalEvent
 * group[=].element[=].display = "A.2.3 - Information about clinical event"
 * group[=].element[=].target.code = #Composition.encounter					

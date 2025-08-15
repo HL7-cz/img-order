@@ -12,7 +12,7 @@ Obecné informace o zprávě. Většina informačních prvků v této části zp
 
 **Klinická událost (encounter)**
 
-Tato volitelná sekce může umožnit indikující lékař propojení žádanky s jednou konkrétní klinickou událostí, tj. například návštěvu ambulance, při které žádanka vznikla. Tato informace sama o sobě není pro vyšetření důležitá, nicméně lze touto cestou propojit žádanku s ambulantní či jinou zprávu, která může obsahovat relevantní informace, které klinik na žádanku neuvedl.
+Tento profil umožňuje propojení žádanky s jednou konkrétní klinickou událostí, tj. například návštěvu ambulance, při které žádanka vznikla. 
 
 #### Tělo obrazové žádanky
 

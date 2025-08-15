@@ -8,38 +8,38 @@ Usage: #example
 * type = #document
 * timestamp = "2025-05-20T12:02:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition][=].resource = Composition-kralik-rtg
+* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].resource = Composition-kralik-rtg
 
-* entry[patient][+].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
-* entry[patient][=].resource = patient_kralik
+* entry[patient].fullUrl = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
+* entry[patient].resource = patient_kralik
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[orderInformation][=].resource = cz-kralikrgt-example
+* entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[orderInformation].resource = cz-kralikrgt-example
 
-* entry[coverage][+].fullUrl = "urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c"
-* entry[coverage][=].resource = cz-kralikinsurance-example
+* entry[coverage].fullUrl = "urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c"
+* entry[coverage].resource = cz-kralikinsurance-example
 
-* entry[attachment][+].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
-* entry[attachment][=].resource = cz-pdfkralikrgt-example
+* entry[attachment].fullUrl = "urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb"
+* entry[attachment].resource = cz-pdfkralikrgt-example
 
-* entry[practitioner][+].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
-* entry[practitioner][=].resource = practitionerPavlicek
+* entry[practitioner].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
+* entry[practitioner].resource = practitionerPavlicek
 
-* entry[device][+].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
-* entry[device][=].resource = RGDevice
+* entry[device].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
+* entry[device].resource = RGDevice
 
-* entry[condition][+].fullUrl = "urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce"
-* entry[condition][=].resource = KralikCondition
+* entry[condition].fullUrl = "urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce"
+* entry[condition].resource = KralikCondition
 
-* entry[organisation][+].fullUrl = "urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308"
-* entry[organisation][=].resource = cz-pojistovna-example
+* entry[organisation].fullUrl = "urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308"
+* entry[organisation].resource = cz-pojistovna-example
 
-* entry[encounter][+].fullUrl = "urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9"
-* entry[encounter][=].resource = cz-encounter-example
+* entry[encounter].fullUrl = "urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9"
+* entry[encounter].resource = cz-encounter-example
 
-* entry[deviceUse][+].fullUrl = "urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
-* entry[deviceUse][=].resource = cz-deviceusestatement-example
+* entry[deviceUse].fullUrl = "urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
+* entry[deviceUse].resource = cz-deviceusestatement-example
 
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
@@ -47,7 +47,7 @@ Description: "Example of Imaging order (Composition) including a RTG order"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
 * status = #final
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * title = "Imaging Order - Rentgen Ing. Králíka"
@@ -103,16 +103,16 @@ Usage: #example
 
 Instance: patient_kralik
 InstanceOf: CZ_PatientCore
-Usage: #inline
+Usage: #example
 Description: "Patient, contact information"
-* id = "62d2aa9a-a15f-4e43-9458-fec16c1c4882"
+* id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
 * identifier[CPOJ][=].use = #official
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
@@ -124,12 +124,12 @@ Description: "Patient, contact information"
 * address[=].type = #physical
 * address[=].text = "Pod Hroudou 8, 190 00 Praha 9 - Prosek"
 * address[=].line[+] = "Pod Hroudou 8"
-//* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
-//* address[=].line[=].extension[houseNumber].valueString = "8"
+* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
+* address[=].line[=].extension[houseNumber].valueString = "8"
 * address[=].city = "Praha"
 * address[=].postalCode = "19000"
 * address[=].country = "CZ"
-//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -139,7 +139,7 @@ InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT].code = #1153637007
@@ -159,7 +159,7 @@ InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT].code = #27113001
@@ -179,7 +179,7 @@ InstanceOf: CZ_PatientMobility
 Usage: #example
 Title: "Patient mobility of patient Kralik"
 Description: "Example of patient mobility of Patient Kralik"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 //* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 //* category.coding.code = #vital-signs
 * code = $sct#710828008 "Assessment of ability to walk"
@@ -200,7 +200,7 @@ Description: "Imaging order for Plain X-ray"
 * intent = #order
 * category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#6757004 "Right knee"
 * bodySite = $sct#62175007 "Right leg"
@@ -227,7 +227,7 @@ Usage: #example
 Title: "Coverage - Healthcare insurance company"
 * id = "92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * status = #active
-* beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* beneficiary = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * payor = Reference(urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308)
 
 Instance: cz-pojistovna-example
@@ -246,7 +246,7 @@ Usage: #example
 Description: "Condition"
 Title: "Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * code.coding = $mkn10#S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 

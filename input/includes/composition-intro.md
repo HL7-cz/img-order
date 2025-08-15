@@ -12,7 +12,7 @@ General information on the order. Most of the information elements in this part 
 
 **Clinical Encounter (Encounter)**
 
-This optional section allows for linking the order form to a specific clinical encounter, such as an outpatient visit during which the order was created. Although this information is not crucial for the examination itself, it provides a way to connect the order with outpatient or other reports that may contain relevant information not included on the order form by the clinician. This linkage can enhance the context and understanding of the patient's clinical situation and ensure all pertinent details are considered in the diagnostic or treatment process.
+This profile allows for linking the order form to a specific clinical encounter, such as an outpatient visit during which the order was created.
 
 #### Body of the Imaging Order
 
