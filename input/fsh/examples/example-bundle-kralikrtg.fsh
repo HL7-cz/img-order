@@ -35,6 +35,12 @@ Usage: #example
 * entry[organisation][+].fullUrl = "urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308"
 * entry[organisation][=].resource = cz-pojistovna-example
 
+* entry[encounter][+].fullUrl = "urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9"
+* entry[encounter][=].resource = cz-encounter-example
+
+* entry[deviceUse][+].fullUrl = "urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
+* entry[deviceUse][=].resource = cz-deviceusestatement-example
+
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
 Description: "Example of Imaging order (Composition) including a RTG order"
@@ -47,6 +53,7 @@ Usage: #example
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
 * type = $loinc#18748-4 "Diagnostic imaging study"
+* encounter = Reference(urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9)
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
@@ -56,6 +63,11 @@ Usage: #example
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
+* section[medicalDevices].title = "Medical Devices and implants"
+* section[medicalDevices].code = $loinc#97813-0 "Implant component"
+* section[medicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Implants</div>"
+* section[medicalDevices].text.status = #generated
+* section[medicalDevices].entry[0] = Reference(urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375)
 * section[attachments].title = "Additional documentation"
 * section[attachments].code = $loinc#77599-9 "Additional documentation"
 * section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Additional documentation</div>"
