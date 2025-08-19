@@ -27,7 +27,7 @@ or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"
 * reasonCode.coding ^slicing.rules = #open
