@@ -9,12 +9,14 @@ Description: "Encounter"
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
 * type.text = "Rentgen pacienta Králíka"
-* serviceProvider = Reference(cz-organizationwithlogo-example)
+* serviceProvider = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) // CZ_OrganizationWithLogo
+
 
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
+* id = "5bdedd9b-27c5-4593-ae3a-968c5f25d253"
 * contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"

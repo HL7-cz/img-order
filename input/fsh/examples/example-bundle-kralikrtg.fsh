@@ -24,7 +24,10 @@ Usage: #example
 * entry[attachment].resource = cz-pdfkralikrgt-example
 
 * entry[practitioner].fullUrl = "urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be"
-* entry[practitioner].resource = practitionerPavlicek
+* entry[practitioner].resource = cz-practitioner2-example
+
+* entry[practitioner][+].fullUrl = "urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25"
+* entry[practitioner][=].resource = cz-practitioner1-example
 
 * entry[device].fullUrl = "urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1"
 * entry[device].resource = RGDevice
@@ -40,6 +43,21 @@ Usage: #example
 
 * entry[deviceUse].fullUrl = "urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
 * entry[deviceUse].resource = cz-deviceusestatement-example
+
+* entry[device][+].fullUrl = "urn:uuid:711e1d43-d5e4-4cbc-b546-74059db270f6"
+* entry[device][=].resource = cz-medicalDevice-example
+
+* entry[observation][0].fullUrl = "urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b"
+* entry[observation][=].resource = HeightKralik
+
+* entry[observation][+].fullUrl = "urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677"
+* entry[observation][=].resource = WeightKralik
+
+* entry[observation][+].fullUrl = "urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f"
+* entry[observation][=].resource = MobilityKralik
+
+* entry[organisation][+].fullUrl = "urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253"
+* entry[organisation][=].resource = cz-organizationwithlogo-example
 
 Instance: Composition-kralik-rtg
 InstanceOf: CZ_CompositionImageOrder
@@ -74,20 +92,21 @@ Usage: #example
 * section[attachments].text.status = #generated
 * section[attachments].entry[0] = Reference(urn:uuid:af6df099-793b-4872-bac4-6ed1c1f016cb)
 
-Instance: practitionerKeller
+Instance: cz-practitioner1-example
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
+* id = "16793b99-aecc-482d-8283-0e4885e0ca25"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 * name.use = #usual
 * name.prefix = "doc. MUDr."
 * name.family = "Jiří"
-* name.given = "Keller"
+* name.given = "Example"
 * name.suffix = "PhD."
 * gender = #male
 
-Instance: practitionerPavlicek
+Instance: cz-practitioner2-example
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
@@ -97,7 +116,7 @@ Usage: #example
 * name.use = #usual
 * name.prefix = "Bc."
 * name.family = "Miroslav"
-* name.given = "Pavlíček"
+* name.given = "Example"
 * name.suffix = "MBA"
 * gender = #male
 
@@ -105,6 +124,7 @@ Instance: patient_kralik
 InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Patient, contact information"
+Title: "Patient Kralik"
 * id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
@@ -139,6 +159,7 @@ InstanceOf: CZ_BodyHeight
 Usage: #example
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
+* id = "4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -152,13 +173,14 @@ Description: "Example of body height of Patient Kralik"
 * valueQuantity.code = #cm
 * status = #final
 * effectiveDateTime = 2025-05-20
-* performer = Reference (practitionerKeller)
+* performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: WeightKralik
 InstanceOf: CZ_BodyWeight
 Usage: #example
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
+* id = "e0861d9f-4b04-465f-b15b-cb01e3a8b677"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
@@ -172,25 +194,26 @@ Description: "Example of body weight of Patient Kralik"
 * valueQuantity.code = #kg
 * status = #final
 * effectiveDateTime = 2025-05-20
-* performer = Reference (practitionerKeller)
+* performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: MobilityKralik
 InstanceOf: CZ_PatientMobility
 Usage: #example
 Title: "Patient mobility of patient Kralik"
 Description: "Example of patient mobility of Patient Kralik"
+* id = "d70a725d-baa9-4553-a670-2609b0c0219f"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 //* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 //* category.coding.code = #vital-signs
-* code = $sct#710828008 "Assessment of ability to walk"
-* valueCodeableConcept = $sct#282147000 "Does not walk"
+* code = $sct#710828008
+* valueCodeableConcept = $sct#282147000
 * status = #final
 * effectiveDateTime = 2025-05-20
-* performer = Reference (practitionerKeller)
+* performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: cz-kralikrgt-example
 InstanceOf: CZ_ImagingOrderInformation
-Usage: #inline
+Usage: #example
 Title: "Imaging order for Plain X-ray"
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
@@ -213,9 +236,9 @@ Description: "Imaging order for Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
-* supportingInfo[0] = Reference(WeightKralik)
-* supportingInfo[+] = Reference(HeightKralik)
-* supportingInfo[+] = Reference(MobilityKralik)
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
@@ -261,3 +284,65 @@ Description: "Imaging order for Plain X-ray"
 * content.attachment.title = "RTG Imaging order - Kralik"
 * content.attachment.creation = "2025-05-20T12:02:00+01:00"
 * status = #current
+
+Instance: cz-deviceusestatement-example
+InstanceOf: CZ_DeviceUseStatement
+Usage: #example
+Title: "Example DeviceUseStatement for Implant"
+Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
+* id = "b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
+
+* status = #active
+
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* subject.reference = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
+
+* timingPeriod.start = "2022-03-15"
+* timingPeriod.end = "2024-12-01"
+
+* device = Reference(urn:uuid:711e1d43-d5e4-4cbc-b546-74059db270f6)
+
+* reasonCode[0] = $sct#27885002 "Complete atrioventricular block"
+* reasonCode[0].text = "Complete AV block"
+
+* bodySite = $sct#73829009  "Right atrium"
+
+
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <p><strong>Device:</strong> Implantable Pacemaker</p>
+  <p><strong>Patient:</strong> Kralik</p>
+  <p><strong>Status:</strong> Active</p>
+  <p><strong>Timing:</strong> 2022-03-15 to 2024-12-01</p>
+  <p><strong>Reason:</strong> Complete atrioventricular block</p>
+  <p><strong>Body Site:</strong> Right atrium</p>
+</div> """
+
+Instance: cz-medicalDevice-example
+InstanceOf: CZ_MedicalDevice
+Usage: #example
+Title: "Example Device - Implantable Pacemaker"
+Description: "A sample Device resource for an implantable pacemaker, referenced in a DeviceUseStatement."
+* id = "711e1d43-d5e4-4cbc-b546-74059db270f6"
+
+//* identifier.system = "https://hl7europe.org/example-identifier"
+//* identifier.value = "pacemaker-001"
+
+* udiCarrier.deviceIdentifier = "12345678901234"
+* udiCarrier.carrierHRF = "(01)12345678901234"
+
+* status = #active
+
+* type.coding.code = #40388003
+* type.coding.system = $sct
+* type.text = "Implant"
+
+* patient = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* patient.reference = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
+
+* manufacturer = "MedDevice Inc."
+* lotNumber = "LOTPM1234"
+* serialNumber = "SN987654321"
+* modelNumber = "MDX-5000"
+* expirationDate = "2028-06-30"
