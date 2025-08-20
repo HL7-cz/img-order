@@ -53,14 +53,16 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * signature ^short = "Digital Signature of this order"
 * signature only CZ_Signature
 
-* entry 1..
-* entry ^slicing.discriminator[0].type = #profile
-* entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "Entry resource in the Imaging order bundle"
 * entry ^definition = "An entry resource included in the Imaging order document bundle resource."
 * entry ^comment = "Must contain the Imaging Order Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the Imaging Order Composition profile."
+* entry.resource 1..
 * entry contains
     composition 1..1 and
     patient 1..1 and
@@ -91,15 +93,9 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[condition].resource only CZ_ConditionImage
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanImage
-* entry[observation].resource only CZ_ObservationImage
+* entry[observation].resource only Observation
 * entry[deviceUse].resource only CZ_DeviceUseStatement
-* entry[device].resource only CZ_DeviceObserver
-* entry[attachment].resource only CZ_Attachment
+* entry[device].resource only Device
+* entry[attachment].resource only DocumentReference
 * entry[organisation].resource only CZ_OrganizationCore
 * entry[encounter].resource only CZ_Encounter
-
-* signature ^short = "Report Digital Signature"
-  * type ^short = "Digital Signature Purposes"
-  * when ^short = "When was signed"
-  * who ^short = "Who signed."
-  * data ^short = "Signature content"

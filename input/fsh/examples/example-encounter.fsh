@@ -9,13 +9,15 @@ Description: "Encounter"
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
 * type.text = "Rentgen pacienta Králíka"
-* serviceProvider = Reference(cz-organizationwithlogo-example)
+* serviceProvider = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) // CZ_OrganizationWithLogo
+
 
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
-* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
+* id = "5bdedd9b-27c5-4593-ae3a-968c5f25d253"
+//* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
@@ -37,4 +39,4 @@ Description: "An example of the organization with logo extension"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
 // Rozšíření organization-logo aliasované jako cz-organization-logo
-* extension[logo].valueReference = Reference(logoFNMotol)
+* extension[logo].valueReference = Reference(urn:uuid:0af43461-495e-4dfc-82ca-7f3140a60fe7) // CZ_Logo
