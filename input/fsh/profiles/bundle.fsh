@@ -96,6 +96,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[observation].resource only Observation
 * entry[deviceUse].resource only CZ_DeviceUseStatement
 * entry[device].resource only Device
-* entry[attachment].resource only CZ_Attachment
+* entry[attachment].resource only DocumentReference
 * entry[organisation].resource only CZ_OrganizationCore
 * entry[encounter].resource only CZ_Encounter
