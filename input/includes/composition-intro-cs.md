@@ -1,6 +1,6 @@
 ### Sekce a obsah
 
-Dokument je rozdělen do sady povinných sekcí. Sekce jsou povinné, nikoli volitelné, aby bylo jasné, proč nejsou k dispozici žádná data, což je vyjádřeno v `composition.section.emptyReason`.
+Dokument je rozdělen do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, lze odůvodnění vyjádřit v `composition.section.emptyReason`.
 
 ### Struktura dokumentu
 
