@@ -1,6 +1,6 @@
 ### Sections and content
 
-The document is subdivided in a set of required sections. Sections are required instead of optional to make it clear that when no data is present, why that is the case, which is expressed in `composition.section.emptyReason`.
+The document is divided into a set of mandatory and optional sections. In case no data is available for a mandatory section, the justification can be expressed in `composition.section.emptyReason`.
 
 ### Document structure
 

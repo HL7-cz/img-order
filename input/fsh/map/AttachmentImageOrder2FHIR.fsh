@@ -12,37 +12,37 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "A.4 - Presented Form"
-* group[=].element[=].target.code = #CZ_Attachment.content
+* group[=].element[=].target.code = #Composition.extension:relatedArtifact.document
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PresentedForm.contentType
 * group[=].element[=].display = "A.4.1 - Content type of presented form"
-* group[=].element[=].target.code = #content.attachment.contentType					
+* group[=].element[=].target.code = #document.contentType					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PresentedForm.language
 * group[=].element[=].display = "A.4.2 - Language of presented form"
-* group[=].element[=].target.code = #content.attachment.language					
+* group[=].element[=].target.code = #document.language					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent		
 * group[=].element[+].code = #PresentedForm.data
 * group[=].element[=].display = "A.4.3 - Data of presented form"
-* group[=].element[=].target.code = #content.attachment.data					
+* group[=].element[=].target.code = #document.data					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent				
 * group[=].element[+].code = #PresentedForm.url
 * group[=].element[=].display = "A.4.4 - URL of presented form"
-* group[=].element[=].target.code = #content.attachment.url					
+* group[=].element[=].target.code = #document.url					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PresentedForm.title
 * group[=].element[=].display = "A.4.5 - Title of presented form"
-* group[=].element[=].target.code = #content.attachment.title					
+* group[=].element[=].target.code = #document.title					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #PresentedForm.creation
 * group[=].element[=].display = "A.4.6 - Date and time of creation"
-* group[=].element[=].target.code = #content.attachment.creation				
+* group[=].element[=].target.code = #document.creation				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AttachmentsCz"

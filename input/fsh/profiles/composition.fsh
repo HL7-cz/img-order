@@ -53,6 +53,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 * category from $DocumentClassValueSet
 
+* extension contains $artifact-relatedArtifact named relatedArtifact 0..*
+* extension[relatedArtifact]
+  * ^short = "Related artefacts: e.g. presented form"
+* extension[relatedArtifact].valueRelatedArtifact.type
+  * ^example[0].label = "presented form"
+  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#documentation
+  // ItT seems not appropriate as code... to be changed if this solution is used
+* extension[relatedArtifact].valueRelatedArtifact.document
+
 * section 1..
 * obeys text-or-section
 
