@@ -23,7 +23,7 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote
 
-class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
 
 "Vizuální podoba dokumentu" -- "Přílohy"
 
