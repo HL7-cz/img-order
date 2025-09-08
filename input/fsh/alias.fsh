@@ -13,6 +13,7 @@ Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $mkn10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
+Alias: $mime = urn:ietf:bcp:13
 
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus

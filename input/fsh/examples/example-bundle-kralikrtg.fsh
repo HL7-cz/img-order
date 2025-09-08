@@ -71,9 +71,7 @@ Usage: #example
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
 * type = $loinc#18748-4 "Diagnostic imaging study"
-* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
-* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
-* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfkralikrgt-example
+* extension[presentedForm].valueAttachment = cz-pdfkralikrgt-example
 * encounter = Reference(urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9)
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
