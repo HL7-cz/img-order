@@ -12,7 +12,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-compositionImageOrder"
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "A.4 - Presented Form"
-* group[=].element[=].target.code = #Composition.extension:relatedArtifact.document
+* group[=].element[=].target.code = #Composition.extension:presentedForm.document
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PresentedForm.contentType
