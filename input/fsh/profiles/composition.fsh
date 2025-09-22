@@ -102,7 +102,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * text 1..
   * text ^short = "Clinical question text"
   * entry 0..
-  * entry only Reference(CZ_ConditionImage)
+  * entry only Reference(CZ_ConditionClinicalQuestion)
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
