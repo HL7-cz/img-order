@@ -12,6 +12,11 @@ Description: "A imaging order bundle SHALL include one and only one Composition"
 Expression: "entry.resource.ofType(Composition).count() = 1"
 Severity:    #error
 
+Invariant: same-servicerequest-performer
+Description: "Service requests SHALL have the same performer."
+Expression: "entry.resource.ofType(ServiceRequest).contained.all($this.performer = entry.resource.ofType(ServiceRequest).performer)"
+Severity: #warning
+
 //Invariant: one-do
 //Description: "A imaging order SHALL include one and only one DiagnosticOrder"
 //Expression: "entry.resource.ofType(DiagnosticOrder).count() = 1"
@@ -35,6 +40,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 //* obeys dr-comp-subj
 * obeys one-comp
+* obeys same-servicerequest-performer
 //* obeys one-dr
 
 * identifier ^short = "Business identifier for this Imaging order"
