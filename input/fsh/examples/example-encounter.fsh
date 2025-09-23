@@ -18,7 +18,7 @@ Usage: #example
 Description: "An example of the organization with logo extension"
 * id = "5bdedd9b-27c5-4593-ae3a-968c5f25d253"
 //* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
 * name = "Fakultní nemocnice Motol"

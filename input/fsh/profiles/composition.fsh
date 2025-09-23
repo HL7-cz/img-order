@@ -62,6 +62,11 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
+* extension contains
+    $information-recipient-url  named informationRecipient 0..*
+* extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+
+
 * section 1..
 * obeys text-or-section
 
