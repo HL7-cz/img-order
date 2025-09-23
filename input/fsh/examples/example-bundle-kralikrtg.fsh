@@ -90,6 +90,13 @@ Usage: #example
 * section[medicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Implants</div>"
 * section[medicalDevices].text.status = #generated
 * section[medicalDevices].entry[0] = Reference(urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375)
+* section[supportingInformation].title = "Supporting information"
+* section[supportingInformation].code = $loinc#55752-0 "Clinical information"
+* section[supportingInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Supporting information</div>"
+* section[supportingInformation].text.status = #generated
+* section[supportingInformation].entry[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* section[supportingInformation].entry[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* section[supportingInformation].entry[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 
 Instance: cz-practitioner1-example
 InstanceOf: CZ_PractitionerCore

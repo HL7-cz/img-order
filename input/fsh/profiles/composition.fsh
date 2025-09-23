@@ -84,6 +84,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     appointment 0..1 and
     carePlan 0..1 and
     medicalDevices 0..* and
+    supportingInformation 0..1 and
     attachments 0..*
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
@@ -144,6 +145,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * code = $loinc#97813-0 "Implant component"
   * entry 0..
   * entry only Reference(CZ_DeviceUseStatement)
+
+ /////////////////////////////////// SUPPORTING INFORMATION SECTION /////////////////////////////////////////
+* section[supportingInformation]
+  * ^short = "Supporting information"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#55752-0 "Clinical information"
+  * entry 0..
+  * entry only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
