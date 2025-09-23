@@ -20,6 +20,8 @@ Description: "An example of the organization with logo extension"
 //* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789655"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[=].value = "456789656"
 * type[+] = $drzar#101 "Fakultní nemocnice"
 * name = "Fakultní nemocnice Motol"
 * telecom[0].system = #phone
