@@ -62,6 +62,11 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
+* extension contains
+    $information-recipient-url  named informationRecipient 0..*
+* extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+
+
 * section 1..
 * obeys text-or-section
 
@@ -79,6 +84,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     appointment 0..1 and
     carePlan 0..1 and
     medicalDevices 0..* and
+    supportingInformation 0..1 and
     attachments 0..*
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
@@ -102,7 +108,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * text 1..
   * text ^short = "Clinical question text"
   * entry 0..
-  * entry only Reference(CZ_ConditionImage)
+  * entry only Reference(CZ_ConditionClinicalQuestion)
 
 /////////////////////////////////// COVERAGE SECTION ////////////////////////////////////////////
 * section[coverage]
@@ -139,6 +145,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * code = $loinc#97813-0 "Implant component"
   * entry 0..
   * entry only Reference(CZ_DeviceUseStatement)
+
+ /////////////////////////////////// SUPPORTING INFORMATION SECTION /////////////////////////////////////////
+* section[supportingInformation]
+  * ^short = "Supporting information"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#55752-0 "Clinical information"
+  * entry 0..
+  * entry only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
