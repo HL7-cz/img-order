@@ -13,7 +13,6 @@ A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the c
 
 # URL does not resolve
 URL value 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' does not resolve
-URL value 'https://homolka.cz/nis' does not resolve
 URL value 'https://hl7europe.org/example-identifier' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/krzp' does not resolve
 URL value 'https://mkn10.uzis.cz' does not resolve
@@ -22,4 +21,3 @@ URL value 'http://hospital.cz/nis' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/rid' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/rcis' does not resolve
 URL value 'https://ncez.mzcr.cz/fhir/sid/kp' does not resolve
-URL value 'https://www.homolka.cz/' does not resolve
