@@ -23,21 +23,16 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
 Concept Map
 endnote
 
-class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
+class "cz-compositionImageOrder.extension:presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#ac]]
+class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-attachment.html]]
 
 "Presented Form" -- "Attachments"
 
-"Presented Form" <|. "cz-attachment"
+"Presented Form" <|. "cz-compositionImageOrder.extension:presentedForm"
 "Attachments" <|. "cz-attachment"
 
-/'
-"Imaging Order Header" <|. "cz-patient-core"
-"Imaging Order Header" <|. "cz-attachment"
-"Imaging Order Header" <|. "cz-practitioner-core"
-'/
-
 "Presented Form" -r[hidden]-> "Attachments"
-"Presented Form" -d[hidden]-> "cz-attachment"
+"Presented Form" -d[hidden]-> "cz-compositionImageOrder.extension:presentedForm"
 "Attachments" -d[hidden]-> "cz-attachment"
 
 @enduml
