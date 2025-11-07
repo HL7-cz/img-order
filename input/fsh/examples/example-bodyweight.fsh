@@ -8,7 +8,7 @@ Description: "Example of body weight of Patient Mracena"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $sct#27113001
 * code.coding[LOINC] = $loinc#29463-7
-* code.coding[NCLP] = $nclp#20042
+* code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 65
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $UCUM
