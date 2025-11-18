@@ -242,12 +242,12 @@ Description: "Imaging order for Plain X-ray"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#6757004 "Right knee"
-* bodySite = $sct#62175007 "Right leg"
-* bodySite = $sct#731788002 "LS Spine"
-* bodySite = $sct#737406006 "Right talus"
-* bodySite = $sct#12921003 "Pelvis"
-* bodySite = $sct#287579007 "Right hip"
-* bodySite = $sct#287679003 "Left hip"
+* bodySite[+] = $sct#62175007 "Right leg"
+* bodySite[+] = $sct#731788002 "Entire joint of lumbosacral junction of spine"
+* bodySite[+] = $sct#737406006 "Structure of right talus bone"
+* bodySite[+] = $sct#12921003 "Pelvis"
+* bodySite[+] = $sct#287579007 "Right hip"
+* bodySite[+] = $sct#287679003 "Left hip"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
