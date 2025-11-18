@@ -7,7 +7,8 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier 1..
 * category 1..
 
-* extension contains BodySiteImageOrder named bodySite 0..*
+* extension contains $bodySite-reference named bodySite 0..1
+* extension[bodySite].valueReference only Reference(BodyStructureCz)
 
 * authoredOn 1..
 * occurrenceDateTime
@@ -23,6 +24,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore
 or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 * performer.type from $sct-device-type
+* bodySite 0..1
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
