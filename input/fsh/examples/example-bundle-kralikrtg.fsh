@@ -15,7 +15,25 @@ Usage: #example
 * entry[patient].resource = patient_kralik
 
 * entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[orderInformation].resource = cz-kralikrgt-example
+* entry[orderInformation].resource = cz-kralikrgt-example1
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:fea1dbb8-9e16-4e11-beae-c12829c97381"
+* entry[orderInformation][=].resource = cz-kralikrgt-example2
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:210db397-977a-47a0-8a2e-febde6f9f92a"
+* entry[orderInformation][=].resource = cz-kralikrgt-example3
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:ded5bee9-8a58-4676-919f-0b8e08eaede4"
+* entry[orderInformation][=].resource = cz-kralikrgt-example4
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:158808ba-fcca-480e-8188-dec77920ec3c"
+* entry[orderInformation][=].resource = cz-kralikrgt-example5
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
+* entry[orderInformation][=].resource = cz-kralikrgt-example6
+
+* entry[orderInformation][+].fullUrl = "urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
+* entry[orderInformation][=].resource = cz-kralikrgt-example7
 
 * entry[coverage].fullUrl = "urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * entry[coverage].resource = cz-kralikinsurance-example
@@ -81,6 +99,12 @@ Usage: #example
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
+* section[orderInformation].entry[+] = Reference(urn:uuid:fea1dbb8-9e16-4e11-beae-c12829c97381)
+* section[orderInformation].entry[+] = Reference(urn:uuid:210db397-977a-47a0-8a2e-febde6f9f92a)
+* section[orderInformation].entry[+] = Reference(urn:uuid:ded5bee9-8a58-4676-919f-0b8e08eaede4)
+* section[orderInformation].entry[+] = Reference(urn:uuid:158808ba-fcca-480e-8188-dec77920ec3c)
+* section[orderInformation].entry[+] = Reference(urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9)
+* section[orderInformation].entry[+] = Reference(urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
@@ -227,7 +251,7 @@ Description: "Example of patient mobility of Patient Kralik"
 * effectiveDateTime = 2025-05-20
 * performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
-Instance: cz-kralikrgt-example
+Instance: cz-kralikrgt-example1
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
 Title: "Imaging order for Plain X-ray"
@@ -242,15 +266,165 @@ Description: "Imaging order for Plain X-ray"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#6757004 "Right knee"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Koleno pravé</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example2
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "fea1dbb8-9e16-4e11-beae-c12829c97381"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#62175007 "Right leg"
-* bodySite = $sct#731788002 "LS Spine"
-* bodySite = $sct#737406006 "Right talus"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Noha pravá</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example3
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "210db397-977a-47a0-8a2e-febde6f9f92a"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
+* bodySite = $sct#731788002 "Entire joint of lumbosacral junction of spine"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example4
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "ded5bee9-8a58-4676-919f-0b8e08eaede4"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
+* bodySite = $sct#737406006 "Structure of right talus bone"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Hlezno pravé</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example5
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "158808ba-fcca-480e-8188-dec77920ec3c"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#12921003 "Pelvis"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Pánev</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example6
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#287579007 "Right hip"
+* code.coding = $sct#168537006 "Plain X-ray"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Kyčel pravý</div>"
+* authoredOn = "2025-05-20T12:02:00+01:00"
+* supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
+* supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
+* supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
+* reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
+* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+
+Instance: cz-kralikrgt-example7
+InstanceOf: CZ_ImagingOrderInformation
+Usage: #example
+Title: "Imaging order for Plain X-ray"
+Description: "Imaging order for Plain X-ray"
+* id = "c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
+* identifier.system = "http://hospital.org/ris-order"
+* identifier[=].value = "6609024"
+* status = #active
+* intent = #order
+* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
+* subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
+* insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#287679003 "Left hip"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Kyčel levý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
