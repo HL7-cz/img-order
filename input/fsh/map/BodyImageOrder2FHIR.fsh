@@ -420,12 +420,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
-* group[=].element[+].code = #Body.SupportingInformation.Medication
+* group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
 * group[=].element[=].display = "A.3.1.3.1 - Medication"
 * group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatement)			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Body.SupportingInformation.Medication
+* group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
 * group[=].element[=].display = "A.3.1.3.1 - Medication"
 * group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_MedicationStatement)			
 * group[=].element[=].target.display = ""
