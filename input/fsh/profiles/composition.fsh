@@ -45,13 +45,12 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * date
   * ^short = "Date the order was created."
 
-* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
-  * coding 1..*
-    * insert SliceElement( #value, $this )
-  * coding contains loinc 1..1
-  * coding[loinc] = $loinc#18748-4
+* type from $OrderTypes (required)
+  * coding = $sct#721964003
 
-* category from $DocumentClassValueSet
+
+* category from $DocumentCategory (required)
+  * coding = $loinc#57133-1 
 
 * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
