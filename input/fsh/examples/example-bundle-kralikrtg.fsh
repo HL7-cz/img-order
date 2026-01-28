@@ -91,7 +91,8 @@ Usage: #example
 * author = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = $loinc#18748-4 "Diagnostic imaging study"
+* type = $sct#721964003
+* category = $loinc#57133-1
 * extension[presentedForm].valueAttachment = cz-pdfkralikrgt-example
 * encounter = Reference(urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9)
 * section[orderInformation].title = "Requested imaging studies information Document"

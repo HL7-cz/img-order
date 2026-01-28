@@ -53,8 +53,14 @@ Následuje seznam použitých kódovacích systémů a číselníků:
 | A.1.1.6        | Gender                  | https://terminology.hl7.org/4.0.0/ValueSet-v3-AdministrativeGender.html |
 | A.1.2.1        | Address                 | https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html             |
 | A.1.4.1        | Method of coverage      | http://hl7.org/fhir/ValueSet/coverage-kind                              |
-| A.1.8.2        | Document category       | http://hl7.org/fhir/ValueSet/referenced-item-category                   |
 | A.1.8.3        | Document status         | https://hl7.org/fhir/valueset-request-status.html                       |
 | A.1.8.7        | Confidentiality         | https://terminology.hl7.org/ValueSet-v3-Confidentiality.html            |
 | A.2.1.4        | Urgency of the order    | https://hl7.org/fhir/valueset-request-priority.html                     |
 | A.2.4.1        | Method of coverage      | http://hl7.org/fhir/ValueSet/coverage-kind                              |
+
+### LOINC
+
+| Item code      | Item description        | Value                                                                   |
+| ---------------| ----------------------- | ----------------------------------------------------------------------- |
+| A.1.8.2        | Document category       | https://ncez.mzcr.cz/terminology/ValueSet/document-category             |
+
