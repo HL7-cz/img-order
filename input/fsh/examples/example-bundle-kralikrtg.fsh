@@ -3,8 +3,8 @@ InstanceOf: CZ_BundleImageOrder
 Title: "Bundle: RTG Patient Kralik"
 Description: "Example of Imaging order (Bundle) including a RTG order"
 Usage: #example
-* identifier[+].system = "http://example.org"
-* identifier[=].value = "CZEXIO0001"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:f369f400-c43c-481b-b6ce-5f45e36a7e59"
 * type = #document
 * timestamp = "2025-05-20T12:02:00+01:00"
 

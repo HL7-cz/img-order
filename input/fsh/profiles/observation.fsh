@@ -30,7 +30,7 @@ Description: "Observation for Imaging Order for the scope of the Czech national 
 * code.coding[NCLP]
   * ^short = "NCLP code for the observation"
   * system 1..
-  * system = "https://nclp.ncez.mzcr.cz/CodeSystem/nclppol" (exactly)
+  * system = "https://ncez.mzcr.cz/nclp/CodeSystem/nclppol" (exactly)
   * code 1..
 * valueQuantity
 * valueCodeableConcept

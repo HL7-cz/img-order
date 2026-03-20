@@ -3,8 +3,8 @@ InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
 Description: "Imaging order for Magnetic Resonance"
 
-* identifier[+].system = "http://hospital.cz/nis"
-* identifier[=].value = "27520536"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:f69fed08-cee4-48c2-9475-d2cedb17f88f"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging"
