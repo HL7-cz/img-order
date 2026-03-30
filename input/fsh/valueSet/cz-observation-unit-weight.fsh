@@ -8,9 +8,8 @@ Description: "UCUM units for weight"
 * ^date = "2024-01-01"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://hl7.cz/fhir/img-order/ValueSet/cz-observationUnitsWeight-vs"
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsWeight-cz"
 * insert SetFmmandStatusRule(2, trial-use)
 
-* ^experimental = false
 * $UCUM#kg
 * $UCUM#g

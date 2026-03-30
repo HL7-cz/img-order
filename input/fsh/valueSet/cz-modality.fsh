@@ -2,6 +2,7 @@ ValueSet: CZ_ModalityVs
 Id: cz-modality-vs
 Title: "CZ Modality"
 Description: "This value set includes all modalities."
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-modality"
 * ^language = #cs
 * ^version = "1.0.0"
 * ^status = #active
