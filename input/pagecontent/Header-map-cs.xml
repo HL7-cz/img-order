@@ -1,9 +1,782 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<h3 id="overview">Mapování logického modelu hlavičky</h3>
-<a> </a>
-<p>V této části je uveden diagram, který ukazuje, jak je logický model hlavičky obrazové žádanky mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
-<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
-<h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include imgOrderHead-map-cs.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hlavička -&gt; FHIR profily (CZ IMG-ORDER)</title>
+
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Probíhající sladění:</strong>
+          Logické modely Xt-EHR jsou průběžně revidovány a dále zpřesňovány. Aktualizace z Xt-EHR budou postupně promítány do této implementační příručky, aby byla zachována návaznost na vyvíjející se specifikace EHDS.
+        </div>
+      </div>
+    </div>
+
+    <h3>Hlavička -&gt; FHIR profily (CZ IMG-ORDER)</h3>
+
+    <p>
+      Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu hlavičky vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
+    </p>
+
+    <h4 id="model">Přehled modelu</h4>
+
+    <p>{% include imgOrderHead-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Kontext mapování</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojový logický model:</strong>
+          <a href="StructureDefinition-logHeaderImagingOrder.html">logHeaderImagingOrder</a>
+        </li>
+        <li>
+          <strong>Hlavní cílový profil:</strong>
+          <a href="StructureDefinition-cz-compositionImageOrder.html">cz-compositionImageOrder</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapování logického modelu hlavičky na CZ IMG-ORDER profily">
+
+        <caption>Hlavička -&gt; FHIR profily (CZ IMG-ORDER)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Hlavička (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Subject.identification</td>
+            <td>A.1.1 Identification of the patient/subject</td>
+            <td>související</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.givenName</td>
+            <td>A.1.1.1 Given name</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.name.given</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.familyName</td>
+            <td>A.1.1.2 Familyname/surname</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.name.family</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.dateOfBirth</td>
+            <td>A.1.1.3 Date of birth</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.birthDate</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.dateOfDeath</td>
+            <td>A.1.1.4 Date of death</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.deceased[x].deceasedDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.identifier</td>
+            <td>A.1.1.5 Patient identifier</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.citizenship</td>
+            <td>A.1.1.6 Citizenship</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.patient-citizenship</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.gender</td>
+            <td>A.1.1.7 Gender</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.gender</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.genderForClinicalUse</td>
+            <td>A.1.1.8 Gender</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.extension:sex-for-clinical-use</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.languageOfCommunication</td>
+            <td>A.1.1.9 Language of communication</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.communication.language</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.identification.handicap</td>
+            <td>A.1.1.10 Handicap</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo</td>
+            <td>A.1.2 Patient/subject related contact information</td>
+            <td>související</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.address</td>
+            <td>A.1.2.1 Address</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.telecom</td>
+            <td>A.1.2.2 Telecom</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician</td>
+            <td>A.1.2.3 Prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.generalPractitioner</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent</td>
+            <td>A.1.2.4 Legal representatives and other contact persons</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.type</td>
+            <td>A.1.2.4.1 Contact type</td>
+            <td>související</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.relationship</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.relationToSubject</td>
+            <td>A.1.2.4.2 Relationship to the patient</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.relationship</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.identifier</td>
+            <td>A.1.2.4.3 Person identifier</td>
+            <td>související</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.givenName</td>
+            <td>A.1.2.4.4 Given name</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.name.given</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.familyName</td>
+            <td>A.1.2.4.5 Family name/surname</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.name.family</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.address</td>
+            <td>A.1.2.4.6 Contact person address</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.legalRepresent.telecom</td>
+            <td>A.1.2.4.7 Telecom</td>
+            <td>ekvivalentní</td>
+            <td>Patient (cz-patient-core)</td>
+            <td>Patient.contact.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician</td>
+            <td>A.1.2.3 Prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.Identifier</td>
+            <td>A.1.2.3.1 Identification of the prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.Name</td>
+            <td>A.1.2.3.2 Name of the prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.telecom</td>
+            <td>A.1.2.3.6 Telecom</td>
+            <td>ekvivalentní</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician</td>
+            <td>A.1.2.3 Prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.Identifier</td>
+            <td>A.1.2.3.1 Identification of the prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.Name</td>
+            <td>A.1.2.3.2 Name of the prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.practiotioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.Specialization</td>
+            <td>A.1.2.3.3 Specialization of the prefered physician</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.speciality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.providerIdentifierName</td>
+            <td>A.1.2.3.4 Identification and name of the provider the doctor represents</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.organization.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.providerAddress</td>
+            <td>A.1.2.3.5 Provider address</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.organization.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subject.contactInfo.preferedPhysician.telecom</td>
+            <td>A.1.2.3.6 Telecom</td>
+            <td>ekvivalentní</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.payer</td>
+            <td>A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.</td>
+            <td>související</td>
+            <td>Composition (cz-coverage)</td>
+            <td>Composition.section:order.insurance</td>
+            <td></td>
+            <td>Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_Coverage)</td>
+          </tr>
+          <tr>
+            <td>Header.payer.insuranceCode</td>
+            <td>A.1.3.1 - Health insurance code</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.payor.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.payer.insuranceName</td>
+            <td>A.1.3.2 - Health insurance name</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.payor.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.payer.insuranceNumber</td>
+            <td>A.1.3.3 - Health insurance number</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.coverage</td>
+            <td>A.1.4 - Information about coverage</td>
+            <td>související</td>
+            <td>Composition (cz-coverage)</td>
+            <td>Composition.section:Coverage</td>
+            <td></td>
+            <td>Composition.section:Coverage.entry.ofType(CZ_Coverage)</td>
+          </tr>
+          <tr>
+            <td>Header.coverage.method</td>
+            <td>A.1.4.1 - Coverage method</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.coverage.informationPayor</td>
+            <td>A.1.4.2 - Information about Payor</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.payor</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author</td>
+            <td>A.1.5 - Author (by whom the Imaging Order was/were authored)</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-practitionerRole-core)</td>
+            <td>Composition.author</td>
+            <td></td>
+            <td>Composition.author.resolve().ofType(CZ_PractitionerRoleCore)</td>
+          </tr>
+          <tr>
+            <td>Header.author.identifier</td>
+            <td>A.1.5.1 - Author identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author.name</td>
+            <td>A.1.5.2 - Author name</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author.address</td>
+            <td>A.1.5.3 - Author address</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.address</td>
+            <td></td>
+            <td>ID Organization</td>
+          </tr>
+          <tr>
+            <td>Header.author.organization</td>
+            <td>A.1.5.4 - Author organisation</td>
+            <td>ekvivalentní</td>
+            <td>Z_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>Z_PractitionerRoleCore.organization.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AuthorCz.organization</td>
+            <td>A.1.5.4 - Author organisation</td>
+            <td>související</td>
+            <td>CZ_Encounter (cz-encounter)</td>
+            <td>CZ_Encounter.serviceProvider</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.requestedPerformer</td>
+            <td>A.1.6 - Requested Performer</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingInformationAboutOrder (cz-practitionerRole-core)</td>
+            <td>CZ_ImagingInformationAboutOrder.performer</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.requestedPerformer.identifier</td>
+            <td>A.1.6.1 - Requested Performer identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.requestedPerformer.name</td>
+            <td>A.1.6.2 - Requested Performer name</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.requestedPerformer.organizationID</td>
+            <td>A.1.6.3 - Requested Performer organisation ID</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.organization.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.requestedPerformer.organization</td>
+            <td>A.1.6.4 - Requested Performer organisation</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerCore.organization.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.additionalRecipient</td>
+            <td>A.1.7 - Additional Recipient</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-practitionerRole-core)</td>
+            <td>Composition.extension:informationRecipient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.additionalRecipient.identifier</td>
+            <td>A.1.7.1 - Additional Recipient identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practitioner.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.additionalRecipient.name</td>
+            <td>A.1.7.2 - Additional Recipient name</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.practictioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.additionalRecipient.organizationID</td>
+            <td>A.1.7.3 - Additional Recipient organisation ID</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.organization.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.additionalRecipient.organization</td>
+            <td>A.1.7.4 - Additional Recipient organisation</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PractitionerRoleCore (cz-practitionerRole-core)</td>
+            <td>CZ_PractitionerRoleCore.organization.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.identifier</td>
+            <td>A.1.8.1 - Document ID</td>
+            <td>ekvivalentní</td>
+            <td>Bundle (cz-bundleImageOrder)</td>
+            <td>Bundle.identifier</td>
+            <td></td>
+            <td>If it is the identifier of a particular order instance</td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.dateTime</td>
+            <td>A.1.8.4 - Order date and time</td>
+            <td>ekvivalentní</td>
+            <td>Bundle (cz-bundleImageOrder)</td>
+            <td>Bundle.timeStamp</td>
+            <td></td>
+            <td>If it is when this particular version of  this order has been assembled into a Bundle.</td>
+          </tr>
+          <tr>
+            <td>Header.subject</td>
+            <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.subject</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author.dateTime</td>
+            <td>A.1.5.5 - Date Time</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.date</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata</td>
+            <td>A.1.8 - Document metadata</td>
+            <td>související</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.category</td>
+            <td>A.1.8.2 - Document category</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.category</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.status</td>
+            <td>A.1.8.3 - Document status</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.status</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.dateTime</td>
+            <td>A.1.8.4 - Order date and time</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.date</td>
+            <td></td>
+            <td>If it is when this document has been created (indipendently by its version)</td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.title</td>
+            <td>A.1.8.5 - Document title</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.custodian</td>
+            <td>A.1.8.6 - Order custodian</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.custodian</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.confidentiality</td>
+            <td>A.1.8.7 - Confidentiality</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.confidentiality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.language</td>
+            <td>A.1.8.8 - Language</td>
+            <td>související</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.language</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.version</td>
+            <td>A.1.8.9 - Version</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.extension:versionNumber.valueString</td>
+            <td></td>
+            <td>As business version, not as resource version</td>
+          </tr>
+          <tr>
+            <td>Header.digitalSignatureCz.digitalSignature</td>
+            <td>A.1.9.1 - Electronic signature or document seal</td>
+            <td>ekvivalentní</td>
+            <td>Bundle (cz-bundleImageOrder)</td>
+            <td>Bundle.signature.data</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.digitalSignatureCz.timestamp</td>
+            <td>A.1.9.2 - Electronic time stamp</td>
+            <td>ekvivalentní</td>
+            <td>Bundle (cz-bundleImageOrder)</td>
+            <td>Bundle.signature.when</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
+
 </div>

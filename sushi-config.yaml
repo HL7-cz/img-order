@@ -36,7 +36,7 @@ publisher:
 dependencies:
   hl7.fhir.cz.core: 0.3.0
   hl7.fhir.eu.base: 0.1.0
-  hl7.fhir.eu.extensions: 1.2.0
+  hl7.fhir.eu.extensions.r4: 1.2.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

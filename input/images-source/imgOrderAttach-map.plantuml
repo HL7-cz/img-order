@@ -14,14 +14,8 @@ legend right
 endlegend
 
 class "Presented Form" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
-note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
-note top #EEEEAE [[ConceptMap-AttachmentImagingOrder2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "cz-compositionImageOrder.extension:presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#ac]]
 class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-attachment.html]]

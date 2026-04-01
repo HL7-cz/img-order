@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Imaging Order Header" <<LogicalModel>> [[StructureDefinition-HeaderImagingOrder.html]]
-note top #EEEEAE [[ConceptMap-HeaderImagingOrder2FHIR-cz.html]]
-Concept Map
-endnote
+
 /'
 class "Additional Recipient" <<LogicalModel>> [[StructureDefinition-AdditionalRecipientCz.html]]
 class "Author" <<LogicalModel>> [[StructureDefinition-AuthorCz.html]]
@@ -28,7 +26,7 @@ class "Related contact information of the Patient/subject" <<LogicalModel>> [[St
 '/
 class "cz-encounter" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
-class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "cz-patient-core" <<Profile>> [[https://hl7.cz/fhir/core/0.3.0/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundleImageOrder" <<Profile>> [[StructureDefinition-cz-bundleImageOrder.html]]
 class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositionImageOrder.html]]
