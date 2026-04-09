@@ -6,11 +6,11 @@
 id: hl7.fhir.cz.img-order
 canonical: https://hl7.cz/fhir/img-order
 name: HL7CzImagingOrderImplementationGuide
-title: HL7 Czech Imaging Order IG
+title: HL7 Czech Imaging Order FHIR IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ballot
-language: cs
+version: 0.1.0
+# language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -36,7 +36,7 @@ publisher:
 dependencies:
   hl7.fhir.cz.core: 0.3.0
   hl7.fhir.eu.base: 0.1.0
-  hl7.fhir.eu.extensions: 1.2.0
+  hl7.fhir.eu.extensions: 0.1.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

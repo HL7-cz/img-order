@@ -125,11 +125,11 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_Coverage.payor					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #Body.coverage.comment
 * group[=].element[=].display = "A.2.4.3 - Coverage comment"
 * group[=].element[=].target.code = #CZ_Coverage.comment					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Body.coverage.comment
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageAppointmentCz"
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-appointment"
 * group[=].element[+].code = #Body.Appointment

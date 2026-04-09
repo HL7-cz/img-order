@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profil |
 endlegend
 class "Tělo žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
-note top #EEEEAE [[ConceptMap-BodyImagingOrder2FHIR-cz.html]]
-Concept Mapa
-endnote
 
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]

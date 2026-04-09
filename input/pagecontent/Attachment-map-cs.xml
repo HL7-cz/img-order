@@ -1,9 +1,261 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<h3 id="overview">Mapování logického modelu vizuální podoby dokumentu a příloh</h3>
-<a> </a>
-<p>V této části je uveden diagram, který ukazuje, jak je logický model vizuální podoby dokumentu a příloh obrazové žádanky mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
-<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
-<h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include imgOrderAttach-map-cs.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Vizuální podoba dokumentu a přílohy -&gt; FHIR profily (CZ IMG-ORDER)</title>
+
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Probíhající sladění:</strong>
+          Logické modely Xt-EHR jsou průběžně revidovány a dále zpřesňovány. Aktualizace z Xt-EHR budou postupně promítány do této implementační příručky, aby byla zachována návaznost na vyvíjející se specifikace EHDS.
+        </div>
+      </div>
+    </div>
+
+    <h3>Vizuální podoba dokumentu a přílohy -&gt; FHIR profily (CZ IMG-ORDER)</h3>
+
+    <p>
+      Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu vizuální podoby dokumentu a příloh vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
+    </p>
+
+    <h4 id="model">Přehled modelu</h4>
+
+    <p>{% include imgOrderAttach-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Kontext mapování</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojové logické modely:</strong>
+          <a href="StructureDefinition-logPresentedFormCz.html">logPresentedFormCz</a>,
+          <a href="StructureDefinition-logAttachmentsCz.html">logAttachmentsCz</a>
+        </li>
+        <li>
+          <strong>Hlavní cílový profil:</strong>
+          <a href="StructureDefinition-cz-compositionImageOrder.html">CZ_CompositionImageOrder</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapování logického modelu vizuální podoby dokumentu a příloh na CZ IMG-ORDER profily">
+
+        <caption>Vizuální podoba dokumentu a přílohy -&gt; FHIR profily (CZ IMG-ORDER)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Vizuální podoba dokumentu a přílohy (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>PresentedForm</td>
+            <td>A.4 - Presented Form</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-compositionImageOrder)</td>
+            <td>Composition.extension:presentedForm.document</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.contentType</td>
+            <td>A.4.1 - Content type of presented form</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.contentType</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.language</td>
+            <td>A.4.2 - Language of presented form</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.language</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.data</td>
+            <td>A.4.3 - Data of presented form</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.data</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.url</td>
+            <td>A.4.4 - URL of presented form</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.url</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.title</td>
+            <td>A.4.5 - Title of presented form</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PresentedForm.creation</td>
+            <td>A.4.6 - Date and time of creation</td>
+            <td>ekvivalentní</td>
+            <td>document (cz-compositionImageOrder)</td>
+            <td>document.creation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz</td>
+            <td>A.5 - Additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Attachment (cz-attachment)</td>
+            <td>CZ_Attachment.content</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.contentType</td>
+            <td>A.5.1 - Content type of additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.contentType</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.language</td>
+            <td>A.5.2 - Language of additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.language</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.data</td>
+            <td>A.5.3 - Data of additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.data</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.url</td>
+            <td>A.5.4 - URL of additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.url</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.title</td>
+            <td>A.5.5 - Title of additional attachments</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AttachmentsCz.creation</td>
+            <td>A.5.6 - Date and time of creation</td>
+            <td>ekvivalentní</td>
+            <td>content (cz-attachment)</td>
+            <td>content.attachment.creation</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
+
 </div>

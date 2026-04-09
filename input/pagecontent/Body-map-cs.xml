@@ -1,9 +1,1232 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir../../input-cache/schemas/R5/fhir-single.xsd">
-<h3 id="overview">Mapování logického modelu těla</h3>
-<a> </a>
-<p>V této části je uveden diagram, který ukazuje, jak je logický model těla obrazové žádanky mapován na profily HL7 FHIR v rámci implementační specifikace.</p>
-<!--p>Hereafter a browseable diagram showing how the Imaging Order header model is realized by the HL7 FHIR Profiles of this guide</p-->
-<h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include imgOrderBody-map-cs.svg %}</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Tělo -&gt; FHIR profily (CZ IMG-ORDER)</title>
+
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Probíhající sladění:</strong>
+          Logické modely Xt-EHR jsou průběžně revidovány a dále zpřesňovány. Aktualizace z Xt-EHR budou postupně promítány do této implementační příručky, aby byla zachována návaznost na vyvíjející se specifikace EHDS.
+        </div>
+      </div>
+    </div>
+
+    <h3>Tělo -&gt; FHIR profily (CZ IMG-ORDER)</h3>
+
+    <p>
+      Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu těla vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
+    </p>
+
+    <h4 id="model">Přehled modelu</h4>
+
+    <p>{% include imgOrderBody-map-cs.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Kontext mapování</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojový logický model:</strong>
+          <a href="StructureDefinition-logBodyImageOrderCz.html">logBodyImageOrderCz</a>
+        </li>
+        <li>
+          <strong>Hlavní cílový profil:</strong>
+          <a href="StructureDefinition-cz-imagingOrderInformation.html">CZ_ImagingOrderInformation</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapování logického modelu těla na CZ IMG-ORDER profily">
+
+        <caption>Tělo -&gt; FHIR profily (CZ IMG-ORDER)</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Tělo (Logický model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cíl</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Poznámky</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Body.OrderInformation</td>
+            <td>A.2.1 and A.2.2 - Information about order</td>
+            <td>související</td>
+            <td>Composition (cz-imagingOrderInformation)</td>
+            <td>Composition.section:OrderInformation</td>
+            <td></td>
+            <td>#Composition.OrderInformation.entry.ofType(CZ_ImagingOrderInformation)</td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderDetail</td>
+            <td>A.2.1 - Order detail</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.identifier</td>
+            <td>A.2.1.1 - Identifier of order detail</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.dateTime</td>
+            <td>A.2.1.2 - Date and time of the order placement</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.authoredOn</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.requestedExecdateTime</td>
+            <td>A.2.1.3 - Date and time of requested execution</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.occurrenceDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.urgency</td>
+            <td>A.2.1.4 - Urgency of the order</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.priority</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderText</td>
+            <td>A.2.1.5 - Order text</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.note</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderText</td>
+            <td>A.2.1.6 - Information for the patient</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.patientInstruction</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderReason</td>
+            <td>A.2.2 - Order reason</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.reasonCode</td>
+            <td></td>
+            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)</td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderReason.problem</td>
+            <td>A.2.2.1 -  Problem / diagnosis / condition description</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.reasonCode.coding</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderDetail.reasonCode</td>
+            <td>A.2.2.4 - Reason for ordering by code</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.reasonCode.coding</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderDetail.reasonText</td>
+            <td>A.2.2.6 - Reason for order by text</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.reasonCode.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderDetail.questionCode</td>
+            <td>A.2.2.2 - Clinical question in code form</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-conditionImage)</td>
+            <td>Composition.section:ClinicalQuestion.entry.ofType(CZ_ConditionClinicalQuestion).code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderInformation.orderDetail.questionText</td>
+            <td>A.2.2.3 - A clinical question in text form</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-conditionImage)</td>
+            <td>Composition.section:ClinicalQuestion.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.ClinicalEvent</td>
+            <td>A.2.3 - Information about clinical event</td>
+            <td>související</td>
+            <td>Composition (cz-encounter)</td>
+            <td>Composition.encounter</td>
+            <td></td>
+            <td>Composition.encounter.ofType(CZ_Encounter)</td>
+          </tr>
+          <tr>
+            <td>ClinicalEvent.identifier</td>
+            <td>A.2.3.1 - Identifier of clinical event</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Encounter (cz-encounter)</td>
+            <td>CZ_Encounter.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ClinicalEvent.type</td>
+            <td>A.2.3.2 - Type of clinical event</td>
+            <td>ekvivalentní</td>
+            <td>Composition (cz-encounter)</td>
+            <td>Composition.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ClinicalEvent.otherInformation</td>
+            <td>A.2.3.3 - Other information about clinical event</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Encounter (cz-encounter)</td>
+            <td>CZ_Encounter.type.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.coverage</td>
+            <td>A.2.4 - Information about additional coverage</td>
+            <td>související</td>
+            <td>Composition (cz-coverage)</td>
+            <td>Composition.section:Coverage</td>
+            <td></td>
+            <td>Composition.section:Coverage.entry.ofType(CZ_Coverage)</td>
+          </tr>
+          <tr>
+            <td>Body.coverage.method</td>
+            <td>A.2.4.1 - Coverage method</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.coverage.informationPayor</td>
+            <td>A.2.4.2 - Information about payor</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.payor</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.coverage.comment</td>
+            <td>A.2.4.3 - Coverage comment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Coverage (cz-coverage)</td>
+            <td>CZ_Coverage.comment</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.Appointment</td>
+            <td>A.2.5 - Information about appointment</td>
+            <td>související</td>
+            <td>Composition (cz-appointment)</td>
+            <td>Composition.section:Appointment</td>
+            <td></td>
+            <td>Composition.section:Appointment.entry.ofType(CZ_Appointment)</td>
+          </tr>
+          <tr>
+            <td>Appointment.identifier</td>
+            <td>A.2.5.1 - Identifier of appointment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.status</td>
+            <td>A.2.5.2 - Status of appointment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.status</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.description</td>
+            <td>A.2.5.3 - Description of appointment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.description</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.dateTime</td>
+            <td>A.2.5.4 - Date Time</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.created</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.examDuration</td>
+            <td>A.2.5.5 - Duration of appointment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.minutesDuration</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.comment</td>
+            <td>A.2.5.6 - Comment about appointment</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.comment</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.patientInstruction</td>
+            <td>A.2.5.7 - Instructions for the patient</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.patientInstruction</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Appointment.address</td>
+            <td>A.2.5.7 - Address of the workplace</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Appointment (cz-appointment)</td>
+            <td>CZ_Appointment.Location.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SpecimenInformation</td>
+            <td>A.2.6 - Speciment information</td>
+            <td>související</td>
+            <td>Composition (cz-specimen)</td>
+            <td>Composition.section:OrderInformation.specimen.ofType(CZ_Specimen)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.identifier</td>
+            <td>A.2.6.1 - Identifier of specimen</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.species</td>
+            <td>A.2.6.2 - Species of animal patient</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.subject.species</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.material</td>
+            <td>A.2.6.3 - Type of material</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collectionDate</td>
+            <td>A.2.6.4 - Date and time of collection</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.collectionDate</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.transportDate</td>
+            <td>A.2.6.5 - Date and time of transport</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.receivedTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.type</td>
+            <td>A.2.6.6 - Sample type</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.anatomicLocation</td>
+            <td>A.2.6.7 - Anatomic location</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.bodySite</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.morphology</td>
+            <td>A.2.6.8 - Morphology</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.extension:bodySite:bodyStructure.morphology</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.instrument</td>
+            <td>A.2.6.9 - Instrument</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.subject</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.procedure</td>
+            <td>A.2.6.10 - Collection procedure</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.method</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.sourceDevice</td>
+            <td>A.2.6.11 - Source Device</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.subject.type</td>
+            <td></td>
+            <td>Device or Location</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.samplingPoint</td>
+            <td>A.2.6.12 - Sampling point</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.subject.type</td>
+            <td></td>
+            <td>Location</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.Note</td>
+            <td>A.2.6.13 - Note</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.note</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.container</td>
+            <td>A.2.6.14 - Container</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.container</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.container.type</td>
+            <td>A.2.6.14.1 - Type</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.container.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.container.count</td>
+            <td>A.2.6.14.2 - Specimen quantity</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.container.specimenQuantity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.container.deviceId</td>
+            <td>A.2.6.14.3 - Device id</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.container.extension:Device:identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.container.label</td>
+            <td>A.2.6.14.4 - Label</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector.description</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData</td>
+            <td>A.2.6.15 - Additional formalised sample data</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData.date</td>
+            <td>A.2.6.15.1 - Date</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.collectedDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData.value</td>
+            <td>A.2.6.15.3 - Data value</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.collectedPeriod</td>
+            <td></td>
+            <td>If #SpecimenInformation.additionalData.code = 08017 or 09056 (NCLPPOL - Čas odběru v minutách nebo sekundách)</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData.value</td>
+            <td>A.2.6.15.3 - Data value</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collection.quantity</td>
+            <td></td>
+            <td>If #SpecimenInformation.additionalData.code = 03142 (NCLPPOL - Objem)</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData.value</td>
+            <td>A.2.6.15.3 - Data value</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.condition</td>
+            <td></td>
+            <td>If #SpecimenInformation.additionalData.code = 20293 (NCLPPOL - Stav materiálu)</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.additionalData.value</td>
+            <td>A.2.6.15.3 - Data value</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.note</td>
+            <td></td>
+            <td>If #SpecimenInformation.additionalData.code = 20206 (NCLPPOL - Poznámky-specifikace-jiné)</td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collector</td>
+            <td>A.2.6.16 - Collector</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collector.identifier</td>
+            <td>A.2.6.16.1 - Identifier of the sample collector</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collector.name</td>
+            <td>A.2.6.16.2 - Name of the sample collector</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collector.contact</td>
+            <td>A.2.6.16.3 - Contact information of the sample collector</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SpecimenInformation.collector</td>
+            <td>A.2.6.16.4 - Organization of the sample collector</td>
+            <td>ekvivalentní</td>
+            <td>CZ_Specimen (cz-specimen)</td>
+            <td>CZ_Specimen.collector.organization</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.biometricData</td>
+            <td>A.3.1.1 - Biometric data</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.biometricData</td>
+            <td>A.3.1.1 - Biometric data</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.weight</td>
+            <td>A.3.1.1.2 - Weight</td>
+            <td>související</td>
+            <td>Composition (cz-bodyweight)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyWeight)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.weight</td>
+            <td>A.3.1.1.2 - Weight</td>
+            <td>související</td>
+            <td>Composition (cz-bodyweight)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_BodyWeight)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.weight.valueQuantity</td>
+            <td>A.3.1.1.2.1 - Value Quantity</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyWeight (cz-bodyweight)</td>
+            <td>CZ_BodyWeight.valueQuantity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.weight.code</td>
+            <td>A.3.1.1.2.2 - Code</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyWeight (cz-bodyweight)</td>
+            <td>CZ_BodyWeight.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.weight.dateTime</td>
+            <td>A.3.1.1.2.3 - DateTime</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyWeight (cz-bodyweight)</td>
+            <td>CZ_BodyWeight.effectiveDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.height</td>
+            <td>A.3.1.1.2 - Height</td>
+            <td>související</td>
+            <td>Composition (cz-bodyheight)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyHeight)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.height</td>
+            <td>A.3.1.1.2 - Height</td>
+            <td>související</td>
+            <td>Composition (cz-bodyheight)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_BodyHeight)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.height.valueQuantity</td>
+            <td>A.3.1.1.2.1 - Value Quantity</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyHeight (cz-bodyheight)</td>
+            <td>CZ_BodyHeight.valueQuantity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.height.code</td>
+            <td>A.3.1.1.2.2 - Code</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyHeight (cz-bodyheight)</td>
+            <td>CZ_BodyHeight.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.height.dateTime</td>
+            <td>A.3.1.1.2.3 - DateTime</td>
+            <td>ekvivalentní</td>
+            <td>CZ_BodyHeight (cz-bodyheight)</td>
+            <td>CZ_BodyHeight.effectiveDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.otherRelevantClinicalInformation</td>
+            <td>A.3.1.2 - Other Relevant Clinical Information</td>
+            <td>související</td>
+            <td>Composition (cz-conditionImage)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(Condition)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.otherRelevantClinicalInformation</td>
+            <td>A.3.1.2 - Other Relevant Clinical Information</td>
+            <td>související</td>
+            <td>Composition (cz-conditionImage)</td>
+            <td>Composition.section:SupportingInformation.ofType(Condition)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.otherRelevantClinicalInformation.code</td>
+            <td>A.3.1.2.1 - Code</td>
+            <td>ekvivalentní</td>
+            <td>Condition (cz-conditionImage)</td>
+            <td>Condition.code.coding</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.otherRelevantClinicalInformation.text</td>
+            <td>A.3.1.2.2 - Text</td>
+            <td>ekvivalentní</td>
+            <td>Condition (cz-conditionImage)</td>
+            <td>Condition.code.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</td>
+            <td>A.3.1.3.1 - Medication</td>
+            <td>související</td>
+            <td>Composition (cz-MedicationStatement)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatement)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</td>
+            <td>A.3.1.3.1 - Medication</td>
+            <td>související</td>
+            <td>Composition (cz-MedicationStatement)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_MedicationStatement)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Medication.identifier</td>
+            <td>A.3.1.3.1.1 - Identifier of medication</td>
+            <td>ekvivalentní</td>
+            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatement.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Medication.code</td>
+            <td>A.3.1.3.1.2 - Code of Medication</td>
+            <td>ekvivalentní</td>
+            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatement.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Medication.amount</td>
+            <td>A.3.1.3.1.3 - Amount of Medication</td>
+            <td>ekvivalentní</td>
+            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatement.amount</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.implant</td>
+            <td>A.3.1.4 - Implant</td>
+            <td>související</td>
+            <td>Composition (cz-deviceUseStatement)</td>
+            <td>Composition.section:MedicalDevices</td>
+            <td></td>
+            <td>Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)</td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.implant.type</td>
+            <td>A.3.1.4.1 - Type</td>
+            <td>ekvivalentní</td>
+            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
+            <td>CZ_DeviceUseStatement.device.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.implant.identifier</td>
+            <td>A.3.1.4.2 - Identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
+            <td>CZ_DeviceUseStatement.device.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.implant.model</td>
+            <td>A.3.1.4.3 - Model</td>
+            <td>ekvivalentní</td>
+            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
+            <td>CZ_DeviceUseStatement.device.modelNumber</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.implant.bodyPart</td>
+            <td>A.3.1.4.4 - Body Part</td>
+            <td>ekvivalentní</td>
+            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
+            <td>CZ_DeviceUseStatement.bodySite</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.allergyIntolerance</td>
+            <td>A.3.1.5.1 - Allergy intolerance</td>
+            <td>související</td>
+            <td>Composition (cz-allergyIntolerance)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_AllergyIntolerance)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.allergyIntolerance</td>
+            <td>A.3.1.5.1 - Allergy intolerance</td>
+            <td>související</td>
+            <td>Composition (cz-allergyIntolerance)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_AllergyIntolerance)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.identifier</td>
+            <td>A.3.1.5.1.1 - Identifier of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.clinicalStatus</td>
+            <td>A.3.1.5.1.2 - Clinical status of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.clinicalStatus</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.type</td>
+            <td>A.3.1.5.1.3 - Type of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.category</td>
+            <td>A.3.1.5.1.4 - Category of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.category</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.code</td>
+            <td>A.3.1.5.1.5 - Code of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AllergyIntolerance.note</td>
+            <td>A.3.1.5.1.6 - Note of allergyIntolerance</td>
+            <td>ekvivalentní</td>
+            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
+            <td>CZ_AllergyIntolerance.note</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.warnings</td>
+            <td>A.3.1.5.2 - Warning</td>
+            <td>související</td>
+            <td>Composition (cz-flag)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_Flag)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.warnings</td>
+            <td>A.3.1.5.2 - Warning</td>
+            <td>související</td>
+            <td>Composition (cz-flag)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_Flag)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.warnings.text</td>
+            <td>A.3.1.5.2.1 - Text of warning</td>
+            <td>ekvivalentní</td>
+            <td>Flag (cz-flag)</td>
+            <td>Flag.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.limitationOfPatientMobility</td>
+            <td>A.3.1.6 - Limitation of patient mobility</td>
+            <td>související</td>
+            <td>Composition (cz-potientMobility)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.limitationOfPatientMobility</td>
+            <td>A.3.1.6 - Limitation of patient mobility</td>
+            <td>související</td>
+            <td>Composition (cz-potientMobility)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_PatientMobility)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.imitationOfPatientMobility.dateTime</td>
+            <td>A.3.1.6.1 - Date and time of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility.valueDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.imitationOfPatientMobility.code</td>
+            <td>A.3.1.6.1 - Code of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.imitationOfPatientMobility.value</td>
+            <td>A.3.1.6.2 - Value of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility.valueCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.otherInformation</td>
+            <td>A.3.1.7 - Other information</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.SupportingInformation.otherInformation</td>
+            <td>A.3.1.7 - Other information</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.otherInformation.dateTime</td>
+            <td>A.3.1.7.1 - Date and time of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ObservationImage (cz-observationImage)</td>
+            <td>CZ_ObservationImage.valueDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.otherInformation.code</td>
+            <td>A.3.1.7.2 - Code of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ObservationImage (cz-observationImage)</td>
+            <td>CZ_ObservationImage.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SupportingInformation.otherInformation.value</td>
+            <td>A.3.1.7.3 - Value of information</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ObservationImage (cz-observationImage)</td>
+            <td>CZ_ObservationImage.valueQuantity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.OrderDataElements</td>
+            <td>A.3.2.1 - Order/examination data elements.</td>
+            <td>související</td>
+            <td>Composition (cz-imagingOrderInformation)</td>
+            <td>Composition.section:OrderInformation</td>
+            <td></td>
+            <td>Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)</td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.code</td>
+            <td>A.3.2.1.1 - Examination code</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.name</td>
+            <td>A.3.2.1.2 Name of the examination</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.modality</td>
+            <td>A.3.2.1.3 - Modality</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.orderDetail.modality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.bodyPart</td>
+            <td>A.3.2.1.4 - Body Part</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.extension:bodySite.location</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.laterality</td>
+            <td>A.3.2.1.5 - Laterality</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.extension:bodySite.extension:laterality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OrderDataElements.note</td>
+            <td>A.3.2.1.6 - Examination note</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
+            <td>CZ_ImagingOrderInformation.note</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.PlannedCareOrdersCz</td>
+            <td>A.3.3 - Order/examination data elements.</td>
+            <td>související</td>
+            <td>Composition (cz-carePlanImage)</td>
+            <td>Composition.section:CarePlan</td>
+            <td></td>
+            <td>Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)</td>
+          </tr>
+          <tr>
+            <td>PlannedCareOrdersCz.identifier</td>
+            <td>A.3.3.1 - Identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
+            <td>CZ_CarePlanImage.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>PlannedCareOrdersCz.name</td>
+            <td>A.3.3.2 Title of the observation</td>
+            <td>ekvivalentní</td>
+            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
+            <td>CZ_CarePlanImage.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.OtherSupportingInformationCz</td>
+            <td>A.3.4 - Order/examination data elements.</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)&quot;</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Body.OtherSupportingInformationCz</td>
+            <td>A.3.4 - Order/examination data elements.</td>
+            <td>související</td>
+            <td>Composition (cz-observationImage)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)&quot;</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OtherSupportingInformationCz.identifier</td>
+            <td>A.3.4.1 - Identifier</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ObservationImage (cz-observationImage)</td>
+            <td>CZ_ObservationImage.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>OtherSupportingInformationCz.name</td>
+            <td>A.3.4.2 Title of the observation</td>
+            <td>ekvivalentní</td>
+            <td>CZ_ObservationImage (cz-observationImage)</td>
+            <td>CZ_ObservationImage.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
+
 </div>
