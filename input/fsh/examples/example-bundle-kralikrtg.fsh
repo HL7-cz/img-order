@@ -12,7 +12,7 @@ Usage: #example
 * entry[composition].resource = Composition-kralik-rtg
 
 * entry[patient].fullUrl = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
-* entry[patient].resource = patient_kralik
+* entry[patient].resource = cz-patient-kralik
 
 * entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
 * entry[orderInformation].resource = cz-kralikrgt-example1
@@ -161,11 +161,11 @@ Usage: #example
 * practitioner = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
-Instance: patient_kralik
+Instance: cz-patient-kralik
 InstanceOf: CZ_PatientCore
-Usage: #example
-Description: "Patient, contact information"
 Title: "Patient Kralik"
+Description: "Patient Kralik for RTG order example"
+Usage: #example
 * id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
@@ -269,7 +269,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * bodySite = $sct#6757004 "Right knee"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Koleno pravé</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Koleno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -295,7 +295,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * bodySite = $sct#62175007 "Right leg"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Noha pravá</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Noha pravá</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -321,7 +321,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * bodySite = $sct#731788002 "Entire joint of lumbosacral junction of spine"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: LS páteř</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -347,7 +347,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * bodySite = $sct#737406006 "Structure of right talus bone"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Hlezno pravé</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Hlezno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -373,7 +373,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * bodySite = $sct#12921003 "Pelvis"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Pánev</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Pánev</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -399,7 +399,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * bodySite = $sct#287579007 "Right hip"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Kyčel pravý</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -425,7 +425,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * bodySite = $sct#287679003 "Left hip"
 * code.coding = $sct#168537006 "Plain X-ray"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: Kyčel levý</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel levý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -484,7 +484,6 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 * status = #active
 
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* subject.reference = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
 
 * timingPeriod.start = "2022-03-15"
 * timingPeriod.end = "2024-12-01"
@@ -499,7 +498,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 
 * text.status = #generated
 * text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml">
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <p><strong>Device:</strong> Implantable Pacemaker</p>
   <p><strong>Patient:</strong> Kralik</p>
   <p><strong>Status:</strong> Active</p>

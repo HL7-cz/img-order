@@ -13,6 +13,6 @@ Description: "Imaging order for Magnetic Resonance"
 * bodySite = $sct#72696002
 * code.coding = $sct#19741000087109
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vyšetření MR pravého kolene</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">Vyšetření MR pravého kolene</div>"
 * authoredOn = "2025-04-01T09:00:00+01:00"
 * note.text = "Poznámka k vyšetření"
