@@ -12,25 +12,25 @@ Tato příručka nepopisuje způsob výměny této zprávy.
 
 Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horní části každé stránky na liště nabídek.
 
-- [Home - Domovská stránka](index-cs.html): Tato stránka poskytuje úvodní informace, stručný rozsah použití, reference, závislosti, rozdílovou analýzu verzí a prohlášení o duševním vlastnictví.
+- [Home - Domovská stránka](index.html): Tato stránka poskytuje úvodní informace, stručný rozsah použití, reference, závislosti, rozdílovou analýzu verzí a prohlášení o duševním vlastnictví.
 - Introduction:
-  - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o obrazové žádance.
-  - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice obrazové žádanky. 
+  - [Rozsah použití a obsah](scope-and-content.html): Tento segment obsahuje úvodní obecné informace o obrazové žádance.
+  - [Background](background.html): Tento segment obsahuje obecné informace o původu definice obrazové žádanky. 
 - Functional:
-  - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití. 
-  - [Workflow](workflow-cs.html): Tento segment obsahuje informace o pracovním postupu. 
-  - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech. 
-  - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o terminologii. 
+  - [Případy užití](use-cases.html): Tento segment obsahuje informace o případech použití. 
+  - [Workflow](workflow.html): Tento segment obsahuje informace o pracovním postupu. 
+  - [Logické modely](logical-models.html): Tento segment obsahuje informace o logických modelech. 
+  - [Terminologické aspekty](terminology-considerations.html): Tento segment obsahuje informace o terminologii. 
 - Implementation:
-  - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové žádanky.
-  - [Příklady](examples-cs.html): Tento segment obsahuje informace o příkladech.
-  - [Povinnosti](obligations-cs.html): Tento segment obsahuje informace o povinnostech.
-  - [Poznámky k implementaci](implementation-notes-cs.html): Tento segment obsahuje informace pro implementaci.
+  - [Mapování logického modelu](model-map.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové žádanky.
+  - [Příklady](examples.html): Tento segment obsahuje informace o příkladech.
+  - [Povinnosti](obligations.html): Tento segment obsahuje informace o povinnostech.
+  - [Poznámky k implementaci](implementation-notes.html): Tento segment obsahuje informace pro implementaci.
 - About:
-  - [Autoři](authors-cs.html): Tento segment obsahuje informace o autorech.
-  - [Downloads](downloads-cs.html): Tento segment obsahuje informace o možnostech stahování obsahu implementační specifikace.
-  - [Závislosti](dependencies-cs.html): Tento segment obsahuje informace o závislostech.
-  - [Autorská práva](copyright-cs.html): Tento segment obsahuje informace o autorských právech.
+  - [Autoři](authors.html): Tento segment obsahuje informace o autorech.
+  - [Downloads](downloads.html): Tento segment obsahuje informace o možnostech stahování obsahu implementační specifikace.
+  - [Závislosti](dependencies.html): Tento segment obsahuje informace o závislostech.
+  - [Autorská práva](copyright.html): Tento segment obsahuje informace o autorských právech.
 - [Artifacts](artifacts.html): Tato stránka poskytuje seznam FHIR artefaktů definovaných jako součást této implementační příručky.
 
 ### Reference

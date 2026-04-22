@@ -1,10 +1,11 @@
 .DS_Store
 Thumbs.db
-fsh-generated
-input-cache
-output
-temp
-template
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
+/translations
 _*.*
 *.bak
 ig-template/includes/.index.json
