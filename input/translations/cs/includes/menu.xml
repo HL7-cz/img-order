@@ -1,0 +1,76 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Domovská stránka</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Úvod<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope-and-content.html">Rozsah a obsah</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Funkční část<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="use-cases.html">Případy užití</a>
+      </li>
+      <li>
+        <a href="workflow.html">Workflow</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logické modely</a>
+      </li>
+      <li>
+        <a href="terminology-considerations.html">Terminologie</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Implementace<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="model-map.html">Mapování na profily</a>
+      </li>
+      <li>
+        <a href="examples.html">Příklady</a>
+      </li>
+      <li>
+        <a href="obligations.html">Povinnosti</a>
+      </li>
+      <li>
+        <a href="implementation-notes.html">Poznámky k implementaci</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+        <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">O projektu<b class="caret">
+          </b>
+        </a>
+        <ul class="dropdown-menu">
+        <li>
+            <a href="authors.html">Autoři</a>
+        </li>
+        <li>
+            <a href="downloads.html">Ke stažení</a>
+        </li>
+        <li>
+            <a href="dependencies.html">Závislosti</a>
+        </li>
+        <li>
+            <a href="copyright.html">Autorská práva</a>
+        </li>
+        </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakty</a>
+  </li>
+</ul>   

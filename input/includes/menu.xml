@@ -1,0 +1,76 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Introduction<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope-and-content.html">Scope and content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Functional<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="use-cases.html">Use cases</a>
+      </li>
+      <li>
+        <a href="workflow.html">Workflow</a>
+      </li>
+      <li>
+        <a href="logical-models.html">Logical models</a>
+      </li>
+      <li>
+        <a href="terminology-considerations.html">Terminology considerations</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Implementation<b class="caret">
+      </b>
+    </a>  
+    <ul class="dropdown-menu">
+      <li>
+        <a href="model-map.html">Mapping to profiles</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="implementation-notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+        <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">About<b class="caret">
+          </b>
+        </a>
+        <ul class="dropdown-menu">
+        <li>
+            <a href="authors.html">Authors</a>
+        </li>
+        <li>
+            <a href="downloads.html">Downloads</a>
+        </li>
+        <li>
+            <a href="dependencies.html">Dependencies</a>
+        </li>
+        <li>
+            <a href="copyright.html">Copyright</a>
+        </li>
+        </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>   

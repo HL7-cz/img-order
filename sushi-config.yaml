@@ -173,39 +173,6 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
  #    - 5.0.1
  #    - 4.0.0
 
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
-#
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
-# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
-# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
-# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
-# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
-# │ property below.                                                                                │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home:
-    Home: index.html
-  Introduction:
-    Scope and content: scope-and-content.html
-    Background: background.html
-  Functional:
-    Use cases: use-cases.html
-    Workflow: workflow.html
-    Logical models: logical-models.html
-    Terminology considerations: terminology-considerations.html
-  Implementation:
-    Mapping to profiles: model-map.html
-    Examples: examples.html
-    Obligations: obligations.html
-    Implementation notes: implementation-notes.html
-  About:
-    Authors: authors.html
-    Downloads: downloads.html
-    Dependencies: dependencies.html
-    Copyright: copyright.html
-  Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
