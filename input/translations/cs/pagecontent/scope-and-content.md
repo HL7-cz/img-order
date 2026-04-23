@@ -4,7 +4,7 @@
 
 Tento dokument se zabývá funkční specifikací žádanky na zobrazovací vyšetření, její strukturou a kódovými systémy, které by bylo vhodné použít pro její vytvoření.
 
-Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření, které je definováno jednou z modalit z [následující tabulky](scope-and-content-cs.html#tabulka-typů-modalit). Vzhledem ke kardinalitě `1..*` je možné požadovat současně dvě modality typicky v případě hybridních metod jako je **PET/CT** (tedy PT + CT).
+Pojmem Žádanka na obrazové vyšetření se rozumí žádanka na vyšetření, které je definováno jednou z modalit z [následující tabulky](scope-and-content.html#tabulka-typů-modalit). Vzhledem ke kardinalitě `1..*` je možné požadovat současně dvě modality typicky v případě hybridních metod jako je **PET/CT** (tedy PT + CT).
 
 ##### Tabulka typů modalit
 
@@ -166,7 +166,7 @@ Tato požadovaná sekce zahrnuje datové elementy požadovaného vyšetření, a
    - Computed radiography (CR) ze stroje s nepřímou digitalizací a 
    - DX ze stroje s přímou digitalizací
 
-        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka typů modalit](scope-and-content-cs.html#tabulka-typů-modalit).
+        > Vzhledem k ústupu RG a CR lze pro účely žádanky předpokládat, že požadovaným vyšetřením je DX. Pokud by vyšetření bylo provedeno jinou skiagrafickou modalitou, neměl by to být problém, protože jako sekundární modality by byly též namapovány na skiagram/prostý snímek. Mapování DICOM atributů řeší [tabulka typů modalit](scope-and-content.html#tabulka-typů-modalit).
 
 4)	Část těla – část číselníku SNOMED-CT definovaná DICOM standardem. Důvodem je, že kompletní sada hodnot SNOMED-CT obsahuje i obecné části těla (např. šlacha), což pro zobrazovací vyšetření není užitečné, my potřebujeme vědět, zda je ta šlacha na ruce nebo na noze
 

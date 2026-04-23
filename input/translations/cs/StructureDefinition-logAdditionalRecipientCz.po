@@ -1,0 +1,12 @@
+
+#: name
+msgid "LogEnAdditionalRecipient"
+msgstr "LogCzAdditionalRecipient"
+
+#: title
+msgid "A.1.7 - Additional Recipient"
+msgstr "A.1.7 - Příjemce nálezu"
+
+#: AdditionalRecipientCz.identifier/short
+msgid "A.1.7.1 - Additional Recipient identifier"
+msgstr "A.1.7.1 - Identifikátor příjemce"

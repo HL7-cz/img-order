@@ -42,4 +42,4 @@ Obrazová žádanka je reprezentována jako FHIR bundle, který obsahuje zdroje 
 
 ### Popis obsahu CZ_CompositionImageOrder
 
-{% include composition-intro-cs.md %}
+{% include composition-intro.md %}

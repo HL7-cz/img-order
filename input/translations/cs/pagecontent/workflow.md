@@ -110,14 +110,14 @@ Vzhledem k tomu, že je uzákoněna svobodná volba lékaře, může se pacient 
 
 ##### Scénář: PET/CT
 
-Indikující lékař vytvoří žádanku na PET/CT (z [DICOM modalit](scope-and-content-cs.html#tabulka-typů-modalit) vybere PET i CT), které se obvykle provádí na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky. Žádanka může být adresována spolupracujícímu pracovišti, vyšetření ale může být provedeno dle svobodné volby pacienta i v jiném zdravotnickém zařízení, které toto vyšetření provádí. 
+Indikující lékař vytvoří žádanku na PET/CT (z [DICOM modalit](scope-and-content.html#tabulka-typů-modalit) vybere PET i CT), které se obvykle provádí na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky. Žádanka může být adresována spolupracujícímu pracovišti, vyšetření ale může být provedeno dle svobodné volby pacienta i v jiném zdravotnickém zařízení, které toto vyšetření provádí. 
 Do klinických informací je vhodné doplnit informace, které by mohly ovlivnit interpretaci vyšetření (datum ukončení radioterapie či chemoterapie, datum poslední operace, datum lokální ablační léčby atd.).
 
 Tento postup lze uplatnit i na PET/MR vyšetření.
 
 ##### Scenario: Angioplastika periferních tepen
 
-Indikující lékař vytvoří žádanku na angioplastiku periferních tepen, která se obvykle provádí na základě předchozí domluvy ([scénář 3.2.3.1](workflow-cs.html#scénař-přijatá-obecná-konzultace), obecná konzultace, specifikace daného není součástí tohoto dokumentu) na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky, a to včetně koagulačních parametrů (INR, počet trombocytů). 
+Indikující lékař vytvoří žádanku na angioplastiku periferních tepen, která se obvykle provádí na základě předchozí domluvy ([scénář 3.2.3.1](workflow.html#scénař-přijatá-obecná-konzultace), obecná konzultace, specifikace daného není součástí tohoto dokumentu) na pracovišti, se kterým spolupracuje. Na žádanku vyplní kromě povinných informací, také informace, které by mohly ovlivnit průběh vyšetření a podání jodové kontrastní látky, a to včetně koagulačních parametrů (INR, počet trombocytů). 
 
 Žádanka bude adresována pracovišti, které výkon provádí. Do přílohy žádanky je možné připojit výsledky předchozích vyšetření a zejména písemné vyjádření schvalující provedení tohoto výkonu (např. zápis mezioborové komise či konzultace jinou odborností). Navíc tato žádanka obsahuje i informaci o lateralitě, kterou je nutno předat. Jako příklad může posloužit angioplastika tepny a. tibialis anterior vlevo (SNOMED kód 312643005 a přesná "levá" s kódem code 2014100008710).
 Druhá uvedená varianta je přesnějším kódem, který by se měl použít. Nicméně patrně bude potřeba vypracovat i koncept, který z prvního kódu a levostranné laterality odvodí kód druhý. Přesnou implementaci bude nutné ověřit na funkčním prototypu.

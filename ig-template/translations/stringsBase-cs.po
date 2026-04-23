@@ -1,0 +1,429 @@
+# en -> cs
+
+# NO_TRANS
+msgid ""
+msgstr ""
+
+#: NO_TRANS
+msgid "There is no translation page available for the current page, so it has been rendered in the default language"
+msgstr "Pro aktuální stránku není k dispozici žádný překlad, proto byla vykreslena ve výchozím jazyce."
+
+# Experimental
+#: Experimental
+msgid "Experimental"
+msgstr "Experimentální"
+
+# Swagger
+#: Swagger
+msgid "Raw OpenAPI-Swagger Definition file"
+msgstr "Zdrojový soubor definice OpenAPI-Swagger"
+
+# Download
+#: Download
+msgid "Download"
+msgstr "Stáhnout"
+
+# NoTestPlan
+#: NoTestPlan
+msgid "No test plans are currently available for the %ARTIFACT%."
+msgstr "Pro artefakt %ARTIFACT% nejsou aktuálně k dispozici žádné testovací plány (TestPlans)."
+
+# NoTestScript
+#: NoTestScript
+msgid "No test scripts are currently available for the %ARTIFACT%."
+msgstr "Pro artefakt %ARTIFACT% nejsou aktuálně k dispozici žádné testovací skripty (TestScripts)."
+
+# ChangeHistory
+#: ChangeHistory
+msgid "Change History"
+msgstr "Historie změn"
+
+# HistoryOfChange
+#: HistoryOfChange
+msgid "History of changes for %ARTIFACT%."
+msgstr "Historie změn pro %ARTIFACT%."
+
+# CodeSystemValuesets
+#: CodeSystemValuesets
+msgid "This Code system is referenced in the definition of the following value sets:"
+msgstr "Na tento CodeSystem se odkazuje v definici následujících ValueSetů:"
+
+# Contained
+#: Contained
+msgid "Contained resources"
+msgstr "Obsažené (Contained) zdroje"
+
+# FormalExtension
+#: FormalExtension
+msgid "Formal Views of Extension Content"
+msgstr "Formální zobrazení obsahu Extension"
+
+# FormalProfile
+#: FormalProfile
+msgid "Formal Views of Profile Content"
+msgstr "Formální zobrazení obsahu profilu"
+
+# ReadingStructures
+#: ReadingStructures
+msgid "Description of Profiles, Differentials, Snapshots, and their representations"
+msgstr "Popis profilů, tabulek Differential, Snapshot a jejich reprezentací"
+
+# KeyElementsTable
+#: KeyElementsTable
+msgid "Key Elements Table"
+msgstr "Tabulka klíčových elementů"
+
+# DifferentialTable
+#: DifferentialTable
+msgid "Differential Table"
+msgstr "Tabulka Differential"
+
+# SnapshotTable
+#: SnapshotTable
+msgid "Snapshot Table"
+msgstr "Tabulka Snapshot"
+
+# PseudoXML
+#: PseudoXML
+msgid "Pseudo XML"
+msgstr "Pseudo XML"
+
+# PseudoJSON
+#: PseudoJSON
+msgid "Pseudo JSON"
+msgstr "Pseudo JSON"
+
+# PseudoTTL
+#: PseudoTTL
+msgid "Pseudo TTL"
+msgstr "Pseudo TTL"
+
+# StatisticsReferences
+#: StatisticsReferences
+msgid "Statistics/References"
+msgstr "Statistiky/Reference"
+
+# AllTables
+#: AllTables
+msgid "All"
+msgstr "Vše"
+
+# Derived
+#: Derived
+msgid "This structure is derived from %ARTIFACT%"
+msgstr "Tato struktura je odvozena od %ARTIFACT%"
+
+# KeyElementsView
+#: KeyElementsView
+msgid "Key Elements View"
+msgstr "Zobrazení klíčových elementů"
+
+# DifferentialView
+#: DifferentialView
+msgid "Differential View"
+msgstr "Zobrazení Differential"
+
+# SnapshotView
+#: SnapshotView
+msgid "Snapshot View"
+msgstr "Zobrazení Snapshot"
+
+# XMLTemplate
+#: XMLTemplate
+msgid "XML Template"
+msgstr "XML šablona"
+
+# JSONTemplate
+#: JSONTemplate
+msgid "JSON Template"
+msgstr "JSON šablona"
+
+# TTLTemplate
+#: TTLTemplate
+msgid "TTL Template"
+msgstr "TTL šablona"
+
+# OtherReps
+#: OtherReps
+msgid "Other representations of profile:"
+msgstr "Další reprezentace profilu:"
+
+# CSV
+#: CSV
+msgid "CSV"
+msgstr "CSV"
+
+# Excel
+#: Excel
+msgid "Excel"
+msgstr "Excel"
+
+# Schematron
+#: Schematron
+msgid "Schematron"
+msgstr "Schematron"
+
+# Example
+#: Example
+msgid "Example"
+msgstr "Příklad"
+
+# Examples
+#: Examples
+msgid "Examples"
+msgstr "Příklady"
+
+# Raw
+#: Raw
+msgid "Raw %FMT%"
+msgstr "Zdrojový %FMT%"
+
+# Abstract
+#: Abstract
+msgid "Abstract"
+msgstr "Abstraktní"
+
+# DetailedDescriptions
+#: DetailedDescriptions
+msgid "Detailed Descriptions"
+msgstr "Detailní popisy"
+
+# DefinitionsFor
+#: DefinitionsFor
+msgid "Definitions for the %MODEL%"
+msgstr "Definice pro %MODEL%"
+
+# ExamplesForProfile
+#: ExamplesForProfile
+msgid "Examples for the %ID% Profile."
+msgstr "Příklady pro profil %ID%."
+
+# NoExamples
+#: NoExamples
+msgid "No examples are currently available for the %ID% Profile."
+msgstr "Pro profil %ID% nejsou aktuálně k dispozici žádné příklady."
+
+# FormatProfile
+#: FormatProfile
+msgid "%FMT% Profile"
+msgstr "Profil %FMT%"
+
+# FormatRep
+#: FormatRep
+msgid "%FMT% representation of the %ID% %TYPE%."
+msgstr "%FMT% reprezentace %TYPE% %ID%."
+
+# Mappings
+#: Mappings
+msgid "Mappings"
+msgstr "Mapování"
+
+# MappingsFor
+#: MappingsFor
+msgid "Mappings for the %ID% %TYPE%."
+msgstr "Mapování pro %TYPE% %ID%."
+
+# ChangesIn
+#: ChangesIn
+msgid "Changes in the %ID% %TYPE%."
+msgstr "Změny v %TYPE% %ID%."
+
+# Testing
+#: Testing
+msgid "Testing"
+msgstr "Testování"
+
+# TestScripts
+#: TestScripts
+msgid "Test Scripts"
+msgstr "Testovací skripty"
+
+# Expansion
+#: Expansion
+msgid "Expansion"
+msgstr "Expanze"
+
+# Content
+#: Content
+msgid "Content"
+msgstr "Obsah"
+
+# XML
+#: XML
+msgid "XML"
+msgstr "XML"
+
+# JSON
+#: JSON
+msgid "JSON"
+msgstr "JSON"
+
+# TTL
+#: TTL
+msgid "TTL"
+msgstr "TTL"
+
+# History
+#: History
+msgid "History"
+msgstr "Historie"
+
+# Extension
+#: Extension
+msgid "Extension"
+msgstr "Extension"
+
+# LogicalModel
+#: LogicalModel
+msgid "Logical Model"
+msgstr "Logický model"
+
+# ResourceProfile
+#: ResourceProfile
+msgid "Resource Profile"
+msgstr "Profil zdroje"
+
+# DataTypeProfile
+#: DataTypeProfile
+msgid "Data Type Profile"
+msgstr "Profil datového typu"
+
+# Links
+#: Links
+msgid "Links"
+msgstr "Odkazy"
+
+# Notes
+#: Notes
+msgid "Notes"
+msgstr "Poznámky"
+
+# VisitFCP
+#: VisitFCP
+msgid "Visit the FHIR Community Process Specification Registry"
+msgstr "Navštivte FHIR Community Process Specification Registry"
+
+# CountryFlag
+#: CountryFlag
+msgid "flag"
+msgstr "vlajka"
+
+# PrevPage
+#: PrevPage
+msgid "< prev"
+msgstr "< předchozí"
+
+# NextPage
+#: NextPage
+msgid "next >"
+msgstr "další >"
+
+# PageBottom
+#: PageBottom
+msgid "bottom"
+msgstr "konec"
+
+# PageTop
+#: PageTop
+msgid "top"
+msgstr "začátek"
+
+# IGCopyright
+#: IGCopyright
+msgid "IG © %YEAR%"
+msgstr "IG © %YEAR%"
+
+# IGPackage
+#: IGPackage
+msgid "Package %PKG% based on %FHIRVER%."
+msgstr "Balíček %PKG% založený na %FHIRVER%."
+
+# GeneratedDate
+#: GeneratedDate
+msgid "Generated %DATE%"
+msgstr "Generováno %DATE%"
+
+# PageStandardsStatus
+#: PageStandardsStatus
+msgid "Page standards status"
+msgstr "Stav standardu stránky"
+
+# StandardsStatus
+#: StandardsStatus
+msgid "Standards Status"
+msgstr "Stav standardu"
+
+# FromNormative
+#: FromNormative
+msgid "from v%NORMVER%"
+msgstr "od v%NORMVER%"
+
+# MaturityLevel
+#: MaturityLevel
+msgid "Maturity Level"
+msgstr "Maturity Level (úroveň vyspělosti)"
+
+# OfficialURL
+#: OfficialURL
+msgid "Official URL"
+msgstr "Oficiální URL"
+
+# CopyURL
+#: CopyURL
+msgid "Click to copy URL"
+msgstr "Kliknutím zkopírujete URL"
+
+# CopyVersioned
+#: CopyVersioned
+msgid "Click to copy versioned URL"
+msgstr "Kliknutím zkopírujete verzi URL"
+
+# Version
+#: Version
+msgid "Version"
+msgstr "Verze"
+
+# ResourceDate
+#: ResourceDate
+msgid "as of %RESDATE%"
+msgstr "k datu %RESDATE%"
+
+# Responsible
+#: Responsible
+msgid "Responsible"
+msgstr "Odpovědná osoba/org."
+
+# Realm
+#: Realm
+msgid "Realm"
+msgstr "Realm"
+
+# ComputableName
+#: ComputableName
+msgid "Computable Name"
+msgstr "Strojově zpracovatelný název"
+
+# OtherIdentifiers
+#: OtherIdentifiers
+msgid "Other Identifiers"
+msgstr "Ostatní identifikátory"
+
+# Keywords
+#: Keywords
+msgid "Keywords"
+msgstr "Klíčová slova"
+
+# Usage
+#: Usage
+msgid "Usage"
+msgstr "Použití"
+
+# CopyrightLegal
+#: CopyrightLegal
+msgid "Copyright/Legal"
+msgstr "Copyright/Právní doložky"
+
+# NarrativeContent
+#: NarrativeContent
+msgid "Narrative Content"
+msgstr "Narativní obsah"

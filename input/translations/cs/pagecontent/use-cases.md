@@ -18,7 +18,7 @@ Tato žádanka není určena konkrétnímu pracovišti nebo lékaři. Pacient ji
 
 Nabízí pacientovi větší flexibilitu při výběru pracoviště a doby vyšetření. V budoucnu by v souvislosti s elektronickými žádankami (eŽádanky) měly neadresné žádanky umožnit sledování čekacích dob a snadnější objednávání. Nevýhodou může být fakt, že si pacient musí sám vyhledat pracoviště, což může být pro některé osoby komplikované.
 
-> Scénáře pro neadresnou žádanku jsou dostupné [zde](workflow-cs.html#neadresná-žádanka).
+> Scénáře pro neadresnou žádanku jsou dostupné [zde](workflow.html#neadresná-žádanka).
 
 ### Obrazová žádanka adresná
 
@@ -26,4 +26,4 @@ Tato žádanka je adresována konkrétnímu radiologickému pracovišti nebo dok
 
 Pro pacienta to znamená plynulejší cestu k vyšetření, jelikož už nemusí sám složitě hledat vhodné radiologické pracoviště. Zároveň se zjednodušuje komunikace mezi jeho ošetřujícím lékařem a konkrétním radiologickým oddělením. Na druhou stranu je však nutné počítat s menší flexibilitou pacienta při výběru místa a času, kdy se vyšetření provede.
 
-> Scénáře pro adresnou žádanku jsou dostupné [zde](workflow-cs.html#adresná-žádanka).
+> Scénáře pro adresnou žádanku jsou dostupné [zde](workflow.html#adresná-žádanka).
