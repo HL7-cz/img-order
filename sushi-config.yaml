@@ -88,6 +88,8 @@ pages:
     title: Workflow
   artifacts.xml:
     title: Artifacts
+  translationinfo.md:
+    title: Translation Information
 # profiles-and-extensions.md:
 #   title: Profiles and extensions
   downloads.md:

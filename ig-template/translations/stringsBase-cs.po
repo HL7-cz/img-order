@@ -8,6 +8,11 @@ msgstr ""
 msgid "There is no translation page available for the current page, so it has been rendered in the default language"
 msgstr "Pro aktuální stránku není k dispozici žádný překlad, proto byla vykreslena ve výchozím jazyce."
 
+# TRANS_HLP
+#: TRANS_HLP
+msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
+msgstr "Tato stránka obsahuje překlady z původního zdrojového jazyka, ve kterém byla příručka vytvořena. Informace o těchto překladech a pokyny, jak k nim poskytnout zpětnou vazbu, naleznete [zde](translationinfo.html)."
+
 # Experimental
 #: Experimental
 msgid "Experimental"
