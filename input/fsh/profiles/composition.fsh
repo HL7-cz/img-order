@@ -39,7 +39,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //  * insert SetPopulateIfKnown
 
 * author
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver)
+* author only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz or CZ_DeviceObserver)
   * ^short = "Who and/or what authored the Imaging order"
 
 * date
