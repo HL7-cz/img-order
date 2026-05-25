@@ -1009,7 +1009,7 @@
             <td>Body.SupportingInformation.limitationOfPatientMobility</td>
             <td>A.3.1.6 - Limitation of patient mobility</td>
             <td>related-to</td>
-            <td>Composition (cz-potientMobility)</td>
+            <td>Composition (cz-patientMobility)</td>
             <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)</td>
             <td></td>
             <td></td>
@@ -1018,7 +1018,7 @@
             <td>Body.SupportingInformation.limitationOfPatientMobility</td>
             <td>A.3.1.6 - Limitation of patient mobility</td>
             <td>related-to</td>
-            <td>Composition (cz-potientMobility)</td>
+            <td>Composition (cz-patientMobility)</td>
             <td>Composition.section:SupportingInformation.ofType(CZ_PatientMobility)</td>
             <td></td>
             <td></td>
@@ -1027,7 +1027,7 @@
             <td>SupportingInformation.imitationOfPatientMobility.dateTime</td>
             <td>A.3.1.6.1 - Date and time of information</td>
             <td>equivalent</td>
-            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility (cz-tMobility)</td>
             <td>CZ_PatientMobility.valueDateTime</td>
             <td></td>
             <td></td>
@@ -1036,7 +1036,7 @@
             <td>SupportingInformation.imitationOfPatientMobility.code</td>
             <td>A.3.1.6.1 - Code of information</td>
             <td>equivalent</td>
-            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility (cz-patientMobility)</td>
             <td>CZ_PatientMobility.code</td>
             <td></td>
             <td></td>
@@ -1045,7 +1045,7 @@
             <td>SupportingInformation.imitationOfPatientMobility.value</td>
             <td>A.3.1.6.2 - Value of information</td>
             <td>equivalent</td>
-            <td>CZ_PatientMobility (cz-potientMobility)</td>
+            <td>CZ_PatientMobility (cz-patientMobility)</td>
             <td>CZ_PatientMobility.valueCodeableConcept</td>
             <td></td>
             <td></td>

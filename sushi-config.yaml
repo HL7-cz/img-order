@@ -137,6 +137,11 @@ pages:
     title: Presented Form and Attachment Model map
   Attachment-map-cs.html:
     title: Mapování logického modelu vizuální podoby dokumentu a příloh
+  changes.md:
+    title: Change log
+  changes-cs.md:
+    title: Záznam změn
+
 
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -242,6 +247,8 @@ menu:
     Implementation notes (en): implementation-notes.html
     Implementation notes (cs): implementation-notes-cs.html
   About:
+    Changes (en): changes.html
+    Changes (cs): changes-cs.html
     Authors (en): authors.html
     Authors (cs): authors-cs.html
     Downloads (en): downloads.html
