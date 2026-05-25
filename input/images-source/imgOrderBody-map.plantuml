@@ -16,16 +16,16 @@ class "Imaging Order Body" <<LogicalModel>> [[StructureDefinition-BodyImageOrder
 
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
-class "cz-encounter" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-encounter.html]]
-class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+class "cz-encounter" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html]]
+class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html]]
 class "cz-appointment" <<Profile>> [[StructureDefinition-cz-appointment.html]]
-class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
+class "cz-specimen" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html]]
 class "cz-observationImage" <<Profile>> [[StructureDefinition-cz-observationImage.html]]
 class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
 class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
-class "cz-MedicationStatement" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-MedicationStatement.html]]
+class "cz-MedicationStatement" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html]]
 class "cz-deviceUseStatement" <<Profile>> [[StructureDefinition-cz-deviceUseStatement.html]]
-class "cz-allergyIntolerance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html]]
+class "cz-allergyIntolerance" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html]]
 class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html]]
 
 "Imaging Order Body" <|. "cz-imagingOrderInformation"
