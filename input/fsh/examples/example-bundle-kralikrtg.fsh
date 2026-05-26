@@ -152,12 +152,12 @@ Usage: #example
 * gender = #male
 
 Instance: cz-example-practitionerRole
-InstanceOf: CZ_PractitionerRoleCore
+InstanceOf: OrderPractitionerRoleCz
 Title: "Practitioner Role Radiology"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"
-* specialty = $sct#394914008 "Radiology"
+* specialty.coding[vzpOdbornost] = urn:oid:1.2.203.7898.1.4#809 "Radiologie a zobrazovací metody"
 * practitioner = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 

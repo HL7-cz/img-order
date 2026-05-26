@@ -18,7 +18,7 @@ class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-Prese
 class "Přílohy" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
 
 class "cz-compositionImageOrder.extension:presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#ac]]
-class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
+class "cz-attachment" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html]]
 
 "Vizuální podoba dokumentu" -- "Přílohy"
 
