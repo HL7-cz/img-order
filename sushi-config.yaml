@@ -153,12 +153,12 @@ pages:
 #
 parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   special-url:
-    - https://ncez.mzcr.cz.cz/terminology/ValueSet/cz-mobility-type
+    - https://ncez.mzcr.cz/terminology/ValueSet/cz-mobility-type
     - https://ncez.mzcr.cz/terminology/ValueSet/cz-mobility-value
     - https://ncez.mzcr.cz/terminology/ValueSet/cz-modality
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsHeight-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsWeight-cz
-    - https://ncez.mzcr.cz.cz/terminology/ValueSet/cz-diagnosis-condition
+    - https://ncez.mzcr.cz/terminology/ValueSet/cz-diagnosis-condition
     - https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-cz
 #    - https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar

@@ -2,7 +2,7 @@ ValueSet: CZ_MobilityTypeVs
 Id: cz-mobility-type
 Title: "CZ Mobility Type"
 Description: "This value set includes all patient mobility types for imaging order."
-* ^url = "https://ncez.mzcr.cz.cz/terminology/ValueSet/cz-mobility-type"
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-mobility-type"
 * ^language = #cs
 * ^version = "1.0.0"
 * ^status = #active
