@@ -821,7 +821,7 @@
             <td>A.3.1.3.1 - Medication</td>
             <td>related-to</td>
             <td>Composition (cz-MedicationStatement)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatement)</td>
+            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatementCore)</td>
             <td></td>
             <td></td>
           </tr>
@@ -830,7 +830,7 @@
             <td>A.3.1.3.1 - Medication</td>
             <td>related-to</td>
             <td>Composition (cz-MedicationStatement)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_MedicationStatement)</td>
+            <td>Composition.section:SupportingInformation.ofType(CZ_MedicationStatementCore)</td>
             <td></td>
             <td></td>
           </tr>
@@ -838,8 +838,8 @@
             <td>Medication.identifier</td>
             <td>A.3.1.3.1.1 - Identifier of medication</td>
             <td>equivalent</td>
-            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatement.identifier</td>
+            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatementCore.identifier</td>
             <td></td>
             <td></td>
           </tr>
@@ -847,8 +847,8 @@
             <td>Medication.code</td>
             <td>A.3.1.3.1.2 - Code of Medication</td>
             <td>equivalent</td>
-            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatement.code</td>
+            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatementCore.code</td>
             <td></td>
             <td></td>
           </tr>
@@ -856,8 +856,8 @@
             <td>Medication.amount</td>
             <td>A.3.1.3.1.3 - Amount of Medication</td>
             <td>equivalent</td>
-            <td>CZ_MedicationStatement (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatement.amount</td>
+            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
+            <td>CZ_MedicationStatementCore.amount</td>
             <td></td>
             <td></td>
           </tr>

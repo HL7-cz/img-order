@@ -2,7 +2,7 @@ ValueSet: CZ_DiagnosisConditionVs
 Id: diagnosis-condition-cz
 Title: "CZ Diagnosis Condition"
 Description: "ValueSet for diagnosis in condition in the Czech Imaging project, using MKN-10 and ORPHA codes."
-* ^url = "https://ncez.mzcr.cz.cz/terminology/ValueSet/cz-diagnosis-condition"
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/cz-diagnosis-condition"
 * ^language = #cs
 * ^version = "1.0.0"
 * ^status = #active

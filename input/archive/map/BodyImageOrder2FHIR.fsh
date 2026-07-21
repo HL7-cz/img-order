@@ -422,27 +422,27 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
 * group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
 * group[=].element[=].display = "A.3.1.3.1 - Medication"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatement)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatementCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
 * group[=].element[=].display = "A.3.1.3.1 - Medication"
-* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_MedicationStatement)
+* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_MedicationStatementCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Medication.identifier
 * group[=].element[=].display = "A.3.1.3.1.1 - Identifier of medication"
-* group[=].element[=].target.code = #CZ_MedicationStatement.identifier
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.code
 * group[=].element[=].display = "A.3.1.3.1.2 - Code of Medication"
-* group[=].element[=].target.code = #CZ_MedicationStatement.code
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.amount
 * group[=].element[=].display = "A.3.1.3.1.3 - Amount of Medication"
-* group[=].element[=].target.code = #CZ_MedicationStatement.amount
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.amount
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
