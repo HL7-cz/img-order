@@ -7,7 +7,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier 1..
 * category 1..
 
-* extension contains $bodySite-reference named bodySite 0..1
+* extension contains $targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureCzCore)
 
 * authoredOn 1..
