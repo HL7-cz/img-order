@@ -157,7 +157,7 @@ Title: "Practitioner Role Radiology"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"
-* specialty[0] = $vzp-odbornost#809 "radiodiagnostika"
+* specialty[0] = $vzp-odbornost#809 "Pracoviště radiodiagnostiky"
 * practitioner = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
