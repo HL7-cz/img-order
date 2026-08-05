@@ -21,11 +21,9 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz
-or CZ_OrganizationCore)
+* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
-* performer only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz
-or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 * performer.type from $sct-device-type
 * bodySite 0..1
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
