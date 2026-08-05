@@ -204,9 +204,9 @@ Description: "Example of body height of Patient Kralik"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
+* code.coding[LOINC] = $loinc#8302-2
 * code.coding[SNOMEDCT].code = #1153637007
 * code.coding[SNOMEDCT].system = $sct
-* code.coding[LOINC] = $loinc#8302-2
 * code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 180
 * valueQuantity.unit = "cm"
@@ -225,9 +225,9 @@ Description: "Example of body weight of Patient Kralik"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
+* code.coding[LOINC] = $loinc#29463-7
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
-* code.coding[LOINC] = $loinc#29463-7
 * code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 80
 * valueQuantity.unit = "kg"

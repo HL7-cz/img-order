@@ -152,7 +152,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 "Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+  * entry only Reference(CZ_MedicationStatementCore or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------

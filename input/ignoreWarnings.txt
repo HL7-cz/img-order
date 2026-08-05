@@ -1,3 +1,4 @@
+== Suppressed Messages ==
 
 # Ignore actor OID assignment information
 %could usefully have an OID assigned (OIDs are easy to assign%
@@ -152,7 +153,7 @@ WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere 
 %Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
 %Pinned the version of http://terminology.hl7.org/CodeSystem/list-empty-reason to 1.0.1 from choices of 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 1.0.1 (hl7.terminology.r4#7.2.0)%
 %Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
-%Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-detail to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
-%Pinned the version of http://terminology.hl7.org/ValueSet/v2-0276 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#6.3.0), 3.0.0 (hl7.terminology.r4#7.1.0)
-%Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-priority to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
-%Pinned the version of http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-detail to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://terminology.hl7.org/ValueSet/v2-0276 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#6.3.0), 3.0.0 (hl7.terminology.r4#7.1.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-priority to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
+%Pinned the version of http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)%
