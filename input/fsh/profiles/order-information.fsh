@@ -37,7 +37,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     diagnosis 0..1 and
     reason 0..1
 * reasonCode.coding[diagnosis] from $mkn10vs (preferred)
-* reasonCode.coding[diagnosis].system = "https://terminology.uzis.cz/CodeSystem/Mkn10_5"
+* reasonCode.coding[diagnosis].system = "https://uzis.cz/terminology/ValueSet/mkn-10"
 * reasonCode.coding[reason] from $sct-condition-code (preferred)
 * reasonCode.coding[reason].system = "http://snomed.info/sct" (exactly)
 
@@ -47,4 +47,4 @@ Description: "Order information for the scope of the Czech national interoperabi
 * orderDetail.coding contains
     modality 1..*
 * orderDetail.coding[modality] from CZ_ModalityVs (preferred)  
-* orderDetail.coding[modality].system = $dicomwithoutversion
+* orderDetail.coding[modality].system = "http://dicom.nema.org/resources/ontology/DCM"

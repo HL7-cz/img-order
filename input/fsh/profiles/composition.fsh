@@ -132,7 +132,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Care Plan"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#18776-5 "Plan of care note"
+  * code = $loinc#18776-5
   * entry 0..
   * entry only Reference(CZ_CarePlanImage)
 

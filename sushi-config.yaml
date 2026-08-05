@@ -10,7 +10,7 @@ title: HL7 Czech Imaging Order FHIR IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.1.0
-# language: cs
+language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -38,6 +38,10 @@ dependencies:
   hl7.fhir.eu.base: 2.0.0
   hl7.fhir.eu.extensions.r4: 1.3.0
   hl7.fhir.eu.laboratory: 2.0.0
+  fhir.dicom:
+    id: DICOM
+    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
+    version: 2025.3.20250714
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -160,7 +164,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsHeight-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsWeight-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/cz-diagnosis-condition
-    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-cz
+    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-vs
 #    - https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
@@ -189,10 +193,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  active-tables: false
   pin-canonicals: pin-multiples
   path-expansion-params: '../../expansion-params.json'
-  apply-contact: true
+  default-contact: true
+  default-copyright: true
+  apply-copyright: false
   apply-jurisdiction: true
+  apply-license: false
+  default-license: true
   apply-publisher: true
-  apply-version: true
+  apply-version: false
+  default-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
   # excludexml: false
@@ -405,14 +414,12 @@ groups:
 # The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
 # See the individual option definitions below for more detail.
 #
-# instanceOptions:
-#   Determines for which types of Instances SUSHI will automatically set meta.profile
-#   if InstanceOf references a profile:
-#
-#   setMetaProfile: always # always | never | inline-only | standalone-only
-#
-#
-#   Determines for which types of Instances SUSHI will automatically set id
-#   if InstanceOf references a profile:
-#
-#   setId: always # always | standalone-only
+instanceOptions:
+  # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
+  # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
+  # While SUSHI defaults to false for legacy reasons, manualSliceOrding is recommended for new projects.
+  manualSliceOrdering: true # true | false
+  # Determines for which types of Instances SUSHI will automatically set meta.profile
+  # if InstanceOf references a profile:
+  #
+  setMetaProfile: always
