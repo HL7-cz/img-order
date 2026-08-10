@@ -21,17 +21,15 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz
-or CZ_OrganizationCore)
+* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
-* performer only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz
-or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 * performer.type from $sct-device-type
 * bodySite 0..1
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"
 * reasonCode.coding ^slicing.rules = #open
@@ -39,7 +37,7 @@ or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_
     diagnosis 0..1 and
     reason 0..1
 * reasonCode.coding[diagnosis] from $mkn10vs (preferred)
-* reasonCode.coding[diagnosis].system = "https://terminology.uzis.cz/CodeSystem/Mkn10_5"
+* reasonCode.coding[diagnosis].system = "https://uzis.cz/terminology/ValueSet/mkn-10"
 * reasonCode.coding[reason] from $sct-condition-code (preferred)
 * reasonCode.coding[reason].system = "http://snomed.info/sct" (exactly)
 
@@ -49,4 +47,4 @@ or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_
 * orderDetail.coding contains
     modality 1..*
 * orderDetail.coding[modality] from CZ_ModalityVs (preferred)  
-* orderDetail.coding[modality].system = $dicomwithoutversion
+* orderDetail.coding[modality].system = "http://dicom.nema.org/resources/ontology/DCM"

@@ -152,12 +152,12 @@ Usage: #example
 * gender = #male
 
 Instance: cz-example-practitionerRole
-InstanceOf: OrderPractitionerRoleCz
+InstanceOf: CZ_PractitionerRoleCore
 Title: "Practitioner Role Radiology"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"
-* specialty.coding[vzpOdbornost] = urn:oid:1.2.203.7898.1.4#809 "Radiologie a zobrazovací metody"
+* specialty[0] = $vzp-odbornost#809 "Pracoviště radiodiagnostiky"
 * practitioner = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
@@ -204,9 +204,9 @@ Description: "Example of body height of Patient Kralik"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
+* code.coding[LOINC] = $loinc#8302-2
 * code.coding[SNOMEDCT].code = #1153637007
 * code.coding[SNOMEDCT].system = $sct
-* code.coding[LOINC] = $loinc#8302-2
 * code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 180
 * valueQuantity.unit = "cm"
@@ -225,9 +225,9 @@ Description: "Example of body weight of Patient Kralik"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
+* code.coding[LOINC] = $loinc#29463-7
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
-* code.coding[LOINC] = $loinc#29463-7
 * code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 80
 * valueQuantity.unit = "kg"
@@ -262,12 +262,12 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#6757004 "Right knee"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#6757004 "oblast pravého kolene"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Koleno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -276,7 +276,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example2
 InstanceOf: CZ_ImagingOrderInformation
@@ -288,12 +288,12 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#62175007 "Right leg"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#62175007 "pravá dolní končetina"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Noha pravá</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -302,7 +302,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example3
 InstanceOf: CZ_ImagingOrderInformation
@@ -314,12 +314,12 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#731788002 "Entire joint of lumbosacral junction of spine"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#731788002 "celý kloub spojení bederní a křížové páteře"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: LS páteř</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -328,7 +328,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example4
 InstanceOf: CZ_ImagingOrderInformation
@@ -340,12 +340,12 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#737406006 "Structure of right talus bone"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#737406006 "pravý talus"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Hlezno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -354,7 +354,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example5
 InstanceOf: CZ_ImagingOrderInformation
@@ -366,12 +366,12 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#12921003 "Pelvis"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#12921003 "pánevní oblast"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Pánev</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -380,7 +380,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example6
 InstanceOf: CZ_ImagingOrderInformation
@@ -392,12 +392,12 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#287579007 "Right hip"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#287579007 "pravá kyčelní krajina"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -406,7 +406,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example7
 InstanceOf: CZ_ImagingOrderInformation
@@ -418,12 +418,12 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
-* bodySite = $sct#287679003 "Left hip"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sct#287679003 "levá kyčelní krajina"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel levý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -432,7 +432,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
 * requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
-* orderDetail.coding[modality] = $dicomwithoutversion#DX "Digital Radiography"
+* orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage
@@ -461,7 +461,7 @@ Description: "Condition"
 Title: "Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* code.coding = $mkn10#S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding = $mkn10#S018 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: cz-pdfkralikrgt-example
@@ -490,10 +490,10 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 
 * device = Reference(urn:uuid:711e1d43-d5e4-4cbc-b546-74059db270f6)
 
-* reasonCode[0] = $sct#27885002 "Complete atrioventricular block"
-* reasonCode[0].text = "Complete AV block"
+* reasonCode[0] = $sct#27885002 "úplná atrioventrikulární blokáda"
+* reasonCode[0].text = "úplná atrioventrikulární blokáda"
 
-* bodySite = $sct#73829009  "Right atrium"
+* bodySite = $sct#73829009  "atrium dextrum"
 
 
 * text.status = #generated
@@ -503,8 +503,8 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
   <p><strong>Patient:</strong> Kralik</p>
   <p><strong>Status:</strong> Active</p>
   <p><strong>Timing:</strong> 2022-03-15 to 2024-12-01</p>
-  <p><strong>Reason:</strong> Complete atrioventricular block</p>
-  <p><strong>Body Site:</strong> Right atrium</p>
+  <p><strong>Reason:</strong> úplná atrioventrikulární blokáda</p>
+  <p><strong>Body Site:</strong> atrium dextrum</p>
 </div> """
 
 Instance: cz-medicalDevice-example

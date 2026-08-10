@@ -107,13 +107,13 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[appointment].resource only CZ_Appointment
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
-* entry[practitionerRole].resource only CZ_PractitionerRoleCore or OrderPractitionerRoleCz
+* entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatementCore
 * entry[condition].resource only CZ_ConditionImage
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanImage
-* entry[observation].resource only Observation
+* entry[observation].resource only CZ_ObservationImage
 * entry[deviceUse].resource only CZ_DeviceUseStatement
 * entry[device].resource only Device
 * entry[attachment].resource only DocumentReference

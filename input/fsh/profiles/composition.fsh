@@ -39,7 +39,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //  * insert SetPopulateIfKnown
 
 * author
-* author only Reference(CZ_PractitionerCore or OrderPractitionerRoleCz or CZ_DeviceObserver)
+* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver)
   * ^short = "Who and/or what authored the Imaging order"
 
 * date
@@ -132,7 +132,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Care Plan"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#18776-5 "Plan of care note"
+  * code = $loinc#18776-5
   * entry 0..
   * entry only Reference(CZ_CarePlanImage)
 
@@ -152,7 +152,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 "Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+  * entry only Reference(CZ_MedicationStatementCore or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
