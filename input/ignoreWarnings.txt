@@ -26,6 +26,8 @@
 # A definition could not be found for Canonical URL 'https://terminology.ncez.mzcr.cz/ValueSet/mkn-10'
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 A definition for CodeSystem 'http://dicom.nema.org/resources/ontology/DCM' version '2022.4.20221006' could not be found, so the code cannot be validated. Valid versions: 01 or 2025.3.20250714
+A definition for CodeSystem 'https://www.orpha.net' could not be found, so the value set cannot be expanded
+
 
 # URL does not resolve
 # URL value 'https://hl7europe.org/example-identifier' does not resolve
