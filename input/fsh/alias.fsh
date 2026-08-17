@@ -4,6 +4,7 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $hl7CoverageType = http://hl7.org/fhir/ValueSet/coverage-type
 Alias: $sct = http://snomed.info/sct
+Alias: $sctCzEdition = http://snomed.info/sct/11000279109
 Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2025.3.20250714
 Alias: $dicomModalityType = http://terminology.hl7.org/CodeSystem/dicomMDLTY
 Alias: $drzar = https://ncez.mzcr.cz/terminology/CodeSystem/drzar
