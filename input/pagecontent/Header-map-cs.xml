@@ -69,13 +69,13 @@
       </div>
     </div>
 
-    <h3>Hlavička -&gt; FHIR profily (CZ IMG-ORDER)</h3>
+    <!-- Název stránky je doplněn ze sushi-config.yaml. -->
 
     <p>
       Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu hlavičky vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
     </p>
 
-    <h4 id="model">Přehled modelu</h4>
+    <h3 id="model">Přehled modelu</h3>
 
     <p>{% include imgOrderHead-map-cs.svg %}</p>
 
