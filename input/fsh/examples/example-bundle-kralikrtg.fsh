@@ -167,11 +167,22 @@ Title: "Patient Kralik"
 Description: "Patient Kralik for RTG order example"
 Usage: #example
 * id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <p><strong>Pacient:</strong> MUDr., Ing. Králík Pokusný, MBA, Ph.D.</p>
+  <p><strong>Pohlaví:</strong> muž; <strong>datum narození:</strong> 12. 1. 1985</p>
+  <p><strong>Identifikátory:</strong> RID 2066425387; číslo pojištěnce 0551621110</p>
+  <p><strong>Adresa:</strong> Pod Hroudou 8, 190 00 Praha 9 - Prosek, CZ</p>
+  <p><strong>Národnost:</strong> Česká republika; <strong>preferovaný jazyk:</strong> čeština</p>
+</div>
+"""
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
 * identifier[CPOJ][=].use = #official
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
+* identifier[CPOJ][=].use = #official
 
 * extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
@@ -244,8 +255,8 @@ Title: "Patient mobility of patient Kralik"
 Description: "Example of patient mobility of Patient Kralik"
 * id = "d70a725d-baa9-4553-a670-2609b0c0219f"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-//* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-//* category.coding.code = #vital-signs
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * code = $sct#710828008
 * valueCodeableConcept = $sct#282147000
 * status = #final
@@ -269,7 +280,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * bodySite = $sct#6757004 "oblast pravého kolene"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Koleno pravé</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Koleno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -295,7 +306,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * bodySite = $sct#62175007 "pravá dolní končetina"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Noha pravá</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Noha pravá</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -321,7 +332,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * bodySite = $sct#731788002 "celý kloub spojení bederní a křížové páteře"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: LS páteř</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: LS páteř</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -347,7 +358,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * bodySite = $sct#737406006 "pravý talus"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Hlezno pravé</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Hlezno pravé</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -373,7 +384,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * bodySite = $sct#12921003 "pánevní oblast"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Pánev</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Pánev</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -399,7 +410,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * bodySite = $sct#287579007 "pravá kyčelní krajina"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel pravý</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -418,14 +429,14 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sct#363679005 "zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * bodySite = $sct#287679003 "levá kyčelní krajina"
 * code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">RTG Požadované vyšetření: Kyčel levý</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">RTG Požadované vyšetření: Kyčel levý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
 * supportingInfo[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
