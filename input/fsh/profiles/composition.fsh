@@ -15,7 +15,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * insert SetFmmandStatusRule ( 0, draft )
 
 * meta
-  * security 0..* MS
+  * security 0..* //MS
 
 * identifier
   * ^short = "Order identifier"
@@ -47,10 +47,11 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 * type from $OrderTypes (required)
   * coding = $sct#721964003
+    * version = $sctCzEdition
 
 
 * category from $DocumentCategory (required)
-  * coding = $loinc#57133-1 
+  * coding = $loinc#57133-1
 
 * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
