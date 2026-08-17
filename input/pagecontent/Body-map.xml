@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Body -&gt; FHIR Profiles (CZ IMG-ORDER)</title>
-
     <style type="text/css">
 
       .model-map-block { margin: 0 0 1rem 0; }
@@ -56,9 +52,6 @@
       .tgt-sub { background: #cf8398; }
 
     </style>
-  </head>
-
-  <body>
 
     <div class="model-map-block">
       <div class="callout-wrapper">
@@ -69,13 +62,13 @@
       </div>
     </div>
 
-    <h3>Body -&gt; FHIR Profiles (CZ IMG-ORDER)</h3>
+    <!-- <h3>Body -&gt; FHIR Profiles (CZ IMG-ORDER)</h3> -->
 
     <p>
       This page explains how conceptual elements from the Body logical model are expressed in the corresponding FHIR profiles used by this Implementation Guide.
     </p>
 
-    <h4 id="model">Model Overview</h4>
+    <h3>Model Overview</h3>
 
     <p>{% include imgOrderBody-map.svg %}</p>
 
@@ -1226,7 +1219,5 @@
       </table>
 
     </div>
-
-  </body>
 
 </div>
