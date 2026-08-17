@@ -1,5 +1,5 @@
 Profile: CZ_PatientMobility
-Parent: Observation
+Parent: CZ_MedicalTestResultCore
 Id: cz-patientMobility
 Title: "Patient mobility: Imaging Order (CZ)"
 Description: "Profile of patient mobility observation for the scope of the Czech national interoperability project."
