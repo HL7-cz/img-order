@@ -69,13 +69,13 @@
       </div>
     </div>
 
-    <h3>Header -&gt; FHIR Profiles (CZ IMG-ORDER)</h3>
+    <!-- The page title is supplied by sushi-config.yaml. -->
 
     <p>
       This page explains how conceptual elements from the Header logical model are expressed in the corresponding FHIR profiles used by this Implementation Guide.
     </p>
 
-    <h4 id="model">Model Overview</h4>
+    <h3 id="model">Model Overview</h3>
 
     <p>{% include imgOrderHead-map.svg %}</p>
 
