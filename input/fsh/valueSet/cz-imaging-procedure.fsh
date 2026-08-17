@@ -8,7 +8,7 @@ Description: "ValueSet for imaging procedure in the Czech Imaging project, using
 * ^date = "2024-01-01"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-vs"
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedures"
 
 * insert SNOMEDCopyrightForVS
 * include codes from system $sct where concept is-a #363679005
