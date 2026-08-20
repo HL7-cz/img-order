@@ -44,7 +44,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Order Bundle"
-* . ^definition = "Imaging Order Bundle. \r\nA container for a collection of resources in the inmaging order document."
+* . ^definition = "Imaging Order Bundle. \r\nA container for a collection of resources in the imaging order document."
 
 * insert SetFmmandStatusRule ( 0, draft )
 

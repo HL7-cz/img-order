@@ -5,6 +5,7 @@ Alias: $loinc =  http://loinc.org
 Alias: $hl7CoverageType = http://hl7.org/fhir/ValueSet/coverage-type
 Alias: $sct = http://snomed.info/sct
 Alias: $sctCzEdition = http://snomed.info/sct/11000279109
+Alias: $sctCZ = http://snomed.info/sct|http://snomed.info/sct/11000279109
 Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2025.3.20250714
 Alias: $dicomModalityType = http://terminology.hl7.org/CodeSystem/dicomMDLTY
 Alias: $drzar = https://ncez.mzcr.cz/terminology/CodeSystem/drzar
@@ -29,6 +30,8 @@ Alias: $DocumentClassValueSet = http://hl7.org/fhir/ValueSet/document-classcodes
 Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
 Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 Alias: $OrderTypes = https://ncez.mzcr.cz/terminology/ValueSet/referralorder-types
+Alias: $orphanet-vs = https://ncez.mzcr.cz/terminology/ValueSet/orphanet-rare-diseases
+Alias: $CZ_DiagnosisConditionVs = https://ncez.mzcr.cz/terminology/ValueSet/condition-cz
 
 // Extensions:
 Alias: $hl7Supportinginfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
