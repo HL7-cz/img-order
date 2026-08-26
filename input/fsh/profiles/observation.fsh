@@ -17,7 +17,7 @@ Description: "Observation for Imaging Order for the scope of the Czech national 
     SNOMEDCT 0..1 and
     NCLP 0..1
  // NCLP OR NPU 0..1 and
-* code.coding[LOINC] 
+* code.coding[LOINC]
   * ^short = "LOINC code for the observation"
   * system 1..
   * system = "http://loinc.org" (exactly)

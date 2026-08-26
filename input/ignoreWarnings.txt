@@ -26,6 +26,8 @@
 # A definition could not be found for Canonical URL 'https://terminology.ncez.mzcr.cz/ValueSet/mkn-10'
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 A definition for CodeSystem 'http://dicom.nema.org/resources/ontology/DCM' version '2022.4.20221006' could not be found, so the code cannot be validated. Valid versions: 01 or 2025.3.20250714
+%A definition for CodeSystem 'https://www.orpha.net' could not be found, so the value set cannot be expanded%
+
 
 # URL does not resolve
 # URL value 'https://hl7europe.org/example-identifier' does not resolve
@@ -81,6 +83,10 @@ The packageId hl7.fhir.uv.xver-r5.r4 points to the canonical http://hl7.org/fhir
 
 # experimental valueset binding
 The definition for the element 'Basic.extension.extension.extension.value[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
+
+# Composition.type is constrained by the national required OrderTypes
+# ValueSet, which intentionally contains SNOMED CT order-document codes.
+%None of the codings provided are in the value set 'FHIR Document Type Codes'%
 
 # Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no examples for this profile

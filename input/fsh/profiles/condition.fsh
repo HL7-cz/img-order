@@ -11,9 +11,9 @@ Description: "Condition for Imaging Order for the scope of the Czech national in
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "$this"
 * code.coding ^slicing.rules = #open
-* code.coding contains 
-    diagnosis 0..1 and 
-    condition 0..1 
+* code.coding contains
+    diagnosis 0..1 and
+    condition 0..1
 * code.coding[diagnosis] from CZ_DiagnosisConditionVs
 * code.coding[condition] from $sct-condition-code
 * code.coding[condition].system = "http://snomed.info/sct" (exactly)

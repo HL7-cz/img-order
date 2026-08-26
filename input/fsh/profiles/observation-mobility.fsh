@@ -1,5 +1,5 @@
 Profile: CZ_PatientMobility
-Parent: Observation
+Parent: CZ_ObservationImage
 Id: cz-patientMobility
 Title: "Patient mobility: Imaging Order (CZ)"
 Description: "Profile of patient mobility observation for the scope of the Czech national interoperability project."
@@ -9,21 +9,16 @@ Description: "Profile of patient mobility observation for the scope of the Czech
 * category.coding.system
 * category.coding.code
 * code
-* code.coding ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
-  * ^slicing.rules = #open
-* code.coding contains
-    SNOMEDCT 0..1
-
-* code.coding[SNOMEDCT]
+* code.coding[SNOMEDCT] 1..1
   * ^short = "SNOMED CT code for the observation"
   * system 1..
   * system = $sct (exactly)
   * code 1..
   * code from CZ_MobilityTypeVs
 
-* valueCodeableConcept
+* valueCodeableConcept 1..1
 * valueCodeableConcept from CZ_MobilityValueVs
+* valueQuantity 0..0
 //* valueCodeableConcept.system = "http://snomed.info/sct" (exactly)
 * effective[x] 1..1
 * effective[x] only dateTime

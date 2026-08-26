@@ -6,7 +6,7 @@ Description: "Example of body height of Patient Mracena"
 * subject = Reference(Mracena)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* code.coding[SNOMEDCT] = $sct#1153637007
+* code.coding[SNOMEDCT] = $sctCZ#1153637007
 * code.coding[LOINC] = $loinc#8302-2
 * code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 165

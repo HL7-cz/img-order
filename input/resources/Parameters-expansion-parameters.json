@@ -1,0 +1,18 @@
+{
+  "resourceType": "Parameters",
+  "id": "expansion-parameters",
+  "parameter": [
+    {
+      "name": "displayLanguage",
+      "valueCode": "cs"
+    },
+    {
+      "name": "includeDesignations",
+      "valueBoolean": false
+    },
+    {
+      "name": "system-version",
+      "valueCanonical": "http://snomed.info/sct|http://snomed.info/sct/11000279109"
+    }
+  ]
+}

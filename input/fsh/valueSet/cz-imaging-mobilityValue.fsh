@@ -11,11 +11,11 @@ Description: "This value set includes all patient im/mobility values for imaging
 * ^experimental = false
 * insert SNOMEDCopyrightForVS
 
-* $sct#282146009 "Does walk"
-* $sct#282147000 "Does not walk"
-* $sct#282873007 "Does stand up"
-* $sct#282874001 "Does not stand up"
-* $sct#282972001 "Does stand"
-* $sct#282973006 "Does not stand"
-* $sct#301683006 "Does move in bed"
-* $sct#301684000 "Does not move in bed"
+* $sctCZ#282146009 //"Does walk"
+* $sctCZ#282147000 //"Does not walk"
+* $sctCZ#282873007 //"Does stand up"
+* $sctCZ#282874001 //"Does not stand up"
+* $sctCZ#282972001 //"Does stand"
+* $sctCZ#282973006 //"Does not stand"
+* $sctCZ#301683006 //"Does move in bed"
+* $sctCZ#301684000 //"Does not move in bed"

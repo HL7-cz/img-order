@@ -10,12 +10,12 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Order Composition"
-* . ^definition = "Imaging Order Composition. \r\n\r\n A composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^definition = "Imaging Order Composition.\r\n\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
 * meta
-  * security 0..* MS
+  * security 0..* //MS
 
 * identifier
   * ^short = "Order identifier"
@@ -46,11 +46,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Date the order was created."
 
 * type from $OrderTypes (required)
+  * coding 1..1
   * coding = $sct#721964003
+    * version = $sctCzEdition
 
-
-* category from $DocumentCategory (required)
-  * coding = $loinc#57133-1 
+* category
+  * insert SliceElement( #value, $this )
+* category contains documentCategory 1..1
+* category[documentCategory] from $DocumentCategory (required)
+* category[documentCategory] = $loinc#57133-1
 
 * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
@@ -92,7 +96,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^definition = "This section holds information related to the order for the imaging study."
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#55115-0 "Requested imaging studies information Document"
+  * code = $loinc#55115-0 //"Requested imaging studies information Document"
   * entry 0..
   * entry only Reference(CZ_ImagingOrderInformation)
 
@@ -102,7 +106,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^definition = "This section holds information about the clinical question or questions that the imaging service is intended to answer."
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
+  * code = $loinc#18785-6	//"Radiology Reason for study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * text 1..
   * text ^short = "Clinical question text"
@@ -114,7 +118,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Coverage type"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#87520-3 "Coverage type"
+  * code = $loinc#87520-3 //"Coverage type"
   * entry 0..
   * entry only Reference(CZ_Coverage)
 
@@ -123,7 +127,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Appointment"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#56446-8 "Appointment summary Document"
+  * code = $loinc#56446-8 //"Appointment summary Document"
   * entry 0..
   * entry only Reference(CZ_Appointment)
 
@@ -141,7 +145,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Medical Devices and implants"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#97813-0 "Implant component"
+  * code = $loinc#97813-0 //"Implant component"
   * entry 0..
   * entry only Reference(CZ_DeviceUseStatement)
 
@@ -150,9 +154,19 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Supporting information"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#55752-0 "Clinical information"
+  * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_PatientMobility or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+  * entry only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanImage)
+  * entry ^slicing.discriminator[0].type = #profile
+  * entry ^slicing.discriminator[0].path = "resolve()"
+  * entry ^slicing.rules = #open
+  * entry contains
+      bodyHeight 0..1 and
+      bodyWeight 0..1 and
+      mobility 0..1
+  * entry[bodyHeight] only Reference(CZ_BodyHeight)
+  * entry[bodyWeight] only Reference(CZ_BodyWeight)
+  * entry[mobility] only Reference(CZ_PatientMobility)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
@@ -160,7 +174,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Library of attachments"
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#77599-9 "Additional documentation"
+  * code = $loinc#77599-9 //"Additional documentation"
   * entry 0..
   * entry only Reference(CZ_Attachment)
 
