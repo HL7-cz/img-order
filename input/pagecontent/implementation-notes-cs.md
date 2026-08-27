@@ -25,7 +25,7 @@ classDiagram
   CZ_ImagingOrderInformation --> CZ_CompositionImageOrder: composition
   
   CZ_CompositionImageOrder --> CZ_ImagingOrderInformation: section[orderInformation]
-  CZ_CompositionImageOrder --> CZ_ConditionImage: section[clinicalQuestion]
+  CZ_CompositionImageOrder --> CZ_ConditionCore: section[clinicalQuestion]
   CZ_CompositionImageOrder --> CZ_PractionerCore: author[author]
   CZ_CompositionImageOrder --> CZ_Encounter: encounter
   CZ_CompositionImageOrder --> CZ_OrganizationCore: custodian
