@@ -21,8 +21,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleOrder or CZ_OrganizationCore)
-
+* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleOrder or CZ_PatientCore)  // omezení pouze na profil obsahující smluvní odbornost pracoviště VZP (pro případy úhrady z pojištění) nebo zdravotník nebo pacient pro případy jiné formy úhrady
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 //* performer.type from $sct-device-type  // performer type
 * bodySite 0..1
