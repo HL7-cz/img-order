@@ -129,7 +129,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#56446-8 //"Appointment summary Document"
   * entry 0..
-  * entry only Reference(CZ_Appointment)
+  * entry only Reference(CZ_AppointmentCore)
 
   /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
 * section[carePlan]
@@ -138,7 +138,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#18776-5
   * entry 0..
-  * entry only Reference(CZ_CarePlanImage)
+  * entry only Reference(CZ_CarePlanCore)
 
  /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
 * section[medicalDevices]
@@ -156,7 +156,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanImage)
+  * entry only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore)
   * entry ^slicing.discriminator[0].type = #profile
   * entry ^slicing.discriminator[0].path = "resolve()"
   * entry ^slicing.rules = #open

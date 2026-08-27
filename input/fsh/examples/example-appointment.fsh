@@ -1,5 +1,5 @@
 Instance: AppointmentExample
-InstanceOf: CZ_Appointment
+InstanceOf: CZ_AppointmentCore
 Usage: #example
 Description: "Appointment"
 

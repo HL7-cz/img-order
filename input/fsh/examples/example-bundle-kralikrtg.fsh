@@ -469,13 +469,13 @@ Title: "Organization - Healthcare insurance company"
 * identifier[KP].value = "111"
 
 Instance: KralikCondition
-InstanceOf: CZ_ConditionImage
+InstanceOf: CZ_ConditionCore
 Usage: #example
 Description: "Condition"
 Title: "Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* code.coding = $mkn10#S018 "Otevřená rána jiných částí hlavy"
+* code.coding[0] = $mkn10#S018 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: cz-pdfkralikrgt-example

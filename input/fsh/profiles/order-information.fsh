@@ -29,7 +29,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open

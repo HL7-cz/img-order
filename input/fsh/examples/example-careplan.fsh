@@ -1,5 +1,5 @@
 Instance: CarePlanExample
-InstanceOf: CZ_CarePlanImage
+InstanceOf: CZ_CarePlanCore
 Usage: #example
 Description: "Care Plan"
 
