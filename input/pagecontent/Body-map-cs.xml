@@ -195,7 +195,7 @@
             <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
             <td>CZ_ImagingOrderInformation.reasonCode</td>
             <td></td>
-            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)</td>
+            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)</td>
           </tr>
           <tr>
             <td>OrderInformation.orderReason.problem</td>

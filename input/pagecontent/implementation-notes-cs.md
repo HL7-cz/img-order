@@ -12,7 +12,7 @@ classDiagram
   CZ_BundleImageOrder *-- "1" CZ_CompositionImageOrder
   CZ_BundleImageOrder *-- "1" CZ_PatientCore
   CZ_BundleImageOrder *-- "0..*" CZ_ImagingOrderInformation
-  CZ_BundleImageOrder *-- "0..*" CZ_ConditionImage
+  CZ_BundleImageOrder *-- "0..*" CZ_ConditionCore
   CZ_BundleImageOrder *-- "0..*" CZ_Coverage
   CZ_BundleImageOrder *-- "0..*" CZ_Encounter
   CZ_BundleImageOrder *-- "0..1" CZ_Appointment
