@@ -11,7 +11,7 @@ Usage: #example
 * entry[composition].resource = Composition-pet-ct-lymfom
 * entry[patient].fullUrl = "urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193"
 * entry[patient].resource = cz-patient-novak
-* entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[orderInformation].fullUrl = "urn:uuid:213859c2-ac9d-4166-a673-13a50640af90"
 * entry[orderInformation].resource = cz-petct-request
 * entry[coverage].fullUrl = "urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff"
 * entry[coverage].resource = cz-insurance-coverage
@@ -44,7 +44,7 @@ Usage: #inline
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadované PET/CT celotělové vyšetření</div>"
 * section[orderInformation].text.status = #generated
-* section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
+* section[orderInformation].entry[0] = Reference(urn:uuid:213859c2-ac9d-4166-a673-13a50640af90)
 
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
@@ -82,7 +82,7 @@ InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
 Title: "Žádanka na hybridní PET/CT vyšetření"
 Description: "Multimodální požadavek kombinující pozitronovou emisní tomografii a výpočetní tomografii"
-* id = "d6784779-d008-447d-90cf-89d5d53a0f04"
+* id = "213859c2-ac9d-4166-a673-13a50640af90"
 * identifier.system = "http://nemocnice.cz"
 * identifier.value = "2026-PETCT-00895"
 * status = #active
@@ -90,7 +90,7 @@ Description: "Multimodální požadavek kombinující pozitronovou emisní tomog
 * category = $sctCZ#363679005 "zobrazování"
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * insurance = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
-* bodySite = $sctCZ#38266002 "celé tělo" 
+* bodySite = $sctCZ#38266002 //"celé tělo" 
 * code.coding = $sctCZ#443304001 "positron emission tomography with computed tomography"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: 18F-FDG PET/CT celotělové (od základny lebeční po stehna)</div>"
@@ -107,7 +107,7 @@ Title: "Indikační diagnóza - Maligní lymfom"
 Description: "Klinické zdůvodnění požadavku pro PET/CT vyšetření"
 * id = "aae6b1c0-d22e-4058-b225-8be5669da40e"
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
-* code.coding = $mkn10#C85.9 "Maligní nehodgkinský lymfom, neurčený"
+* code.coding = $mkn10#C859 "Maligní nehodgkinský lymfom, neurčený"
 * code.text = "Pacient po základní onkologické léčbě, aktuálně s hmatnou lymfadenopatií na krku a subfebriliemi. Podezření na časný relaps onemocnění. Požadováno celotělové PET/CT k posouzení rozsahu metabolické aktivity."
 
 Instance: cz-practitioner-oncologist
@@ -129,8 +129,8 @@ Title: "Role: Klinická onkologie"
 Description: "Kontext pracoviště odesílajícího lékaře"
 Usage: #example
 * id = "8fd3a4cf-173a-43f0-a1f9-5b538d088c03"
-* specialty[0] = $vzp-odbornost#403 "Klinická onkologie"
-* specialty[+] = $sctCZ#394592004 "klinická onkologie - specializace"
+* specialty[0] = $vzp-odbornost#403 //"Klinická onkologie"
+* specialty[+] = $sctCZ#394592004 //"klinická onkologie - specializace"
 * practitioner = Reference(urn:uuid:6918f12d-318b-4fa7-9462-16a60d6fdfe4)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 

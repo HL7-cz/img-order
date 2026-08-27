@@ -35,8 +35,8 @@ Usage: #inline
 * author = Reference(urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757)
 * title = "Žádanka o zobrazovací vyšetření - Preventivní mamografie"
 * confidentiality = #N
-* type = $sctCZ#721964003 "žádanka o vyšetření"
-* category[documentCategory] = $loinc#57133-1 "Referral note"
+* type = $sctCZ#721964003 //"žádanka o vyšetření"
+* category[documentCategory] = $loinc#57133-1
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadované mamografické vyšetření - preventivní screening na žádost pacientky.</div>"
@@ -101,7 +101,7 @@ Title: "Zdůvodnění - Preventivní screening prsů"
 Description: "Kódování preventivního screeningu pomocí MKN-10 klasifikace"
 * id = "8d570541-52af-4f8a-886c-fb732a218b68"
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
-* code.coding = $mkn10#Z12.3 "Speciální screeningové vyšetření zaměřené na novotvar prsu"
+* code.coding = $mkn10#Z123 "Speciální screeningové vyšetření zaměřené na novotvar prsu"
 * code.text = "Preventivní screeningové vyšetření prsů na vlastní žádost pacientky. Věk 38 let (pod hranicí úhrady z veřejného zdravotního pojištění). Rodinná anamnéza bez prokazatelného genetického zatížení."
 
 Instance: cz-practitioner-gynecologist

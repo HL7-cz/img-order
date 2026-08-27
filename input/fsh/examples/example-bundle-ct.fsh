@@ -216,8 +216,8 @@ Description: "Plánované CT vyšetření břicha s nitrožilním podáním kont
 * category = $sctCZ#363679005 "zobrazování"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * insurance = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
-* bodySite = $sctCZ#818983003 "struktura břicha"
-* code.coding = $sctCZ#169069000 "CT vyšetření břicha s kontrastní látkou"
+* bodySite = $sctCZ#818983003 
+* code.coding = $sctCZ#169069000 //"CT vyšetření břicha s kontrastní látkou"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">CT Požadované vyšetření: Břicho s i.v. kontrastní látkou. Žádanka je neadresná - vhodná k realizaci na libovolném přijímajícím pracovišti dle kapacity. UPOZORNĚNÍ: pacientka alergická na jód - před podáním kontrastní látky nutno ověřit bezpečnost aplikace, viz AllergyIntolerance.</div>"
 * authoredOn = "2025-08-27T09:15:00+02:00"
@@ -267,7 +267,7 @@ Description: "Klinický důvod žádosti o CT vyšetření"
 Title: "Reason in code form for CT examination"
 * id = "bcd4c4a3-6543-4765-0fed-cba987654321"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
-* code.coding[0] = $mkn10#K869 "Nemoc slinivky břišní, blíže neurčená"
+* code.coding[0] = $mkn10#K869 //"Nemoc slinivky břišní, blíže neurčená"
 * code.text = "Suspektní expanze v oblasti hlavy pankreatu, k upřesnění stagingem pomocí CT břicha."
 
 
