@@ -15,7 +15,7 @@ endlegend
 class "Imaging Order Body" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
 
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
-class "cz-conditionImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html]]
+class "cz-conditionCore" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html]]
 class "cz-encounter" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html]]
 class "cz-appointment" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html]]
@@ -31,7 +31,7 @@ class "cz-carePlanImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "Imaging Order Body" <|. "cz-imagingOrderInformation"
 "Imaging Order Body" <|. "cz-appointment"
 "Imaging Order Body" <|. "cz-coverage"
-"Imaging Order Body" <|. "cz-conditionImage"
+"Imaging Order Body" <|. "cz-conditionCore"
 "Imaging Order Body" <|. "cz-encounter"
 "Imaging Order Body" <|. "cz-specimen"
 "Imaging Order Body" <|. "cz-observationImage"
@@ -43,8 +43,8 @@ class "cz-carePlanImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "Imaging Order Body" <|. "cz-carePlanImage"
 
 "cz-imagingOrderInformation" -d[hidden]-> "cz-encounter"
-"cz-encounter" -d[hidden]-> "cz-conditionImage"
-"cz-conditionImage" -d[hidden]-> "cz-appointment"
+"cz-encounter" -d[hidden]-> "cz-conditionCore"
+"cz-conditionCore" -d[hidden]-> "cz-appointment"
 "cz-appointment" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-specimen"
 "cz-specimen" -d[hidden]-> "cz-observationImage"
