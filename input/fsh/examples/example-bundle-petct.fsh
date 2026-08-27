@@ -38,7 +38,7 @@ Usage: #inline
 * title = "Žádanka o zobrazovací vyšetření - Celotělové PET/CT"
 * confidentiality = #N
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
-* category[documentCategory] = $loinc#57133-1 "Referral note"
+* category[documentCategory] = $loinc#57133-1 //"Referral note"
 
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"

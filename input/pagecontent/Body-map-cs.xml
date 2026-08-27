@@ -1582,7 +1582,7 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-MedicationStatement.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
 
             </td>
@@ -1601,7 +1601,7 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-MedicationStatement.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
 
             </td>
@@ -1620,7 +1620,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-MedicationStatement.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
             identifier
             </td>
@@ -1639,7 +1639,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-MedicationStatement.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
             code
             </td>
@@ -1658,7 +1658,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-MedicationStatement.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
             amount
             </td>
@@ -1772,7 +1772,7 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
 
             </td>
@@ -1791,7 +1791,7 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
 
             </td>
@@ -1810,7 +1810,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             identifier
             </td>
@@ -1829,7 +1829,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             clinicalStatus
             </td>
@@ -1848,7 +1848,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             type
             </td>
@@ -1867,7 +1867,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             category
             </td>
@@ -1886,7 +1886,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             code
             </td>
@@ -1905,7 +1905,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-allergyIntolerance.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
             <td>
             note
             </td>

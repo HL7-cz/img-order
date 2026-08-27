@@ -900,7 +900,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
 
             </td>
@@ -919,7 +919,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.identifier
             </td>
@@ -938,7 +938,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.name
             </td>
@@ -957,7 +957,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.address
             </td>
@@ -976,7 +976,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             organization.name
             </td>
@@ -1014,7 +1014,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             performer
             </td>
@@ -1033,7 +1033,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.identifier
             </td>
@@ -1052,7 +1052,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.name
             </td>
@@ -1071,7 +1071,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             organization.identifier
             </td>
@@ -1090,7 +1090,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             organization.name
             </td>
@@ -1109,7 +1109,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
 
             </td>
@@ -1128,7 +1128,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practitioner.identifier
             </td>
@@ -1147,7 +1147,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             practictioner.name
             </td>
@@ -1166,7 +1166,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             organization.identifier
             </td>
@@ -1185,7 +1185,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerRole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
             organization.name
             </td>

@@ -86,7 +86,7 @@ Description: "Požadavek na bilaterální screeningovou mamografii (MG) obou prs
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * insurance = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12) // Odkaz na samoplátecké krytí
 * bodySite = $sctCZ#63482000 "struktura prsu (oboustranně)"
-* code.coding = $sctCZ#71651007 "screeningová mamografie"
+* code.coding = $sctCZ#71651007 //"screeningová mamografie"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: Screeningová mamografie oboustranná, 2 projekce (kraniokaudální a šikmá) z každého prsu. Vyšetření hrazeno pacientkou.</div>"
 * authoredOn = "2026-08-27T11:15:00+02:00"
