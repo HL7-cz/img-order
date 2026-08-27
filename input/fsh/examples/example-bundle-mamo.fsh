@@ -101,7 +101,7 @@ Title: "Zdůvodnění - Preventivní screening prsů"
 Description: "Kódování preventivního screeningu pomocí MKN-10 klasifikace"
 * id = "8d570541-52af-4f8a-886c-fb732a218b68"
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
-* code.coding = $mkn10#Z123 "Speciální screeningové vyšetření zaměřené na novotvar prsu"
+* code.coding = $mkn10#Z123 //"Speciální screeningové vyšetření zaměřené na novotvar prsu"
 * code.text = "Preventivní screeningové vyšetření prsů na vlastní žádost pacientky. Věk 38 let (pod hranicí úhrady z veřejného zdravotního pojištění). Rodinná anamnéza bez prokazatelného genetického zatížení."
 
 Instance: cz-practitioner-gynecologist
@@ -123,8 +123,8 @@ Title: "Role: Gynekologie a porodnictví"
 Description: "Kontext pracoviště registrujícího gynekologa"
 Usage: #example
 * id = "e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
-* specialty = $vzp-odbornost#603 "Gynekologie a porodnictví"
-* specialty[+] = $sctCZ#394586005 "gynekologie a porodnictví - specializace"
+* specialty = $vzp-odbornost#603 //"Gynekologie a porodnictví"
+* specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:3d60c2df-af65-4095-95f6-d3d9b61cb5e7)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 

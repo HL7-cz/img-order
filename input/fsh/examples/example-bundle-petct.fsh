@@ -37,7 +37,7 @@ Usage: #inline
 * author = Reference(urn:uuid:8fd3a4cf-173a-43f0-a1f9-5b538d088c03)
 * title = "Žádanka o zobrazovací vyšetření - Celotělové PET/CT"
 * confidentiality = #N
-* type = $sctCZ#721964003 "žádanka o vyšetření"
+* type = $sctCZ#721964003 //"žádanka o vyšetření"
 * category[documentCategory] = $loinc#57133-1 "Referral note"
 
 * section[orderInformation].title = "Requested imaging studies information Document"
@@ -107,7 +107,7 @@ Title: "Indikační diagnóza - Maligní lymfom"
 Description: "Klinické zdůvodnění požadavku pro PET/CT vyšetření"
 * id = "aae6b1c0-d22e-4058-b225-8be5669da40e"
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
-* code.coding = $mkn10#C859 "Maligní nehodgkinský lymfom, neurčený"
+* code.coding = $mkn10#C859 //"Maligní nehodgkinský lymfom, neurčený"
 * code.text = "Pacient po základní onkologické léčbě, aktuálně s hmatnou lymfadenopatií na krku a subfebriliemi. Podezření na časný relaps onemocnění. Požadováno celotělové PET/CT k posouzení rozsahu metabolické aktivity."
 
 Instance: cz-practitioner-oncologist
