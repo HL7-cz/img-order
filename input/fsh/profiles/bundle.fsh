@@ -89,7 +89,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     specimen 0..* and
     practitioner 0..* and
     practitionerRole 0..* and
-    coverage 0..* and
+    coverage 1..* and
     medication 0..* and
     condition 0..* and
     allergyIntolerance 0..* and

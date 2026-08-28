@@ -5,6 +5,11 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 
  Hlavním příklad [Bundle Kralik RTG](Bundle-BundleKralikRTG.html) obsahuje obrazovou žádanku pacienta Králíka. Tato žádanka obsahuje mimo jiné i přílohu v podobě souboru PDF.
 
+ Následují příklady žádanek:
+ - Příklad [Žádanky na PET/CT se dvěmi modalitami](Bundle-BundlePetCtLymfom.html)
+ - Příklad [Žádanky na Preventivní mamografii (samoplátce)](Bundle-BundleMamografieSamoplatce.html)
+ - Příklad [Žádanky na CT břicha s klinickou kontraindikací](Bundle-BundleNovakovaCT.html)
+
 ### Příklady profilů
 
  - Příklad [Termín návštěvy](Appointment-AppointmentExample.html)

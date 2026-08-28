@@ -2,7 +2,12 @@ All examples can be found in the [artifacts](artifacts.html) page.
 
 ### Imaging order example
 
-The main example [Bundle Kralik RTG](Bundle-BundleKralikRTG.html) contains a picture request form for patient Králík. This request form also includes an attachment in the form of a PDF file.
+ The main example [Bundle Kralik RTG](Bundle-BundleKralikRTG.html) contains Mr Králík’s imaging order. Among other things, this order includes an attachment in the form of a PDF file.
+
+ The following are examples of referral forms:
+ - Example [Referral forms for dual-modality PET/CT scans](Bundle-BundlePetCtLymfom.html)
+ - Example [Referral forms for preventive mammography (self-pay patients)](Bundle-BundleMamografieSamoplatce.html)
+ - Example [Referral forms for abdominal CT with a clinical contraindication](Bundle-BundleNovakovaCT.html)
 
 ### Examples of profiles
 

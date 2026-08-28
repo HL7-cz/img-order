@@ -39,9 +39,14 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //  * insert SetPopulateIfKnown
 
 * author
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleOrder)
-//* author only Reference(CZ_PractitionerRoleOrder)  // omezení pouze na profil obsahující smluvní odbornost VZP
   * ^short = "Who and/or what authored the Imaging order"
+* author
+  * insert SliceElement( #profile, [[$this.resolve()]] )
+* author contains
+    authorOrder 0..* and
+    authorCore 0..*
+* author[authorOrder] only Reference(CZ_PractitionerRoleOrder)
+* author[authorCore] only Reference(CZ_PractitionerRoleCore)
 
 * date
   * ^short = "Date the order was created."
@@ -84,7 +89,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * section contains
     orderInformation 1..* and
     clinicalQuestion 1..* and
-    coverage 0..* and
+    coverage 1..* and
     appointment 0..1 and
     carePlan 0..1 and
     medicalDevices 0..* and

@@ -1,7 +1,7 @@
 Instance: AppointmentExample
 InstanceOf: CZ_AppointmentCore
 Usage: #example
-Title: "Appointment - Example"
+Title: "Appointment: Example"
 Description: "Appointment for a patient to attend a scheduled examination"
 
 * status = #booked
