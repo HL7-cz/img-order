@@ -107,7 +107,7 @@ Usage: #inline
 * section[orderInformation].entry[+] = Reference(urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9)
 * section[orderInformation].entry[+] = Reference(urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed)
 * section[coverage].title = "Coverage"
-* section[coverage].code = $loinc#87520-3 "Insurance information"
+* section[coverage].code = $loinc#87520-3 //"Insurance information"
 * section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Ing. Králík, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated  
 * section[coverage].entry[0] = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)

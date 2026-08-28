@@ -40,13 +40,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 * author
   * ^short = "Who and/or what authored the Imaging order"
-* author
+/* author
   * insert SliceElement( #profile, [[$this.resolve()]] )
 * author contains
     authorOrder 0..* and
-    authorCore 0..*
+    authorCore 0..*                  .. slicing nefungoval dobře
 * author[authorOrder] only Reference(CZ_PractitionerRoleOrder)
 * author[authorCore] only Reference(CZ_PractitionerRoleCore)
+*/
+* author only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
 
 * date
   * ^short = "Date the order was created."

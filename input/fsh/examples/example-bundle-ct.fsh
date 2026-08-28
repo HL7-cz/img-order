@@ -75,7 +75,7 @@ Usage: #inline
 * section[orderInformation].entry[0] = Reference(urn:uuid:3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701)
 
 * section[coverage].title = "Coverage"
-* section[coverage].code = $loinc#87520-3 "Insurance information"
+* section[coverage].code = $loinc#87520-3 //"Insurance information"
 * section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry[0] = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)

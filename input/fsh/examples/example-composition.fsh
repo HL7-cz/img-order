@@ -7,7 +7,7 @@ Description: "Standalone example of an imaging order Composition."
 * status = #final
 * subject = Reference(Mracena)
 * date = "2025-04-01T09:00:00+01:00"
-* author = Reference(practitionerExample)
+* author = Reference(cz-practitionerRole-example)
 * title = "Imaging Order – Magnetic Resonance"
 * confidentiality = #N
 * type = $sctCZ#721964003
@@ -19,7 +19,7 @@ Description: "Standalone example of an imaging order Composition."
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Requested magnetic resonance examination</div>"
 * section[orderInformation].entry = Reference(cz-imagingorder-example)
 * section[coverage].title = "Coverage"
-* section[coverage].code = $loinc#87520-3 "Insurance information"
+* section[coverage].code = $loinc#87520-3 //"Insurance information"
 * section[coverage].text.status = #generated
 * section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient insurance information</div>"
 * section[coverage].entry = Reference(cz-coverage-example)
@@ -36,8 +36,6 @@ Title: "Coverage: Patient insurance information"
 Description: "Example of a patient's insurance coverage information."
 * id = "coverage-example"
 * status = #active
-* type = $sctCZ#394814009 "Pojištění"
-* subscriberId = "1234567890"
 * beneficiary = Reference(Mracena)
 * payor = Reference(insuranceCompanyExample)
 
