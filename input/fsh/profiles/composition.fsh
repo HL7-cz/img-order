@@ -34,7 +34,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^short = "Organization that manages the Imaging Order"
 
 * encounter
-* encounter only Reference(CZ_Encounter)
+* encounter only Reference(CZ_EncounterCore)
   * ^short = "Context that defines the Imaging Order"
 //  * insert SetPopulateIfKnown
 
@@ -108,6 +108,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	//"Radiology Reason for study (narrative)"
+  // TODO: Zvážit sjednocení s lab-order např. na $loinc#104720-8 // "Clinical indication Narrative"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * text 1..
   * text ^short = "Clinical question text"

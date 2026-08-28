@@ -11,5 +11,5 @@ Description: "ValueSet for imaging procedure in the Czech Imaging project, using
 * ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedures"
 
 * insert SNOMEDCopyrightForVS
-* include codes from system $sctCZ where concept is-a #363679005
-* exclude $sctCZ#363679005
+* include codes from system $sctCZ where concept descendent-of #363679005
+//* exclude $sctCZ#363679005
