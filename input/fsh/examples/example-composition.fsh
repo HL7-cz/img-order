@@ -1,7 +1,7 @@
 Instance: CompositionImagingOrderExample
 InstanceOf: CZ_CompositionImageOrder
 Usage: #example
-Title: "Imaging Order Composition example"
+Title: "Composition: Imaging Order"
 Description: "Standalone example of an imaging order Composition."
 
 * status = #final

@@ -299,7 +299,7 @@ Instance: cz-organizace-odesilajici-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Referring organisation (GP’s surgery) – the referral is not addressed to a specific receiving facility"
-Title: "Organization: requesting workplace (general practitioner)"
+Title: "Organization: Requesting workplace (general practitioner)"
 * id = "9ab2a281-4321-4543-edcb-a9876543210f"
 * name = "Ordinace praktického lékaře MUDr. Karla Dlouhého"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
@@ -308,7 +308,8 @@ Title: "Organization: requesting workplace (general practitioner)"
 
 Instance: cz-practitioner-dlouhy-example
 InstanceOf: CZ_PractitionerCore
-Description: "Příklad žádajícího lékaře"
+Title: "Practitioner: Karel Dlouhý"
+Description: "Example of a general practitioner (requesting physician) - the referral is not addressed to a specific receiving facility"
 Usage: #example
 * id = "6d8f7e65-9a01-42b3-c4c5-e6f708192a34"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
@@ -322,8 +323,8 @@ Usage: #example
 
 Instance: cz-example-practitionerRole-radiologie
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "Practitioner Role - žádající praktický lékař"
-Description: "Role žádajícího lékaře - odesílající pracoviště (bez vazby na konkrétní přijímací radiologické pracoviště)"
+Title: "PractitionerRole: Requesting Physician"
+Description: "Example of a general practitioner (requesting physician) - the referral is not addressed to a specific receiving facility"
 Usage: #example
 * id = "7e90806f-2109-4321-cba9-87654321fed1"
 * specialty[0] = $vzp-odbornost#001 "Pracoviště praktického lékaře pro dospělé"
@@ -333,8 +334,8 @@ Usage: #example
 Instance: cz-encounter-novakova-example
 InstanceOf: Encounter
 Usage: #example
-Description: "Příklad kontaktu (ambulantní vyšetření předcházející žádance)"
-Title: "Encounter - Nováková"
+Description: "Ambulatory visit of patient Nováková"
+Title: "Encounter: Ambulatory visit"
 * id = "abc3b392-5432-4654-fedc-ba9876543201"
 * status = #finished
 * class = #AMB "ambulatory"

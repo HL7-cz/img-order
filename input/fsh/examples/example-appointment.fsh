@@ -1,7 +1,8 @@
 Instance: AppointmentExample
 InstanceOf: CZ_AppointmentCore
 Usage: #example
-Description: "Appointment"
+Title: "Appointment - Example"
+Description: "Appointment for a patient to attend a scheduled examination"
 
 * status = #booked
 * description = "Pravidelná kontrola"
@@ -19,6 +20,7 @@ Description: "Appointment"
 Instance: LocationExample
 InstanceOf: CZ_LocationCore
 Usage: #example
+Title: "Location: Example of doctor's office"
 Description: "Example of location"
 
 * status = #active

@@ -1,5 +1,6 @@
 Instance: practitionerExample
 InstanceOf: CZ_PractitionerCore
+Title: "Practitioner: doc. MUDr. Jan Testovací, PhD."
 Description: "Example of practitioner"
 Usage: #example
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"

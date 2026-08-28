@@ -1,7 +1,8 @@
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
 Usage: #example
-Description: "Encounter"
+Title: "Encounter: Radiography"
+Description: "Encounter for radiography of patient Kralik"
 * id = "db16a37b-d393-4767-bb2e-739f9bff16f9"
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9"
@@ -15,6 +16,7 @@ Description: "Encounter"
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
 Usage: #example
+Title: "Organization: Fakultní nemocnice Obláčkov"
 Description: "An example of the organization with logo extension"
 * id = "5bdedd9b-27c5-4593-ae3a-968c5f25d253"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"

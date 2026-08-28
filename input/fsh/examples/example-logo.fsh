@@ -1,6 +1,7 @@
 Instance: logoFNOblackov-example
 InstanceOf: CZ_Logo
 Usage: #example
+Title: "Logo: FN Obláčkov"
 Description: "Example of logo as document reference for FN Obláčkov."
 
 * id = "0af43461-495e-4dfc-82ca-7f3140a60fe7"

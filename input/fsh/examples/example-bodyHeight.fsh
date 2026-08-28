@@ -1,7 +1,7 @@
 Instance: ExampleBodyHeight
 InstanceOf: CZ_BodyHeight
 Usage: #example
-Title: "Body height of patient"
+Title: "Body height: Patient Mracena"
 Description: "Example of body height of Patient Mracena"
 * subject = Reference(Mracena)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"

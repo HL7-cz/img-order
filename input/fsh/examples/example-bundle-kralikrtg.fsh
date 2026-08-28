@@ -125,6 +125,7 @@ Usage: #inline
 
 Instance: cz-practitioner1-example
 InstanceOf: CZ_PractitionerCore
+Title: "Practitioner: doc. MUDr. Jiří Example, PhD."
 Description: "Example of practitioner"
 Usage: #example
 * id = "16793b99-aecc-482d-8283-0e4885e0ca25"
@@ -139,6 +140,7 @@ Usage: #example
 
 Instance: cz-practitioner2-example
 InstanceOf: CZ_PractitionerCore
+Title: "Practitioner: Bc. Miroslav Example, MBA"
 Description: "Example of practitioner"
 Usage: #example
 * id = "984dcf34-1924-45a8-8ec5-3d100b67d9be"
@@ -153,7 +155,7 @@ Usage: #example
 
 Instance: cz-example-practitionerRole
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "Practitioner Role Radiology"
+Title: "PractitionerRole: Radiology"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"
@@ -164,7 +166,7 @@ Usage: #example
 
 Instance: cz-patient-kralik
 InstanceOf: CZ_PatientCore
-Title: "Patient Kralik"
+Title: "Patient: Kralik"
 Description: "Patient Kralik for RTG order example"
 Usage: #example
 * id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
@@ -452,7 +454,7 @@ Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage
 Description: "Example of coverage"
 Usage: #example
-Title: "Coverage - Healthcare insurance company"
+Title: "Coverage: Healthcare insurance company 2"
 * id = "92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * status = #active
 * beneficiary = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
@@ -462,7 +464,7 @@ Instance: cz-pojistovna-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation"
-Title: "Organization - Healthcare insurance company"
+Title: "Organization: Healthcare insurance company"
 * id = "35e78cc9-6fe2-42a8-8553-83a3f86ce308"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
@@ -471,8 +473,8 @@ Title: "Organization - Healthcare insurance company"
 Instance: KralikCondition
 InstanceOf: CZ_ConditionCore
 Usage: #example
-Description: "Condition"
-Title: "Reason in code form"
+Description: "Example of condition"
+Title: "Condition: Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * code.coding[0] = $mkn10#S018 "Otevřená rána jiných částí hlavy"
@@ -491,7 +493,7 @@ Description: "Attachment for Plain X-ray"
 Instance: cz-deviceusestatement-example
 InstanceOf: CZ_DeviceUseStatement
 Usage: #example
-Title: "Example DeviceUseStatement for Implant"
+Title: "DeviceUseStatement: Implant"
 Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
 * id = "b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
 
@@ -524,7 +526,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 Instance: cz-medicalDevice-example
 InstanceOf: CZ_MedicalDevice
 Usage: #example
-Title: "Example Device - Implantable Pacemaker"
+Title: "Device: Implantable Pacemaker"
 Description: "A sample Device resource for an implantable pacemaker, referenced in a DeviceUseStatement."
 * id = "711e1d43-d5e4-4cbc-b546-74059db270f6"
 

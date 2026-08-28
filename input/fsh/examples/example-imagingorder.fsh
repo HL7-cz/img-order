@@ -1,6 +1,7 @@
 Instance: cz-imagingorder-example
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
+Title: "Imaging order: Magnetic Resonance"
 Description: "Imaging order for Magnetic Resonance"
 
 * identifier[+].system = "urn:ietf:rfc:3986"
