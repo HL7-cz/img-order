@@ -196,6 +196,7 @@ Description: "Serum creatinine laboratory results as a basis for assessing the s
 * valueQuantity.code = #umol/L
 * status = #final
 * effectiveDateTime = 2025-08-25
+* performer = Reference(urn:uuid:6d8f7e65-9a01-42b3-c4c5-e6f708192a34)
 
 
 // -----------------------------------------------------------------
@@ -255,7 +256,7 @@ Description: "Clinically significant allergy to iodine / iodinated contrast agen
 * code = $sctCZ#294913003 // "alergie na jód"
 * patient = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * recordedDate = "2025-08-27"
-* reaction[0].manifestation = $sctCZ#39579001 "anafylaktická reakce"
+* reaction[0].manifestation = $sctCZ#39579001 //"anafylaktická reakce"
 * reaction[=].description = "Anamnesticky anafylaktoidní reakce po i.v. podání jodové kontrastní látky (rok 2019)."
 * reaction[=].severity = #severe
 * note.text = "Před i.v. podáním jodové kontrastní látky nutno ověřit aktuální klinický stav a zvážit alternativní postup (nativní vyšetření, premedikace, jiné kontrastní médium)."

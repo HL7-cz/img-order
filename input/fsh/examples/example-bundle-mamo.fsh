@@ -23,6 +23,8 @@ Usage: #example
 * entry[condition].resource = PreventionCondition
 * entry[organisation].fullUrl = "urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253"
 * entry[organisation].resource = cz-organizationwithlogo-example
+* entry[attachment][+].fullUrl = "urn:uuid:0af43461-495e-4dfc-82ca-7f3140a60fe7"
+* entry[attachment][=].resource = logoFNOblackov-example
 
 Instance: Composition-mamografie-preventivni
 InstanceOf: CZ_CompositionImageOrder
