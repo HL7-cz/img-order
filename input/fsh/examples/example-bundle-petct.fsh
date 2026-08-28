@@ -91,7 +91,7 @@ Description: "Multimodální požadavek kombinující pozitronovou emisní tomog
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * insurance = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
 * bodySite = $sctCZ#38266002 //"celé tělo" 
-* code.coding = $sctCZ#443304001 "positron emission tomography with computed tomography"
+* code.coding = $sctCZ#480621000119104 //"positron emission tomography with computed tomography"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: 18F-FDG PET/CT celotělové (od základny lebeční po stehna)</div>"
 * authoredOn = "2026-08-27T10:00:00+02:00"
