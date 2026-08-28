@@ -344,7 +344,7 @@ Description: "Ambulatory visit of patient Nováková"
 Title: "Encounter: Ambulatory visit"
 * id = "abc3b392-5432-4654-fedc-ba9876543201"
 * status = #finished
-* class = #AMB "ambulatory"
+* class = $v3-ActCode#AMB "ambulatory"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * period.start = "2025-08-27T08:30:00+02:00"
 * period.end = "2025-08-27T09:15:00+02:00"

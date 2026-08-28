@@ -160,7 +160,7 @@ Usage: #example
 
 Instance: cz-example-practitionerRole
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "PractitionerRole: Radiology"
+Title: "PractitionerRole: Radiology 2"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"

@@ -107,7 +107,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[appointment].resource only CZ_AppointmentCore
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
-* entry[practitionerRole].resource only CZ_PractitionerRoleCore
+* entry[practitionerRole].resource only PractitionerRole
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatementCore
 * entry[condition].resource only CZ_ConditionCore
