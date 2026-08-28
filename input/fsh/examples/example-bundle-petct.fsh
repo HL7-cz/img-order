@@ -1,7 +1,7 @@
 Instance: BundlePetCtLymfom
 InstanceOf: CZ_BundleImageOrder
-Title: "Žádanka na vyšetření - celotělové PET/CT"
-Description: "Příklad komplexní hybridní multimodální žádanky (PET/CT) při podezření na relaps lymfomu."
+Title: "Bundle: PET/CT"
+Description: "An example of a comprehensive hybrid multimodal referral (PET/CT) in cases of suspected lymphoma relapse."
 Usage: #example
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d"
@@ -21,14 +21,15 @@ Usage: #example
 * entry[practitioner].resource = cz-practitioner-oncologist
 * entry[condition].fullUrl = "urn:uuid:aae6b1c0-d22e-4058-b225-8be5669da40e"
 * entry[condition].resource = LymphomaCondition
-* entry[organisation].fullUrl = "urn:uuid:d9503020-e03b-4a09-b565-3505ec5b12d5"
-* entry[organisation].resource = cz-pojistovna-vzp
-* entry[organisation].fullUrl = "urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253"
-* entry[organisation].resource = cz-organizationwithlogo-example
+* entry[organisation][0].fullUrl = "urn:uuid:d9503020-e03b-4a09-b565-3505ec5b12d5"
+* entry[organisation][=].resource = cz-pojistovna-vzp
+* entry[organisation][+].fullUrl = "urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253"
+* entry[organisation][=].resource = cz-organizationwithlogo-example
 
 Instance: Composition-pet-ct-lymfom
 InstanceOf: CZ_CompositionImageOrder
-Description: "Struktura dokumentu žádanky pro PET/CT"
+Title: "Composition: PET/CT referral structure"
+Description: "Structure of the PET/CT request form for suspected lymphoma relapse"
 Usage: #inline
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
 * status = #final
@@ -53,8 +54,8 @@ Usage: #inline
 
 Instance: cz-patient-novak
 InstanceOf: CZ_PatientCore
-Title: "Pacient: Jan Novák"
-Description: "Profil pacienta odpovídající standardu CZ_PatientCore"
+Title: "Patient: Jan Novák"
+Description: "Profile of the patient corresponding to the CZ_PatientCore standard"
 Usage: #example
 * id = "0c7366a1-54d2-41d3-aa78-3fbb81962193"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
@@ -80,8 +81,8 @@ Usage: #example
 Instance: cz-petct-request
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
-Title: "Žádanka na hybridní PET/CT vyšetření"
-Description: "Multimodální požadavek kombinující pozitronovou emisní tomografii a výpočetní tomografii"
+Title: "ServiceRequest: Referral for hybrid PET/CT examination"
+Description: "Multimodal request combining positron emission tomography and computed tomography"
 * id = "213859c2-ac9d-4166-a673-13a50640af90"
 * identifier.system = "http://nemocnice.cz"
 * identifier.value = "2026-PETCT-00895"
@@ -103,8 +104,8 @@ Description: "Multimodální požadavek kombinující pozitronovou emisní tomog
 Instance: LymphomaCondition
 InstanceOf: CZ_ConditionCore
 Usage: #example
-Title: "Indikační diagnóza - Maligní lymfom"
-Description: "Klinické zdůvodnění požadavku pro PET/CT vyšetření"
+Title: "Condition: Malignant lymphoma"
+Description: "Clinical justification for a request for a PET/CT scan"
 * id = "aae6b1c0-d22e-4058-b225-8be5669da40e"
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * code.coding = $mkn10#C859 //"Maligní nehodgkinský lymfom, neurčený"
@@ -112,7 +113,8 @@ Description: "Klinické zdůvodnění požadavku pro PET/CT vyšetření"
 
 Instance: cz-practitioner-oncologist
 InstanceOf: CZ_PractitionerCore
-Description: "Odesílající onkolog"
+Title: "Practitioner: MUDr. Petr Onkologický"
+Description: "Referring oncologist"
 Usage: #example
 * id = "6918f12d-318b-4fa7-9462-16a60d6fdfe4"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
@@ -125,8 +127,8 @@ Usage: #example
 
 Instance: cz-practitionerRole-oncology
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "Role: Klinická onkologie"
-Description: "Kontext pracoviště odesílajícího lékaře"
+Title: "PractitionerRole: Clinical Oncology"
+Description: "Context of the practice site of the referring oncologist"
 Usage: #example
 * id = "8fd3a4cf-173a-43f0-a1f9-5b538d088c03"
 * specialty[0] = $vzp-odbornost#403 //"Klinická onkologie"
@@ -136,9 +138,9 @@ Usage: #example
 
 Instance: cz-insurance-coverage
 InstanceOf: CZ_Coverage
-Description: "Zdravotní pojištění pacienta"
+Description: "Health insurance of the patient"
 Usage: #example
-Title: "Pojištění pacienta"
+Title: "Coverage: Health Insurance of the Patient"
 * id = "a0bd92b5-4112-4cac-86df-e6cb89b5fcff"
 * status = #active
 * beneficiary = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
@@ -148,7 +150,7 @@ Instance: cz-pojistovna-vzp
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Všeobecná zdravotní pojišťovna"
-Title: "VZP"
+Title: "Organization: VZP"
 * id = "d9503020-e03b-4a09-b565-3505ec5b12d5"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"

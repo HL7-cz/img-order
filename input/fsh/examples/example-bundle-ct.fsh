@@ -1,7 +1,7 @@
 Instance: BundleNovakovaCT
 InstanceOf: CZ_BundleImageOrder
-Title: "Bundle: CT břicha - neadresná žádanka - Nováková"
-Description: "Příklad neadresné žádanky (Bundle) na CT břicha s kontrastní látkou u pacienta s alergií na jód"
+Title: "Bundle: CT abdomen with contrast (non-addressed)"
+Description: "Example of a non-addressed request (Bundle) for CT abdomen with contrast in a patient with iodine allergy"
 Usage: #example
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:7a1c9e20-3f4a-4b7a-9e2f-6c1d2a9b5e11"
@@ -53,7 +53,8 @@ Usage: #example
 
 Instance: Composition-novakova-ct
 InstanceOf: CZ_CompositionImageOrder
-Description: "Neadresná žádanka na CT vyšetření břicha s kontrastní látkou u pacienta s alergií na jód"
+Description: "Non-addressed request for CT abdomen with contrast in a patient with iodine allergy"
+Title: "Composition: Non-addressed request for CT abdomen with contrast"
 Usage: #inline
 * id = "1e3a2f10-4b5c-4d6e-8f70-9a1b2c3d4e5f"
 * status = #final
@@ -89,8 +90,8 @@ Usage: #inline
 
 Instance: cz-patient-novakova
 InstanceOf: CZ_PatientCore
-Title: "Pacientka Nováková"
-Description: "Pacientka Nováková pro příklad neadresné žádanky na CT břicha"
+Title: "Patient: Nováková"
+Description: "Patient Nováková for the example of a non-addressed request for CT abdomen"
 Usage: #example
 * id = "2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0"
 * text.status = #generated
@@ -134,8 +135,8 @@ Usage: #example
 Instance: HeightNovakova
 InstanceOf: CZ_BodyHeight
 Usage: #inline
-Title: "Tělesná výška pacientky Novákové"
-Description: "Příklad tělesné výšky pacientky Novákové"
+Title: "Body Height: Patient Nováková"
+Description: "Example of body height of patient Nováková"
 * id = "cde5d5b4-7654-4876-10fe-dcba98765432"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -157,8 +158,8 @@ Description: "Příklad tělesné výšky pacientky Novákové"
 Instance: WeightNovakova
 InstanceOf: CZ_BodyWeight
 Usage: #inline
-Title: "Tělesná hmotnost pacientky Novákové"
-Description: "Příklad tělesné hmotnosti pacientky Novákové"
+Title: "Body Weight: Patient Nováková"
+Description: "Example of body weight of patient Nováková"
 * id = "def6e6c5-8765-4987-2110-edcba9876543"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -182,8 +183,8 @@ Description: "Příklad tělesné hmotnosti pacientky Novákové"
 Instance: KreatininNovakova
 InstanceOf: CZ_MedicalTestResultCore
 Usage: #inline
-Title: "Sérový kreatinin pacientky Novákové"
-Description: "Laboratorní hodnota sérového kreatininu jako podklad pro posouzení bezpečnosti podání kontrastní látky"
+Title: "Medical Test Result: Serum Creatinine of Patient Nováková"
+Description: "Serum creatinine laboratory results as a basis for assessing the safety of contrast medium administration"
 * id = "ef07f7d6-9876-4a98-3221-fedcba987654"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -205,8 +206,8 @@ Description: "Laboratorní hodnota sérového kreatininu jako podklad pro posouz
 Instance: cz-novakovact-example1
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
-Title: "Žádanka na CT břicha s i.v. kontrastní látkou (neadresná)"
-Description: "Plánované CT vyšetření břicha s nitrožilním podáním kontrastní látky - neadresná žádanka, klinická kontraindikace (alergie na jód)"
+Title: "ServiceRequest: CT abdomen with contrast (non-addressed)"
+Description: "Planned CT examination of the abdomen with intravenous administration of contrast medium - non-addressed request, clinical contraindication (allergy to iodine)"
 * id = "3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
 * identifier.system = "http://nemocnice-novakova.cz/ris-order"
 * identifier[=].value = "9912045"
@@ -241,8 +242,8 @@ Description: "Plánované CT vyšetření břicha s nitrožilním podáním kont
 Instance: AllergyJodNovakova
 InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
-Title: "Alergie na jód - pacientka Nováková"
-Description: "Klinicky významná alergie na jód / jodové kontrastní látky, nutno ověřit před podáním kontrastní látky"
+Title: "Allergy: To Iodine - Patient Nováková"
+Description: "Clinically significant allergy to iodine / iodinated contrast agents, must verify before administration of contrast medium"
 * id = "4b6d5c43-7e8f-4091-a2a3-c4d5e6f70812"
 * identifier[+].system = "http://example.org/hospital/allergy-intolerances"
 * identifier[=].value = "allergy-1"
@@ -263,8 +264,8 @@ Description: "Klinicky významná alergie na jód / jodové kontrastní látky, 
 Instance: NovakovaCondition
 InstanceOf: CZ_ConditionCore
 Usage: #example
-Description: "Klinický důvod žádosti o CT vyšetření"
-Title: "Reason in code form for CT examination"
+Description: "Clinical reason for CT examination"
+Title: "Condition: Clinical Reason for CT Examination"
 * id = "bcd4c4a3-6543-4765-0fed-cba987654321"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * code.coding[0] = $mkn10#K869 //"Nemoc slinivky břišní, blíže neurčená"
@@ -273,9 +274,9 @@ Title: "Reason in code form for CT examination"
 
 Instance: cz-novakovainsurance-example
 InstanceOf: CZ_Coverage
-Description: "Příklad pojištění"
+Description: "Example of healthcare insurance"
 Usage: #example
-Title: "Coverage - zdravotní pojišťovna"
+Title: "Coverage: Healthcare Insurance Company"
 * id = "5c7e6d54-8f90-41a2-b3b4-d5e6f7081923"
 * status = #active
 * beneficiary = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
@@ -285,8 +286,8 @@ Title: "Coverage - zdravotní pojišťovna"
 Instance: cz-organization-novakova-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
-Description: "Příklad zdravotní pojišťovny (pouze reference přes payor)"
-Title: "Organization - Healthcare insurance company 2"
+Description: "Example of a healthcare insurance company (only reference via payor)"
+Title: "Organization: Healthcare Insurance Company 2"
 * id = "8fa19170-3210-4432-dcba-98765432fe10"
 * name = "Oborová zdravotní pojišťovna zaměstnanců bank"
 * identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"
@@ -296,8 +297,8 @@ Title: "Organization - Healthcare insurance company 2"
 Instance: cz-organizace-odesilajici-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
-Description: "Odesílající organizace (ordinace praktického lékaře) - žádanka nesměřuje na konkrétní přijímací pracoviště"
-Title: "Organization - odesílající pracoviště"
+Description: "Referring organisation (GP’s surgery) – the referral is not addressed to a specific receiving facility"
+Title: "Organization: requesting workplace (general practitioner)"
 * id = "9ab2a281-4321-4543-edcb-a9876543210f"
 * name = "Ordinace praktického lékaře MUDr. Karla Dlouhého"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"

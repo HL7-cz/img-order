@@ -1,7 +1,7 @@
 Instance: BundleMamografieSamoplatce
 InstanceOf: CZ_BundleImageOrder
-Title: "Žádanka na vyšetření - Preventivní mamografie (Samoplátce)"
-Description: "Příklad žádanky na preventivní mamografické vyšetření prsů na vlastní žádost pacientky (mimo screeningový program)."
+Title: "Bundle: Prevent mamography (selfpay)"
+Description: "An example of a request form for a preventive mammogram at the patient’s own request (outside the screening programme)."
 Usage: #example
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:7e2c9a1b-3f4d-5e6f-7a8b-9c0d1e2f3a4b"
@@ -26,7 +26,8 @@ Usage: #example
 
 Instance: Composition-mamografie-preventivni
 InstanceOf: CZ_CompositionImageOrder
-Description: "Struktura dokumentu žádanky pro preventivní mamografii"
+Title: "Composition: Preventive mammography request"
+Description: "Structure of the referral form for a screening mammogram"
 Usage: #inline
 * id = "ebe537ba-7fe2-4b2a-8c56-3d100b67d9be"
 * status = #final
@@ -49,8 +50,8 @@ Usage: #inline
 
 Instance: cz-patient-cerna
 InstanceOf: CZ_PatientCore
-Title: "Pacientka: Marie Černá"
-Description: "Profil pacientky (38 let) vyžadující vyšetření mimo standardní věkovou hranici screeningu"
+Title: "Patient: Marie Černá"
+Description: "Profile of a female patient (aged 38) requiring an examination outside the standard screening age range"
 Usage: #example
 * id = "43614302-1d18-4b04-929d-d762b16fd688"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
@@ -75,8 +76,8 @@ Usage: #example
 Instance: cz-mammo-request
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
-Title: "Žádanka na screeningovou mamografii"
-Description: "Požadavek na bilaterální screeningovou mamografii (MG) obou prsů"
+Title: "ServiceRequest: Request for screening mammography"
+Description: "Request for bilateral screening mammography (MG) of both breasts"
 * id = "60ea3958-7344-4969-a0b7-58f849473d05"
 * identifier.system = "http://ambulance-gynekologie.cz"
 * identifier.value = "2026-MG-0451"
@@ -97,8 +98,8 @@ Description: "Požadavek na bilaterální screeningovou mamografii (MG) obou prs
 Instance: PreventionCondition
 InstanceOf: CZ_ConditionCore
 Usage: #example
-Title: "Zdůvodnění - Preventivní screening prsů"
-Description: "Kódování preventivního screeningu pomocí MKN-10 klasifikace"
+Title: "Condition: Preventive mammography screening"
+Description: "Coding of preventive screening using MKN-10 classification"
 * id = "8d570541-52af-4f8a-886c-fb732a218b68"
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * code.coding = $mkn10#Z123 //"Speciální screeningové vyšetření zaměřené na novotvar prsu"
@@ -106,7 +107,8 @@ Description: "Kódování preventivního screeningu pomocí MKN-10 klasifikace"
 
 Instance: cz-practitioner-gynecologist
 InstanceOf: CZ_PractitionerCore
-Description: "Indikující registrující gynekolog"
+Title: "Practitioner: MUDr. Aleš Ženský"
+Description: "Referring gynaecologist"
 Usage: #example
 * id = "3d60c2df-af65-4095-95f6-d3d9b61cb5e7"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
@@ -119,8 +121,8 @@ Usage: #example
 
 Instance: cz-practitionerRole-gynecology
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "Role: Gynekologie a porodnictví"
-Description: "Kontext pracoviště registrujícího gynekologa"
+Title: "PractitionerRole: Gynecology and Obstetrics"
+Description: "Context of the practice site of the referring gynaecologist"
 Usage: #example
 * id = "e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
 * specialty = $vzp-odbornost#603 //"Gynekologie a porodnictví"
@@ -130,9 +132,9 @@ Usage: #example
 
 Instance: cz-selfpay-coverage
 InstanceOf: CZ_Coverage
-Description: "Identifikace typu úhrady vyšetření (samoplátce)"
+Description: "Identification of the type of reimbursement for the examination (self-payer)"
 Usage: #example
-Title: "Úhrada vyšetření - Samoplátce"
+Title: "Coverage: Self-Payer"
 * id = "db6858e6-8d8b-4952-832b-9124cd103b12"
 * status = #active
 * beneficiary = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
