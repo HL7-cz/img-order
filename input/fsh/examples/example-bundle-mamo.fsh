@@ -49,6 +49,11 @@ Usage: #inline
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Preventivní screening karcinomu prsu u nerizikové pacientky mladší 45 let na vlastní žádost (samoplátkyně). Palpačně bpn.</div>"
 * section[clinicalQuestion].text.status = #additional
+* section[coverage].title = "Coverage"
+* section[coverage].code = $loinc#48768-6 "Insurance information"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacientky Marie Černá, číslo pojištěnce 8855221234, poskytovatel VZP</div>"
+* section[coverage].text.status = #generated
+* section[coverage].entry = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12)
 
 Instance: cz-patient-cerna
 InstanceOf: CZ_PatientCore

@@ -103,7 +103,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 //"Requested imaging studies information Document"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_ImagingOrderInformation)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
@@ -125,7 +125,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#87520-3 //"Coverage type"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////

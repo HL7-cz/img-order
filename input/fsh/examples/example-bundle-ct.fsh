@@ -74,6 +74,12 @@ Usage: #inline
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701)
 
+* section[coverage].title = "Coverage"
+* section[coverage].code = $loinc#48768-6 "Insurance information"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.status = #generated
+* section[coverage].entry[0] = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
+
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Vyloučení intraabdominální patologie (susp. tumor slinivky břišní), staging.</div>"

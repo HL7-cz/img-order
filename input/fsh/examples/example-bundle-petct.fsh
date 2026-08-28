@@ -48,7 +48,11 @@ Usage: #inline
 * section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadované PET/CT celotělové vyšetření</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:213859c2-ac9d-4166-a673-13a50640af90)
-
+* section[coverage].title = "Coverage"
+* section[coverage].code = $loinc#48768-6 "Insurance information"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.status = #generated
+* section[coverage].entry[0] = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Restaging maligního lymfomu, suspekce na relaps/progresi onemocnění dle klinického stavu.</div>"
