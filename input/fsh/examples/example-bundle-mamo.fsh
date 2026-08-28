@@ -50,7 +50,7 @@ Usage: #inline
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Preventivní screening karcinomu prsu u nerizikové pacientky mladší 45 let na vlastní žádost (samoplátkyně). Palpačně bpn.</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[coverage].title = "Coverage"
-* section[coverage].code = $loinc#48768-6 "Insurance information"
+* section[coverage].code = $loinc#87520-3 "Insurance information"
 * section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacientky Marie Černá, číslo pojištěnce 8855221234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12)
