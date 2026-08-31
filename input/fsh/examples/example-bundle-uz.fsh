@@ -157,7 +157,7 @@ Description: "Pregnancy, 20+3 weeks gestation, indicated for second trimester sc
 Title: "Condition: Reason in code form"
 * id = "a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
-* code.coding = $mkn10#Z34.9 //"Dohled nad normální graviditou, neurčený"
+* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
 * code.text = "Fyziologicky probíhající gravidita, gestační týden 20+3, indikován screening II. trimestru. Pacientka žádá zároveň nadstandardní 3D/4D fotografii plodu."
 
 Instance: cz-practitioner-gynekolozka
@@ -181,7 +181,7 @@ Title: "PractitionerRole: gynecology and obstetrics"
 Description: "Role of gynecologist in the context of imaging order for patient Malíková"
 Usage: #example
 * id = "c9fabcde-edfe-4cfa-8f89-adbecfd0e1f8"
-* specialty[0] = $vzp-odbornost#603 "Gynekologie a porodnictví"
+* specialty[0] = $vzp-odbornost#603 //"Gynekologie a porodnictví"
 * specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:b8e9fabc-dcfd-4bef-8f78-9cadbecfd0e7)
 * organization = Reference(urn:uuid:dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9)

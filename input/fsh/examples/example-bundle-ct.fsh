@@ -338,7 +338,7 @@ Usage: #example
 * organization = Reference(urn:uuid:9ab2a281-4321-4543-edcb-a9876543210f)
 
 Instance: cz-encounter-novakova-example
-InstanceOf: Encounter
+InstanceOf: CZ_EncounterCore
 Usage: #example
 Description: "Ambulatory visit of patient Nováková"
 Title: "Encounter: Ambulatory visit"
