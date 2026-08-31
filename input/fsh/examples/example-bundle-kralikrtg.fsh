@@ -283,7 +283,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -309,7 +309,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -335,7 +335,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -361,7 +361,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -387,7 +387,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -413,7 +413,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -439,7 +439,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 "zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)

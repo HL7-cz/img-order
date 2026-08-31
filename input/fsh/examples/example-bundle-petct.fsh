@@ -94,7 +94,7 @@ Description: "Multimodal request combining positron emission tomography and comp
 * identifier.value = "2026-PETCT-00895"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 "zobrazování"
+* category = $sctCZ#363679005 //"zobrazování"
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * insurance = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
 * bodySite = $sctCZ#38266002 //"celé tělo" 

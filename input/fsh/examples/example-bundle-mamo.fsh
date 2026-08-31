@@ -90,7 +90,7 @@ Description: "Request for bilateral screening mammography (MG) of both breasts"
 * identifier.value = "2026-MG-0451"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 "zobrazování"
+* category = $sctCZ#363679005 //"zobrazování"
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * insurance = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12) // Odkaz na samoplátecké krytí
 * bodySite = $sctCZ#76752008 //"Breast structure"

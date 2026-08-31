@@ -221,7 +221,7 @@ Description: "Planned CT examination of the abdomen with intravenous administrat
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sctCZ#363679005 "zobrazování"
+* category = $sctCZ#363679005 //"zobrazování"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * insurance = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
 * bodySite = $sctCZ#818983003 
