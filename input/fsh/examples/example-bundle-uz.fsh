@@ -38,6 +38,9 @@ Usage: #example
 * entry[organisation].fullUrl = "urn:uuid:dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9"
 * entry[organisation].resource = cz-pojistovna-malikova-example
 
+* entry[organisation][+].fullUrl = "urn:uuid:21046dff-3219-487b-b9c0-8ff98429971a"
+* entry[organisation][=].resource = cz-organization-malikova
+
 
 Instance: Composition-uzplod-malikova
 InstanceOf: CZ_CompositionImageOrder
@@ -154,10 +157,10 @@ Instance: TehotenstviCondition
 InstanceOf: CZ_ConditionClinicalQuestion
 Usage: #example
 Description: "Pregnancy, 20+3 weeks gestation, indicated for second trimester screening."
-Title: "Condition: Reason in code form"
+Title: "Condition: Pregnancy"
 * id = "a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
-* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
+* code.coding = $mkn10#Z34 //"Dohled nad normální graviditou, neurčený"
 * code.text = "Fyziologicky probíhající gravidita, gestační týden 20+3, indikován screening II. trimestru. Pacientka žádá zároveň nadstandardní 3D/4D fotografii plodu."
 
 Instance: cz-practitioner-gynekolozka
@@ -184,7 +187,7 @@ Usage: #example
 * specialty[0] = $vzp-odbornost#603 //"Gynekologie a porodnictví"
 * specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:b8e9fabc-dcfd-4bef-8f78-9cadbecfd0e7)
-* organization = Reference(urn:uuid:dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9)
+* organization = Reference(urn:uuid:9ab2a281-4321-4543-edcb-a9876543210f)
 
 Instance: cz-pojisteni-malikova
 InstanceOf: CZ_Coverage
@@ -207,12 +210,31 @@ Title: "Coverage: Self-pay for 3D/4D photography"
 * payor = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * type = http://terminology.hl7.org/CodeSystem/coverage-selfpay#pay
 
+Instance: cz-organization-malikova
+InstanceOf: CZ_OrganizationCore
+Title: "Organization: Gynecology and Obstetrics Clinic"
+Description: "Gynecology and Obstetrics Clinic providing care for patient Malíková"
+Usage: #example
+* id = "21046dff-3219-487b-b9c0-8ff98429971a"
+* name = "Gynekologicko-porodnická ambulance Malíková"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
+* identifier[=].value = "456789670"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[=].value = "456789671"
+* address[+].use = #work
+* address[=].type = #physical
+* address[=].text = "Jiráskova 88, 370 01 České Budějovice"
+* address[=].line[+] = "Jiráskova 88"
+* address[=].line[=].extension[streetName].valueString = "Jiráskova"
+* address[=].line[=].extension[houseNumber].valueString = "88"
+* address[=].city = "České Budějovice"
+* address[=].postalCode = "37001"
 
 Instance: cz-pojistovna-malikova-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Organization providing healthcare insurance coverage for patient Malíková"
-Title: "Organization: Healthcare insurance company"
+Title: "Organization: Healthcare insurance company 3"
 * id = "dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"
