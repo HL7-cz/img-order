@@ -118,4 +118,4 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[device].resource only Device
 * entry[attachment].resource only DocumentReference
 * entry[organisation].resource only CZ_OrganizationCore
-* entry[encounter].resource only CZ_Encounter
+* entry[encounter].resource only CZ_EncounterCore

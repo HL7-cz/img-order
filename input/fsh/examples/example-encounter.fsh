@@ -1,5 +1,5 @@
 Instance: cz-encounter-example
-InstanceOf: CZ_Encounter
+InstanceOf: CZ_EncounterCore
 Usage: #example
 Title: "Encounter: Radiography"
 Description: "Encounter for radiography of patient Kralik"
