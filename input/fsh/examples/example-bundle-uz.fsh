@@ -160,7 +160,7 @@ Description: "Pregnancy, 20+3 weeks gestation, indicated for second trimester sc
 Title: "Condition: Pregnancy"
 * id = "a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
-* code.coding = $mkn10#Z34 //"Dohled nad normální graviditou, neurčený"
+* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
 * code.text = "Fyziologicky probíhající gravidita, gestační týden 20+3, indikován screening II. trimestru. Pacientka žádá zároveň nadstandardní 3D/4D fotografii plodu."
 
 Instance: cz-practitioner-gynekolozka
@@ -187,7 +187,7 @@ Usage: #example
 * specialty[0] = $vzp-odbornost#603 //"Gynekologie a porodnictví"
 * specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:b8e9fabc-dcfd-4bef-8f78-9cadbecfd0e7)
-* organization = Reference(urn:uuid:9ab2a281-4321-4543-edcb-a9876543210f)
+* organization = Reference(urn:uuid:21046dff-3219-487b-b9c0-8ff98429971a)
 
 Instance: cz-pojisteni-malikova
 InstanceOf: CZ_Coverage
