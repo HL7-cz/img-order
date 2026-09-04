@@ -41,6 +41,9 @@ Usage: #example
 * entry[organisation][+].fullUrl = "urn:uuid:21046dff-3219-487b-b9c0-8ff98429971a"
 * entry[organisation][=].resource = cz-organization-malikova
 
+* entry[organisation][+].fullUrl = "urn:uuid:df19b899-358f-4cb9-8e66-9e151be70416"
+* entry[organisation][=].resource = cz-nemocnice-oblackov
+
 
 Instance: Composition-uzplod-malikova
 InstanceOf: CZ_CompositionImageOrder
