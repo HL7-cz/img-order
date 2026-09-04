@@ -42,7 +42,7 @@ classDiagram
 
 Nejsou-li pro povinnou sekci k dispozici žádná data, vyjádří se důvod v `composition.section.emptyReason`.
 
-Obsah jednotlivých sekcí a význam prvků jsou uvedeny na stránce [Rozsah použití a obsah](scope-and-content-cs.html#kostra-logického-modelu) a v definicích logických modelů, viz [Logické modely](logical-models-cs.html). Tato stránka je neopakuje.
+Obsah jednotlivých sekcí a význam prvků jsou uvedeny na stránce [Rozsah použití a obsah](scope-and-content-cs.html#koncepční-pohled) a v definicích logických modelů, viz [Logické modely](logical-models-cs.html). Tato stránka je neopakuje.
 
 ### Důsledky neměnnosti pro sestavení bundlu
 
