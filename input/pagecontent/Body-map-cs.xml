@@ -77,14 +77,9 @@
       <strong>Kontext mapování</strong>
 
       <ul>
-        <li>
-          <strong>Zdrojový logický model:</strong>
-          <a href="StructureDefinition-logBodyImageOrderCz.html">logBodyImageOrderCz</a>
-        </li>
-        <li>
-          <strong>Hlavní cílový profil:</strong>
-          <a href="StructureDefinition-cz-imagingOrderInformation.html">CZ_ImagingOrderInformation</a>
-        </li>
+        <li><strong>Zdrojový logický model:</strong> <a href="StructureDefinition-logBodyImageOrderCz.html">logBodyImageOrderCz</a></li>
+        <li><strong>Zdrojový mapovací soubor:</strong> <code>BodyImageOrder2FHIR.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.2 až A.3 Tělo dokumentu obrazové žádanky</li>
       </ul>
 
     </div>
@@ -109,7 +104,7 @@
             <th class="relsub">Vztah</th>
             <th class="tgt-sub">Zdroj/Profil</th>
             <th class="tgt-sub">Prvek</th>
-            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Reference</th>
             <th class="tgt-sub">Poznámky</th>
           </tr>
 
@@ -117,1102 +112,2322 @@
 
         <tbody>
           <tr>
-            <td>Body.OrderInformation</td>
-            <td>A.2.1 and A.2.2 - Information about order</td>
-            <td>související</td>
-            <td>Composition (cz-imagingOrderInformation)</td>
-            <td>Composition.section:OrderInformation</td>
-            <td></td>
-            <td>#Composition.OrderInformation.entry.ofType(CZ_ImagingOrderInformation)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OrderInformation</a></td>
+            <td>
+            A.2.1 and A.2.2 - Informace o objednávce
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            </td>
+            <td>
+            #Composition.OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderDetail</td>
-            <td>A.2.1 - Order detail</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail</a></td>
+            <td>
+            A.2.1 - Detail objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            CZ_ImagingOrderInformation
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.identifier</td>
-            <td>A.2.1.1 - Identifier of order detail</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.identifier</a></td>
+            <td>
+            A.2.1.1 - Identifikátor objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.dateTime</td>
-            <td>A.2.1.2 - Date and time of the order placement</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.authoredOn</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.dateTime</a></td>
+            <td>
+            A.2.1.2 - Datum a čas vytvoření objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            authoredOn
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.requestedExecdateTime</td>
-            <td>A.2.1.3 - Date and time of requested execution</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.occurrenceDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.requestedExecdateTime</a></td>
+            <td>
+            A.2.1.3 - Datum a čas požadovaného provedení
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            occurrenceDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.urgency</td>
-            <td>A.2.1.4 - Urgency of the order</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.priority</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.urgency</a></td>
+            <td>
+            A.2.1.4 - Urgentnost objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            priority
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderText</td>
-            <td>A.2.1.5 - Order text</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.note</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderText</a></td>
+            <td>
+            A.2.1.5 - Text objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            note
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderText</td>
-            <td>A.2.1.6 - Information for the patient</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.patientInstruction</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderText</a></td>
+            <td>
+            A.2.1.6 - Informace pro pacienta
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            patientInstruction
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderReason</td>
-            <td>A.2.2 - Order reason</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.reasonCode</td>
-            <td></td>
-            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)</td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderReason</a></td>
+            <td>
+            A.2.2 - Důvod objednávky
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            reasonCode
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+            #CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderReason.problem</td>
-            <td>A.2.2.1 -  Problem / diagnosis / condition description</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.reasonCode.coding</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderReason.problem</a></td>
+            <td>
+            A.2.2.1 -  Popis problému / diagnózy / stavu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            reasonCode.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderDetail.reasonCode</td>
-            <td>A.2.2.4 - Reason for ordering by code</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.reasonCode.coding</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail.reasonCode</a></td>
+            <td>
+            A.2.2.4 - Důvod objednávky kódem
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            reasonCode.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderDetail.reasonText</td>
-            <td>A.2.2.6 - Reason for order by text</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.reasonCode.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail.reasonText</a></td>
+            <td>
+            A.2.2.6 - Důvod objednávky textem
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            reasonCode.text
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderDetail.questionCode</td>
-            <td>A.2.2.2 - Clinical question in code form</td>
-            <td>ekvivalentní</td>
-            <td>Composition (cz-conditionImage)</td>
-            <td>Composition.section:ClinicalQuestion.entry.ofType(CZ_ConditionClinicalQuestion).code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail.questionCode</a></td>
+            <td>
+            A.2.2.2 - Klinická otázka kódem
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[ClinicalQuestion].entry.ofType(CZ_ConditionClinicalQuestion).code
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderInformation.orderDetail.questionText</td>
-            <td>A.2.2.3 - A clinical question in text form</td>
-            <td>ekvivalentní</td>
-            <td>Composition (cz-conditionImage)</td>
-            <td>Composition.section:ClinicalQuestion.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail.questionText</a></td>
+            <td>
+            A.2.2.3 - Klinická otázka textem
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[ClinicalQuestion].text
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.ClinicalEvent</td>
-            <td>A.2.3 - Information about clinical event</td>
-            <td>související</td>
-            <td>Composition (cz-encounter)</td>
-            <td>Composition.encounter</td>
-            <td></td>
-            <td>Composition.encounter.ofType(CZ_Encounter)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.ClinicalEvent</a></td>
+            <td>
+            A.2.3 - Informace o klinické události
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+            Composition.encounter.ofType(CZ_Encounter)
+            </td>
           </tr>
           <tr>
-            <td>ClinicalEvent.identifier</td>
-            <td>A.2.3.1 - Identifier of clinical event</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Encounter (cz-encounter)</td>
-            <td>CZ_Encounter.identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.identifier</a></td>
+            <td>
+            A.2.3.1 - Identifikátor klinické události
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>ClinicalEvent.type</td>
-            <td>A.2.3.2 - Type of clinical event</td>
-            <td>ekvivalentní</td>
-            <td>Composition (cz-encounter)</td>
-            <td>Composition.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.type</a></td>
+            <td>
+            A.2.3.2 - Typ klinické události
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).type
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>ClinicalEvent.otherInformation</td>
-            <td>A.2.3.3 - Other information about clinical event</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Encounter (cz-encounter)</td>
-            <td>CZ_Encounter.type.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation</a></td>
+            <td>
+            A.2.3.3 - Další informace o klinické události
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            type.text
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.coverage</td>
-            <td>A.2.4 - Information about additional coverage</td>
-            <td>související</td>
-            <td>Composition (cz-coverage)</td>
-            <td>Composition.section:Coverage</td>
-            <td></td>
-            <td>Composition.section:Coverage.entry.ofType(CZ_Coverage)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage</a></td>
+            <td>
+            A.2.4 - Informace o doplňkové úhradě
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[Coverage]
+            </td>
+            <td>
+            Composition.section:Coverage.entry.ofType(CZ_Coverage)
+            </td>
           </tr>
           <tr>
-            <td>Body.coverage.method</td>
-            <td>A.2.4.1 - Coverage method</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Coverage (cz-coverage)</td>
-            <td>CZ_Coverage.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.method</a></td>
+            <td>
+            A.2.4.1 - Coverage method
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.coverage.informationPayor</td>
-            <td>A.2.4.2 - Information about payor</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Coverage (cz-coverage)</td>
-            <td>CZ_Coverage.payor</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor</a></td>
+            <td>
+            A.2.4.2 - Informace o plátci
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td>
+            payor
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.coverage.comment</td>
-            <td>A.2.4.3 - Coverage comment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Coverage (cz-coverage)</td>
-            <td>CZ_Coverage.comment</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.comment</a></td>
+            <td>
+            A.2.4.3 - Coverage comment
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td>
+            comment
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.Appointment</td>
-            <td>A.2.5 - Information about appointment</td>
-            <td>související</td>
-            <td>Composition (cz-appointment)</td>
-            <td>Composition.section:Appointment</td>
-            <td></td>
-            <td>Composition.section:Appointment.entry.ofType(CZ_Appointment)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.Appointment</a></td>
+            <td>
+            A.2.5 - Informace o objednání
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[Appointment]
+            </td>
+            <td>
+            Composition.section:Appointment.entry.ofType(CZ_Appointment)
+            </td>
           </tr>
           <tr>
             <td>Appointment.identifier</td>
-            <td>A.2.5.1 - Identifier of appointment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.identifier</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.1 - Identifikátor objednání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.status</td>
-            <td>A.2.5.2 - Status of appointment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.status</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.2 - Stav objednání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            status
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.description</td>
-            <td>A.2.5.3 - Description of appointment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.description</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.3 - Popis objednání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            description
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.dateTime</td>
-            <td>A.2.5.4 - Date Time</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.created</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.4 - Datum a čas
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            created
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.examDuration</td>
-            <td>A.2.5.5 - Duration of appointment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.minutesDuration</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.5 - Délka objednání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            minutesDuration
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.comment</td>
-            <td>A.2.5.6 - Comment about appointment</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.comment</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.6 - Poznámka k objednání
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            comment
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.patientInstruction</td>
-            <td>A.2.5.7 - Instructions for the patient</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.patientInstruction</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.7 - Pokyny pro pacienta
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            patientInstruction
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Appointment.address</td>
-            <td>A.2.5.7 - Address of the workplace</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Appointment (cz-appointment)</td>
-            <td>CZ_Appointment.Location.address</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.2.5.7 - Adresa of the workplace
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td>
+            Location.address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SpecimenInformation</td>
-            <td>A.2.6 - Speciment information</td>
-            <td>související</td>
-            <td>Composition (cz-specimen)</td>
-            <td>Composition.section:OrderInformation.specimen.ofType(CZ_Specimen)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SpecimenInformation</a></td>
+            <td>
+            A.2.6 - Informace o vzorku
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].specimen.ofType(CZ_Specimen)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.identifier</td>
-            <td>A.2.6.1 - Identifier of specimen</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.identifier</a></td>
+            <td>
+            A.2.6.1 - Identifikátor vzorku
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.species</td>
-            <td>A.2.6.2 - Species of animal patient</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.subject.species</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.species</a></td>
+            <td>
+            A.2.6.2 - Druh zvířecího pacienta
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            subject.species
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.material</td>
-            <td>A.2.6.3 - Type of material</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.material</a></td>
+            <td>
+            A.2.6.3 - Typ materiálu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collectionDate</td>
-            <td>A.2.6.4 - Date and time of collection</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.collectionDate</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collectionDate</a></td>
+            <td>
+            A.2.6.4 - Datum a čas odběru
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.collectionDate
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.transportDate</td>
-            <td>A.2.6.5 - Date and time of transport</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.receivedTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.transportDate</a></td>
+            <td>
+            A.2.6.5 - Datum a čas transportu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.receivedTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.type</td>
-            <td>A.2.6.6 - Sample type</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.type</a></td>
+            <td>
+            A.2.6.6 - Typ vzorku
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.anatomicLocation</td>
-            <td>A.2.6.7 - Anatomic location</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.bodySite</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.anatomicLocation</a></td>
+            <td>
+            A.2.6.7 - Anatomická lokalizace
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.bodySite
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.morphology</td>
-            <td>A.2.6.8 - Morphology</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.extension:bodySite:bodyStructure.morphology</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.morphology</a></td>
+            <td>
+            A.2.6.8 - Morphology
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.extension:bodySite:bodyStructure.morphology
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.instrument</td>
-            <td>A.2.6.9 - Instrument</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.subject</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.instrument</a></td>
+            <td>
+            A.2.6.9 - Instrument
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            subject
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.procedure</td>
-            <td>A.2.6.10 - Collection procedure</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.method</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.procedure</a></td>
+            <td>
+            A.2.6.10 - Postup odběru
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.method
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.sourceDevice</td>
-            <td>A.2.6.11 - Source Device</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.subject.type</td>
-            <td></td>
-            <td>Device or Location</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.sourceDevice</a></td>
+            <td>
+            A.2.6.11 - Zdrojové zařízení
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            subject.type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            Device or Location
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.samplingPoint</td>
-            <td>A.2.6.12 - Sampling point</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.subject.type</td>
-            <td></td>
-            <td>Location</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.samplingPoint</a></td>
+            <td>
+            A.2.6.12 - Místo odběru
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            subject.type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            Location
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.Note</td>
-            <td>A.2.6.13 - Note</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.note</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.Note</a></td>
+            <td>
+            A.2.6.13 - Note
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            note
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.container</td>
-            <td>A.2.6.14 - Container</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.container</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.container</a></td>
+            <td>
+            A.2.6.14 - Container
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            container
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.container.type</td>
-            <td>A.2.6.14.1 - Type</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.container.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.container.type</a></td>
+            <td>
+            A.2.6.14.1 - Type
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            container.type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.container.count</td>
-            <td>A.2.6.14.2 - Specimen quantity</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.container.specimenQuantity</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.container.count</a></td>
+            <td>
+            A.2.6.14.2 - Množství vzorku
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            container.specimenQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.container.deviceId</td>
-            <td>A.2.6.14.3 - Device id</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.container.extension:Device:identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.container.deviceId</a></td>
+            <td>
+            A.2.6.14.3 - Device id
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            container.extension:Device:identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.container.label</td>
-            <td>A.2.6.14.4 - Label</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector.description</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.container.label</a></td>
+            <td>
+            A.2.6.14.4 - Label
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector.description
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData</td>
-            <td>A.2.6.15 - Additional formalised sample data</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData</a></td>
+            <td>
+            A.2.6.15 - Další strukturovaná data vzorku
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData.date</td>
-            <td>A.2.6.15.1 - Date</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.collectedDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.date</a></td>
+            <td>
+            A.2.6.15.1 - Date
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.collectedDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData.value</td>
-            <td>A.2.6.15.3 - Data value</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.collectedPeriod</td>
-            <td></td>
-            <td>If #SpecimenInformation.additionalData.code = 08017 or 09056 (NCLPPOL - Čas odběru v minutách nebo sekundách)</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.value</a></td>
+            <td>
+            A.2.6.15.3 - Data value
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.collectedPeriod
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            If #SpecimenInformation.additionalData.code = 08017 or 09056 (NCLPPOL - Čas odběru v minutách nebo sekundách)
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData.value</td>
-            <td>A.2.6.15.3 - Data value</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collection.quantity</td>
-            <td></td>
-            <td>If #SpecimenInformation.additionalData.code = 03142 (NCLPPOL - Objem)</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.value</a></td>
+            <td>
+            A.2.6.15.3 - Data value
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection.quantity
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            If #SpecimenInformation.additionalData.code = 03142 (NCLPPOL - Objem)
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData.value</td>
-            <td>A.2.6.15.3 - Data value</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.condition</td>
-            <td></td>
-            <td>If #SpecimenInformation.additionalData.code = 20293 (NCLPPOL - Stav materiálu)</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.value</a></td>
+            <td>
+            A.2.6.15.3 - Data value
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            condition
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            If #SpecimenInformation.additionalData.code = 20293 (NCLPPOL - Stav materiálu)
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.additionalData.value</td>
-            <td>A.2.6.15.3 - Data value</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.note</td>
-            <td></td>
-            <td>If #SpecimenInformation.additionalData.code = 20206 (NCLPPOL - Poznámky-specifikace-jiné)</td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.value</a></td>
+            <td>
+            A.2.6.15.3 - Data value
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            note
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            If #SpecimenInformation.additionalData.code = 20206 (NCLPPOL - Poznámky-specifikace-jiné)
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collector</td>
-            <td>A.2.6.16 - Collector</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector</a></td>
+            <td>
+            A.2.6.16 - Collector
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collector.identifier</td>
-            <td>A.2.6.16.1 - Identifier of the sample collector</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector.identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector.identifier</a></td>
+            <td>
+            A.2.6.16.1 - Identifier of the sample collector
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collector.name</td>
-            <td>A.2.6.16.2 - Name of the sample collector</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector.name</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector.name</a></td>
+            <td>
+            A.2.6.16.2 - Name of the sample collector
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector.name
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collector.contact</td>
-            <td>A.2.6.16.3 - Contact information of the sample collector</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector.address</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector.contact</a></td>
+            <td>
+            A.2.6.16.3 - Contact information of the sample collector
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector.address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SpecimenInformation.collector</td>
-            <td>A.2.6.16.4 - Organization of the sample collector</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Specimen (cz-specimen)</td>
-            <td>CZ_Specimen.collector.organization</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector</a></td>
+            <td>
+            A.2.6.16.4 - Organization of the sample collector
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collector.organization
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.biometricData</td>
-            <td>A.3.1.1 - Biometric data</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.biometricData</a></td>
+            <td>
+            A.3.1.1 - Biometrické údaje
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.biometricData</td>
-            <td>A.3.1.1 - Biometric data</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.biometricData</a></td>
+            <td>
+            A.3.1.1 - Biometrické údaje
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.weight</td>
-            <td>A.3.1.1.2 - Weight</td>
-            <td>související</td>
-            <td>Composition (cz-bodyweight)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyWeight)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.weight</a></td>
+            <td>
+            A.3.1.1.2 - Hmotnost
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation (cz-bodyweight)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_BodyHmotnost)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.weight</td>
-            <td>A.3.1.1.2 - Weight</td>
-            <td>související</td>
-            <td>Composition (cz-bodyweight)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_BodyWeight)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.weight</a></td>
+            <td>
+            A.3.1.1.2 - Hmotnost
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation (cz-bodyweight)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_BodyHmotnost)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.weight.valueQuantity</td>
-            <td>A.3.1.1.2.1 - Value Quantity</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyWeight (cz-bodyweight)</td>
-            <td>CZ_BodyWeight.valueQuantity</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.weight.valueQuantity</a></td>
+            <td>
+            A.3.1.1.2.1 - Value Quantity
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation (cz-bodyweight)</a></td>
+            <td>
+            valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.weight.code</td>
-            <td>A.3.1.1.2.2 - Code</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyWeight (cz-bodyweight)</td>
-            <td>CZ_BodyWeight.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.weight.code</a></td>
+            <td>
+            A.3.1.1.2.2 - Code
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation (cz-bodyweight)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.weight.dateTime</td>
-            <td>A.3.1.1.2.3 - DateTime</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyWeight (cz-bodyweight)</td>
-            <td>CZ_BodyWeight.effectiveDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.weight.dateTime</a></td>
+            <td>
+            A.3.1.1.2.3 - DateTime
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyweight.html">Observation (cz-bodyweight)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.height</td>
-            <td>A.3.1.1.2 - Height</td>
-            <td>související</td>
-            <td>Composition (cz-bodyheight)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyHeight)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.height</a></td>
+            <td>
+            A.3.1.1.2 - Výška
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation (cz-bodyheight)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_BodyVýška)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.height</td>
-            <td>A.3.1.1.2 - Height</td>
-            <td>související</td>
-            <td>Composition (cz-bodyheight)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_BodyHeight)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.height</a></td>
+            <td>
+            A.3.1.1.2 - Výška
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation (cz-bodyheight)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_BodyVýška)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.height.valueQuantity</td>
-            <td>A.3.1.1.2.1 - Value Quantity</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyHeight (cz-bodyheight)</td>
-            <td>CZ_BodyHeight.valueQuantity</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.height.valueQuantity</a></td>
+            <td>
+            A.3.1.1.2.1 - Value Quantity
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation (cz-bodyheight)</a></td>
+            <td>
+            valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.height.code</td>
-            <td>A.3.1.1.2.2 - Code</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyHeight (cz-bodyheight)</td>
-            <td>CZ_BodyHeight.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.height.code</a></td>
+            <td>
+            A.3.1.1.2.2 - Code
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation (cz-bodyheight)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.height.dateTime</td>
-            <td>A.3.1.1.2.3 - DateTime</td>
-            <td>ekvivalentní</td>
-            <td>CZ_BodyHeight (cz-bodyheight)</td>
-            <td>CZ_BodyHeight.effectiveDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.height.dateTime</a></td>
+            <td>
+            A.3.1.1.2.3 - DateTime
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-bodyheight.html">Observation (cz-bodyheight)</a></td>
+            <td>
+            effectiveDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.otherRelevantClinicalInformation</td>
-            <td>A.3.1.2 - Other Relevant Clinical Information</td>
-            <td>související</td>
-            <td>Composition (cz-conditionImage)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(Condition)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.otherRelevantClinicalInformation</a></td>
+            <td>
+            A.3.1.2 - Další relevantní klinické informace
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(Condition)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.otherRelevantClinicalInformation</td>
-            <td>A.3.1.2 - Other Relevant Clinical Information</td>
-            <td>související</td>
-            <td>Composition (cz-conditionImage)</td>
-            <td>Composition.section:SupportingInformation.ofType(Condition)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.otherRelevantClinicalInformation</a></td>
+            <td>
+            A.3.1.2 - Další relevantní klinické informace
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(Condition)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.otherRelevantClinicalInformation.code</td>
-            <td>A.3.1.2.1 - Code</td>
-            <td>ekvivalentní</td>
-            <td>Condition (cz-conditionImage)</td>
-            <td>Condition.code.coding</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherRelevantClinicalInformation.code</a></td>
+            <td>
+            A.3.1.2.1 - Code
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+            code.coding
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.otherRelevantClinicalInformation.text</td>
-            <td>A.3.1.2.2 - Text</td>
-            <td>ekvivalentní</td>
-            <td>Condition (cz-conditionImage)</td>
-            <td>Condition.code.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherRelevantClinicalInformation.text</a></td>
+            <td>
+            A.3.1.2.2 - Text
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td>
+            code.text
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</td>
-            <td>A.3.1.3.1 - Medication</td>
-            <td>související</td>
-            <td>Composition (cz-MedicationStatement)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatementCore)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
+            <td>
+            A.3.1.3.1 - Medication
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_MedicationStatementCore)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</td>
-            <td>A.3.1.3.1 - Medication</td>
-            <td>související</td>
-            <td>Composition (cz-MedicationStatement)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_MedicationStatementCore)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
+            <td>
+            A.3.1.3.1 - Medication
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Medication.identifier</td>
-            <td>A.3.1.3.1.1 - Identifier of medication</td>
-            <td>ekvivalentní</td>
-            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatementCore.identifier</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.3.1.1 - Identifier of medication
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Medication.code</td>
-            <td>A.3.1.3.1.2 - Code of Medication</td>
-            <td>ekvivalentní</td>
-            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatementCore.code</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.3.1.2 - Code of Medication
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>Medication.amount</td>
-            <td>A.3.1.3.1.3 - Amount of Medication</td>
-            <td>ekvivalentní</td>
-            <td>CZ_MedicationStatementCore (cz-MedicationStatement)</td>
-            <td>CZ_MedicationStatementCore.amount</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.3.1.3 - Amount of Medication
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td>
+            amount
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.implant</td>
-            <td>A.3.1.4 - Implant</td>
-            <td>související</td>
-            <td>Composition (cz-deviceUseStatement)</td>
-            <td>Composition.section:MedicalDevices</td>
-            <td></td>
-            <td>Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.implant</a></td>
+            <td>
+            A.3.1.4 - Implant
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[MedicalDevices]
+            </td>
+            <td>
+            Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.implant.type</td>
-            <td>A.3.1.4.1 - Type</td>
-            <td>ekvivalentní</td>
-            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
-            <td>CZ_DeviceUseStatement.device.type</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.implant.type</a></td>
+            <td>
+            A.3.1.4.1 - Type
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td>
+            device.type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.implant.identifier</td>
-            <td>A.3.1.4.2 - Identifier</td>
-            <td>ekvivalentní</td>
-            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
-            <td>CZ_DeviceUseStatement.device.identifier</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.implant.identifier</a></td>
+            <td>
+            A.3.1.4.2 - Identifier
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td>
+            device.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.implant.model</td>
-            <td>A.3.1.4.3 - Model</td>
-            <td>ekvivalentní</td>
-            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
-            <td>CZ_DeviceUseStatement.device.modelNumber</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.implant.model</a></td>
+            <td>
+            A.3.1.4.3 - Model
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td>
+            device.modelNumber
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.implant.bodyPart</td>
-            <td>A.3.1.4.4 - Body Part</td>
-            <td>ekvivalentní</td>
-            <td>CZ_DeviceUseStatement (cz-deviceUseStatement)</td>
-            <td>CZ_DeviceUseStatement.bodySite</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.implant.bodyPart</a></td>
+            <td>
+            A.3.1.4.4 - Body Part
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td>
+            bodySite
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.allergyIntolerance</td>
-            <td>A.3.1.5.1 - Allergy intolerance</td>
-            <td>související</td>
-            <td>Composition (cz-allergyIntolerance)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_AllergyIntolerance)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.allergyIntolerance</a></td>
+            <td>
+            A.3.1.5.1 - Alergie a intolerance
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_AllergyIntolerance)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.allergyIntolerance</td>
-            <td>A.3.1.5.1 - Allergy intolerance</td>
-            <td>související</td>
-            <td>Composition (cz-allergyIntolerance)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_AllergyIntolerance)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.allergyIntolerance</a></td>
+            <td>
+            A.3.1.5.1 - Alergie a intolerance
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_AllergyIntolerance)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.identifier</td>
-            <td>A.3.1.5.1.1 - Identifier of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.identifier</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.1 - Identifier of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.clinicalStatus</td>
-            <td>A.3.1.5.1.2 - Clinical status of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.clinicalStatus</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.2 - Clinical status of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            clinicalStatus
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.type</td>
-            <td>A.3.1.5.1.3 - Type of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.type</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.3 - Type of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            type
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.category</td>
-            <td>A.3.1.5.1.4 - Category of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.category</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.4 - Category of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            category
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.code</td>
-            <td>A.3.1.5.1.5 - Code of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.code</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.5 - Code of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
             <td>AllergyIntolerance.note</td>
-            <td>A.3.1.5.1.6 - Note of allergyIntolerance</td>
-            <td>ekvivalentní</td>
-            <td>CZ_AllergyIntolerance (cz-allergyIntolerance)</td>
-            <td>CZ_AllergyIntolerance.note</td>
-            <td></td>
-            <td></td>
+            <td>
+            A.3.1.5.1.6 - Note of allergyIntolerance
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html">AllergyIntolerance (cz-allergyIntolerance)</a></td>
+            <td>
+            note
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.warnings</td>
-            <td>A.3.1.5.2 - Warning</td>
-            <td>související</td>
-            <td>Composition (cz-flag)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_Flag)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.warnings</a></td>
+            <td>
+            A.3.1.5.2 - Warning
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-flag.html">Flag (cz-flag)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_Flag)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.warnings</td>
-            <td>A.3.1.5.2 - Warning</td>
-            <td>související</td>
-            <td>Composition (cz-flag)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_Flag)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.warnings</a></td>
+            <td>
+            A.3.1.5.2 - Warning
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-flag.html">Flag (cz-flag)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Flag)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.warnings.text</td>
-            <td>A.3.1.5.2.1 - Text of warning</td>
-            <td>ekvivalentní</td>
-            <td>Flag (cz-flag)</td>
-            <td>Flag.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.warnings.text</a></td>
+            <td>
+            A.3.1.5.2.1 - Text of warning
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-flag.html">Flag (cz-flag)</a></td>
+            <td>
+            text
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.limitationOfPatientMobility</td>
-            <td>A.3.1.6 - Limitation of patient mobility</td>
-            <td>související</td>
-            <td>Composition (cz-patientMobility)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.limitationOfPatientMobility</a></td>
+            <td>
+            A.3.1.6 - Limitation of patient mobility
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_PatientMobility)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.limitationOfPatientMobility</td>
-            <td>A.3.1.6 - Limitation of patient mobility</td>
-            <td>související</td>
-            <td>Composition (cz-patientMobility)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_PatientMobility)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.limitationOfPatientMobility</a></td>
+            <td>
+            A.3.1.6 - Limitation of patient mobility
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_PatientMobility)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.imitationOfPatientMobility.dateTime</td>
-            <td>A.3.1.6.1 - Date and time of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_PatientMobility (cz-patientMobility)</td>
-            <td>CZ_PatientMobility.valueDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.dateTime</a></td>
+            <td>
+            A.3.1.6.1 - Date and time of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
+            <td>
+            valueDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.imitationOfPatientMobility.code</td>
-            <td>A.3.1.6.1 - Code of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_PatientMobility (cz-patientMobility)</td>
-            <td>CZ_PatientMobility.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.code</a></td>
+            <td>
+            A.3.1.6.1 - Code of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.imitationOfPatientMobility.value</td>
-            <td>A.3.1.6.2 - Value of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_PatientMobility (cz-patientMobility)</td>
-            <td>CZ_PatientMobility.valueCodeableConcept</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.value</a></td>
+            <td>
+            A.3.1.6.2 - Value of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
+            <td>
+            valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.otherInformation</td>
-            <td>A.3.1.7 - Other information</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.otherInformation</a></td>
+            <td>
+            A.3.1.7 - Other information
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.SupportingInformation.otherInformation</td>
-            <td>A.3.1.7 - Other information</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.otherInformation</a></td>
+            <td>
+            A.3.1.7 - Other information
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.otherInformation.dateTime</td>
-            <td>A.3.1.7.1 - Date and time of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ObservationImage (cz-observationImage)</td>
-            <td>CZ_ObservationImage.valueDateTime</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherInformation.dateTime</a></td>
+            <td>
+            A.3.1.7.1 - Date and time of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+            valueDateTime
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.otherInformation.code</td>
-            <td>A.3.1.7.2 - Code of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ObservationImage (cz-observationImage)</td>
-            <td>CZ_ObservationImage.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherInformation.code</a></td>
+            <td>
+            A.3.1.7.2 - Code of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>SupportingInformation.otherInformation.value</td>
-            <td>A.3.1.7.3 - Value of information</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ObservationImage (cz-observationImage)</td>
-            <td>CZ_ObservationImage.valueQuantity</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherInformation.value</a></td>
+            <td>
+            A.3.1.7.3 - Value of information
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+            valueQuantity
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.OrderDataElements</td>
-            <td>A.3.2.1 - Order/examination data elements.</td>
-            <td>související</td>
-            <td>Composition (cz-imagingOrderInformation)</td>
-            <td>Composition.section:OrderInformation</td>
-            <td></td>
-            <td>Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OrderDataElements</a></td>
+            <td>
+            A.3.2.1 - Datové prvky objednávky / vyšetření.
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            </td>
+            <td>
+            Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.code</td>
-            <td>A.3.2.1.1 - Examination code</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.code</a></td>
+            <td>
+            A.3.2.1.1 - Examination code
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.name</td>
-            <td>A.3.2.1.2 Name of the examination</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.text</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.name</a></td>
+            <td>
+            A.3.2.1.2 Name of the examination
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            text
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.modality</td>
-            <td>A.3.2.1.3 - Modality</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.orderDetail.modality</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.modality</a></td>
+            <td>
+            A.3.2.1.3 - Modality
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            orderDetail.modality
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.bodyPart</td>
-            <td>A.3.2.1.4 - Body Part</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.extension:bodySite.location</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.bodyPart</a></td>
+            <td>
+            A.3.2.1.4 - Body Part
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            extension:bodySite.location
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.laterality</td>
-            <td>A.3.2.1.5 - Laterality</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.extension:bodySite.extension:laterality</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.laterality</a></td>
+            <td>
+            A.3.2.1.5 - Laterality
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            extension:bodySite.extension:laterality
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OrderDataElements.note</td>
-            <td>A.3.2.1.6 - Examination note</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
-            <td>CZ_ImagingOrderInformation.note</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.note</a></td>
+            <td>
+            A.3.2.1.6 - Examination note
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+            note
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.PlannedCareOrdersCz</td>
-            <td>A.3.3 - Order/examination data elements.</td>
-            <td>související</td>
-            <td>Composition (cz-carePlanImage)</td>
-            <td>Composition.section:CarePlan</td>
-            <td></td>
-            <td>Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)</td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.PlannedCareOrdersCz</a></td>
+            <td>
+            A.3.3 - Datové prvky objednávky / vyšetření.
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html">CarePlan (cz-carePlanImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[CarePlan]
+            </td>
+            <td>
+            Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)
+            </td>
           </tr>
           <tr>
-            <td>PlannedCareOrdersCz.identifier</td>
-            <td>A.3.3.1 - Identifier</td>
-            <td>ekvivalentní</td>
-            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
-            <td>CZ_CarePlanImage.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPlannedCareOrdersCz.html">PlannedCareOrdersCz.identifier</a></td>
+            <td>
+            A.3.3.1 - Identifier
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html">CarePlan (cz-carePlanImage)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[carePlan].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PlannedCareOrdersCz.name</td>
-            <td>A.3.3.2 Title of the observation</td>
-            <td>ekvivalentní</td>
-            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
-            <td>CZ_CarePlanImage.title</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPlannedCareOrdersCz.html">PlannedCareOrdersCz.name</a></td>
+            <td>
+            A.3.3.2 Title of the observation
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html">CarePlan (cz-carePlanImage)</a></td>
+            <td>
+            title
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[carePlan].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.OtherSupportingInformationCz</td>
-            <td>A.3.4 - Order/examination data elements.</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)&quot;</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OtherSupportingInformationCz</a></td>
+            <td>
+            A.3.4 - Datové prvky objednávky / vyšetření.
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>Body.OtherSupportingInformationCz</td>
-            <td>A.3.4 - Order/examination data elements.</td>
-            <td>související</td>
-            <td>Composition (cz-observationImage)</td>
-            <td>Composition.section:SupportingInformation.ofType(CZ_ObservationImage)&quot;</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OtherSupportingInformationCz</a></td>
+            <td>
+            A.3.4 - Datové prvky objednávky / vyšetření.
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OtherSupportingInformationCz.identifier</td>
-            <td>A.3.4.1 - Identifier</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ObservationImage (cz-observationImage)</td>
-            <td>CZ_ObservationImage.code</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOtherSupportingInformationCz.html">OtherSupportingInformationCz.identifier</a></td>
+            <td>
+            A.3.4.1 - Identifier
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+            code
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>OtherSupportingInformationCz.name</td>
-            <td>A.3.4.2 Title of the observation</td>
-            <td>ekvivalentní</td>
-            <td>CZ_ObservationImage (cz-observationImage)</td>
-            <td>CZ_ObservationImage.title</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logOtherSupportingInformationCz.html">OtherSupportingInformationCz.name</a></td>
+            <td>
+            A.3.4.2 Title of the observation
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td>
+            title
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
         </tbody>
 

@@ -16,12 +16,14 @@ Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClin
 Alias: $mkn10 = https://uzis.cz/terminology/CodeSystem/mkn-10
 Alias: $mime = urn:ietf:bcp:13
 Alias: $vzp-odbornost = https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
 Alias: $mkn10vs = https://uzis.cz/terminology/ValueSet/mkn-10
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
-Alias: $czlaterality = https://hl7.cz/fhir/core/ValueSet/laterality-cz-lab
 Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type

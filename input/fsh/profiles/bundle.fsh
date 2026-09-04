@@ -89,7 +89,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
     specimen 0..* and
     practitioner 0..* and
     practitionerRole 0..* and
-    coverage 0..* and
+    coverage 1..* and
     medication 0..* and
     condition 0..* and
     allergyIntolerance 0..* and
@@ -104,15 +104,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 * entry[orderInformation].resource only CZ_ImagingOrderInformation
-* entry[appointment].resource only CZ_Appointment
+* entry[appointment].resource only CZ_AppointmentCore
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
-* entry[practitionerRole].resource only CZ_PractitionerRoleCore
+* entry[practitionerRole].resource only PractitionerRole
 * entry[coverage].resource only CZ_Coverage
 * entry[medication].resource only CZ_MedicationStatementCore
-* entry[condition].resource only CZ_ConditionImage
+* entry[condition].resource only CZ_ConditionCore
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
-* entry[carePlan].resource only CZ_CarePlanImage
+* entry[carePlan].resource only CZ_CarePlanCore
 * entry[observation].resource only CZ_MedicalTestResultCore
 * entry[deviceUse].resource only CZ_DeviceUseStatement
 * entry[device].resource only Device

@@ -1,7 +1,7 @@
 Instance: ExampleBodyWeight
 InstanceOf: CZ_BodyWeight
 Usage: #example
-Title: "Body weight of patient"
+Title: "Body weight: Patient Mracena"
 Description: "Example of body weight of Patient Mracena"
 * subject = Reference(Mracena)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"

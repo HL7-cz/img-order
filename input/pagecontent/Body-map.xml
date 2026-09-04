@@ -195,7 +195,7 @@
             <td>CZ_ImagingOrderInformation (cz-imagingOrderInformation)</td>
             <td>CZ_ImagingOrderInformation.reasonCode</td>
             <td></td>
-            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)</td>
+            <td>#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)</td>
           </tr>
           <tr>
             <td>OrderInformation.orderReason.problem</td>
@@ -1158,14 +1158,14 @@
             <td>Composition (cz-carePlanImage)</td>
             <td>Composition.section:CarePlan</td>
             <td></td>
-            <td>Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)</td>
+            <td>Composition.section:CarePlan.entry.ofType(CZ_CarePlanCore)</td>
           </tr>
           <tr>
             <td>PlannedCareOrdersCz.identifier</td>
             <td>A.3.3.1 - Identifier</td>
             <td>equivalent</td>
-            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
-            <td>CZ_CarePlanImage.code</td>
+            <td>CZ_CarePlanCore (cz-carePlanImage)</td>
+            <td>CZ_CarePlanCore.code</td>
             <td></td>
             <td></td>
           </tr>
@@ -1173,8 +1173,8 @@
             <td>PlannedCareOrdersCz.name</td>
             <td>A.3.3.2 Title of the observation</td>
             <td>equivalent</td>
-            <td>CZ_CarePlanImage (cz-carePlanImage)</td>
-            <td>CZ_CarePlanImage.title</td>
+            <td>CZ_CarePlanCore (cz-carePlanImage)</td>
+            <td>CZ_CarePlanCore.title</td>
             <td></td>
             <td></td>
           </tr>

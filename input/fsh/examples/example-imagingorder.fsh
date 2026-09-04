@@ -1,13 +1,14 @@
 Instance: cz-imagingorder-example
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
+Title: "Imaging order: Magnetic Resonance"
 Description: "Imaging order for Magnetic Resonance"
 
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:f69fed08-cee4-48c2-9475-d2cedb17f88f"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování"
+* category = $sctCZ#363679005 //	"zobrazování"
 * performer = Reference(MRDevice)
 * subject = Reference(Mracena)
 * bodySite = $sctCZ#72696002

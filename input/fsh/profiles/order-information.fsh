@@ -21,14 +21,15 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleOrder or CZ_PatientCore)  // omezení pouze na profil obsahující smluvní odbornost pracoviště VZP (pro případy úhrady z pojištění) nebo zdravotník nebo pacient pro případy jiné formy úhrady
+* requester only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
+
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 //* performer.type from $sct-device-type  // performer type
 * bodySite 0..1
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open

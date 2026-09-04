@@ -56,7 +56,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionImage)"
+* group[=].element[=].target.comment = "#CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)"
 * group[=].element[+].code = #OrderInformation.orderReason.problem
 * group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.coding
@@ -137,45 +137,45 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:Appointment
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:Appointment.entry.ofType(CZ_Appointment)"
+* group[=].element[=].target.comment = "Composition.section:Appointment.entry.ofType(CZ_AppointmentCore)"
 * group[=].element[+].code = #Appointment.identifier
 * group[=].element[=].display = "A.2.5.1 - Identifier of appointment"
-* group[=].element[=].target.code = #CZ_Appointment.identifier
+* group[=].element[=].target.code = #CZ_AppointmentCore.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.status
 * group[=].element[=].display = "A.2.5.2 - Status of appointment"
-* group[=].element[=].target.code = #CZ_Appointment.status
+* group[=].element[=].target.code = #CZ_AppointmentCore.status
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.description
 * group[=].element[=].display = "A.2.5.3 - Description of appointment"
-* group[=].element[=].target.code = #CZ_Appointment.description
+* group[=].element[=].target.code = #CZ_AppointmentCore.description
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.dateTime
 * group[=].element[=].display = "A.2.5.4 - Date Time"
-* group[=].element[=].target.code = #CZ_Appointment.created
+* group[=].element[=].target.code = #CZ_AppointmentCore.created
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.examDuration
 * group[=].element[=].display = "A.2.5.5 - Duration of appointment"
-* group[=].element[=].target.code = #CZ_Appointment.minutesDuration
+* group[=].element[=].target.code = #CZ_AppointmentCore.minutesDuration
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.comment
 * group[=].element[=].display = "A.2.5.6 - Comment about appointment"
-* group[=].element[=].target.code = #CZ_Appointment.comment
+* group[=].element[=].target.code = #CZ_AppointmentCore.comment
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.patientInstruction
 * group[=].element[=].display = "A.2.5.7 - Instructions for the patient"
-* group[=].element[=].target.code = #CZ_Appointment.patientInstruction
+* group[=].element[=].target.code = #CZ_AppointmentCore.patientInstruction
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.address
 * group[=].element[=].display = "A.2.5.7 - Address of the workplace"
-* group[=].element[=].target.code = #CZ_Appointment.Location.address
+* group[=].element[=].target.code = #CZ_AppointmentCore.Location.address
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/SpecimenInformationCz"
@@ -630,15 +630,15 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:CarePlan
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)"
+* group[=].element[=].target.comment = "Composition.section:CarePlan.entry.ofType(CZ_CarePlanCore)"
 * group[=].element[+].code = #PlannedCareOrdersCz.identifier
 * group[=].element[=].display = "A.3.3.1 - Identifier"
-* group[=].element[=].target.code = #CZ_CarePlanImage.code
+* group[=].element[=].target.code = #CZ_CarePlanCore.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PlannedCareOrdersCz.name
 * group[=].element[=].display = "A.3.3.2 Title of the observation"
-* group[=].element[=].target.code = #CZ_CarePlanImage.title
+* group[=].element[=].target.code = #CZ_CarePlanCore.title
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/OtherSupportingInformationCz"

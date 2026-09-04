@@ -106,6 +106,11 @@ Usage: #inline
 * section[orderInformation].entry[+] = Reference(urn:uuid:158808ba-fcca-480e-8188-dec77920ec3c)
 * section[orderInformation].entry[+] = Reference(urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9)
 * section[orderInformation].entry[+] = Reference(urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed)
+* section[coverage].title = "Coverage"
+* section[coverage].code = $loinc#87520-3 //"Insurance information"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Ing. Králík, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.status = #generated  
+* section[coverage].entry[0] = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
@@ -125,6 +130,7 @@ Usage: #inline
 
 Instance: cz-practitioner1-example
 InstanceOf: CZ_PractitionerCore
+Title: "Practitioner: doc. MUDr. Jiří Example, PhD."
 Description: "Example of practitioner"
 Usage: #example
 * id = "16793b99-aecc-482d-8283-0e4885e0ca25"
@@ -139,6 +145,7 @@ Usage: #example
 
 Instance: cz-practitioner2-example
 InstanceOf: CZ_PractitionerCore
+Title: "Practitioner: Bc. Miroslav Example, MBA"
 Description: "Example of practitioner"
 Usage: #example
 * id = "984dcf34-1924-45a8-8ec5-3d100b67d9be"
@@ -153,7 +160,7 @@ Usage: #example
 
 Instance: cz-example-practitionerRole
 InstanceOf: CZ_PractitionerRoleOrder
-Title: "Practitioner Role Radiology"
+Title: "PractitionerRole: Radiology 2"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "f0ac1e16-61f5-4591-a7eb-1dc586e25349"
@@ -164,7 +171,7 @@ Usage: #example
 
 Instance: cz-patient-kralik
 InstanceOf: CZ_PatientCore
-Title: "Patient Kralik"
+Title: "Patient: Kralik"
 Description: "Patient Kralik for RTG order example"
 Usage: #example
 * id = "dd800c46-f71a-4628-b457-6ccaa27dd6bc"
@@ -276,7 +283,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -289,7 +296,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example2
@@ -302,7 +309,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -315,7 +322,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example3
@@ -328,7 +335,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -341,7 +348,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example4
@@ -354,7 +361,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -367,7 +374,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example5
@@ -380,7 +387,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -393,7 +400,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example6
@@ -406,7 +413,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -419,7 +426,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example7
@@ -432,7 +439,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 "zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category = $sctCZ#363679005 //"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -445,14 +452,14 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * supportingInfo[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
 * supportingInfo[+] = Reference(urn:uuid:d70a725d-baa9-4553-a670-2609b0c0219f)
 * reasonReference = Reference(urn:uuid:8ca719d9-da84-4bc0-a7da-860eac1347ce)
-* requester = Reference(urn:uuid:984dcf34-1924-45a8-8ec5-3d100b67d9be)
+* requester = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikinsurance-example
 InstanceOf: CZ_Coverage
 Description: "Example of coverage"
 Usage: #example
-Title: "Coverage - Healthcare insurance company"
+Title: "Coverage: Healthcare insurance company 2"
 * id = "92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * status = #active
 * beneficiary = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
@@ -462,20 +469,20 @@ Instance: cz-pojistovna-example
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation"
-Title: "Organization - Healthcare insurance company"
+Title: "Organization: Healthcare insurance company"
 * id = "35e78cc9-6fe2-42a8-8553-83a3f86ce308"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
 
 Instance: KralikCondition
-InstanceOf: CZ_ConditionImage
+InstanceOf: CZ_ConditionCore
 Usage: #example
-Description: "Condition"
-Title: "Reason in code form"
+Description: "Example of condition"
+Title: "Condition: Reason in code form"
 * id = "8ca719d9-da84-4bc0-a7da-860eac1347ce"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* code.coding = $mkn10#S018 "Otevřená rána jiných částí hlavy"
+* code.coding[0] = $mkn10#S018 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad"
 
 Instance: cz-pdfkralikrgt-example
@@ -491,7 +498,7 @@ Description: "Attachment for Plain X-ray"
 Instance: cz-deviceusestatement-example
 InstanceOf: CZ_DeviceUseStatement
 Usage: #example
-Title: "Example DeviceUseStatement for Implant"
+Title: "DeviceUseStatement: Implant"
 Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."
 * id = "b29cacfd-b05b-44cf-be5a-8b6d76bdc375"
 
@@ -524,7 +531,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 Instance: cz-medicalDevice-example
 InstanceOf: CZ_MedicalDevice
 Usage: #example
-Title: "Example Device - Implantable Pacemaker"
+Title: "Device: Implantable Pacemaker"
 Description: "A sample Device resource for an implantable pacemaker, referenced in a DeviceUseStatement."
 * id = "711e1d43-d5e4-4cbc-b546-74059db270f6"
 

@@ -130,6 +130,13 @@ WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere 
 # Missing ISO3166 Czech designations of the country codes on tx servers
 %There are no valid display names found for the code urn:iso:std:iso:3166%
 
+# Author/requester může být buď obecná (Core) nebo objednávající (Order) PractitionerRole role dle typu výkonu.
+# Validátor hlásí ambiguitu, protože Order je striktní specializace Core - jde o očekávané chování, ne chybu.
+%Found multiple matching profiles for urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349 among choices: https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core|1.0.0, https://hl7.cz/fhir/core/StructureDefinition/practitionerrole-cz-order|1.0.0%
+%Found multiple matching profiles for urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757 among choices: https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core|1.0.0, https://hl7.cz/fhir/core/StructureDefinition/practitionerrole-cz-order|1.0.0%
+%Found multiple matching profiles for urn:uuid:7e90806f-2109-4321-cba9-87654321fed1 among choices: https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core|1.0.0, https://hl7.cz/fhir/core/StructureDefinition/practitionerrole-cz-order|1.0.0%
+%Found multiple matching profiles for urn:uuid:8fd3a4cf-173a-43f0-a1f9-5b538d088c03 among choices: https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core|1.0.0, https://hl7.cz/fhir/core/StructureDefinition/practitionerrole-cz-order|1.0.0%
+
 # Suppress pinning information
 %Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core to 2.0.0 from choices of 2.0.0 (hl7.fhir.eu.base#2.0.0), 2.0.0-ballot (hl7.fhir.eu.base#2.0.0-ballot)%
 %Pinned the version of http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure to 0.1.0 from choices of 0.0.1-snapshot-2 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2), 0.1.0 (hl7.fhir.uv.xver-r5.r4#0.1.0)%
