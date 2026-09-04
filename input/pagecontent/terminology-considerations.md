@@ -74,7 +74,7 @@ The element `A.1.8.3 Document status` expresses the status of the document at th
 | Item code      | Item description        | Value                                                                   |
 | ---------------| ----------------------- | ----------------------------------------------------------------------- |
 | A.1.8.2        | Document category       | [document-category](https://ncez.mzcr.cz/terminology/ValueSet/document-category)             |
-| ----        | Order type, `Composition.type`       | [referralorder-types](https://ncez.mzcr.cz/terminology/ValueSet/referralorder-typesy) — for type Z the SNOMED CT code `721964003`             |
+| —        | Order type, `Composition.type`       | [referralorder-types](https://ncez.mzcr.cz/terminology/ValueSet/referralorder-typesy) — for type Z the SNOMED CT code `721964003`             |
 
 The element `Composition.type` carries the order type from the national Referral Order Types value set. No `A.x` element is defined for it in the logical model, which is why the table gives it no number.
 
