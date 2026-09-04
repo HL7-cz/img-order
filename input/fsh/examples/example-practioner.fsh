@@ -28,6 +28,8 @@ Title: "Organization: Example radiology clinic"
 Description: "Example of an organization"
 Usage: #example
 * name = "Radiologická klinika, s.r.o."
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "100000003"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789666"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"

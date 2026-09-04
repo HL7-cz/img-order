@@ -308,6 +308,8 @@ Description: "Referring organisation (GP’s surgery) – the referral is not ad
 Title: "Organization: Requesting workplace (general practitioner)"
 * id = "9ab2a281-4321-4543-edcb-a9876543210f"
 * name = "Ordinace praktického lékaře MUDr. Karla Dlouhého"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "100000002"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "77889900"
 
