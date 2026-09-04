@@ -74,11 +74,11 @@ Kostra logického modelu je pro všechny typy eŽádanek jednotná a číslují 
 
 #### Subjekty
 
-Pacient, zdravotnický pracovník a poskytovatel zdravotních služeb jsou definováni v [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/en/index.html) a tato příručka je pouze používá. Profil pacienta lokalizuje základní pojmy včetně identifikátorů a terminologie pro použití v českém kontextu, profil zdravotnického pracovníka umožňuje osobě přidělit roli, a profil poskytovatele vymezuje způsob reprezentace organizace.
+Pacient, zdravotnický pracovník a poskytovatel zdravotních služeb jsou definováni v [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/index-cs.html) a tato příručka je pouze používá. Profil pacienta lokalizuje základní pojmy včetně identifikátorů a terminologie pro použití v českém kontextu, profil zdravotnického pracovníka umožňuje osobě přidělit roli, a profil poskytovatele vymezuje způsob reprezentace organizace.
 
 #### Objekty
 
-Zdravotnický přístroj a zdravotnický prostředek jsou rovněž definovány v [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/en/index.html). Totéž platí pro komponenty společné více dokumentům, například pro biometrické údaje, které jsou napříč dokumenty definovány shodně.
+Zdravotnický přístroj a zdravotnický prostředek jsou rovněž definovány v [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/index-cs.html). Totéž platí pro komponenty společné více dokumentům, například pro biometrické údaje, které jsou napříč dokumenty definovány shodně.
 
 ### Struktura obrazové žádanky
 

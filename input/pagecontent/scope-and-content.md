@@ -74,11 +74,11 @@ The skeleton of the logical model is uniform for all types of eReferral and the 
 
 #### Subject
 
-The patient, the practitioner and the healthcare provider are defined in [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/en/index.html) and this guide only uses them. The patient profile localises the basic concepts, including identifiers and terminology, for use in the Czech context, the practitioner profile allows a role to be assigned to a person, and the provider profile defines how an organisation is represented.
+The patient, the practitioner and the healthcare provider are defined in [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/index.html) and this guide only uses them. The patient profile localises the basic concepts, including identifiers and terminology, for use in the Czech context, the practitioner profile allows a role to be assigned to a person, and the provider profile defines how an organisation is represented.
 
 #### Objects
 
-The imaging device and the medical device are likewise defined in [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/en/index.html). The same applies to components common to several documents, for example biometric data, which are defined identically across documents.
+The imaging device and the medical device are likewise defined in [HL7 Czech Base and Core Implementation Guide](https://hl7.cz/fhir/core/index.html). The same applies to components common to several documents, for example biometric data, which are defined identically across documents.
 
 ### Imaging Order structure
 

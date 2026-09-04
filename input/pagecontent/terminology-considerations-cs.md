@@ -42,7 +42,7 @@ Samostatně jsou obory hodnot dostupné jako [mkn-10](https://uzis.cz/terminolog
 | A.3.1.6 | Omezení pohyblivosti pacienta | [cz-mobility-value](ValueSet-cz-mobility-value.html) — osm kódů pro chůzi, vstávání, stání a pohyb na lůžku. Typ hodnoceného úkonu nese [cz-mobility-type](ValueSet-cz-mobility-type.html) |
 | A.3.2.1.1 | Kód požadovaného vyšetření | [cz-imaging-procedure-vs](ValueSet-cz-imaging-procedure-vs.html) — potomci konceptu `363679005` Imaging (procedure) |
 | A.3.2.1.4 | Požadované vyšetření – část těla | SNOMED CT, Body structure v rozsahu definovaném standardem DICOM |
-| A.3.2.1.5 | Lateralita | [laterality-cz-lab](https://hl7.cz/fhir/core/ValueSet/laterality-cz-lab) z CZ core |
+| A.3.2.1.5 | Lateralita | [laterality-cz-lab](https://ncez.mzcr.cz/terminology/ValueSet/cz-specimen-laterality) |
 
 Preferovaným způsobem vyjádření požadovaného vyšetření je SNOMED CT, preference je vyjádřena silou vazby v profilu. U laterality je třeba počítat s tím, že SNOMED CT a FHIR nepracují s konceptem oboustrannosti stejně jako číselník DASTA — má-li být vyšetřena obě strany, vytvoří se zvlášť hodnoty pro levou a pravou.
 

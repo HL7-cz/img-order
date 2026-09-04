@@ -24,7 +24,6 @@ Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
 Alias: $mkn10vs = https://uzis.cz/terminology/ValueSet/mkn-10
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
-Alias: $czlaterality = https://hl7.cz/fhir/core/ValueSet/laterality-cz-lab
 Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
