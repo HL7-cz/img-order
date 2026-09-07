@@ -1302,7 +1302,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
             </td>
             <td>
 
@@ -1340,7 +1340,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_BodyHmotnost)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_BodyHmotnost)
             </td>
             <td>
 
@@ -1435,7 +1435,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_BodyVýška)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_BodyVýška)
             </td>
             <td>
 
@@ -1530,7 +1530,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(Condition)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(Condition)
             </td>
             <td>
 
@@ -1606,7 +1606,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_MedicationStatementCore)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
             </td>
             <td>
 
@@ -1796,7 +1796,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_AllergyIntolerance)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_AllergyIntolerance)
             </td>
             <td>
 
@@ -1948,7 +1948,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_Flag)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Flag)
             </td>
             <td>
 
@@ -2005,7 +2005,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_PatientMobility)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_PatientMobility)
             </td>
             <td>
 
@@ -2100,7 +2100,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
             </td>
             <td>
 
@@ -2385,7 +2385,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
             </td>
             <td>
 
