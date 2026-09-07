@@ -510,6 +510,120 @@
 
             </td>
           </tr>
+                    <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.name</a></td>
+            <td>
+            A.2.4.2.1 - Jméno plátce
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.name
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.organizationId</a></td>
+            <td>
+            A.2.4.2.2 - ID organizace
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.organization</a></td>
+            <td>
+            A.2.4.2.3 - Organizace plátce
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.address</a></td>
+            <td>
+            A.2.4.2.4 - Adresa
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.country</a></td>
+            <td>
+            A.2.4.2.5 - Země
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address.country
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Body.coverage.informationPayor.telecom</a></td>
+            <td>
+            A.2.4.2.6 - Telekom
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.telecom
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
           <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.comment</a></td>
             <td>

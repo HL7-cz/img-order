@@ -893,6 +893,120 @@
             </td>
           </tr>
           <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.name</a></td>
+            <td>
+            A.1.4.2.1 - Payor name
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.name
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organizationId</a></td>
+            <td>
+            A.1.4.2.2 - Organization id
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organization</a></td>
+            <td>
+            A.1.4.2.3 - Organization
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.address</a></td>
+            <td>
+            A.1.4.2.4 - Address
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.country</a></td>
+            <td>
+            A.1.4.2.5 - Country
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address.country
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.telecom</a></td>
+            <td>
+            A.1.4.2.6 - Telecom
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.telecom
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
             <td>
             A.1.5 - Author (who requested the order). Multiple authors could be provided.

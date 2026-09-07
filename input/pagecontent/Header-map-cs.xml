@@ -838,7 +838,7 @@
           <tr>
             <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage</a></td>
             <td>
-            A.1.4 - Information about coverage
+            A.1.4 - Úhrada
             </td>
             <td>
             související
@@ -857,7 +857,7 @@
           <tr>
             <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.method</a></td>
             <td>
-            A.1.4.1 - Coverage method
+            A.1.4.1 - Způsob úhrady
             </td>
             <td>
             ekvivalentní
@@ -876,7 +876,7 @@
           <tr>
             <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor</a></td>
             <td>
-            A.1.4.2 - Information about Payor
+            A.1.4.2 - Informace o plátci
             </td>
             <td>
             ekvivalentní
@@ -887,6 +887,120 @@
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.name</a></td>
+            <td>
+            A.1.4.2.1 - Jméno plátce
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.name
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organizationId</a></td>
+            <td>
+            A.1.4.2.2 - ID organizace
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization.identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organization</a></td>
+            <td>
+            A.1.4.2.3 - Organizace plátce
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
+            <td>
+            organization
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.address</a></td>
+            <td>
+            A.1.4.2.4 - Adresa
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.country</a></td>
+            <td>
+            A.1.4.2.5 - Země
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.address.country
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.telecom</a></td>
+            <td>
+            A.1.4.2.6 - Telekom
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td>
+            patient.telecom
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
             </td>
             <td>
 
