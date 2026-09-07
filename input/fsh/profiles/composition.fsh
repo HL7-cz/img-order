@@ -89,7 +89,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * section ^definition = "The root of the sections that make up the Imaging Order composition."
 
 * section contains
-    orderInformation 1..* and
+    orderInformation 1..1 and
     clinicalQuestion 1..* and
     coverage 1..* and
     appointment 0..1 and
