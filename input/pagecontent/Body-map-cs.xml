@@ -323,7 +323,7 @@
           <tr>
             <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail.reasonText</a></td>
             <td>
-            A.2.2.6 - Důvod objednávky textem
+            A.2.2.5 - Důvod objednávky textem
             </td>
             <td>
             ekvivalentní
@@ -684,7 +684,7 @@
           <tr>
             <td>Appointment.address</td>
             <td>
-            A.2.5.7 - Adresa of the workplace
+            A.2.5.8 - Adresa of the workplace
             </td>
             <td>
             ekvivalentní
@@ -1097,6 +1097,25 @@
             </td>
             <td>
 
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.additionalData.code</a></td>
+            <td>
+            A.2.6.15.2 - Code
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html">Specimen (cz-specimen)</a></td>
+            <td>
+            collection
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            </td>
+            <td>
+            Hodnota určuje, jaký typ dat je uložen v A.2.16.5.3 (SpecimenInformation.additionalData.value)
             </td>
           </tr>
           <tr>
@@ -2325,7 +2344,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html">CarePlan (cz-carePlanImage)</a></td>
             <td>
-            code
+            identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[carePlan].entry
@@ -2401,7 +2420,7 @@
             </td>
             <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
             <td>
-            code
+            identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[supportingInformation].entry

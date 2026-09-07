@@ -68,7 +68,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.reasonText
-* group[=].element[=].display = "A.2.2.6 - Reason for order by text"
+* group[=].element[=].display = "A.2.2.5 - Reason for order by text"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
@@ -174,7 +174,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Appointment.address
-* group[=].element[=].display = "A.2.5.7 - Address of the workplace"
+* group[=].element[=].display = "A.2.5.8 - Address of the workplace"
 * group[=].element[=].target.code = #CZ_AppointmentCore.Location.address
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
@@ -334,7 +334,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.SupportingInformation.biometricData
 * group[=].element[=].display = "A.3.1.1 - Biometric data"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.biometricData
@@ -346,7 +346,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bodyweight"
 * group[=].element[+].code = #Body.SupportingInformation.weight
 * group[=].element[=].display = "A.3.1.1.2 - Weight"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyWeight)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_BodyWeight)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.weight
@@ -373,7 +373,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bodyheight"
 * group[=].element[+].code = #Body.SupportingInformation.height
 * group[=].element[=].display = "A.3.1.1.2 - Height"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_BodyHeight)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_BodyHeight)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.height
@@ -400,7 +400,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.SupportingInformation.otherRelevantClinicalInformation
 * group[=].element[=].display = "A.3.1.2 - Other Relevant Clinical Information"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(Condition)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(Condition)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.otherRelevantClinicalInformation
@@ -422,7 +422,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
 * group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
 * group[=].element[=].display = "A.3.1.3.1 - Medication"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_MedicationStatementCore)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
@@ -477,7 +477,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.SupportingInformation.allergyIntolerance
 * group[=].element[=].display = "A.3.1.5.1 - Allergy intolerance"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_AllergyIntolerance)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_AllergyIntolerance)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.allergyIntolerance
@@ -519,7 +519,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-flag"
 * group[=].element[+].code = #Body.SupportingInformation.warnings
 * group[=].element[=].display = "A.3.1.5.2 - Warning"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_Flag)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Flag)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.warnings
@@ -536,7 +536,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-patientMobility"
 * group[=].element[+].code = #Body.SupportingInformation.limitationOfPatientMobility
 * group[=].element[=].display = "A.3.1.6 - Limitation of patient mobility"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_PatientMobility)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_PatientMobility)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.limitationOfPatientMobility
@@ -562,7 +562,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.SupportingInformation.otherInformation
 * group[=].element[=].display = "A.3.1.7 - Other information"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.otherInformation
@@ -633,7 +633,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "Composition.section:CarePlan.entry.ofType(CZ_CarePlanCore)"
 * group[=].element[+].code = #PlannedCareOrdersCz.identifier
 * group[=].element[=].display = "A.3.3.1 - Identifier"
-* group[=].element[=].target.code = #CZ_CarePlanCore.code
+* group[=].element[=].target.code = #CZ_CarePlanCore.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PlannedCareOrdersCz.name
@@ -645,7 +645,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-observationImage"
 * group[=].element[+].code = #Body.OtherSupportingInformationCz
 * group[=].element[=].display = "A.3.4 - Order/examination data elements."
-* group[=].element[=].target.code = #Composition.section:OrderInformation.supportingInfo.ofType(CZ_ObservationImage)"
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)"
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.OtherSupportingInformationCz
@@ -655,7 +655,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #OtherSupportingInformationCz.identifier
 * group[=].element[=].display = "A.3.4.1 - Identifier"
-* group[=].element[=].target.code = #CZ_ObservationImage.code
+* group[=].element[=].target.code = #CZ_ObservationImage.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OtherSupportingInformationCz.name
