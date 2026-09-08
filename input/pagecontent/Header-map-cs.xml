@@ -1313,7 +1313,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.identifier</a></td>
             <td>
-            A.1.8.1 - Document ID
+            A.1.8.1 - Dokument ID
             </td>
             <td>
             ekvivalentní
@@ -1326,13 +1326,13 @@
             Composition (CZ_CompositionImageOrder)
             </td>
             <td>
-            If it is the identifier of a particular order instance
+            unikátní identifikátor dokumentu (ne samotné žádanky)
             </td>
           </tr>
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
-            A.1.8.4 - Order date and time
+            A.1.8.4 - Datum a čas objednávky
             </td>
             <td>
             ekvivalentní
@@ -1345,7 +1345,7 @@
             Composition (CZ_CompositionImageOrder)
             </td>
             <td>
-            If it is when this particular version of  this order has been assembled into a Bundle.
+            Kdy byla žádanka v této verzi vložena do bundle.
             </td>
           </tr>
           <tr>
@@ -1408,7 +1408,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.category</a></td>
             <td>
-            A.1.8.2 - Document category
+            A.1.8.2 - Kategorie dokumentu
             </td>
             <td>
             ekvivalentní
@@ -1427,7 +1427,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.status</a></td>
             <td>
-            A.1.8.3 - Document status
+            A.1.8.3 - Stav dokumentu
             </td>
             <td>
             ekvivalentní
@@ -1446,7 +1446,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
-            A.1.8.4 - Order date and time
+            A.1.8.4 - Datum a čas vytvoření dokumentu
             </td>
             <td>
             ekvivalentní
@@ -1459,13 +1459,13 @@
             Composition (CZ_CompositionImageOrder).date
             </td>
             <td>
-            If it is when this document has been created (indipendently by its version)
+            Kdy byl dokument vytvořen (nezávisle na verzi)
             </td>
           </tr>
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.title</a></td>
             <td>
-            A.1.8.5 - Document title
+            A.1.8.5 - Název dokumentu
             </td>
             <td>
             ekvivalentní
@@ -1484,7 +1484,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.custodian</a></td>
             <td>
-            A.1.8.6 - Order custodian
+            A.1.8.6 - Správce dokumentu
             </td>
             <td>
             ekvivalentní
@@ -1503,7 +1503,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.confidentiality</a></td>
             <td>
-            A.1.8.7 - Confidentiality
+            A.1.8.7 - Důvěrnost
             </td>
             <td>
             ekvivalentní
@@ -1522,7 +1522,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.language</a></td>
             <td>
-            A.1.8.8 - Language
+            A.1.8.8 - Jazyk
             </td>
             <td>
             související
@@ -1541,7 +1541,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.version</a></td>
             <td>
-            A.1.8.9 - Version
+            A.1.8.9 - Verze
             </td>
             <td>
             ekvivalentní
@@ -1554,13 +1554,13 @@
             Composition (CZ_CompositionImageOrder).extension[versionNumber].valueString
             </td>
             <td>
-            As business version, not as resource version
+            Verze dokumentu (bussiness version)
             </td>
           </tr>
           <tr>
             <td>Header.digitalSignatureCz.digitalSignature</td>
             <td>
-            A.1.9.1 - Electronic signature or document seal
+            A.1.9.1 - Digitální podpis
             </td>
             <td>
             ekvivalentní
@@ -1579,7 +1579,7 @@
           <tr>
             <td>Header.digitalSignatureCz.timestamp</td>
             <td>
-            A.1.9.2 - Electronic time stamp
+            A.1.9.2 - Digitální časové razítko
             </td>
             <td>
             ekvivalentní
