@@ -127,13 +127,13 @@
             Composition (CZ_CompositionImageOrder).section[OrderInformation]
             </td>
             <td>
-            #Composition.OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].entry.ofType(CZ_ImagingOrderInformation)
             </td>
           </tr>
           <tr>
             <td><a href="StructureDefinition-logImageOrderInformationCz.html">OrderInformation.orderDetail</a></td>
             <td>
-            A.2.1 - Order and A.2.2 order reason
+            A.2.1 - Order
             </td>
             <td>
             equivalent
@@ -279,7 +279,7 @@
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-            #CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)
+            CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)
             </td>
           </tr>
           <tr>
@@ -893,7 +893,7 @@
           <tr>
             <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collectionDate</a></td>
             <td>
-            A.2.6.4 - Date and time of collection or end of collection and time of collection
+            A.2.6.4 - Date and time of collection
             </td>
             <td>
             equivalent
@@ -912,7 +912,7 @@
           <tr>
             <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.transportDate</a></td>
             <td>
-            A.2.6.5 - Date and time of commencement of transport of the sample to the laboratory
+            A.2.6.5 - Date and time of transport to the laboratory
             </td>
             <td>
             equivalent
@@ -1229,7 +1229,7 @@
             Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
             </td>
             <td>
-            The value determines the type of data stored in A.2.16.5.3 (SpecimenInformation.additionalData.value).
+            The value determines the type of data stored in A.2.16.5.3 (SpecimenInformation.additionalData.value)
             </td>
           </tr>
           <tr>
@@ -1385,7 +1385,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector</a></td>
+            <td><a href="StructureDefinition-logSpecimenInformationCz.html">SpecimenInformation.collector.organization</a></td>
             <td>
             A.2.6.16.4 - Organization of the sample collector
             </td>
@@ -1672,7 +1672,7 @@
           <tr>
             <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherRelevantClinicalInformation.code</a></td>
             <td>
-            A.3.1.2.1 - Code of other information
+            A.3.1.2.1 - Code
             </td>
             <td>
             equivalent
@@ -1691,7 +1691,7 @@
           <tr>
             <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.otherRelevantClinicalInformation.text</a></td>
             <td>
-            A.3.1.2.2 - Text of other information
+            A.3.1.2.2 - Text
             </td>
             <td>
             equivalent
@@ -2316,9 +2316,28 @@
             </td>
           </tr>
           <tr>
+          <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OrderDataElements.requestedExamination</a></td>
+            <td>
+            A.3.2.1 - Requested examination
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            </td>
+            <td>
+            Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.code</a></td>
             <td>
-            A.3.2.1 - Examination code
+            A.3.2.1.1 - Examination code
             </td>
             <td>
             equivalent
@@ -2337,7 +2356,7 @@
           <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.name</a></td>
             <td>
-            A.3.2.2 - Name of the examination
+            A.3.2.1.2 - Name of the examination
             </td>
             <td>
             equivalent
@@ -2356,7 +2375,7 @@
           <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.modality</a></td>
             <td>
-            A.3.2.3 - Modality
+            A.3.2.1.3 - Modality
             </td>
             <td>
             equivalent
@@ -2375,7 +2394,7 @@
           <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.bodyPart</a></td>
             <td>
-            A.3.2.4 - Body Part
+            A.3.2.1.4 - Body Part
             </td>
             <td>
             equivalent
@@ -2394,7 +2413,7 @@
           <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.laterality</a></td>
             <td>
-            A.3.2.5 - Laterality
+            A.3.2.1.5 - Laterality
             </td>
             <td>
             equivalent
@@ -2413,7 +2432,7 @@
           <tr>
             <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.note</a></td>
             <td>
-            A.3.2.6 - Note
+            A.3.2.1.6 - Note
             </td>
             <td>
             equivalent

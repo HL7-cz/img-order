@@ -382,7 +382,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).
+            A.1.2.3 - Preferred physician
             </td>
             <td>
             equivalent
@@ -553,7 +553,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).
+            A.1.2.3 - Preferred physician
             </td>
             <td>
             equivalent
@@ -572,7 +572,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
             <td>
-            A.1.2.3.1 - Identifier of the HP
+            A.1.2.3.1 - Identifier
             </td>
             <td>
             equivalent
@@ -591,7 +591,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
             <td>
-            A.1.2.3.2 - Name of the HP
+            A.1.2.3.2 - Name
             </td>
             <td>
             equivalent
@@ -629,7 +629,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).
+            A.1.2.3 - Preferred physician
             </td>
             <td>
             equivalent
@@ -648,7 +648,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
             <td>
-            A.1.2.3.1 - Identifier of the HP
+            A.1.2.3.1 - Identifier
             </td>
             <td>
             equivalent
@@ -667,7 +667,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
             <td>
-            A.1.2.3.2 - Name of the HP
+            A.1.2.3.2 - Name
             </td>
             <td>
             equivalent
@@ -686,7 +686,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Specialization</a></td>
             <td>
-            A.1.2.3.3 - Role of the HP
+            A.1.2.3.3 - Specialization
             </td>
             <td>
             equivalent
@@ -705,7 +705,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.providerIdentifierName</a></td>
             <td>
-            A.1.2.3.4 - HP Organisation
+            A.1.2.3.4 - Organisation
             </td>
             <td>
             equivalent
@@ -762,7 +762,7 @@
           <tr>
             <td><a href="StructureDefinition-logPayerCz.html">Header.payer</a></td>
             <td>
-            A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.
+            A.1.3 - Health insurance and payment information
             </td>
             <td>
             related-to
@@ -838,7 +838,7 @@
           <tr>
             <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage</a></td>
             <td>
-            A.1.4 - Information about coverage - the default value will be the patient's insurance company
+            A.1.4 - Information about coverage
             </td>
             <td>
             related-to
@@ -1009,7 +1009,7 @@
           <tr>
             <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
             <td>
-            A.1.5 - Author (who requested the order). Multiple authors could be provided.
+            A.1.5 - Author
             </td>
             <td>
             equivalent
@@ -1079,7 +1079,7 @@
             Composition (CZ_CompositionImageOrder).author
             </td>
             <td>
-            ID Organization
+            
             </td>
           </tr>
           <tr>
@@ -1123,7 +1123,7 @@
           <tr>
             <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer</a></td>
             <td>
-            A.1.6 - Requested Performer (processing person)
+            A.1.6 - Requested Performer
             </td>
             <td>
             equivalent
@@ -1218,7 +1218,7 @@
           <tr>
             <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient</a></td>
             <td>
-            A.1.7 - Additional Recipient (additional recipients of the finding)
+            A.1.7 - Additional Recipient
             </td>
             <td>
             equivalent
@@ -1256,7 +1256,7 @@
           <tr>
             <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.name</a></td>
             <td>
-            A.1.7.2 - Additional Recipient name
+            A.1.7.2 - Jméno dodatečného příjemce
             </td>
             <td>
             equivalent
@@ -1275,7 +1275,7 @@
           <tr>
             <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organizationID</a></td>
             <td>
-            A.1.7.3 - Additional Recipient organisation ID
+            A.1.7.3 - Identifikátor organizace dodatečného příjemce
             </td>
             <td>
             equivalent
@@ -1294,7 +1294,7 @@
           <tr>
             <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organization</a></td>
             <td>
-            A.1.7.4 - Additional Recipient organisation
+            A.1.7.4 - Organizace dodatečného příjemce
             </td>
             <td>
             equivalent
@@ -1313,7 +1313,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.identifier</a></td>
             <td>
-            A.1.8.1 - Document ID
+            A.1.8.1 - ID Dokumentu
             </td>
             <td>
             equivalent
@@ -1326,13 +1326,13 @@
             Composition (CZ_CompositionImageOrder)
             </td>
             <td>
-            If it is the identifier of a particular order instance
+            Pokud se jedná o identifikátor konkrétní instance objednávky
             </td>
           </tr>
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
-            A.1.8.4 - Order date and time
+            A.1.8.4 - Datum a čas objednávky
             </td>
             <td>
             equivalent
@@ -1345,13 +1345,13 @@
             Composition (CZ_CompositionImageOrder)
             </td>
             <td>
-            If it is when this particular version of  this order has been assembled into a Bundle.
+            Pokud se jedná o případ, kdy byla právě tato verze této objednávky zařazena do balíčku (Bundle).
             </td>
           </tr>
           <tr>
-            <td>Header.subject</td>
+            <td><a href="StructureDefinition-logSubjectCz.html">Header.subject</a></td>
             <td>
-            A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject
+            A.1.1 - Identifikace pacienta A.1.2 - související kontaktní informace o pacientovi
             </td>
             <td>
             equivalent
@@ -1370,7 +1370,7 @@
           <tr>
             <td><a href="StructureDefinition-logAuthorCz.html">Header.author.dateTime</a></td>
             <td>
-            A.1.5.5 - Date and time
+            A.1.5.5 - Datum a čas
             </td>
             <td>
             equivalent
@@ -1389,7 +1389,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata</a></td>
             <td>
-            A.1.8 - Document metadata
+            A.1.8 - Dokument metadata
             </td>
             <td>
             related-to
@@ -1408,7 +1408,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.category</a></td>
             <td>
-            A.1.8.2 - Document category
+            A.1.8.2 - Kategorie dokumentu
             </td>
             <td>
             equivalent
@@ -1427,7 +1427,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.status</a></td>
             <td>
-            A.1.8.3 - Document status
+            A.1.8.3 - Stav dokumentu
             </td>
             <td>
             equivalent
@@ -1446,7 +1446,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
-            A.1.8.4 - Order date and time
+            A.1.8.4 - Datum a čas objednávky
             </td>
             <td>
             equivalent
@@ -1459,13 +1459,13 @@
             Composition (CZ_CompositionImageOrder).date
             </td>
             <td>
-            If it is when this document has been created (indipendently by its version)
+            Pokud se jedná o datum vytvoření tohoto dokumentu (bez ohledu na jeho verzi)
             </td>
           </tr>
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.title</a></td>
             <td>
-            A.1.8.5 - Document title
+            A.1.8.5 - Název dokumentu
             </td>
             <td>
             equivalent
@@ -1484,7 +1484,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.custodian</a></td>
             <td>
-            A.1.8.6 - Order custodian
+            A.1.8.6 - Správce objednávky
             </td>
             <td>
             equivalent
@@ -1503,7 +1503,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.confidentiality</a></td>
             <td>
-            A.1.8.7 - Confidentiality
+            A.1.8.7 - Důvěrnost
             </td>
             <td>
             equivalent
@@ -1522,7 +1522,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.language</a></td>
             <td>
-            A.1.8.8 - Language
+            A.1.8.8 - Jazyk
             </td>
             <td>
             related-to
@@ -1541,7 +1541,7 @@
           <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.version</a></td>
             <td>
-            A.1.8.9 - Version
+            A.1.8.9 - Verze
             </td>
             <td>
             equivalent
@@ -1554,13 +1554,13 @@
             Composition (CZ_CompositionImageOrder).extension[versionNumber].valueString
             </td>
             <td>
-            As business version, not as resource version
+            Jako provozní (bussiness) verze, nikoli jako zdrojová (resource) verze
             </td>
           </tr>
           <tr>
             <td>Header.digitalSignatureCz.digitalSignature</td>
             <td>
-            A.1.9.1 - Electronic signature or document seal
+            A.1.9.1 - Elektronický podpis nebo razítko dokumentu
             </td>
             <td>
             equivalent
@@ -1579,7 +1579,7 @@
           <tr>
             <td>Header.digitalSignatureCz.timestamp</td>
             <td>
-            A.1.9.2 - Electronic time stamp
+            A.1.9.2 - Elektronické časové razítko
             </td>
             <td>
             equivalent

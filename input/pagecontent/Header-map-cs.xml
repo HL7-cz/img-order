@@ -382,7 +382,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 Prefered physician
+            A.1.2.3 Preferovaný lékař
             </td>
             <td>
             ekvivalentní
@@ -401,7 +401,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent</a></td>
             <td>
-            A.1.2.4 Legal representatives and other contact persons
+            A.1.2.4 Kontaktní osoba
             </td>
             <td>
             ekvivalentní
@@ -553,7 +553,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 Prefered physician
+            A.1.2.3 Preferovaný lékař
             </td>
             <td>
             ekvivalentní
@@ -629,7 +629,7 @@
           <tr>
             <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
-            A.1.2.3 Prefered physician
+            A.1.2.3 Preferovaný lékař
             </td>
             <td>
             ekvivalentní
@@ -1009,7 +1009,7 @@
           <tr>
             <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
             <td>
-            A.1.5 - Author (by whom the Imaging Order was/were authored)
+            A.1.5 - Autor (objednatel)
             </td>
             <td>
             ekvivalentní
@@ -1142,7 +1142,7 @@
           <tr>
             <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.identifier</a></td>
             <td>
-            A.1.6.1 - Požadovaný zpracovatel identifier
+            A.1.6.1 - Identifikátor požadovaného zpracovatele
             </td>
             <td>
             ekvivalentní
@@ -1161,7 +1161,7 @@
           <tr>
             <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.name</a></td>
             <td>
-            A.1.6.2 - Požadovaný zpracovatel name
+            A.1.6.2 - Jméno požadovaného zpracovatele
             </td>
             <td>
             ekvivalentní
@@ -1180,7 +1180,7 @@
           <tr>
             <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organizationID</a></td>
             <td>
-            A.1.6.3 - Požadovaný zpracovatel organisation ID
+            A.1.6.3 - Identifikátor organizace požadovaného zpracovatele
             </td>
             <td>
             ekvivalentní
@@ -1199,7 +1199,7 @@
           <tr>
             <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organization</a></td>
             <td>
-            A.1.6.4 - Požadovaný zpracovatel organisation
+            A.1.6.4 - Organizace požadovaného zpracovatele
             </td>
             <td>
             ekvivalentní
@@ -1237,7 +1237,7 @@
           <tr>
             <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.identifier</a></td>
             <td>
-            A.1.7.1 - Dodatečný příjemce identifier
+            A.1.7.1 - Identifikátor dodatečného příjemce
             </td>
             <td>
             ekvivalentní
