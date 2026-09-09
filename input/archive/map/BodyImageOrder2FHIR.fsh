@@ -516,10 +516,10 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-flag"
+* group[=].target = "https://hl7.cz/fhir//cz-core/StructureDefinition/flag-patient-cz-core.html"
 * group[=].element[+].code = #Body.SupportingInformation.warnings
 * group[=].element[=].display = "A.3.1.5.2 - Warning"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Flag)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_FlagPatientCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.warnings

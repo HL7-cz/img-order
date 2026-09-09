@@ -2057,12 +2057,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-flag.html">Flag: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-flag-patient-cz-core.html">Flag (flag-patient-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Flag)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_FlagPatientCore)
             </td>
             <td>
 
@@ -2076,12 +2076,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-flag.html">Flag: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-flag-patient-cz-core.html">Flag (flag-patient-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Flag)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_FlagPatientCore)
             </td>
             <td>
 
@@ -2095,7 +2095,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-flag.html">Flag: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-flag-patient-cz-core.html">Flag (flag-patient-cz-core)</a></td>
             <td>
             text
             </td>

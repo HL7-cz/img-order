@@ -165,17 +165,29 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore)
+  * entry only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_ObservationImage or CZ_FlagPatientCore or CZ_Specimen)
   * entry ^slicing.discriminator[0].type = #profile
   * entry ^slicing.discriminator[0].path = "resolve()"
   * entry ^slicing.rules = #open
   * entry contains
       bodyHeight 0..1 and
       bodyWeight 0..1 and
-      mobility 0..1
+      mobility 0..1 and
+      condition 0..* and
+      allergyIntolerance 0..* and
+      medicationStatement 0..* and
+      observation 0..* and
+      flag 0..* and
+      specimen 0..*
   * entry[bodyHeight] only Reference(CZ_BodyHeight)
   * entry[bodyWeight] only Reference(CZ_BodyWeight)
   * entry[mobility] only Reference(CZ_PatientMobility)
+  * entry[condition] only Reference(CZ_ConditionCore)
+  * entry[allergyIntolerance] only Reference(CZ_AllergyIntolerance)
+  * entry[medicationStatement] only Reference(CZ_MedicationStatementCore)
+  * entry[observation] only Reference(CZ_ObservationImage)
+  * entry[flag] only Reference(CZ_FlagPatientCore)
+  * entry[specimen] only Reference(CZ_Specimen)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------
