@@ -176,7 +176,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
       condition 0..* and
       allergyIntolerance 0..* and
       medicationStatement 0..* and
-      observation 0..* and
       flag 0..* and
       specimen 0..*
   * entry[bodyHeight] only Reference(CZ_BodyHeight)
@@ -185,7 +184,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * entry[condition] only Reference(CZ_ConditionCore)
   * entry[allergyIntolerance] only Reference(CZ_AllergyIntolerance)
   * entry[medicationStatement] only Reference(CZ_MedicationStatementCore)
-  * entry[observation] only Reference(CZ_ObservationImage)
   * entry[flag] only Reference(CZ_FlagPatientCore)
   * entry[specimen] only Reference(CZ_Specimen)
 
