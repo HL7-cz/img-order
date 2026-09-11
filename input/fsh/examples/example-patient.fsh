@@ -1,6 +1,7 @@
 Instance: Mracena
 InstanceOf: CZ_PatientCore
 Usage: #example
+Title: "Patient: Mračena Mrakomorová"
 Description: "Patient, contact information and practitioner"
 
 * identifier[RC][+].system = "https://ncez.mzcr.cz/fhir/sid/rcis"

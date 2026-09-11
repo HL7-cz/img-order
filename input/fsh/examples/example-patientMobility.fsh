@@ -1,7 +1,7 @@
 Instance: ExamplePatientMobility
 InstanceOf: CZ_PatientMobility
 Usage: #example
-Title: "Patient mobility example"
+Title: "Patient mobility: example"
 Description: "Example of the mobility of Patient Mracena."
 
 * subject = Reference(Mracena)

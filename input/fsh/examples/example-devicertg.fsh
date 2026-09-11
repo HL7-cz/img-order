@@ -1,6 +1,7 @@
 Instance: RGDevice
 InstanceOf: CZ_DeviceObserver
 Usage: #example
+Title: "Device: Radiography"
 Description: "Radiographic imaging device"
 
 * id = "e33c93c6-3dd0-4595-9f15-63b9302861d1"

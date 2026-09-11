@@ -76,15 +76,9 @@
       <strong>Kontext mapování</strong>
 
       <ul>
-        <li>
-          <strong>Zdrojové logické modely:</strong>
-          <a href="StructureDefinition-logPresentedFormCz.html">logPresentedFormCz</a>,
-          <a href="StructureDefinition-logAttachmentsCz.html">logAttachmentsCz</a>
-        </li>
-        <li>
-          <strong>Hlavní cílový profil:</strong>
-          <a href="StructureDefinition-cz-compositionImageOrder.html">CZ_CompositionImageOrder</a>
-        </li>
+        <li><strong>Zdrojové logické modely:</strong> <a href="StructureDefinition-logPresentedFormCz.html">logPresentedFormCz</a>, <a href="StructureDefinition-logAttachmentsCz.html">logAttachmentsCz</a></li>
+        <li><strong>Zdrojový mapovací soubor:</strong> <code>AttachmentImageOrder2FHIR.fsh</code></li>
+        <li><strong>Rozsah mapování:</strong> A.4 až A.5 Vizuální podoba dokumentu a přílohy</li>
       </ul>
 
     </div>
@@ -109,7 +103,7 @@
             <th class="relsub">Vztah</th>
             <th class="tgt-sub">Zdroj/Profil</th>
             <th class="tgt-sub">Prvek</th>
-            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Reference</th>
             <th class="tgt-sub">Poznámky</th>
           </tr>
 
@@ -117,130 +111,270 @@
 
         <tbody>
           <tr>
-            <td>PresentedForm</td>
-            <td>A.4 - Presented Form</td>
-            <td>ekvivalentní</td>
-            <td>Composition (cz-compositionImageOrder)</td>
-            <td>Composition.extension:presentedForm.document</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm</a></td>
+            <td>
+            A.4 - Vizuální podoba dokumentu
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm].document
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.contentType</td>
-            <td>A.4.1 - Content type of presented form</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.contentType</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.contentType</a></td>
+            <td>
+            A.4.1 - Typ obsahu vizuální podoby
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            contentType
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.language</td>
-            <td>A.4.2 - Language of presented form</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.language</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.language</a></td>
+            <td>
+            A.4.2 - Jazyk vizuální podoby
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            language
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.data</td>
-            <td>A.4.3 - Data of presented form</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.data</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.data</a></td>
+            <td>
+            A.4.3 - Data vizuální podoby
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            data
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.url</td>
-            <td>A.4.4 - URL of presented form</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.url</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.url</a></td>
+            <td>
+            A.4.4 - URL vizuální podoby
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            url
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.title</td>
-            <td>A.4.5 - Title of presented form</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.title</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.title</a></td>
+            <td>
+            A.4.5 - Název vizuální podoby
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            title
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>PresentedForm.creation</td>
-            <td>A.4.6 - Date and time of creation</td>
-            <td>ekvivalentní</td>
-            <td>document (cz-compositionImageOrder)</td>
-            <td>document.creation</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.creation</a></td>
+            <td>
+            A.4.6 - Datum a čas vytvoření
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
+            <td>
+            creation
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).extension[presentedForm]
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz</td>
-            <td>A.5 - Additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>CZ_Attachment (cz-attachment)</td>
-            <td>CZ_Attachment.content</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz</a></td>
+            <td>
+            A.5 - Další přílohy
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            content
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder)
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.contentType</td>
-            <td>A.5.1 - Content type of additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.contentType</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.contentType</a></td>
+            <td>
+            A.5.1 - Typ obsahu dalších příloh
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.contentType
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.language</td>
-            <td>A.5.2 - Language of additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.language</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.language</a></td>
+            <td>
+            A.5.2 - Jazyk dalších příloh
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.language
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.data</td>
-            <td>A.5.3 - Data of additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.data</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.data</a></td>
+            <td>
+            A.5.3 - Data dalších příloh
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.data
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.url</td>
-            <td>A.5.4 - URL of additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.url</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.url</a></td>
+            <td>
+            A.5.4 - URL dalších příloh
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.url
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.title</td>
-            <td>A.5.5 - Title of additional attachments</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.title</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.title</a></td>
+            <td>
+            A.5.5 - Název dalších příloh
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.title
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
           <tr>
-            <td>AttachmentsCz.creation</td>
-            <td>A.5.6 - Date and time of creation</td>
-            <td>ekvivalentní</td>
-            <td>content (cz-attachment)</td>
-            <td>content.attachment.creation</td>
-            <td></td>
-            <td></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.creation</a></td>
+            <td>
+            A.5.6 - Datum a čas vytvoření
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
+            <td>
+            attachment.creation
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[attachments].entry
+            </td>
+            <td>
+
+            </td>
           </tr>
         </tbody>
 

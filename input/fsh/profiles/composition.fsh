@@ -39,9 +39,16 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //  * insert SetPopulateIfKnown
 
 * author
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleOrder)
-//* author only Reference(CZ_PractitionerRoleOrder)  // omezení pouze na profil obsahující smluvní odbornost VZP
   * ^short = "Who and/or what authored the Imaging order"
+/* author
+  * insert SliceElement( #profile, [[$this.resolve()]] )
+* author contains
+    authorOrder 0..* and
+    authorCore 0..*                  .. slicing nefungoval dobře
+* author[authorOrder] only Reference(CZ_PractitionerRoleOrder)
+* author[authorCore] only Reference(CZ_PractitionerRoleCore)
+*/
+* author only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
 
 * date
   * ^short = "Date the order was created."
@@ -82,9 +89,9 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * section ^definition = "The root of the sections that make up the Imaging Order composition."
 
 * section contains
-    orderInformation 1..* and
+    orderInformation 1..1 and
     clinicalQuestion 1..* and
-    coverage 0..* and
+    coverage 1..* and
     appointment 0..1 and
     carePlan 0..1 and
     medicalDevices 0..* and
@@ -98,7 +105,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 //"Requested imaging studies information Document"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_ImagingOrderInformation)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
@@ -121,7 +128,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#87520-3 //"Coverage type"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_Coverage)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
@@ -131,7 +138,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#56446-8 //"Appointment summary Document"
   * entry 0..
-  * entry only Reference(CZ_Appointment)
+  * entry only Reference(CZ_AppointmentCore)
 
   /////////////////////////////////// CARE PLAN SECTION /////////////////////////////////////////
 * section[carePlan]
@@ -140,7 +147,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#18776-5
   * entry 0..
-  * entry only Reference(CZ_CarePlanImage)
+  * entry only Reference(CZ_CarePlanCore)
 
  /////////////////////////////////// MEDICAL DEVICE SECTION /////////////////////////////////////////
 * section[medicalDevices]
@@ -158,17 +165,27 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_MedicationStatementCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanImage)
+  * entry only Reference(CZ_BodyHeight or CZ_BodyWeight or CZ_PatientMobility or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_ObservationImage or CZ_FlagPatientCore or CZ_Specimen)
   * entry ^slicing.discriminator[0].type = #profile
   * entry ^slicing.discriminator[0].path = "resolve()"
   * entry ^slicing.rules = #open
   * entry contains
       bodyHeight 0..1 and
       bodyWeight 0..1 and
-      mobility 0..1
+      mobility 0..1 and
+      condition 0..* and
+      allergyIntolerance 0..* and
+      medicationStatement 0..* and
+      flag 0..* and
+      specimen 0..*
   * entry[bodyHeight] only Reference(CZ_BodyHeight)
   * entry[bodyWeight] only Reference(CZ_BodyWeight)
   * entry[mobility] only Reference(CZ_PatientMobility)
+  * entry[condition] only Reference(CZ_ConditionCore)
+  * entry[allergyIntolerance] only Reference(CZ_AllergyIntolerance)
+  * entry[medicationStatement] only Reference(CZ_MedicationStatementCore)
+  * entry[flag] only Reference(CZ_FlagPatientCore)
+  * entry[specimen] only Reference(CZ_Specimen)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------

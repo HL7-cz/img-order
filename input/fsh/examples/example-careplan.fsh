@@ -1,7 +1,8 @@
 Instance: CarePlanExample
-InstanceOf: CZ_CarePlanImage
+InstanceOf: CZ_CarePlanCore
 Usage: #example
 Description: "Care Plan"
+Title: "Care Plan: Example"
 
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:uuid:3e026243-a659-4957-b24d-8b95fbd8d689"
