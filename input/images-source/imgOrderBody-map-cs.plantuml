@@ -24,6 +24,8 @@ class "cz-observationImage" <<Profile>> [[StructureDefinition-cz-observationImag
 class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
 class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
 class "cz-MedicationStatement" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html]]
+class "cz-MedicationAdministration" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicationAdministration-cz-core.html]]
+class "cz-Immunization" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html]]
 class "cz-deviceUseStatement" <<Profile>> [[StructureDefinition-cz-deviceUseStatement.html]]
 class "cz-allergyIntolerance" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html]]
 class "cz-carePlanImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html]]
@@ -38,6 +40,8 @@ class "cz-carePlanImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "Tělo žádanky obrazového vyšetření" <|. "cz-bodyweight"
 "Tělo žádanky obrazového vyšetření" <|. "cz-bodyheight"
 "Tělo žádanky obrazového vyšetření" <|. "cz-MedicationStatement"
+"Tělo žádanky obrazového vyšetření" <|. "cz-MedicationAdministration"
+"Tělo žádanky obrazového vyšetření" <|. "cz-Immunization"
 "Tělo žádanky obrazového vyšetření" <|. "cz-deviceUseStatement"
 "Tělo žádanky obrazového vyšetření" <|. "cz-allergyIntolerance"
 "Tělo žádanky obrazového vyšetření" <|. "cz-carePlanImage"
@@ -51,7 +55,9 @@ class "cz-carePlanImage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "cz-observationImage" -d[hidden]-> "cz-bodyweight"
 "cz-bodyweight" -d[hidden]-> "cz-bodyheight"
 "cz-bodyheight" -d[hidden]-> "cz-MedicationStatement"
-"cz-MedicationStatement" -d[hidden]-> "cz-deviceUseStatement"
+"cz-MedicationStatement" -d[hidden]-> "cz-MedicationAdministration"
+"cz-MedicationAdministration" -d[hidden]-> "cz-Immunization"
+"cz-Immunization" -d[hidden]-> "cz-deviceUseStatement"
 "cz-deviceUseStatement" -d[hidden]-> "cz-allergyIntolerance"
 "cz-allergyIntolerance" -d[hidden]-> "cz-carePlanImage"
 

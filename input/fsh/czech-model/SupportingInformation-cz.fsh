@@ -35,3 +35,4 @@ Description: """Informace a údaje sdělované pracovišti zobrazovacích metod,
 *  dalsiUdaje.datumACas 0..1 dateTime "A.3.1.7.1 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
 *  dalsiUdaje.kod 1..1 CodeableConcept "A.3.1.7.2 - Kód" """Kód pozorování identifikující význam údaje (týden gravidity apod.)."""
 *  dalsiUdaje.hodnota 0..1 Quantity "A.3.1.7.3 - Hodnota" """Hodnota údaje včetně jednotky měření."""
+*  ockovani 0..* CodeableConcept "A.3.1.8 - Očkování" """Seznam očkování, která mohou ovlivnit realizaci objednávky či interpretaci výsledků."""

@@ -1803,6 +1803,44 @@
             </td>
           </tr>
           <tr>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
+            <td>
+            A.3.1.3 - Možné kontraindikace vyšetření nebo podání kontrastní látky
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationAdministrationCore)
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
+            <td>
+            A.3.1.3 - Možné kontraindikace vyšetření nebo podání kontrastní látky
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationAdministrationCore)
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.implant</a></td>
             <td>
             A.3.1.4 - Implantát
@@ -2291,6 +2329,44 @@
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.vaccination</a></td>
+            <td>
+            A.3.1.8 - Očkování
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html">Immunization (cz-Immunization)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ImmunizationCore)
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.vaccination</a></td>
+            <td>
+            A.3.1.8 - Očkování
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html">Immunization (cz-Immunization)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ImmunizationCore)
             </td>
             <td>
 
