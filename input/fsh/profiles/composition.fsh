@@ -90,13 +90,13 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 
 * section contains
     orderInformation 1..1 and
-    clinicalQuestion 1..* and
-    coverage 1..* and
+    clinicalQuestion 1..1 and
+    coverage 1..1 and
     appointment 0..1 and
     carePlan 0..1 and
-    medicalDevices 0..* and
+    medicalDevices 0..1 and
     supportingInformation 0..1 and
-    attachments 0..*
+    attachments 0..1
 
 ///////////////////////////////// ORDER INFORMATION SECTION ///////////////////////////////////////
 * section[orderInformation]
