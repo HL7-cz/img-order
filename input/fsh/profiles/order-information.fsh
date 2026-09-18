@@ -34,11 +34,9 @@ Description: "Order information for the scope of the Czech national interoperabi
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo contains
-    bodyHeight 0..1 and
-    bodyWeight 0..1 and
+    anthropometric 0..* and
     mobility 0..1
-* supportingInfo[bodyHeight] only Reference(CZ_BodyHeight)
-* supportingInfo[bodyWeight] only Reference(CZ_BodyWeight)
+* supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"
