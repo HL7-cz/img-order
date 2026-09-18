@@ -90,8 +90,9 @@ Usage: #inline
 Title: "ServiceRequest: Referral for hybrid PET/CT examination"
 Description: "Multimodal request combining positron emission tomography and computed tomography"
 * id = "213859c2-ac9d-4166-a673-13a50640af90"
-* identifier.system = "http://nemocnice.cz"
-* identifier.value = "2026-PETCT-00895"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://nemocnice.cz"
+* identifier[accessionNumber].value = "2026-PETCT-00895"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging

@@ -216,8 +216,9 @@ Usage: #inline
 Title: "ServiceRequest: CT abdomen with contrast (non-addressed)"
 Description: "Planned CT examination of the abdomen with intravenous administration of contrast medium - non-addressed request, clinical contraindication (allergy to iodine)"
 * id = "3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
-* identifier.system = "http://nemocnice-novakova.cz/ris-order"
-* identifier[=].value = "9912045"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://nemocnice-novakova.cz/ris-order"
+* identifier[accessionNumber].value = "9912045"
 * status = #active
 * intent = #order
 * priority = #routine

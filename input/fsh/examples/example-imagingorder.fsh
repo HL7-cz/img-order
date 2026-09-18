@@ -4,8 +4,9 @@ Usage: #example
 Title: "Imaging order: Magnetic Resonance"
 Description: "Imaging order for Magnetic Resonance"
 
-* identifier[+].system = "urn:ietf:rfc:3986"
-* identifier[=].value = "urn:uuid:f69fed08-cee4-48c2-9475-d2cedb17f88f"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "urn:ietf:rfc:3986"
+* identifier[accessionNumber].value = "urn:uuid:f69fed08-cee4-48c2-9475-d2cedb17f88f"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging

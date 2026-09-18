@@ -9,8 +9,7 @@ Description: "Order information for the scope of the Czech national interoperabi
   * insert SliceElement( #value, type )
 * identifier contains accessionNumber 0..1
 * identifier[accessionNumber] only CZ_AccessionNumberIdentifier
-* identifier[accessionNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[accessionNumber].type.coding.code = #ACSN
+* identifier[accessionNumber].type = $v2-0203#ACSN
 
 * basedOn only Reference(CZ_CarePlanCore or CZ_ImagingOrderInformation or ServiceRequest or CZ_MedicationRequestCore)
 * replaces only Reference(CZ_ImagingOrderInformation or ServiceRequest)

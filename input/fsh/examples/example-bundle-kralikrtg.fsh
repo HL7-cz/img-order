@@ -279,8 +279,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Knee, right"
 Description: "Imaging order for Plain X-ray - Knee, right"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -305,8 +306,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Leg, right"
 Description: "Imaging order for Plain X-ray - Leg, right"
 * id = "fea1dbb8-9e16-4e11-beae-c12829c97381"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -331,8 +333,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * id = "210db397-977a-47a0-8a2e-febde6f9f92a"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -357,8 +360,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Structure of right talus bone"
 Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * id = "ded5bee9-8a58-4676-919f-0b8e08eaede4"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -383,8 +387,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Pelvis"
 Description: "Imaging order for Plain X-ray - Pelvis"
 * id = "158808ba-fcca-480e-8188-dec77920ec3c"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -409,8 +414,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Right hip"
 Description: "Imaging order for Plain X-ray - Right hip"
 * id = "5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
@@ -435,8 +441,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Left hip"
 Description: "Imaging order for Plain X-ray - Left hip"
 * id = "c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://hospital.org/ris-order"
+* identifier[accessionNumber].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sct#363679005 // Imaging
