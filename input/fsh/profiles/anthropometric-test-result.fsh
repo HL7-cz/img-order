@@ -1,7 +1,7 @@
 Invariant: cz-anthropometric-unit-by-metric
 Description: "The UCUM unit must correspond to the type of anthropometric measurement."
 Severity: #error
-Expression: "valueQuantity.system = 'http://unitsofmeasure.org' and ((code.coding.where(system = 'http://loinc.org' and code in ('8302-2' | '9843-4')).exists() implies valueQuantity.code in ('m' | 'cm' | 'mm')) and (code.coding.where(system = 'http://loinc.org' and code = '29463-7').exists() implies valueQuantity.code in ('kg' | 'g')) and (code.coding.where(system = 'http://loinc.org' and code = '39156-5').exists() implies valueQuantity.code = 'kg/m2') and (code.coding.where(system = 'http://loinc.org' and code = '8277-6').exists() implies valueQuantity.code = 'm2'))"
+Expression: "value.ofType(Quantity).system = 'http://unitsofmeasure.org' and ((code.coding.where(system = 'http://loinc.org' and code in ('8302-2' | '9843-4')).exists() implies value.ofType(Quantity).code in ('m' | 'cm' | 'mm')) and (code.coding.where(system = 'http://loinc.org' and code = '29463-7').exists() implies value.ofType(Quantity).code in ('kg' | 'g')) and (code.coding.where(system = 'http://loinc.org' and code = '39156-5').exists() implies value.ofType(Quantity).code = 'kg/m2') and (code.coding.where(system = 'http://loinc.org' and code = '8277-6').exists() implies value.ofType(Quantity).code = 'm2'))"
 
 Profile: CZ_Anthropometric_Test_Result
 Parent: CZ_ObservationImage
