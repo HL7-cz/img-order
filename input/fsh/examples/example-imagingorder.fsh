@@ -8,7 +8,7 @@ Description: "Imaging order for Magnetic Resonance"
 * identifier[=].value = "urn:uuid:f69fed08-cee4-48c2-9475-d2cedb17f88f"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(MRDevice)
 * subject = Reference(Mracena)
 * bodySite = $sctCZ#72696002

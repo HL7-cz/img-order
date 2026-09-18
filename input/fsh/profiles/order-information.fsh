@@ -5,7 +5,20 @@ Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
 * identifier 1..
-* category 1..
+* identifier
+  * insert SliceElement( #value, type )
+* identifier contains accessionNumber 0..1
+* identifier[accessionNumber] only CZ_AccessionNumberIdentifier
+* identifier[accessionNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[accessionNumber].type.coding.code = #ACSN
+
+* basedOn only Reference(CZ_CarePlanCore or CZ_ImagingOrderInformation or ServiceRequest or CZ_MedicationRequestCore)
+* replaces only Reference(CZ_ImagingOrderInformation or ServiceRequest)
+
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1
+* category[imaging] = $sct#363679005 // "Imaging"
 
 * extension contains $targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureCzCore)
@@ -59,3 +72,19 @@ Description: "Order information for the scope of the Czech national interoperabi
     modality 1..*
 * orderDetail.coding[modality] from CZ_ModalityVs (preferred)
 * orderDetail.coding[modality].system = "http://dicom.nema.org/resources/ontology/DCM"
+
+Profile: CZ_AccessionNumberIdentifier
+Parent: Identifier
+Id: cz-accession-number-identifier
+Title: "Imaging Accession Number Identifier"
+Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
+* insert ImposeProfile($AccessionNumberIdentifier-eu-img,0)
+* system 1..1
+* value 1..1
+* type 1..1
+* type
+  * coding
+    * insert SliceElement( #value, $this )
+  * coding contains v2-0203-coding 1..1 and dcm 0..1
+  * coding[v2-0203-coding] = $v2-0203#ACSN
+  * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#121022 "Accession Number"

@@ -19,6 +19,7 @@ Alias: $vzp-odbornost = https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
@@ -44,4 +45,5 @@ Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 Alias: $cz-organization-logo = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact|5.2.0
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $AccessionNumberIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AccessionNumberIdentifierEuImaging
 
