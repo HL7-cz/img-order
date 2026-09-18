@@ -115,12 +115,13 @@ Usage: #inline
 Title: "ServiceRequest: Screening ultrasound of the fetus (II. trimester)"
 Description: "Screening ultrasound examination of the fetus in the second trimester (20+3 weeks gestation) - biometric measurements, morphological screening, placenta, amniotic fluid"
 * id = "c3f4a5b6-e7d8-4c9a-8f23-4d5e6f7a8b92"
-* identifier.system = "http://gynekologie-malikova.cz/ris-order"
-* identifier[=].value = "2026-UZ-1102"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://gynekologie-malikova.cz/ris-order"
+* identifier[accessionNumber].value = "2026-UZ-1102"
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * insurance = Reference(urn:uuid:e5b6c7d8-a9fa-4ebc-8f45-6f7a8b9cadb4)
 * bodySite = $sctCZ#55460000 //"struktura plodu"
@@ -139,12 +140,13 @@ Usage: #inline
 Title: "ServiceRequest: 3D/4D photography of the fetus (self-pay)"
 Description: "Nadstandard 3D/4D photography of the fetus, requested by the patient, paid directly by the patient, not a diagnostic procedure."
 * id = "d4a5b6c7-f8e9-4dab-8f34-5e6f7a8b9ca3"
-* identifier.system = "http://gynekologie-malikova.cz/ris-order"
-* identifier[=].value = "2026-UZ-1102-FOTO"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://gynekologie-malikova.cz/ris-order"
+* identifier[accessionNumber].value = "2026-UZ-1102-FOTO"
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * insurance = Reference(urn:uuid:f6c7d8e9-bafb-4fcd-8f56-7a8b9cadbec5)
 * bodySite = $sctCZ#88556005 //"struktura plodu"

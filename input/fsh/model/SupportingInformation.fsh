@@ -35,3 +35,4 @@ Description: """Supporting Information - Information and data communicated by th
 *  otherInformation.dateTime 0..1 dateTime "A.3.1.7.1 - Date and time of information" """Date of information discovery, stated if different from the date of order"""
 *  otherInformation.code 1..1 CodeableConcept "A.3.1.7.2 - Code of information" """Observation code identifying the meaning of the observation (week of gestation, etc.)"""
 *  otherInformation.value 0..1 Quantity "A.3.1.7.3 - Value of information" """Observation value including unit of measurement."""
+*  vaccination 0..* CodeableConcept "A.3.1.8 - Vaccination" """List of vaccinations that may affect order fulfillment or interpretation of results"""

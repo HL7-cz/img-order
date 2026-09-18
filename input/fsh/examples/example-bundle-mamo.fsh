@@ -86,11 +86,12 @@ Usage: #inline
 Title: "ServiceRequest: Request for screening mammography"
 Description: "Request for bilateral screening mammography (MG) of both breasts"
 * id = "60ea3958-7344-4969-a0b7-58f849473d05"
-* identifier.system = "http://ambulance-gynekologie.cz"
-* identifier.value = "2026-MG-0451"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://ambulance-gynekologie.cz"
+* identifier[accessionNumber].value = "2026-MG-0451"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * insurance = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12) // Odkaz na samoplátecké krytí
 * bodySite = $sctCZ#76752008 //"Breast structure"

@@ -82,5 +82,4 @@ The element `Composition.type` carries the order type from the national Referral
 
 | Item code      | Item description        | Value                                                                   |
 | ---------------| ----------------------- | ----------------------------------------------------------------------- |
-| A.3.1.1.1.1  | Weight value – unit | [cz-observationUnitsWeight-vs](ValueSet-cz-observationUnitsWeight-vs.html) — kg, g |
-| A.3.1.1.1.2 | Height value – unit  | [cz-observationUnitsHeight-vs](ValueSet-cz-observationUnitsHeight-vs.html) — m, cm |
+| A.3.1.1.1 | Anthropometric metric and unit | [cz-anthropometric-metric-vs](ValueSet-cz-anthropometric-metric-vs.html) — height/head circumference: `m`, `cm`, `mm`; weight: `kg`, `g`; BMI: `kg/m2`; body surface area: `m2` |

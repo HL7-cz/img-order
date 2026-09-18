@@ -139,7 +139,7 @@ Usage: #example
 
 
 Instance: HeightNovakova
-InstanceOf: CZ_BodyHeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body Height: Patient Nováková"
 Description: "Example of body height of patient Nováková"
@@ -162,7 +162,7 @@ Description: "Example of body height of patient Nováková"
 
 
 Instance: WeightNovakova
-InstanceOf: CZ_BodyWeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body Weight: Patient Nováková"
 Description: "Example of body weight of patient Nováková"
@@ -216,12 +216,13 @@ Usage: #inline
 Title: "ServiceRequest: CT abdomen with contrast (non-addressed)"
 Description: "Planned CT examination of the abdomen with intravenous administration of contrast medium - non-addressed request, clinical contraindication (allergy to iodine)"
 * id = "3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
-* identifier.system = "http://nemocnice-novakova.cz/ris-order"
-* identifier[=].value = "9912045"
+* identifier[accessionNumber].type = $v2-0203#ACSN
+* identifier[accessionNumber].system = "http://nemocnice-novakova.cz/ris-order"
+* identifier[accessionNumber].value = "9912045"
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * insurance = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
 * bodySite = $sctCZ#818983003 
