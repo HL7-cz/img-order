@@ -1,7 +1,11 @@
 Invariant: cz-anthropometric-unit-by-metric
 Description: "The UCUM unit must correspond to the type of anthropometric measurement."
 Severity: #error
-Expression: "value.ofType(Quantity).system = 'http://unitsofmeasure.org' and ((code.coding.where(system = 'http://loinc.org' and code in ('8302-2' | '9843-4')).exists() implies value.ofType(Quantity).code in ('m' | 'cm' | 'mm')) and (code.coding.where(system = 'http://loinc.org' and code = '29463-7').exists() implies value.ofType(Quantity).code in ('kg' | 'g')) and (code.coding.where(system = 'http://loinc.org' and code = '39156-5').exists() implies value.ofType(Quantity).code = 'kg/m2') and (code.coding.where(system = 'http://loinc.org' and code = '8277-6').exists() implies value.ofType(Quantity).code = 'm2'))"
+Expression: "value.ofType(Quantity).system = 'http://unitsofmeasure.org' and (
+  (code.coding.where((system = 'http://loinc.org' and code in ('8302-2' | '9843-4')) or (system = 'http://snomed.info/sct' and code in ('50373000' | '363812007'))).exists() implies value.ofType(Quantity).code in ('m' | 'cm' | 'mm')) and
+  (code.coding.where((system = 'http://loinc.org' and code = '29463-7') or (system = 'http://snomed.info/sct' and code = '27113001') or (system = 'https://nclp.ncez.mzcr.cz/CodeSystem/nclppol' and code = '20042')).exists() implies value.ofType(Quantity).code in ('kg' | 'g')) and
+  (code.coding.where((system = 'http://loinc.org' and code = '39156-5') or (system = 'http://snomed.info/sct' and code = '60621009') or (system = 'https://nclp.ncez.mzcr.cz/CodeSystem/nclppol' and code = '20454')).exists() implies value.ofType(Quantity).code = 'kg/m2') and
+  (code.coding.where((system = 'http://loinc.org' and code = '8277-6') or (system = 'http://snomed.info/sct' and code = '301898006')).exists() implies value.ofType(Quantity).code = 'm2'))"
 
 Profile: CZ_Anthropometric_Test_Result
 Parent: CZ_ObservationImage
@@ -12,6 +16,27 @@ Description: "Quantitative anthropometric measurement for the scope of the Czech
 * subject
 * code 1..1
 * code from CZ_AnthropometricMetricVs (required)
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding ^slicing.description = "Slicing by code system (LOINC / SNOMED CT / NČLP)"
+* code.coding contains
+    loinc 0..1 and
+    snomed 0..1 and
+    nclp 0..1
+
+* code.coding[loinc].system 1..
+* code.coding[loinc].system = $loinc (exactly)
+* code.coding[loinc].code 1..
+
+* code.coding[snomed].system 1..
+* code.coding[snomed].system = $sct (exactly)
+* code.coding[snomed].code 1..
+
+* code.coding[nclp].system 1..
+* code.coding[nclp].system = $nclp_new (exactly)
+* code.coding[nclp].code 1..
+
 * valueQuantity 1..1
 * valueQuantity.value 1..
 * valueQuantity.system = $UCUM (exactly)
