@@ -2335,44 +2335,6 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.vaccination</a></td>
-            <td>
-            A.3.1.8 - Vaccination
-            </td>
-            <td>
-            related-to
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html">Immunization (cz-Immunization)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ImmunizationCore)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.vaccination</a></td>
-            <td>
-            A.3.1.8 - Vaccination
-            </td>
-            <td>
-            related-to
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html">Immunization (cz-Immunization)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ImmunizationCore)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.OrderDataElements</a></td>
             <td>
             A.3.2 - Order data elements
