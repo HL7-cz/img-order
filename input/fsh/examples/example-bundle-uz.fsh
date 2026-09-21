@@ -62,19 +62,19 @@ Usage: #inline
 
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 //"Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadovaná vyšetření: 1) screeningové UZ vyšetření plodu (hrazeno z veřejného zdravotního pojištění), 2) nadstandardní 3D/4D fotografie plodu na přání pacientky (hrazeno pacientkou).</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadovaná vyšetření: 1) screeningové UZ vyšetření plodu (hrazeno z veřejného zdravotního pojištění), 2) nadstandardní 3D/4D fotografie plodu na přání pacientky (hrazeno pacientkou).</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:c3f4a5b6-e7d8-4c9a-8f23-4d5e6f7a8b92)
 * section[orderInformation].entry[+] = Reference(urn:uuid:d4a5b6c7-f8e9-4dab-8f34-5e6f7a8b9ca3)
 
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 //"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Screening II. trimestru gravidity (20+3 týdny) - biometrie plodu, morfologie, hodnocení placenty a plodové vody. Pacientka si dále přeje nadstandardní 3D/4D fotografii plodu jako upomínkovou fotografii (nejde o diagnostický výkon).</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Klinická otázka: Screening II. trimestru gravidity (20+3 týdny) - biometrie plodu, morfologie, hodnocení placenty a plodové vody. Pacientka si dále přeje nadstandardní 3D/4D fotografii plodu jako upomínkovou fotografii (nejde o diagnostický výkon).</div>"
 * section[clinicalQuestion].text.status = #additional
 
 * section[coverage].title = "Coverage information"
 * section[coverage].code = $loinc#87520-3 //"Coverage information Document"
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dva způsoby úhrady: screeningové UZ vyšetření je hrazeno z veřejného zdravotního pojištění; nadstandardní 3D/4D fotografie je hrazena přímo pacientkou (samoplátce).</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Dva způsoby úhrady: screeningové UZ vyšetření je hrazeno z veřejného zdravotního pojištění; nadstandardní 3D/4D fotografie je hrazena přímo pacientkou (samoplátce).</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry[0] = Reference(urn:uuid:e5b6c7d8-a9fa-4ebc-8f45-6f7a8b9cadb4)
 * section[coverage].entry[+] = Reference(urn:uuid:f6c7d8e9-bafb-4fcd-8f56-7a8b9cadbec5)

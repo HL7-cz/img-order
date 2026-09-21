@@ -42,16 +42,16 @@ Usage: #inline
 * category[documentCategory] = $loinc#57133-1
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadované mamografické vyšetření - preventivní screening na žádost pacientky.</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované mamografické vyšetření - preventivní screening na žádost pacientky.</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry = Reference(urn:uuid:60ea3958-7344-4969-a0b7-58f849473d05)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Preventivní screening karcinomu prsu u nerizikové pacientky mladší 45 let na vlastní žádost (samoplátkyně). Palpačně bpn.</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Klinická otázka: Preventivní screening karcinomu prsu u nerizikové pacientky mladší 45 let na vlastní žádost (samoplátkyně). Palpačně bpn.</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacientky Marie Černá, číslo pojištěnce 8855221234, poskytovatel VZP</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Pojištění pacientky Marie Černá, číslo pojištěnce 8855221234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12)
 
