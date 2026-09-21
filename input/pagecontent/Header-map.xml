@@ -1323,7 +1323,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder)
+            Bundle (CZ_BundleImageOrder)
             </td>
             <td>
             unique identifier of the document (not the order itself)
@@ -1342,7 +1342,7 @@
             timeStamp
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder)
+            Bundle (CZ_BundleImageOrder)
             </td>
             <td>
             If it is the date and time when this version of the order was included in the bundle (Bundle).
