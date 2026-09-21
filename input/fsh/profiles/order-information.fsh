@@ -4,7 +4,7 @@ Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
-* identifier 1..
+* identifier 0..
 * identifier
   * insert SliceElement( #value, type )
 * identifier contains accessionNumber 0..1
