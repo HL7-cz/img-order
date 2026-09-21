@@ -17,8 +17,8 @@ Description: "LOINC codes for quantitative anthropometric measurements supported
 * $loinc#39156-5 //"Body mass index (BMI)"
 * $loinc#8277-6 //"Body surface area"
 
-* $sctCz#1153637007 //"Body height"
-* $sctCz#27113001 //"Body weight"
-* $sctCz#363812007 //"Head circumference"
-* $sctCz#60621009 //"Body mass index"
-* $sctCz#301898006 //"Body surface area"     
+* $sctCZ#1153637007 //"Body height"
+* $sctCZ#27113001 //"Body weight"
+* $sctCZ#363812007 //"Head circumference"
+* $sctCZ#60621009 //"Body mass index"
+* $sctCZ#301898006 //"Body surface area"     
