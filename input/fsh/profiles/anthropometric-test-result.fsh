@@ -16,26 +16,6 @@ Description: "Quantitative anthropometric measurement for the scope of the Czech
 * subject
 * code 1..1
 * code from CZ_AnthropometricMetricVs (required)
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #open
-* code.coding ^slicing.description = "Slicing by code system (LOINC / SNOMED CT / NČLP)"
-* code.coding contains
-    loinc 0..1 and
-    snomed 0..1 and
-    nclp 0..1
-
-* code.coding[loinc].system 1..
-* code.coding[loinc].system = $loinc (exactly)
-* code.coding[loinc].code 1..
-
-* code.coding[snomed].system 1..
-* code.coding[snomed].system = $sct (exactly)
-* code.coding[snomed].code 1..
-
-* code.coding[nclp].system 1..
-* code.coding[nclp].system = $nclp_new (exactly)
-* code.coding[nclp].code 1..
 
 * valueQuantity 1..1
 * valueQuantity.value 1..
