@@ -45,17 +45,17 @@ Usage: #inline
 
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Požadované PET/CT celotělové vyšetření</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované PET/CT celotělové vyšetření</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:213859c2-ac9d-4166-a673-13a50640af90)
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry[0] = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Restaging maligního lymfomu, suspekce na relaps/progresi onemocnění dle klinického stavu.</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Klinická otázka: Restaging maligního lymfomu, suspekce na relaps/progresi onemocnění dle klinického stavu.</div>"
 * section[clinicalQuestion].text.status = #additional
 
 Instance: cz-patient-novak
@@ -90,11 +90,9 @@ Usage: #inline
 Title: "ServiceRequest: Referral for hybrid PET/CT examination"
 Description: "Multimodal request combining positron emission tomography and computed tomography"
 * id = "213859c2-ac9d-4166-a673-13a50640af90"
-* identifier.system = "http://nemocnice.cz"
-* identifier.value = "2026-PETCT-00895"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sct#363679005 // Imaging
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * insurance = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
 * bodySite = $sctCZ#38266002 //"celé tělo" 

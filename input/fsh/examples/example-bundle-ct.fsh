@@ -70,24 +70,24 @@ Usage: #inline
 
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neadresná žádanka na CT břicha - k realizaci na libovolném přijímajícím pracovišti dle kapacity; nutno ověřit bezpečnost aplikace jodové kontrastní látky vzhledem k uvedené alergii.</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Neadresná žádanka na CT břicha - k realizaci na libovolném přijímajícím pracovišti dle kapacity; nutno ověřit bezpečnost aplikace jodové kontrastní látky vzhledem k uvedené alergii.</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701)
 
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Pojištění pacienta Nováková Veronika, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated
 * section[coverage].entry[0] = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
 
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Vyloučení intraabdominální patologie (susp. tumor slinivky břišní), staging.</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Klinická otázka: Vyloučení intraabdominální patologie (susp. tumor slinivky břišní), staging.</div>"
 * section[clinicalQuestion].text.status = #additional
 
 * section[supportingInformation].title = "Supporting information"
 * section[supportingInformation].code = $loinc#55752-0 "Clinical information"
-* section[supportingInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Supporting information</div>"
+* section[supportingInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Supporting information</div>"
 * section[supportingInformation].text.status = #generated
 * section[supportingInformation].entry[0] = Reference(urn:uuid:cde5d5b4-7654-4876-10fe-dcba98765432)
 * section[supportingInformation].entry[+] = Reference(urn:uuid:def6e6c5-8765-4987-2110-edcba9876543)
@@ -139,7 +139,7 @@ Usage: #example
 
 
 Instance: HeightNovakova
-InstanceOf: CZ_BodyHeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body Height: Patient Nováková"
 Description: "Example of body height of patient Nováková"
@@ -162,7 +162,7 @@ Description: "Example of body height of patient Nováková"
 
 
 Instance: WeightNovakova
-InstanceOf: CZ_BodyWeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body Weight: Patient Nováková"
 Description: "Example of body weight of patient Nováková"
@@ -216,12 +216,10 @@ Usage: #inline
 Title: "ServiceRequest: CT abdomen with contrast (non-addressed)"
 Description: "Planned CT examination of the abdomen with intravenous administration of contrast medium - non-addressed request, clinical contraindication (allergy to iodine)"
 * id = "3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
-* identifier.system = "http://nemocnice-novakova.cz/ris-order"
-* identifier[=].value = "9912045"
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sctCZ#363679005 //"zobrazování"
+* category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * insurance = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
 * bodySite = $sctCZ#818983003 

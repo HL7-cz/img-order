@@ -1,5 +1,5 @@
 Instance: ExampleBodyHeight
-InstanceOf: CZ_BodyHeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #example
 Title: "Body height: Patient Mracena"
 Description: "Example of body height of Patient Mracena"
@@ -8,7 +8,6 @@ Description: "Example of body height of Patient Mracena"
 * category.coding.code = #vital-signs
 * code.coding[SNOMEDCT] = $sctCZ#1153637007
 * code.coding[LOINC] = $loinc#8302-2
-* code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 165
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM

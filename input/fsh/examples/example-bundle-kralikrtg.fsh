@@ -97,7 +97,7 @@ Usage: #inline
 * encounter = Reference(urn:uuid:db16a37b-d393-4767-bb2e-739f9bff16f9)
 * section[orderInformation].title = "Requested imaging studies information Document"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Order information</div>"
 * section[orderInformation].text.status = #generated
 * section[orderInformation].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[orderInformation].entry[+] = Reference(urn:uuid:fea1dbb8-9e16-4e11-beae-c12829c97381)
@@ -108,21 +108,21 @@ Usage: #inline
 * section[orderInformation].entry[+] = Reference(urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed)
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištění pacienta Ing. Králík, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Pojištění pacienta Ing. Králík, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
 * section[coverage].text.status = #generated  
 * section[coverage].entry[0] = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question:Trauma skeletu?</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Clinical question:Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[medicalDevices].title = "Medical Devices and implants"
 * section[medicalDevices].code = $loinc#97813-0 "Implant component"
-* section[medicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Implants</div>"
+* section[medicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Implants</div>"
 * section[medicalDevices].text.status = #generated
 * section[medicalDevices].entry[0] = Reference(urn:uuid:b29cacfd-b05b-44cf-be5a-8b6d76bdc375)
 * section[supportingInformation].title = "Supporting information"
 * section[supportingInformation].code = $loinc#55752-0 "Clinical information"
-* section[supportingInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Supporting information</div>"
+* section[supportingInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Supporting information</div>"
 * section[supportingInformation].text.status = #generated
 * section[supportingInformation].entry[0] = Reference(urn:uuid:e0861d9f-4b04-465f-b15b-cb01e3a8b677)
 * section[supportingInformation].entry[+] = Reference(urn:uuid:4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b)
@@ -215,7 +215,7 @@ Usage: #example
 * communication[=].preferred = true
 
 Instance: HeightKralik
-InstanceOf: CZ_BodyHeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
@@ -237,7 +237,7 @@ Description: "Example of body height of Patient Kralik"
 * performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: WeightKralik
-InstanceOf: CZ_BodyWeight
+InstanceOf: CZ_Anthropometric_Test_Result
 Usage: #inline
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
@@ -279,11 +279,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Knee, right"
 Description: "Imaging order for Plain X-ray - Knee, right"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -305,11 +303,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Leg, right"
 Description: "Imaging order for Plain X-ray - Leg, right"
 * id = "fea1dbb8-9e16-4e11-beae-c12829c97381"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -331,11 +327,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * id = "210db397-977a-47a0-8a2e-febde6f9f92a"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -357,11 +351,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Structure of right talus bone"
 Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * id = "ded5bee9-8a58-4676-919f-0b8e08eaede4"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -383,11 +375,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Pelvis"
 Description: "Imaging order for Plain X-ray - Pelvis"
 * id = "158808ba-fcca-480e-8188-dec77920ec3c"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -409,11 +399,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Right hip"
 Description: "Imaging order for Plain X-ray - Right hip"
 * id = "5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //	"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -435,11 +423,9 @@ Usage: #inline
 Title: "Imaging order for Plain X-ray - Left hip"
 Description: "Imaging order for Plain X-ray - Left hip"
 * id = "c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
-* identifier.system = "http://hospital.org/ris-order"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sctCZ#363679005 //"zobrazování" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -519,7 +505,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 
 * text.status = #generated
 * text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
   <p><strong>Device:</strong> Implantable Pacemaker</p>
   <p><strong>Patient:</strong> Kralik</p>
   <p><strong>Status:</strong> Active</p>

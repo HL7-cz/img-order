@@ -1323,7 +1323,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder)
+            Bundle (CZ_BundleImageOrder)
             </td>
             <td>
             unikátní identifikátor dokumentu (ne samotné žádanky)
@@ -1342,7 +1342,7 @@
             timeStamp
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder)
+            Bundle (CZ_BundleImageOrder)
             </td>
             <td>
             Kdy byla žádanka v této verzi vložena do bundle.

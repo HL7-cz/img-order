@@ -56,7 +56,6 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 //* obeys one-dr
 
 * identifier ^short = "Business identifier for this Imaging order"
-* identifier 1..
 * type = #document
 * timestamp 1..
 * total ..0

@@ -16,18 +16,18 @@ Description: "Standalone example of an imaging order Composition."
 * section[orderInformation].title = "Requested imaging studies information"
 * section[orderInformation].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[orderInformation].text.status = #generated
-* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Requested magnetic resonance examination</div>"
+* section[orderInformation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Requested magnetic resonance examination</div>"
 * section[orderInformation].entry = Reference(cz-imagingorder-example)
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
 * section[coverage].text.status = #generated
-* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient insurance information</div>"
+* section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Patient insurance information</div>"
 * section[coverage].entry = Reference(cz-coverage-example)
 
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.status = #additional
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Is there structural damage to the right knee?</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Is there structural damage to the right knee?</div>"
 
 Instance: cz-coverage-example
 InstanceOf: CZ_Coverage
