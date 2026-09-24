@@ -1565,12 +1565,12 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-bundleImageOrder.html">Bundle (cz-bundleImageOrder)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-provenance.html">Provenance (cz-provenance)</a></td>
             <td>
             signature.data
             </td>
             <td>
-            Bundle (CZ_BundleImageOrder).signature
+            Provenance (CZ_Provenance).signature
             </td>
             <td>
 
@@ -1584,12 +1584,12 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-bundleImageOrder.html">Bundle (cz-bundleImageOrder)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-provenance.html">Provenance (cz-provenance)</a></td>
             <td>
             signature.when
             </td>
             <td>
-            Bundle (CZ_BundleImageOrder).signature
+            Provenance (CZ_Provenance).signature
             </td>
             <td>
 
