@@ -91,6 +91,7 @@ Usage: #inline
 * author = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
+* language = #cs
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
 * extension[presentedForm].valueAttachment = cz-pdfkralikrgt-example

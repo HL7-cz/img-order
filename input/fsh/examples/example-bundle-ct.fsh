@@ -65,7 +65,7 @@ Usage: #inline
 * confidentiality = #N
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
-
+* language = #cs
 * encounter = Reference(urn:uuid:abc3b392-5432-4654-fedc-ba9876543201)
 
 * section[orderInformation].title = "Requested imaging studies information Document"

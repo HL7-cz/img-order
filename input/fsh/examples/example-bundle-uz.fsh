@@ -58,6 +58,7 @@ Usage: #inline
 * title = "Žádanka o zobrazovací vyšetření - UZ plodu + nadstandardní 3D/4D fotografie"
 * confidentiality = #N
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
+* language = #cs
 * category[documentCategory] = $loinc#57133-1
 
 * section[orderInformation].title = "Requested imaging studies information Document"

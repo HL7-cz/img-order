@@ -40,6 +40,7 @@ Usage: #inline
 * author = Reference(urn:uuid:8fd3a4cf-173a-43f0-a1f9-5b538d088c03)
 * title = "Žádanka o zobrazovací vyšetření - Celotělové PET/CT"
 * confidentiality = #N
+* language = #cs
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
 * category[documentCategory] = $loinc#57133-1 //"Referral note"
 
