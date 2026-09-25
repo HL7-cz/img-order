@@ -1,15 +1,15 @@
 Invariant: order-reason
 Description: "Each Order must have a reason or reasonReference."
 Severity: #error
-Expression: ""
-
-Pavlíno, tady je potřeba dodělat kontrolu na to, aby žádanka měla buť reasoCode nebo ReasonReference.
+Expression: "reasonCode.exists() or reasonReference.exists()"
 
 Profile: CZ_ImagingOrderInformation
 Parent: ServiceRequest
 Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
+
+* obeys order-reason
 
 * identifier 0..
 * identifier
@@ -49,7 +49,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_MedicationAdministrationCore or CZ_ImmunizationCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal)
+* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_MedicationAdministrationCore or CZ_ImmunizationCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal or CZ_Anthropometric_Test_Result)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
@@ -58,7 +58,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     mobility 0..1
 * supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
-* reasonCode O..*
+* reasonCode 0..*
 * reasonCode.coding 1..*
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"
