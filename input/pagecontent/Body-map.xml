@@ -1810,7 +1810,7 @@
             <td>
             related-to
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
             <td>
 
             </td>
@@ -1829,7 +1829,7 @@
             <td>
             related-to
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
             <td>
 
             </td>
