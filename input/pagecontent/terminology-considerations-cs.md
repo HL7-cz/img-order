@@ -61,7 +61,7 @@ Preferovaným způsobem vyjádření požadovaného vyšetření je SNOMED CT, p
 | A.1.1.9 | Komunikační jazyk | [all-languages](https://hl7.org/fhir/valueset-all-languages.html) |
 | A.1.2.1 | Adresa – země | [v3-Country2](https://terminology.hl7.org/ValueSet-v3-Country2.html) |
 | A.1.2.4.1 | Typ kontaktu | [contactrole-cz](https://ncez.mzcr.cz/terminology/ValueSet/contactrole-cz) |
-| A.1.4.1 | Způsob úhrady | [cz-coverage-type](https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type) — `HIP` zdravotní pojištění, `pay` samoplátce |
+| A.1.4.1   | Způsob úhrady  | [cz-coverage-type](https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type) - `HIP` veřejné zdravotní pojištění, `pay` samoplátce, `EHCPOL` komerční pojištění, `WCBPOL` pracovní lékařství / úhrada zaměstnavatelem, `PUBLICPOL` státní zdravotní program - státní orgán / policie ČR / soud, `SUBSIZ` dotovaná péče/výzkum |
 | A.1.8.3 | Stav dokumentu | [composition-status](https://hl7.org/fhir/valueset-composition-status.html) — `preliminary`, `final`, `amended`, `entered-in-error`. Prvek se mapuje na `Composition.status`, kde je vazba povinná už v základním zdroji, a profil ji nezužuje. |
 | A.1.8.7 | Důvěrnost dokumentu | [v3-Confidentiality](https://terminology.hl7.org/ValueSet-v3-Confidentiality.html) |
 | A.1.8.8 | Jazyk dokumentu | [all-languages](https://hl7.org/fhir/valueset-all-languages.html) |

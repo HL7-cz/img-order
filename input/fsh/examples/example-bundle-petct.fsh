@@ -142,7 +142,7 @@ Usage: #example
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
 Instance: cz-insurance-coverage
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Health insurance of the patient"
 Usage: #example
 Title: "Coverage: Health Insurance of the Patient"
@@ -150,6 +150,7 @@ Title: "Coverage: Health Insurance of the Patient"
 * status = #active
 * beneficiary = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * payor = Reference(urn:uuid:d9503020-e03b-4a09-b565-3505ec5b12d5)
+* type = $v3-ActCode#HIP
 
 Instance: cz-pojistovna-vzp
 InstanceOf: CZ_OrganizationCore

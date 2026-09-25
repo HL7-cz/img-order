@@ -47,34 +47,54 @@ Severity: #warning
 // Severity: #error
 
 Invariant: insurance-requester
-Description: "For every imaging order covered by health insurance, either the ServiceRequest requester or the Composition author SHALL have an ICP organization identifier and a contractual specialty."
+Description: "For every imaging order covered by public health insurance, the ServiceRequest requester, or the Composition author when requester is absent, SHALL have an ICP organization identifier and a contractual specialty."
 Severity: #error
 Expression: "
   entry.resource.ofType(ServiceRequest).all(
     insurance.resolve().ofType(Coverage)
-      .payor.resolve().ofType(Organization)
-      .identifier.where(
-        system = 'https://ncez.mzcr.cz/fhir/sid/kp'
+      .type.coding.where(
+        system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
+        and code = 'HIP'
       ).exists()
     implies
     (
-      requester.resolve()
-      |
-      %resource.entry.resource.ofType(Composition).author.resolve()
+      (
+        requester.exists()
+        and
+        requester.resolve().ofType(PractitionerRole)
+          .where(
+            organization.resolve().ofType(Organization)
+              .identifier.where(
+                system = 'https://ncez.mzcr.cz/fhir/sid/icp'
+                and value.exists()
+              ).exists()
+            and
+            specialty.coding.where(
+              system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
+              and code.exists()
+            ).exists()
+          ).exists()
+      )
+      or
+      (
+        requester.empty()
+        and
+        %resource.entry.resource.ofType(Composition)
+          .author.resolve().ofType(PractitionerRole)
+          .where(
+            organization.resolve().ofType(Organization)
+              .identifier.where(
+                system = 'https://ncez.mzcr.cz/fhir/sid/icp'
+                and value.exists()
+              ).exists()
+            and
+            specialty.coding.where(
+              system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
+              and code.exists()
+            ).exists()
+          ).exists()
+      )
     )
-    .ofType(PractitionerRole)
-    .where(
-      organization.resolve().ofType(Organization)
-        .identifier.where(
-          system = 'https://ncez.mzcr.cz/fhir/sid/icp'
-        ).exists()
-      and
-      specialty.coding.where(
-        system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
-        and code.exists()
-      ).exists()
-    )
-    .exists()
   )
 "
 
@@ -160,7 +180,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
-* entry[coverage].resource only CZ_Coverage
+* entry[coverage].resource only CZ_CoverageOrder
 * entry[medication].resource only CZ_MedicationStatementCore
 * entry[condition].resource only CZ_ConditionCore
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
