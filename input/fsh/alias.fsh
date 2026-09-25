@@ -24,8 +24,8 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 // Value set
 Alias: $hl7AppointmentStatus = http://hl7.org/fhir/ValueSet/appointmentstatus
 Alias: $mkn10vs = https://uzis.cz/terminology/ValueSet/mkn-10
-Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
-Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
+Alias: $sctBodySite = https://ncez.mzcr.cz/terminology/ValueSet/cz-body-site
+Alias: $sct-condition-code = https://ncez.mzcr.cz/terminology/ValueSet/condition-sct
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
 // Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings

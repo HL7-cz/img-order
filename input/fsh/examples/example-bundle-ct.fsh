@@ -145,8 +145,8 @@ Title: "Body Height: Patient Nováková"
 Description: "Example of body height of patient Nováková"
 * id = "cde5d5b4-7654-4876-10fe-dcba98765432"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
 * code.coding[LOINC] = $loinc#8302-2
 * code.coding[SNOMEDCT].code = #1153637007
 * code.coding[SNOMEDCT].system = $sct
@@ -168,8 +168,8 @@ Title: "Body Weight: Patient Nováková"
 Description: "Example of body weight of patient Nováková"
 * id = "def6e6c5-8765-4987-2110-edcba9876543"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
 * code.coding[LOINC] = $loinc#29463-7
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
@@ -222,7 +222,7 @@ Description: "Planned CT examination of the abdomen with intravenous administrat
 * category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * insurance = Reference(urn:uuid:5c7e6d54-8f90-41a2-b3b4-d5e6f7081923)
-* bodySite = $sctCZ#818983003 
+* bodySite = $sctCZ#818983003
 * code.coding = $sctCZ#169069000 //"CT vyšetření břicha s kontrastní látkou"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">CT Požadované vyšetření: Břicho s i.v. kontrastní látkou. Žádanka je neadresná - vhodná k realizaci na libovolném přijímajícím pracovišti dle kapacity. UPOZORNĚNÍ: pacientka alergická na jód - před podáním kontrastní látky nutno ověřit bezpečnost aplikace, viz AllergyIntolerance.</div>"
