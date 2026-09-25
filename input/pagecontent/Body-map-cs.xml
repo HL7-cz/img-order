@@ -1736,7 +1736,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
-
+            medication[x]
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
@@ -1755,7 +1755,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
-            identifier
+            medication[x].identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1774,7 +1774,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
-            code
+            medication[x].code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1793,7 +1793,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
             <td>
-            amount
+            medication[x].amount
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1810,12 +1810,12 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
             </td>
             <td>
 
@@ -1829,12 +1829,12 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
             </td>
             <td>
 
@@ -2420,7 +2420,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
             <td>
-            orderDetail.modality
+            orderDetail.coding:modality
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry

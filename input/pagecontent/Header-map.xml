@@ -674,7 +674,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerrole-core)</a></td>
             <td>
-            practiotioner.name
+            name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).subject
@@ -693,7 +693,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerrole-core)</a></td>
             <td>
-            speciality
+            specialty
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).subject
@@ -900,9 +900,9 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.name
+            name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
@@ -921,7 +921,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
             <td>
-            organization.identifier
+            identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
@@ -957,9 +957,9 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.address
+            address
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
@@ -976,9 +976,9 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.address.country
+            address.country
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
@@ -995,9 +995,9 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.telecom
+            telecom
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
@@ -1339,7 +1339,7 @@
             </td>
             <td><a href="StructureDefinition-cz-bundleImageOrder.html">Bundle: Imaging Order (CZ)</a></td>
             <td>
-            timeStamp
+            timestamp
             </td>
             <td>
             Bundle (CZ_BundleImageOrder)

@@ -7,8 +7,8 @@ Usage: #example
 * identifier[=].value = "123456786"
 * name.use = #usual
 * name.prefix = "doc. MUDr."
-* name.family = "Jan"
-* name.given = "Testovací"
+* name.family = "Testovací"
+* name.given = "Jan"
 * name.suffix = "PhD."
 * gender = #male
 
@@ -17,8 +17,8 @@ InstanceOf: CZ_PractitionerRoleOrder
 Title: "PractitionerRole: Radiology"
 Description: "Context of the practice site of the referring radiologist"
 Usage: #example
-* specialty = $vzp-odbornost#401 //"Radiodiagnostika"
-* specialty[+] = $sctCZ#394588006 //"radiodiagnostika - specializace"
+* specialty = $vzp-odbornost#809 //"Radiodiagnostika"
+* specialty[+] = $sctCZ#394914008 //"radiodiagnostika - specializace"
 * practitioner = Reference(practitionerExample)
 * organization = Reference(organizationExample)
 
@@ -28,7 +28,7 @@ Title: "Organization: Example radiology clinic"
 Description: "Example of an organization"
 Usage: #example
 * name = "Radiologická klinika, s.r.o."
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "100000003"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789666"

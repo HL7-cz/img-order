@@ -605,7 +605,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderDataElements.modality
 * group[=].element[=].display = "A.3.2.1.3 - Modality"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.modality
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.coding:modality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderDataElements.bodyPart

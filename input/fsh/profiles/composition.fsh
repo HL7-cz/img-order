@@ -17,6 +17,12 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * meta
   * security 0..* //MS
 
+* language 1..1
+
+* confidentiality 1..1
+
+* language 1..1
+
 * identifier
   * ^short = "Order identifier"
   * ^definition = "Identifiers assigned to this Imaging Order by the performer or other systems. It shall be common to several report versions"
@@ -165,7 +171,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_Anthropometric_Test_Result or CZ_PatientMobility or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_MedicationAdministrationCore or CZ_ImmunizationCore or CZ_ObservationImage or CZ_FlagPatientCore or CZ_Specimen)
+  * entry only Reference(CZ_Anthropometric_Test_Result or CZ_PatientMobility or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_ObservationImage or CZ_FlagPatientCore or CZ_Specimen)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------

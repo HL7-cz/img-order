@@ -328,7 +328,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "If it is the identifier of a particular order instance"
 * group[=].element[+].code = #Header.documentMetadata.dateTime
 * group[=].element[=].display = "A.1.8.4 - Order date and time"
-* group[=].element[=].target.code = #Bundle.timeStamp
+* group[=].element[=].target.code = #Bundle.timestamp
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If it is when this particular version of  this order has been assembled into a Bundle."

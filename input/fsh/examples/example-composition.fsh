@@ -10,6 +10,7 @@ Description: "Standalone example of an imaging order Composition."
 * author = Reference(cz-practitionerRole-example)
 * title = "Imaging Order – Magnetic Resonance"
 * confidentiality = #N
+* custodian = Reference(organizationExample)
 * language = #cs
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1

@@ -59,6 +59,7 @@ Usage: #inline
 * confidentiality = #N
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
 * language = #cs
+* custodian = Reference(urn:uuid:df19b899-358f-4cb9-8e66-9e151be70416)
 * category[documentCategory] = $loinc#57133-1
 
 * section[orderInformation].title = "Requested imaging studies information Document"
@@ -224,7 +225,7 @@ Description: "Gynecology and Obstetrics Clinic providing care for patient Malík
 Usage: #example
 * id = "21046dff-3219-487b-b9c0-8ff98429971a"
 * name = "Gynekologicko-porodnická ambulance Malíková"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "100000001"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789670"
@@ -247,7 +248,7 @@ Description: "Hospital in which is Gynecology and Obstetrics Clinic Malíková l
 Title: "Organization: Hospital Oblackov"
 * id = "df19b899-358f-4cb9-8e66-9e151be70416"
 * name = "Nemocnice Oblackov"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "100000004"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "456789672"
