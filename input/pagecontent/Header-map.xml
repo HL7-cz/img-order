@@ -826,7 +826,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
             <td>
-            identifier
+            subscriberId
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance

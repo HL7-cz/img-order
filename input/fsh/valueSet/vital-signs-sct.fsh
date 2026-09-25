@@ -1,6 +1,6 @@
 ValueSet: CZ_SnomedVitalSignsVs
 Id: sct-vital-signs
-Title: "Anthropometric metrics (CZ)"
+Title: "Anthropometric metrics SNOMED CT (CZ)"
 Description: "SNOMED CT concepts for quantitative vital signs measurements supported in imaging orders."
 * ^language = #cs
 * ^version = "1.0.0"
