@@ -129,7 +129,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#87520-3 //"Coverage type"
   * entry 1..
-  * entry only Reference(CZ_Coverage)
+  * entry only Reference(CZ_CoverageOrder)
 
 /////////////////////////////////// APPOINTMENT SECTION /////////////////////////////////////////
 * section[appointment]

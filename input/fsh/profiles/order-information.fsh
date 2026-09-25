@@ -1,3 +1,10 @@
+Invariant: order-reason
+Description: "Each Order must have a reason or reasonReference."
+Severity: #error
+Expression: ""
+
+Pavlíno, tady je potřeba dodělat kontrolu na to, aby žádanka měla buť reasoCode nebo ReasonReference.
+
 Profile: CZ_ImagingOrderInformation
 Parent: ServiceRequest
 Id: cz-imagingOrderInformation
@@ -28,9 +35,10 @@ Description: "Order information for the scope of the Czech national interoperabi
 * patientInstruction
 
 * subject only Reference(CZ_PatientCore)
-* insurance only Reference(CZ_Coverage)
+* insurance 1..*
+* insurance only Reference(CZ_CoverageOrder)
 * specimen only Reference(CZ_Specimen)
-* code
+* code 1..1
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
 * requester only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
@@ -50,7 +58,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     mobility 0..1
 * supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
-* reasonCode 1..*
+* reasonCode O..*
 * reasonCode.coding 1..*
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"

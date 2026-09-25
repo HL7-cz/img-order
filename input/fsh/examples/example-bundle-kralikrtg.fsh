@@ -442,7 +442,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikinsurance-example
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Example of coverage"
 Usage: #example
 Title: "Coverage: Healthcare insurance company 2"
@@ -450,6 +450,7 @@ Title: "Coverage: Healthcare insurance company 2"
 * status = #active
 * beneficiary = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * payor = Reference(urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308)
+* type = $v3-ActCode#HIP
 
 Instance: cz-pojistovna-example
 InstanceOf: CZ_OrganizationCore

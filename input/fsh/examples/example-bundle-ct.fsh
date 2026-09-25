@@ -151,7 +151,7 @@ Description: "Example of body height of patient Nováková"
 * code.coding[SNOMEDCT].code = #1153637007
 * code.coding[SNOMEDCT].system = $sct
 * code.coding[SNOMEDCT].version = $sctCzEdition
-* code.coding[NCLP] = $nclp_new#20411
+//* code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 168
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM
@@ -174,7 +174,7 @@ Description: "Example of body weight of patient Nováková"
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
 * code.coding[SNOMEDCT].version = $sctCzEdition
-* code.coding[NCLP] = $nclp_new#20042
+//* code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 71
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $UCUM
@@ -278,7 +278,7 @@ Title: "Condition: Clinical Reason for CT Examination"
 
 
 Instance: cz-novakovainsurance-example
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Example of healthcare insurance"
 Usage: #example
 Title: "Coverage: Healthcare Insurance Company"
@@ -286,6 +286,7 @@ Title: "Coverage: Healthcare Insurance Company"
 * status = #active
 * beneficiary = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * payor = Reference(urn:uuid:8fa19170-3210-4432-dcba-98765432fe10)
+* type = $v3-ActCode#HIP
 
 
 Instance: cz-organization-novakova-example

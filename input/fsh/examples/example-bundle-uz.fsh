@@ -195,7 +195,7 @@ Usage: #example
 * organization = Reference(urn:uuid:21046dff-3219-487b-b9c0-8ff98429971a)
 
 Instance: cz-pojisteni-malikova
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Coverage for patient Malíková, provided by VZP, covering the screening ultrasound examination of the fetus"
 Usage: #example
 Title: "Coverage: VZP"
@@ -203,9 +203,10 @@ Title: "Coverage: VZP"
 * status = #active
 * beneficiary = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * payor = Reference(urn:uuid:dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9)
+* type = $v3-ActCode#HIP
 
 Instance: cz-samoplatce-foto-malikova
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Coverage for patient Malíková, self-pay for the non-standard 3D/4D photography of the fetus"
 Usage: #example
 Title: "Coverage: Self-pay for 3D/4D photography"

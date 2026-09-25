@@ -30,7 +30,7 @@ Description: "Standalone example of an imaging order Composition."
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Is there structural damage to the right knee?</div>"
 
 Instance: cz-coverage-example
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Usage: #example
 Title: "Coverage: Patient insurance information"
 Description: "Example of a patient's insurance coverage information."
@@ -38,6 +38,7 @@ Description: "Example of a patient's insurance coverage information."
 * status = #active
 * beneficiary = Reference(Mracena)
 * payor = Reference(insuranceCompanyExample)
+* type = $v3-ActCode#HIP
 
 Instance: insuranceCompanyExample
 InstanceOf: CZ_OrganizationCore

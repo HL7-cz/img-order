@@ -136,7 +136,7 @@ Usage: #example
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
 Instance: cz-selfpay-coverage
-InstanceOf: CZ_Coverage
+InstanceOf: CZ_CoverageOrder
 Description: "Identification of the type of reimbursement for the examination (self-payer)"
 Usage: #example
 Title: "Coverage: Self-Payer"
