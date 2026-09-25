@@ -13,19 +13,71 @@ Expression: "entry.resource.ofType(Composition).count() = 1"
 Severity:    #error
 
 Invariant: same-servicerequest-performer
-Description: "Service requests SHALL have the same performer."
-Expression: "entry.resource.ofType(ServiceRequest).contained.all($this.performer = entry.resource.ofType(ServiceRequest).performer)"
+Description: "Service requests SHOULD have the same performer."
+Expression: "entry.resource.ofType(ServiceRequest).performer.reference.distinct().count() <= 1"
 Severity: #warning
 
 Invariant: same-servicerequest-occurrence
-Description: "Service requests SHALL have the same occurrence (dateTime or period)."
-Expression: "entry.resource.ofType(ServiceRequest).contained.all($this.occurrence = entry.resource.ofType(ServiceRequest).occurrence)"
+Description: "Service requests SHOULD have the same occurrence (dateTime or period)."
+Expression: "entry.resource.ofType(ServiceRequest).occurrence.distinct().count() <= 1"
 Severity: #warning
 
-Invariant: coverage-author
-Description: "If coverage is an insurance company than the author must have filled organization.identifier and specialty."
-Expression: "entry.resource.ofType(Coverage).payor.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/kp') implies (entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).specialty.exists() and entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).organization.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/icp'))"
+// Invariant: coverage-author
+// Description: "If coverage is an insurance company than the author must have filled organization.identifier of type icp and specialty."
+// Expression: "entry.resource.ofType(Coverage).payor.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/kp') implies (entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).specialty.exists() and entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).organization.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/icp'))"
+// Expression: "
+//   entry.resource.ofType(Coverage)
+//     .where(
+//       payor.resolve().ofType(Organization)
+//         .identifier.where(
+//           system = 'https://ncez.mzcr.cz/fhir/sid/kp'
+//         ).exists()
+//     ).exists()
+//   implies
+//   entry.resource.ofType(Composition)
+//     .author.resolve().ofType(PractitionerRole)
+//     .where(
+//       specialty.exists() and
+//       organization.resolve().ofType(Organization)
+//         .identifier.where(
+//           system = 'https://ncez.mzcr.cz/fhir/sid/icp'
+//         ).exists()
+//     ).exists()
+// "
+// Severity: #error
+
+Invariant: insurance-requester
+Description: "For every imaging order covered by health insurance, either the ServiceRequest requester or the Composition author SHALL have an ICP organization identifier and a contractual specialty."
 Severity: #error
+Expression: "
+  entry.resource.ofType(ServiceRequest).all(
+    insurance.resolve().ofType(Coverage)
+      .payor.resolve().ofType(Organization)
+      .identifier.where(
+        system = 'https://ncez.mzcr.cz/fhir/sid/kp'
+      ).exists()
+    implies
+    (
+      requester.resolve()
+      |
+      %resource.entry.resource.ofType(Composition).author.resolve()
+    )
+    .ofType(PractitionerRole)
+    .where(
+      organization.resolve().ofType(Organization)
+        .identifier.where(
+          system = 'https://ncez.mzcr.cz/fhir/sid/icp'
+        ).exists()
+      and
+      specialty.coding.where(
+        system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
+        and code.exists()
+      ).exists()
+    )
+    .exists()
+  )
+"
+
 
 //Invariant: one-do
 //Description: "A imaging order SHALL include one and only one DiagnosticOrder"
@@ -52,9 +104,10 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * obeys one-comp
 * obeys same-servicerequest-performer
 * obeys same-servicerequest-occurrence
-* obeys coverage-author
+* obeys insurance-requester
 //* obeys one-dr
 
+* identifier 1..1
 * identifier ^short = "Business identifier for this Imaging order"
 * type = #document
 * timestamp 1..

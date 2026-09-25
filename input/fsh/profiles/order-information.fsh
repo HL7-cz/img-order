@@ -50,18 +50,20 @@ Description: "Order information for the scope of the Czech national interoperabi
     mobility 0..1
 * supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
+* reasonCode 1..*
+* reasonCode.coding 1..*
 * reasonCode.coding ^slicing.discriminator[0].type = #value
 * reasonCode.coding ^slicing.discriminator[0].path = "system"
-* reasonCode.coding ^slicing.rules = #open
+* reasonCode.coding ^slicing.rules = #closed
 * reasonCode.coding contains
     mkn-10 0..1 and
     snomed 0..1 and
     orphacode 0..1
-* reasonCode.coding[mkn-10] from $mkn10vs (preferred)
-* reasonCode.coding[mkn-10].system = "https://uzis.cz/terminology/CodeSystem/mkn-10"
-* reasonCode.coding[snomed] from $sct-condition-code (preferred)
+* reasonCode.coding[mkn-10] from $mkn10vs (required)
+* reasonCode.coding[mkn-10].system = "https://uzis.cz/terminology/CodeSystem/mkn-10" (exactly)
+* reasonCode.coding[snomed] from $sct-condition-code (required)
 * reasonCode.coding[snomed].system = "http://snomed.info/sct" (exactly)
-* reasonCode.coding[orphacode] from $orphanet-vs (preferred)
+* reasonCode.coding[orphacode] from $orphanet-vs (required)
 * reasonCode.coding[orphacode].system = "https://www.orpha.net" (exactly)
 
 * orderDetail.coding ^slicing.discriminator[0].type = #value

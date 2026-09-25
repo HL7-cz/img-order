@@ -110,7 +110,7 @@ Usage: #inline
 * section[coverage].title = "Coverage"
 * section[coverage].code = $loinc#87520-3 //"Insurance information"
 * section[coverage].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Pojištění pacienta Ing. Králík, číslo pojištěnce 7803220234, poskytovatel VZP</div>"
-* section[coverage].text.status = #generated  
+* section[coverage].text.status = #generated
 * section[coverage].entry[0] = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
@@ -222,13 +222,13 @@ Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
 * id = "4a38a57a-fdfe-48df-802c-8d7e8e3e1a3b"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
 * code.coding[LOINC] = $loinc#8302-2
 * code.coding[SNOMEDCT].code = #1153637007
 * code.coding[SNOMEDCT].system = $sct
 * code.coding[SNOMEDCT].version = $sctCzEdition
-* code.coding[NCLP] = $nclp_new#20411
+//* code.coding[NCLP] = $nclp_new#20411
 * valueQuantity.value = 180
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM
@@ -244,13 +244,13 @@ Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
 * id = "e0861d9f-4b04-465f-b15b-cb01e3a8b677"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
 * code.coding[LOINC] = $loinc#29463-7
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
 * code.coding[SNOMEDCT].version = $sctCzEdition
-* code.coding[NCLP] = $nclp_new#20042
+//* code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 80
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $UCUM
