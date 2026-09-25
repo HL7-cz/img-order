@@ -84,4 +84,4 @@ Prvek `Composition.type` nese typ žádanky z národního oboru hodnot Typy žá
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.1.1.1 | Antropometrická metrika a jednotka | [cz-anthropometric-metric-vs](ValueSet-cz-anthropometric-metric-vs.html) — výška/obvod hlavy: `m`, `cm`, `mm`; hmotnost: `kg`, `g`; BMI: `kg/m2`; tělesný povrch: `m2` |
+| A.3.1.1.1 | Antropometrická metrika a jednotka | [sct-vital-signs](ValueSet-sct-vital-signs.html) a [loinc-vital-signs](ValueSet-loinc-vital-signs.html) — výška/obvod hlavy: `m`, `cm`, `mm`; hmotnost: `kg`, `g`; BMI: `kg/m2`; tělesný povrch: `m2` |
