@@ -14,7 +14,7 @@ Description: "Imaging order for Magnetic Resonance"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Vyšetření MR pravého kolene</div>"
 * authoredOn = "2025-04-01T09:00:00+01:00"
-* reasonCode.text = "Klinická otázka: Suspekce na rupturu předního zkříženého vazu pravého kolene"
+* reasonCode.coding = $mkn10#M23.21
 * note.text = "Poznámka k vyšetření"
 
 Instance: VZPCoverage
