@@ -49,8 +49,7 @@ Severity: #warning
 Invariant: insurance-requester
 Description: "For every imaging order covered by public health insurance, the ServiceRequest requester, or the Composition author when requester is absent, SHALL have an ICP organization identifier and a contractual specialty."
 Severity: #error
-Expression: "
-  entry.resource.ofType(ServiceRequest).all(
+Expression: "entry.resource.ofType(ServiceRequest).all(
     insurance.resolve().ofType(Coverage)
       .type.coding.where(
         system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
@@ -95,8 +94,7 @@ Expression: "
           ).exists()
       )
     )
-  )
-"
+  )"
 
 
 //Invariant: one-do
