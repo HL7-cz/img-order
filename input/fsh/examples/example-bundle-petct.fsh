@@ -7,7 +7,7 @@ Usage: #example
 * identifier[=].value = "urn:uuid:a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d"
 * type = #document
 * timestamp = "2026-08-27T10:00:00+02:00"
-* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].fullUrl = "urn:uuid:70113bbe-fc88-4f90-9351-e88dc7866c5e"
 * entry[composition].resource = Composition-pet-ct-lymfom
 * entry[patient].fullUrl = "urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193"
 * entry[patient].resource = cz-patient-novak
@@ -33,7 +33,7 @@ InstanceOf: CZ_CompositionImageOrder
 Title: "Composition: PET/CT referral structure"
 Description: "Structure of the PET/CT request form for suspected lymphoma relapse"
 Usage: #inline
-* id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* id = "70113bbe-fc88-4f90-9351-e88dc7866c5e"
 * status = #final
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * date = "2026-08-27T10:00:00+02:00"
