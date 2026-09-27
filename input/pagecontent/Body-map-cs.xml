@@ -461,7 +461,7 @@
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
 
             </td>
@@ -469,7 +469,7 @@
             Composition (CZ_CompositionImageOrder).section[Coverage]
             </td>
             <td>
-            Composition.section:Coverage.entry.ofType(CZ_Coverage)
+            Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)
             </td>
           </tr>
           <tr>
@@ -480,7 +480,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             type
             </td>
@@ -499,7 +499,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             payor
             </td>
@@ -523,7 +523,7 @@
             patient.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -542,7 +542,7 @@
             organization.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -561,7 +561,7 @@
             organization
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -580,7 +580,7 @@
             patient.address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -599,7 +599,7 @@
             patient.address.country
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -618,7 +618,7 @@
             patient.telecom
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -632,7 +632,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             comment
             </td>

@@ -114,20 +114,20 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:Coverage
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
+* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)"
 * group[=].element[+].code = #Body.coverage.method
 * group[=].element[=].display = "A.2.4.1 - Coverage method"
-* group[=].element[=].target.code = #CZ_Coverage.type
+* group[=].element[=].target.code = #CZ_CoverageOrder.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.coverage.informationPayor
 * group[=].element[=].display = "A.2.4.2 - Information about Payor"
-* group[=].element[=].target.code = #CZ_Coverage.payor
+* group[=].element[=].target.code = #CZ_CoverageOrder.payor
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.coverage.comment
 * group[=].element[=].display = "A.2.4.3 - Coverage comment"
-* group[=].element[=].target.code = #CZ_Coverage.comment
+* group[=].element[=].target.code = #CZ_CoverageOrder.comment
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageAppointmentCz"
