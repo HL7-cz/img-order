@@ -75,7 +75,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * reasonCode.coding[orphacode].system = "https://www.orpha.net" (exactly)
 
 * reasonReference 0..*
-* reasonReference only Reference(CZ_ConditionCore or CZ_ObservationImage or DiagnosticReport or DocumentReference)
+* reasonReference only Reference(CZ_ConditionClinicalQuestion or CZ_ConditionCore or CZ_ObservationImage or DiagnosticReport or DocumentReference)
 
 * orderDetail 1..*
 * orderDetail.coding ^slicing.discriminator[0].type = #value
