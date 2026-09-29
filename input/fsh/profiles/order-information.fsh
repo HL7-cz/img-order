@@ -77,6 +77,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * reasonReference 0..*
 * reasonReference only Reference(CZ_ConditionCore or CZ_ObservationImage or DiagnosticReport or DocumentReference)
 
+* orderDetail 1..*
 * orderDetail.coding ^slicing.discriminator[0].type = #value
 * orderDetail.coding ^slicing.discriminator[0].path = "system"
 * orderDetail.coding ^slicing.rules = #open
