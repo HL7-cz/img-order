@@ -1710,17 +1710,17 @@
           <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
             <td>
-            A.3.1.3.1 - Medikace
+            A.3.1.3 - Medikace
             </td>
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-
+            medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -1729,17 +1729,17 @@
           <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
             <td>
-            A.3.1.3.1 - Medikace
+            A.3.1.3 - Medikace
             </td>
             <td>
             související
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
             medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -1748,12 +1748,12 @@
           <tr>
             <td>Medication.identifier</td>
             <td>
-            A.3.1.3.1.1 - Identifikátor medikace
+            A.3.1.3.1 - Identifikátor medikace
             </td>
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
             medication[x].identifier
             </td>
@@ -1767,12 +1767,12 @@
           <tr>
             <td>Medication.code</td>
             <td>
-            A.3.1.3.1.2 - Kód medikace
+            A.3.1.3.2 - Kód medikace
             </td>
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
             medication[x].code
             </td>
@@ -1786,12 +1786,12 @@
           <tr>
             <td>Medication.amount</td>
             <td>
-            A.3.1.3.1.3 - Množství medikace
+            A.3.1.3.3 - Množství medikace
             </td>
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
             medication[x].amount
             </td>
@@ -1799,45 +1799,6 @@
             Composition (CZ_CompositionImageOrder)
             </td>
             <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
-            <td>
-            A.3.1.3 - Možné kontraindikace vyšetření nebo podání kontrastní látky
-            </td>
-            <td>
-            související
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
-            <td>
-            A.3.1.3 - Možné kontraindikace vyšetření nebo podání kontrastní látky
-            </td>
-            <td>
-            související
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatementCore)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
-            </td>
-            <td>
-
             </td>
           </tr>
           <tr>
