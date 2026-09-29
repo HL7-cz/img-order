@@ -26,9 +26,6 @@ Usage: #example
 * entry[coverage][+].fullUrl = "urn:uuid:f6c7d8e9-bafb-4fcd-8f56-7a8b9cadbec5"
 * entry[coverage][=].resource = cz-samoplatce-foto-malikova
 
-* entry[condition].fullUrl = "urn:uuid:a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
-* entry[condition].resource = TehotenstviCondition
-
 * entry[practitioner].fullUrl = "urn:uuid:b8e9fabc-dcfd-4bef-8f78-9cadbecfd0e7"
 * entry[practitioner].resource = cz-practitioner-gynekolozka
 
@@ -71,7 +68,7 @@ Usage: #inline
 
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6 //"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Klinická otázka: Screening II. trimestru gravidity (20+3 týdny) - biometrie plodu, morfologie, hodnocení placenty a plodové vody. Pacientka si dále přeje nadstandardní 3D/4D fotografii plodu jako upomínkovou fotografii (nejde o diagnostický výkon).</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Odpovídá vývoj plodu gestačnímu stáří? Přítomnost morfologických odchylek a markerů vrozených vývojových vad.</div>"
 * section[clinicalQuestion].text.status = #additional
 
 * section[coverage].title = "Coverage information"
@@ -131,7 +128,7 @@ Description: "Screening ultrasound examination of the fetus in the second trimes
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: Screeningové UZ vyšetření plodu, II. trimestr (20+3 týdny gravidity) - biometrie, morfologický screening, placenta, plodová voda. Hrazeno z veřejného zdravotního pojištění.</div>"
 * authoredOn = "2026-08-31T10:30:00+02:00"
-* reasonReference = Reference(urn:uuid:a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6)
+* reasonCode.coding[mkn-10] = $mkn10#Z349
 * requester = Reference(urn:uuid:c9fabcde-edfe-4cfa-8f89-adbecfd0e1f8)
 * orderDetail.coding[modality] = $dicom#US "Ultrasound"
 
@@ -156,19 +153,9 @@ Description: "Nadstandard 3D/4D photography of the fetus, requested by the patie
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadovaná služba: nadstandardní 3D/4D fotografie plodu pro rodiče, na přání pacientky, v návaznosti na screeningové UZ vyšetření. Hrazeno přímo pacientkou.</div>"
 * authoredOn = "2026-08-31T10:30:00+02:00"
-* reasonReference = Reference(urn:uuid:a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6)
+* reasonCode.coding[mkn-10] = $mkn10#Z349
 * requester = Reference(urn:uuid:c9fabcde-edfe-4cfa-8f89-adbecfd0e1f8)
 * orderDetail.coding[modality] = $dicom#US //"Ultrasound"
-
-Instance: TehotenstviCondition
-InstanceOf: CZ_ConditionClinicalQuestion
-Usage: #example
-Description: "Pregnancy, 20+3 weeks gestation, indicated for second trimester screening."
-Title: "Condition: Pregnancy"
-* id = "a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
-* subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
-* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
-* code.text = "Fyziologicky probíhající gravidita, gestační týden 20+3, indikován screening II. trimestru. Pacientka žádá zároveň nadstandardní 3D/4D fotografii plodu."
 
 Instance: cz-practitioner-gynekolozka
 InstanceOf: CZ_PractitionerCore
