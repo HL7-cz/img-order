@@ -7,7 +7,7 @@ Usage: #example
 * identifier[=].value = "urn:uuid:a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d"
 * type = #document
 * timestamp = "2026-08-27T10:00:00+02:00"
-* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].fullUrl = "urn:uuid:70113bbe-fc88-4f90-9351-e88dc7866c5e"
 * entry[composition].resource = Composition-pet-ct-lymfom
 * entry[patient].fullUrl = "urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193"
 * entry[patient].resource = cz-patient-novak
@@ -33,13 +33,15 @@ InstanceOf: CZ_CompositionImageOrder
 Title: "Composition: PET/CT referral structure"
 Description: "Structure of the PET/CT request form for suspected lymphoma relapse"
 Usage: #inline
-* id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* id = "70113bbe-fc88-4f90-9351-e88dc7866c5e"
 * status = #final
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * date = "2026-08-27T10:00:00+02:00"
 * author = Reference(urn:uuid:8fd3a4cf-173a-43f0-a1f9-5b538d088c03)
 * title = "Žádanka o zobrazovací vyšetření - Celotělové PET/CT"
 * confidentiality = #N
+* language = #cs
+* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
 * category[documentCategory] = $loinc#57133-1 //"Referral note"
 
@@ -149,6 +151,7 @@ Title: "Coverage: Health Insurance of the Patient"
 * status = #active
 * beneficiary = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * payor = Reference(urn:uuid:d9503020-e03b-4a09-b565-3505ec5b12d5)
+* subscriberId = "8501121234"
 * type = $v3-ActCode#HIP
 
 Instance: cz-pojistovna-vzp

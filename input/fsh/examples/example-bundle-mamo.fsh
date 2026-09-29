@@ -38,6 +38,8 @@ Usage: #inline
 * author = Reference(urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757)
 * title = "Žádanka o zobrazovací vyšetření - Preventivní mamografie"
 * confidentiality = #N
+* language = #cs
+* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) 
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
 * category[documentCategory] = $loinc#57133-1
 * section[orderInformation].title = "Requested imaging studies information Document"

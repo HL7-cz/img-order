@@ -4,7 +4,7 @@ Příklady instancí jsou publikovány v této příručce. Speciální funkčn�
 
 | Příklad | Co demonstruje | Instance |
 |---|---|---|
-| Série snímků po traumatu | Sedm požadavků na jedné eŽádance po pádu z výšky: rentgenový snímek pravého kolene, pravé dolní končetiny, lumbosakrálního přechodu, pravého talu, pánevní oblasti a obou kyčelních krajin. Nese biometrické údaje, omezení pohyblivosti, zapůjčenou dokumentaci i prezentovanou formu dokumentu. | [BundleKralikRTG](Bundle-BundleKralikRTG.html) |
+| Série snímků po traumatu | Sedm požadavků na jedné eŽádance po pádu z výšky: rentgenový snímek pravého kolene, pravé dolní končetiny, lumbosakrálního přechodu, pravého talu, pánevní oblasti a obou kyčelních krajin. Nese biometrické údaje, omezení pohyblivosti i prezentovanou formu dokumentu. | [BundleKralikRTG](Bundle-BundleKralikRTG.html) |
 | CT břicha s kontrastní látkou | Neadresná eŽádanka na plánované vyšetření s nitrožilním podáním kontrastní látky. Nese údaje pro ověření bezpečnosti podání, tj. alergii a hodnotu kreatininu, a dále biometrické údaje. | [BundleNovakovaCT](Bundle-BundleNovakovaCT.html) |
 | Celotělové PET/CT | Onkologické přešetření možného návratu lymfomu celotělovým hybridním vyšetřením. Nese dvě modality současně, `PT` a `CT`. | [BundlePetCtLymfom](Bundle-BundlePetCtLymfom.html) |
 | Preventivní mamografie samoplátkyně | Screeningové vyšetření prsů na vlastní žádost pacientky v dřívějším věku, než určuje národní screeningový program. Způsob úhrady označuje pacientku jako samoplátce. | [BundleMamografieSamoplatce](Bundle-BundleMamografieSamoplatce.html) |

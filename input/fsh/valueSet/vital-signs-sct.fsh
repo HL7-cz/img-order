@@ -1,6 +1,6 @@
 ValueSet: CZ_SnomedVitalSignsVs
 Id: sct-vital-signs
-Title: "Anthropometric metrics (CZ)"
+Title: "Anthropometric metrics SNOMED CT (CZ)"
 Description: "SNOMED CT concepts for quantitative vital signs measurements supported in imaging orders."
 * ^language = #cs
 * ^version = "1.0.0"
@@ -17,7 +17,7 @@ Description: "SNOMED CT concepts for quantitative vital signs measurements suppo
 * include codes from system $sct where concept is-a #27113001 // "Body weight"
 //MINUS (<< 248350002 | Reference weight (observable entity) | OR << 301334000 | Birth weight centile (observable entity) |))
 * include codes from system $sct where concept is-a #363812007 // "Head circumference"
-* include codes from system $sct where concept = #60621009 // "Body mass index"
+* include $sct#60621009 // "Body mass index"
 * include codes from system $sct where concept is-a #301898006 // "Body surface area"
 * include codes from system $sct where concept is-a #86290005 // Respiratory rate
 * include codes from system $sct where concept is-a #364075005 // Heart rate

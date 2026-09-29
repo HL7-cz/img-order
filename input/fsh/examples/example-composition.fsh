@@ -10,6 +10,8 @@ Description: "Standalone example of an imaging order Composition."
 * author = Reference(cz-practitionerRole-example)
 * title = "Imaging Order – Magnetic Resonance"
 * confidentiality = #N
+* custodian = Reference(organizationExample)
+* language = #cs
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
 
@@ -37,6 +39,7 @@ Description: "Example of a patient's insurance coverage information."
 * id = "coverage-example"
 * status = #active
 * beneficiary = Reference(Mracena)
+* subscriberId = "2716126452"
 * payor = Reference(insuranceCompanyExample)
 * type = $v3-ActCode#HIP
 

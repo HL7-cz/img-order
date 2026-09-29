@@ -194,20 +194,20 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:order.insurance
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_Coverage)"
+* group[=].element[=].target.comment = "Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_CoverageOrder)"
 * group[=].element[+].code = #Header.payer.insuranceCode
 * group[=].element[=].display = "A.1.3.1 - Health insurance code"
-* group[=].element[=].target.code = #CZ_Coverage.payor.identifier
+* group[=].element[=].target.code = #CZ_CoverageOrder.payor.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.payer.insuranceName
 * group[=].element[=].display = "A.1.3.2 - Health insurance name"
-* group[=].element[=].target.code = #CZ_Coverage.payor.name
+* group[=].element[=].target.code = #CZ_CoverageOrder.payor.name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.payer.insuranceNumber
 * group[=].element[=].display = "A.1.3.3 - Health insurance number"
-* group[=].element[=].target.code = #CZ_Coverage.subscriberId
+* group[=].element[=].target.code = #CZ_CoverageOrder.subscriberId
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/CoverageOrderCz"
@@ -217,15 +217,15 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:Coverage
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
+* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)"
 * group[=].element[+].code = #Header.coverage.method
 * group[=].element[=].display = "A.1.4.1 - Coverage method"
-* group[=].element[=].target.code = #CZ_Coverage.type
+* group[=].element[=].target.code = #CZ_CoverageOrder.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.coverage.informationPayor
 * group[=].element[=].display = "A.1.4.2 - Information about Payor"
-* group[=].element[=].target.code = #CZ_Coverage.payor
+* group[=].element[=].target.code = #CZ_CoverageOrder.payor
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/AuthorCz"
@@ -328,7 +328,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "If it is the identifier of a particular order instance"
 * group[=].element[+].code = #Header.documentMetadata.dateTime
 * group[=].element[=].display = "A.1.8.4 - Order date and time"
-* group[=].element[=].target.code = #Bundle.timeStamp
+* group[=].element[=].target.code = #Bundle.timestamp
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If it is when this particular version of  this order has been assembled into a Bundle."
@@ -398,15 +398,15 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "As business version, not as resource version"
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/digitalSignatureCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-bundleImageOrder"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-provenance"
 * group[=].element[+].code = #Header.digitalSignatureCz.digitalSignature
 * group[=].element[=].display = "A.1.9.1 - Electronic signature or document seal"
-* group[=].element[=].target.code = #Bundle.signature.data
+* group[=].element[=].target.code = #Provenance.signature.data		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.digitalSignatureCz.timestamp
 * group[=].element[=].display = "A.1.9.2 - Electronic time stamp"
-* group[=].element[=].target.code = #Bundle.signature.when
+* group[=].element[=].target.code = #Provenance.signature.when					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = ""

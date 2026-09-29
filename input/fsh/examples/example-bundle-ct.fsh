@@ -65,7 +65,8 @@ Usage: #inline
 * confidentiality = #N
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
-
+* custodian = Reference(urn:uuid:9ab2a281-4321-4543-edcb-a9876543210f)
+* language = #cs
 * encounter = Reference(urn:uuid:abc3b392-5432-4654-fedc-ba9876543201)
 
 * section[orderInformation].title = "Requested imaging studies information Document"
@@ -284,6 +285,7 @@ Usage: #example
 Title: "Coverage: Healthcare Insurance Company"
 * id = "5c7e6d54-8f90-41a2-b3b4-d5e6f7081923"
 * status = #active
+* subscriberId = "7803220234"
 * beneficiary = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * payor = Reference(urn:uuid:8fa19170-3210-4432-dcba-98765432fe10)
 * type = $v3-ActCode#HIP
@@ -307,7 +309,7 @@ Description: "Referring organisation (GP’s surgery) – the referral is not ad
 Title: "Organization: Requesting workplace (general practitioner)"
 * id = "9ab2a281-4321-4543-edcb-a9876543210f"
 * name = "Ordinace praktického lékaře MUDr. Karla Dlouhého"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "100000002"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "77889900"

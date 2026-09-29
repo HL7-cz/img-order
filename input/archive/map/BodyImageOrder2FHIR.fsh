@@ -60,7 +60,7 @@ Usage: #definition
 * group[=].element[+].code = #OrderInformation.orderReason.problem
 * group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.coding
-* group[=].element[=].target.display = ""
+* group[=].element[=].target.display = "or CZ_ImagingOrderInformation.reasonReference"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
 * group[=].element[=].display = "A.2.2.4 - Reason for ordering by code"
@@ -114,20 +114,20 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:Coverage
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
+* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)"
 * group[=].element[+].code = #Body.coverage.method
 * group[=].element[=].display = "A.2.4.1 - Coverage method"
-* group[=].element[=].target.code = #CZ_Coverage.type
+* group[=].element[=].target.code = #CZ_CoverageOrder.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.coverage.informationPayor
 * group[=].element[=].display = "A.2.4.2 - Information about Payor"
-* group[=].element[=].target.code = #CZ_Coverage.payor
+* group[=].element[=].target.code = #CZ_CoverageOrder.payor
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.coverage.comment
 * group[=].element[=].display = "A.2.4.3 - Coverage comment"
-* group[=].element[=].target.code = #CZ_Coverage.comment
+* group[=].element[=].target.code = #CZ_CoverageOrder.comment
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageAppointmentCz"
@@ -419,30 +419,51 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
-* group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
-* group[=].element[=].display = "A.3.1.3.1 - Medication"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/medicationStatement-cz-core"
+* group[=].element[+].code = #Body.SupportingInformation.medication
+* group[=].element[=].display = "A.3.1.3 - Medication"
 * group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication
-* group[=].element[=].display = "A.3.1.3.1 - Medication"
-* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_MedicationStatementCore)
+* group[=].element[+].code = #Body.SupportingInformation.medication
+* group[=].element[=].display = "A.3.1.3 - Medication"
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationAdministrationCore)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Medication.identifier
-* group[=].element[=].display = "A.3.1.3.1.1 - Identifier of medication"
-* group[=].element[=].target.code = #CZ_MedicationStatementCore.identifier
+* group[=].element[=].display = "A.3.1.3.1 - Identifier of medication"
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.medication.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.code
-* group[=].element[=].display = "A.3.1.3.1.2 - Code of Medication"
-* group[=].element[=].target.code = #CZ_MedicationStatementCore.code
+* group[=].element[=].display = "A.3.1.3.2 - Code of Medication"
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.medication.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.amount
-* group[=].element[=].display = "A.3.1.3.1.3 - Amount of Medication"
-* group[=].element[=].target.code = #CZ_MedicationStatementCore.amount
+* group[=].element[=].display = "A.3.1.3.3 - Amount of Medication"
+* group[=].element[=].target.code = #CZ_MedicationStatementCore.medication.amount
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/MedicationAdministration-cz-core"
+* group[=].element[=].display = "A.3.1.3 - Medication"
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationAdministrationCore)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #Medication.identifier
+* group[=].element[=].display = "A.3.1.3.1 - Identifier of medication"
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.medication.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Medication.code
+* group[=].element[=].display = "A.3.1.3.2 - Code of Medication"
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.medication.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Medication.amount
+* group[=].element[=].display = "A.3.1.3.3 - Amount of Medication"
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.dosage.dose
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
@@ -605,7 +626,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderDataElements.modality
 * group[=].element[=].display = "A.3.2.1.3 - Modality"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.modality
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.orderDetail.coding:modality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderDataElements.bodyPart

@@ -4,7 +4,7 @@ Example instances are published in this guide. The Special Functional Specificat
 
 | Example | What it demonstrates | Instance |
 |---|---|---|
-| Series of images after trauma | Seven requests on a single eReferral after a fall from height: radiographs of the right knee, the right lower limb, the lumbosacral junction, the right talus, the pelvic region and both hip regions. Carries biometric data, a mobility restriction, borrowed documentation and the presented form of the document. | [BundleKralikRTG](Bundle-BundleKralikRTG.html) |
+| Series of images after trauma | Seven requests on a single eReferral after a fall from height: radiographs of the right knee, the right lower limb, the lumbosacral junction, the right talus, the pelvic region and both hip regions. Carries biometric data, a mobility restriction and the presented form of the document. | [BundleKralikRTG](Bundle-BundleKralikRTG.html) |
 | Abdominal CT with contrast agent | A non-addressed eReferral for a planned examination with intravenous administration of a contrast agent. Carries the data needed to verify the safety of the administration, that is an allergy and the creatinine value, and biometric data. | [BundleNovakovaCT](Bundle-BundleNovakovaCT.html) |
 | Whole-body PET/CT | Oncological re-examination for a possible return of lymphoma by a whole-body hybrid examination. Carries two modalities at once, `PT` and `CT`. | [BundlePetCtLymfom](Bundle-BundlePetCtLymfom.html) |
 | Preventive mammography, self-payer | A screening examination of the breasts at the patient's own request, at an earlier age than the national screening programme provides for. The coverage kind marks the patient as a self-payer. | [BundleMamografieSamoplatce](Bundle-BundleMamografieSamoplatce.html) |

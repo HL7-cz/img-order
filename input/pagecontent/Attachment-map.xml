@@ -272,7 +272,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.contentType
+            content.attachment.contentType
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry
@@ -291,7 +291,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.language
+            content.attachment.language
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry
@@ -310,7 +310,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.data
+            content.attachment.data
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry
@@ -329,7 +329,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.url
+            content.attachment.url
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry
@@ -348,7 +348,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.title
+            content.attachment.title
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry
@@ -367,7 +367,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html">DocumentReference (cz-attachment)</a></td>
             <td>
-            attachment.creation
+            content.attachment.creation
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[attachments].entry

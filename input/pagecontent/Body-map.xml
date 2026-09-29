@@ -292,7 +292,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            reasonCode.coding
+            reasonCode.coding/reasonReference.ofType(CZ_ConditionCore).code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
@@ -461,7 +461,7 @@
             <td>
             related-to
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
 
             </td>
@@ -469,7 +469,7 @@
             Composition (CZ_CompositionImageOrder).section[Coverage]
             </td>
             <td>
-            Composition.section:Coverage.entry.ofType(CZ_Coverage)
+            Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)
             </td>
           </tr>
           <tr>
@@ -480,7 +480,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             type
             </td>
@@ -499,7 +499,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             payor
             </td>
@@ -523,7 +523,7 @@
             patient.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -542,7 +542,7 @@
             organization.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -561,7 +561,7 @@
             organization
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -580,7 +580,7 @@
             patient.address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -599,7 +599,7 @@
             patient.address.country
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -618,7 +618,7 @@
             patient.telecom
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_Coverage.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
             </td>
             <td>
 
@@ -632,7 +632,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">Coverage (cz-coverage)</a></td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
             <td>
             comment
             </td>
@@ -1708,38 +1708,38 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.medication</a></td>
             <td>
-            A.3.1.3.1 - Medication
+            A.3.1.3 - Medication
             </td>
             <td>
             related-to
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-
+            medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication.Medication</a></td>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.medication</a></td>
             <td>
-            A.3.1.3.1 - Medication
+            A.3.1.3 - Medication
             </td>
             <td>
             related-to
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-
+            medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -1748,14 +1748,14 @@
           <tr>
             <td>Medication.identifier</td>
             <td>
-            A.3.1.3.1.1 - Medication identifier
+            A.3.1.3.1 - Medication identifier
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            identifier
+            medication[x].identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1767,14 +1767,14 @@
           <tr>
             <td>Medication.code</td>
             <td>
-            A.3.1.3.1.2 - Medication code
+            A.3.1.3.2 - Medication code
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            code
+            medication[x].code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1786,55 +1786,17 @@
           <tr>
             <td>Medication.amount</td>
             <td>
-            A.3.1.3.1.3 - Ratio
+            A.3.1.3.3 - Ratio
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            amount
+            medication[x].amount
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
-            <td>
-            A.3.1.3 - Possible contraindications for examination or administration of contrast medium
-            </td>
-            <td>
-            related-to
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationAdministrationCore)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.possibleContraindicationsDueToMedication</a></td>
-            <td>
-            A.3.1.3 - Possible contraindications for examination or administration of contrast medium
-            </td>
-            <td>
-            related-to
-            </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -2420,7 +2382,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            orderDetail.modality
+            orderDetail.coding:modality
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry

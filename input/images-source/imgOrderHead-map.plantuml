@@ -29,9 +29,11 @@ class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-c
 class "cz-patient-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundleImageOrder" <<Profile>> [[StructureDefinition-cz-bundleImageOrder.html]]
+class "cz-provenance" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-provenance.html]]
 class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositionImageOrder.html]]
 "Imaging Order Header" <|. "cz-compositionImageOrder"
 "Imaging Order Header" <|. "cz-bundleImageOrder"
+"Imaging Order Header" <|. "cz-provenance"
 "Imaging Order Header" <|. "cz-patient-core"
 "Imaging Order Header" <|. "cz-coverage"
 "Imaging Order Header" <|. "cz-practitioner-core"
@@ -41,4 +43,5 @@ class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositio
 "cz-patient-core" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-practitioner-core"
 "cz-practitioner-core" -d[hidden]-> "cz-encounter"
+"cz-encounter" -d[hidden]-> "cz-provenance"
 @enduml

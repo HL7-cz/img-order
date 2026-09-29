@@ -91,6 +91,8 @@ Usage: #inline
 * author = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
+* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) 
+* language = #cs
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
 * extension[presentedForm].valueAttachment = cz-pdfkralikrgt-example
@@ -138,8 +140,8 @@ Usage: #example
 * identifier[=].value = "123456789"
 * name.use = #usual
 * name.prefix = "doc. MUDr."
-* name.family = "Jiří"
-* name.given = "Example"
+* name.family = "Example"
+* name.given = "Jiří"
 * name.suffix = "PhD."
 * gender = #male
 
@@ -153,8 +155,8 @@ Usage: #example
 * identifier[=].value = "123456788"
 * name.use = #usual
 * name.prefix = "Bc."
-* name.family = "Miroslav"
-* name.given = "Example"
+* name.family = "Example"
+* name.given = "Miroslav"
 * name.suffix = "MBA"
 * gender = #male
 
@@ -448,6 +450,7 @@ Usage: #example
 Title: "Coverage: Healthcare insurance company 2"
 * id = "92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * status = #active
+* subscriberId = "0551621110"
 * beneficiary = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * payor = Reference(urn:uuid:35e78cc9-6fe2-42a8-8553-83a3f86ce308)
 * type = $v3-ActCode#HIP

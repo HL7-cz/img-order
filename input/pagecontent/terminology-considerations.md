@@ -82,4 +82,4 @@ The element `Composition.type` carries the order type from the national Referral
 
 | Item code | Item description               | Value                                                                                                                                                                                 |
 | --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A.3.1.1.1 | Anthropometric metric and unit | [cz-anthropometric-metric-vs](ValueSet-cz-anthropometric-metric-vs.html) — height/head circumference: `m`, `cm`; weight: `kg`, `g`; BMI: `kg/m2`; body surface area: `m2` |
+| A.3.1.1.1 | Anthropometric metric and unit | [sct-vital-signs](ValueSet-sct-vital-signs.html) and [loinc-vital-signs](ValueSet-loinc-vital-signs.html) — height/head circumference: `m`, `cm`; weight: `kg`, `g`; BMI: `kg/m2`; body surface area: `m2` |
