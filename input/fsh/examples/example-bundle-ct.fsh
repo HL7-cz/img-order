@@ -285,6 +285,7 @@ Usage: #example
 Title: "Coverage: Healthcare Insurance Company"
 * id = "5c7e6d54-8f90-41a2-b3b4-d5e6f7081923"
 * status = #active
+* subscriberId = "7803220234"
 * beneficiary = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * payor = Reference(urn:uuid:8fa19170-3210-4432-dcba-98765432fe10)
 * type = $v3-ActCode#HIP

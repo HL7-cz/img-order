@@ -39,6 +39,7 @@ Description: "Example of a patient's insurance coverage information."
 * id = "coverage-example"
 * status = #active
 * beneficiary = Reference(Mracena)
+* subscriberId = "2716126452"
 * payor = Reference(insuranceCompanyExample)
 * type = $v3-ActCode#HIP
 

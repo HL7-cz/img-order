@@ -151,6 +151,7 @@ Title: "Coverage: Health Insurance of the Patient"
 * status = #active
 * beneficiary = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * payor = Reference(urn:uuid:d9503020-e03b-4a09-b565-3505ec5b12d5)
+* subscriberId = "8501121234"
 * type = $v3-ActCode#HIP
 
 Instance: cz-pojistovna-vzp

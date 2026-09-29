@@ -203,6 +203,7 @@ Usage: #example
 Title: "Coverage: VZP"
 * id = "e5b6c7d8-a9fa-4ebc-8f45-6f7a8b9cadb4"
 * status = #active
+* subscriberId = "9557101234"
 * beneficiary = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * payor = Reference(urn:uuid:dafbcdef-feaf-4dab-8f9a-becfd0e1f2a9)
 * type = $v3-ActCode#HIP
