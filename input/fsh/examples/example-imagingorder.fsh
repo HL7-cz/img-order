@@ -21,6 +21,7 @@ Instance: VZPCoverage
 InstanceOf: CZ_CoverageOrder
 Usage: #example
 Title: "Coverage: Healthcare insurance coverage for patient Mracena"
+Description: "Coverage for healthcare insurance for patient Mracena"
 * status = #active
 * beneficiary = Reference(Mracena)
 * payor = Reference(VZPPojistovna)

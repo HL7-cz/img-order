@@ -258,7 +258,7 @@ Description: "Clinically significant allergy to iodine / iodinated contrast agen
 * type = #allergy
 * category = #medication
 * criticality = #high
-* code = $sctCZ#294913003 // "alergie na jód"
+* code.text = "Alergie na jodové kontrastní látky"
 * patient = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * recordedDate = "2025-08-27"
 * reaction[0].manifestation = $sctCZ#39579001 //"anafylaktická reakce"
