@@ -47,6 +47,7 @@ No definition could be found for URL value 'https://hl7.cz/fhir/sid/idcard-CZE'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krpzs'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icp'
 No definition could be found for URL value 'http://hospital.org/ris-order'
+No definition could be found for URL value 'http://gynekologie-malikova.cz/ris-order'
 
 # Reference to draft CodeSystem
 %Reference to draft CodeSystem http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs%
