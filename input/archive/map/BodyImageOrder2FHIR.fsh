@@ -60,7 +60,7 @@ Usage: #definition
 * group[=].element[+].code = #OrderInformation.orderReason.problem
 * group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonCode.coding
-* group[=].element[=].target.display = ""
+* group[=].element[=].target.display = "or CZ_ImagingOrderInformation.reasonReference"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #OrderInformation.orderDetail.reasonCode
 * group[=].element[=].display = "A.2.2.4 - Reason for ordering by code"

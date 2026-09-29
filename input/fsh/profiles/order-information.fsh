@@ -49,7 +49,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_ObservationImage or Condition or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal or CZ_Anthropometric_Test_Result)
+* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_ObservationImage or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal or CZ_Anthropometric_Test_Result)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
@@ -73,6 +73,9 @@ Description: "Order information for the scope of the Czech national interoperabi
 * reasonCode.coding[snomed].system = "http://snomed.info/sct" (exactly)
 * reasonCode.coding[orphacode] from $orphanet-vs (required)
 * reasonCode.coding[orphacode].system = "https://www.orpha.net" (exactly)
+
+* reasonReference 0..*
+* reasonReference only Reference(CZ_ConditionCore or CZ_ObservationImage or DiagnosticReport or DocumentReference)
 
 * orderDetail.coding ^slicing.discriminator[0].type = #value
 * orderDetail.coding ^slicing.discriminator[0].path = "system"

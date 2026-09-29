@@ -292,7 +292,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            reasonCode.coding
+            reasonCode.coding/reasonReference.ofType(CZ_ConditionCore).code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
