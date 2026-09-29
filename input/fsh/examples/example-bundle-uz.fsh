@@ -167,7 +167,7 @@ Description: "Pregnancy, 20+3 weeks gestation, indicated for second trimester sc
 Title: "Condition: Pregnancy"
 * id = "a7d8e9fa-cbfc-4ade-8f67-8b9cadbecfd6"
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
-* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
+//* code.coding = $mkn10#Z349 //"Dohled nad normální graviditou, neurčený"
 * code.text = "Fyziologicky probíhající gravidita, gestační týden 20+3, indikován screening II. trimestru. Pacientka žádá zároveň nadstandardní 3D/4D fotografii plodu."
 
 Instance: cz-practitioner-gynekolozka
