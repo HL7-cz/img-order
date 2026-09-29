@@ -258,7 +258,7 @@ Description: "Clinically significant allergy to iodine / iodinated contrast agen
 * type = #allergy
 * category = #medication
 * criticality = #high
-* code = $sctCZ#294913003 // "alergie na jód"
+* code.text = "Alergie na jodové kontrastní látky"
 * patient = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * recordedDate = "2025-08-27"
 * reaction[0].manifestation = $sctCZ#39579001 //"anafylaktická reakce"
@@ -347,7 +347,7 @@ Description: "Ambulatory visit of patient Nováková"
 Title: "Encounter: Ambulatory visit"
 * id = "abc3b392-5432-4654-fedc-ba9876543201"
 * status = #finished
-* class = $v3-ActCode#AMB "ambulatory"
+* class = $v3-ActCode#AMB //"ambulatory"
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * period.start = "2025-08-27T08:30:00+02:00"
 * period.end = "2025-08-27T09:15:00+02:00"
