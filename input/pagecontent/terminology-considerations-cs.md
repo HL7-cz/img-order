@@ -57,7 +57,7 @@ Preferovaným způsobem vyjádření požadovaného vyšetření je SNOMED CT, p
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
 | A.1.1.6 | Státní občanství | [v3-Country2](https://terminology.hl7.org/ValueSet-v3-Country2.html) |
-| A.1.1.7 | Pohlaví | [administrative-gender-cz](https://ncez.mzcr.cz/terminology/ValueSet/administrative-gender-cz) |
+| A.1.1.7 | Pohlaví | [administrative-gender-cz](https://hl7.cz/terminology/ValueSet/administrative-gender-cz) |
 | A.1.1.9 | Komunikační jazyk | [all-languages](https://hl7.org/fhir/valueset-all-languages.html) |
 | A.1.2.1 | Adresa – země | [v3-Country2](https://terminology.hl7.org/ValueSet-v3-Country2.html) |
 | A.1.2.4.1 | Typ kontaktu | [contactrole-cz](https://ncez.mzcr.cz/terminology/ValueSet/contactrole-cz) |

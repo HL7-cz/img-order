@@ -13,7 +13,7 @@ Usage: #example
 * gender = #male
 
 Instance: cz-practitionerRole-example
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Radiology"
 Description: "Context of the practice site of the referring radiologist"
 Usage: #example

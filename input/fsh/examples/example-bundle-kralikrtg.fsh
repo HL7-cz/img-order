@@ -91,7 +91,7 @@ Usage: #inline
 * author = Reference(urn:uuid:f0ac1e16-61f5-4591-a7eb-1dc586e25349)
 * title = "Imaging Order - Rentgen Ing. Králíka"
 * confidentiality = #N
-* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) 
+* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 * language = #cs
 * type = $sctCZ#721964003
 * category[documentCategory] = $loinc#57133-1
@@ -161,7 +161,7 @@ Usage: #example
 * gender = #male
 
 Instance: cz-example-practitionerRole
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Radiology 2"
 Description: "Author of RTG Imaging report"
 Usage: #example
@@ -268,7 +268,7 @@ Description: "Example of patient mobility of Patient Kralik"
 * id = "d70a725d-baa9-4553-a670-2609b0c0219f"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category.coding.code = #activity
 * code = $sctCZ#710828008
 * valueCodeableConcept = $sctCZ#282147000
 * status = #final
@@ -283,7 +283,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -307,7 +307,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * id = "fea1dbb8-9e16-4e11-beae-c12829c97381"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -331,7 +331,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * id = "210db397-977a-47a0-8a2e-febde6f9f92a"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -355,7 +355,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * id = "ded5bee9-8a58-4676-919f-0b8e08eaede4"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -379,7 +379,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * id = "158808ba-fcca-480e-8188-dec77920ec3c"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -403,7 +403,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * id = "5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)
@@ -427,7 +427,7 @@ Description: "Imaging order for Plain X-ray - Left hip"
 * id = "c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(urn:uuid:e33c93c6-3dd0-4595-9f15-63b9302861d1)
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * insurance = Reference(urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c)

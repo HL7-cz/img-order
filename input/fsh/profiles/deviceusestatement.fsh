@@ -7,12 +7,12 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * text ^short = "Device usage description"
 * subject only Reference(CZ_PatientCore)
 * subject ^definition = "The patient using the device."
-//* subject.reference 1.. 
-* timing[x] 1..1 
-* timing[x].extension contains $data-absent-reason named data-absent-reason 0..1 
+//* subject.reference 1..
+* timing[x] 1..1
+* timing[x].extension contains $data-absent-reason named data-absent-reason 0..1
 * timing[x].extension[data-absent-reason] ^definition = "Provides a reason why the timing is missing."
 * reasonCode ^short = "Why is used (code)"
-* reasonReference only Reference ( Condition or CZ_ObservationImage or Media or DiagnosticReport or DocumentReference)
+* reasonReference only Reference ( Condition or CZ_MedicalTestResultCore or Media or DiagnosticReport or DocumentReference)
   * ^short = "Why is used (details)"
 * device only Reference(CZ_MedicalDevice)
 * bodySite

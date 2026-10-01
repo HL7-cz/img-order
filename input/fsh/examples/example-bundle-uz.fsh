@@ -120,7 +120,7 @@ Description: "Screening ultrasound examination of the fetus in the second trimes
 * status = #active
 * intent = #order
 * priority = #routine
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * insurance = Reference(urn:uuid:e5b6c7d8-a9fa-4ebc-8f45-6f7a8b9cadb4)
 * bodySite = $sctCZ#55460000 //"struktura plodu"
@@ -145,7 +145,7 @@ Description: "Nadstandard 3D/4D photography of the fetus, requested by the patie
 * status = #active
 * intent = #order
 * priority = #routine
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * insurance = Reference(urn:uuid:f6c7d8e9-bafb-4fcd-8f56-7a8b9cadbec5)
 * bodySite = $sctCZ#88556005 //"struktura plodu"
@@ -173,7 +173,7 @@ Usage: #example
 
 
 Instance: cz-practitionerRole-gynekologie-malikova
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: gynecology and obstetrics"
 Description: "Role of gynecologist in the context of imaging order for patient Malíková"
 Usage: #example

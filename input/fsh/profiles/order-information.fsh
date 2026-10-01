@@ -24,7 +24,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1
-* category[imaging] = $sct#363679005 // "Imaging"
+* category[imaging] = $sctCZ#363679005 // "Imaging"
 
 * extension contains $targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureCzCore)
@@ -41,7 +41,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code 1..1
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
+* requester only Reference(CZ_PractitionerRoleCore)
 
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 //* performer.type from $sct-device-type  // performer type
@@ -49,7 +49,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_ObservationImage or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal or CZ_Anthropometric_Test_Result)
+* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_MedicalTestResultCore or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
@@ -75,7 +75,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * reasonCode.coding[orphacode].system = "https://www.orpha.net" (exactly)
 
 * reasonReference 0..*
-* reasonReference only Reference(CZ_ConditionClinicalQuestion or CZ_ConditionCore or CZ_ObservationImage or DiagnosticReport or DocumentReference)
+* reasonReference only Reference(CZ_ConditionClinicalQuestion or CZ_ConditionCore or CZ_MedicalTestResultCore or DiagnosticReport or DocumentReference)
 
 * orderDetail 1..*
 * orderDetail.coding ^slicing.discriminator[0].type = #value

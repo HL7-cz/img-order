@@ -1411,12 +1411,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Antropometrické výsledky (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
             </td>
             <td>
 
@@ -1430,12 +1430,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Antropometrické výsledky (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Anthropometric_Test_Result)
             </td>
             <td>
 
@@ -2208,12 +2208,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2227,12 +2227,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2246,7 +2246,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
             valueDateTime
             </td>
@@ -2265,7 +2265,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
             code
             </td>
@@ -2284,7 +2284,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
             valueQuantity
             </td>
@@ -2512,12 +2512,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2531,12 +2531,12 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_ObservationImage)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2550,7 +2550,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
             identifier
             </td>
@@ -2569,7 +2569,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-observationImage.html">Observation (cz-observationImage)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
             title
             </td>

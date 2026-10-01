@@ -39,7 +39,7 @@ Usage: #inline
 * title = "Žádanka o zobrazovací vyšetření - Preventivní mamografie"
 * confidentiality = #N
 * language = #cs
-* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253) 
+* custodian = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 * type = $sctCZ#721964003 //"žádanka o vyšetření"
 * category[documentCategory] = $loinc#57133-1
 * section[orderInformation].title = "Requested imaging studies information Document"
@@ -90,7 +90,7 @@ Description: "Request for bilateral screening mammography (MG) of both breasts"
 * id = "60ea3958-7344-4969-a0b7-58f849473d05"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * insurance = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12) // Odkaz na samoplátecké krytí
 * bodySite = $sctCZ#76752008 //"Breast structure"
@@ -127,7 +127,7 @@ Usage: #example
 * gender = #male
 
 Instance: cz-practitionerRole-gynecology
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Gynecology and Obstetrics"
 Description: "Context of the practice site of the referring gynaecologist"
 Usage: #example
