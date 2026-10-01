@@ -1,0 +1,17 @@
+{
+  "package-id": "hl7.fhir.cz.terminology",
+  "version": "1.0.0",
+  "path": "https://hl7.cz/fhir/img-order/1.0.0",
+  "mode": "milestone",
+  "status": "release",
+  "sequence": "Release 1",
+  "first": true,
+  "ci-build": "https://build.fhir.org/ig/HL7-cz/img-order",
+  "category": "Imaging Order",
+  "introduction": "This guide defines profiles that represent a FHIR Imaging Order in the Czech Republic context. It covers all types of imaging orders of any type of imaging service.",
+  "title": "Czech FHIR Imaging Report",
+  "registry-description": "Czech National Imaging Order FHIR IG R4 version 1.0.0",
+  "registry-country": "cz",
+  "registry-authority": "HL7 Czech Republic",
+  "desc": "This is a first release of the Czech Imaging Order FHIR IG."
+}

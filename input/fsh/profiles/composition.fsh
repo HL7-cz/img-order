@@ -54,7 +54,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * author[authorOrder] only Reference(CZ_PractitionerRoleOrder)
 * author[authorCore] only Reference(CZ_PractitionerRoleCore)
 */
-* author only Reference(CZ_PractitionerRoleOrder or CZ_PractitionerRoleCore)
+* author only Reference(CZ_PractitionerRoleCore)
 
 * date
   * ^short = "Date the order was created."
@@ -171,7 +171,15 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55752-0 //"Clinical information"
   * entry 0..
-  * entry only Reference(CZ_Anthropometric_Test_Result or CZ_PatientMobility or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_ObservationImage or CZ_FlagPatientCore or CZ_Specimen)
+  * entry only Reference(CZ_MedicalTestResultCore or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_FlagPatientCore or CZ_Specimen)
+  * entry ^slicing.discriminator[0].type = #profile
+  * entry ^slicing.discriminator[0].path = "resolve()"
+  * entry ^slicing.rules = #open
+  * entry contains
+      anthropometric 0..* and
+      mobility 0..1
+  * entry[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
+  * entry[mobility] only Reference(CZ_PatientMobility)
 
  /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
 // -------------------------------------------------------------

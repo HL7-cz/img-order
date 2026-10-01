@@ -9,7 +9,7 @@ name: HL7CzImagingOrderImplementationGuide
 title: HL7 Czech Imaging Order FHIR IG
 description: HL7 Czech Imaging Order Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 1.0.0
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -38,6 +38,7 @@ dependencies:
   hl7.fhir.eu.base: 2.0.1
   hl7.fhir.eu.extensions.r4: 1.3.1
   hl7.fhir.eu.laboratory: 2.0.0
+  hl7.fhir.eu.imaging: 1.0.0-ballot
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom

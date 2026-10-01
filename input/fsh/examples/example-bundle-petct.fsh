@@ -94,10 +94,10 @@ Description: "Multimodal request combining positron emission tomography and comp
 * id = "213859c2-ac9d-4166-a673-13a50640af90"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * insurance = Reference(urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff)
-* bodySite = $sctCZ#38266002 //"celé tělo" 
+* bodySite = $sctCZ#38266002 //"celé tělo"
 * code.coding = $sctCZ#480621000119104 //"positron emission tomography with computed tomography"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: 18F-FDG PET/CT celotělové (od základny lebeční po stehna)</div>"
@@ -132,7 +132,7 @@ Usage: #example
 * gender = #male
 
 Instance: cz-practitionerRole-oncology
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Clinical Oncology"
 Description: "Context of the practice site of the referring oncologist"
 Usage: #example

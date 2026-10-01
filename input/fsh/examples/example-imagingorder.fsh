@@ -5,7 +5,7 @@ Title: "Imaging order: Magnetic Resonance"
 Description: "Imaging order for Magnetic Resonance"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005 // Imaging
+* category[imaging] = $sctCZ#363679005 // Imaging
 * performer = Reference(MRDevice)
 * subject = Reference(Mracena)
 * insurance = Reference(VZPCoverage)
@@ -15,6 +15,7 @@ Description: "Imaging order for Magnetic Resonance"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Vyšetření MR pravého kolene</div>"
 * authoredOn = "2025-04-01T09:00:00+01:00"
 * reasonCode.coding[mkn-10] = $mkn10#M2321
+* orderDetail.coding[modality] = $dicom#MR "Magnetic Resonance"
 * note.text = "Poznámka k vyšetření"
 
 Instance: VZPCoverage
@@ -34,6 +35,6 @@ Description: "Organization providing healthcare insurance coverage for patient M
 Title: "Organization: Healthcare insurance company 4"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system = "https://ncez.mzcr.cz/fhir/sid/kp"
-* identifier[KP].value = "111" 
+* identifier[KP].value = "111"
 
 

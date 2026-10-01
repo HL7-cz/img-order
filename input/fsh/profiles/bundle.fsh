@@ -22,30 +22,6 @@ Description: "Service requests SHOULD have the same occurrence (dateTime or peri
 Expression: "entry.resource.ofType(ServiceRequest).occurrence.distinct().count() <= 1"
 Severity: #warning
 
-// Invariant: coverage-author
-// Description: "If coverage is an insurance company than the author must have filled organization.identifier of type icp and specialty."
-// Expression: "entry.resource.ofType(Coverage).payor.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/kp') implies (entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).specialty.exists() and entry.resource.ofType(Composition).author.resolve().ofType(PractitionerRole).organization.resolve().ofType(Organization).identifier.where($this.system = 'https://ncez.mzcr.cz/fhir/sid/icp'))"
-// Expression: "
-//   entry.resource.ofType(Coverage)
-//     .where(
-//       payor.resolve().ofType(Organization)
-//         .identifier.where(
-//           system = 'https://ncez.mzcr.cz/fhir/sid/kp'
-//         ).exists()
-//     ).exists()
-//   implies
-//   entry.resource.ofType(Composition)
-//     .author.resolve().ofType(PractitionerRole)
-//     .where(
-//       specialty.exists() and
-//       organization.resolve().ofType(Organization)
-//         .identifier.where(
-//           system = 'https://ncez.mzcr.cz/fhir/sid/icp'
-//         ).exists()
-//     ).exists()
-// "
-// Severity: #error
-
 Invariant: insurance-requester
 Description: "For every imaging order covered by public health insurance, the ServiceRequest requester, or the Composition author when requester is absent, SHALL have an ICP organization identifier and a contractual specialty."
 Severity: #error
@@ -96,6 +72,25 @@ Expression: "entry.resource.ofType(ServiceRequest).all(
     )
   )"
 
+Invariant: insurance-performer
+Description: "For every imaging order covered by public health insurance, at least one ServiceRequest performer SHALL have a contractual specialty filled."
+Severity: #error
+Expression: "entry.resource.ofType(ServiceRequest).all(
+    insurance.resolve().ofType(Coverage)
+      .type.coding.where(
+        system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
+        and code = 'HIP'
+      ).exists()
+    implies
+    performer.resolve().ofType(PractitionerRole)
+      .where(
+        specialty.coding.where(
+          system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
+          and code.exists()
+        ).exists()
+      ).exists()
+  )"
+
 
 //Invariant: one-do
 //Description: "A imaging order SHALL include one and only one DiagnosticOrder"
@@ -123,6 +118,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * obeys same-servicerequest-performer
 * obeys same-servicerequest-occurrence
 * obeys insurance-requester
+//* obeys insurance-performer  // not necessary
 //* obeys one-dr
 
 * identifier 1..1

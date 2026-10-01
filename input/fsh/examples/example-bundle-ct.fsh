@@ -331,12 +331,13 @@ Usage: #example
 
 
 Instance: cz-example-practitionerRole-radiologie
-InstanceOf: CZ_PractitionerRoleOrder
+InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Requesting Physician"
 Description: "Example of a general practitioner (requesting physician) - the referral is not addressed to a specific receiving facility"
 Usage: #example
 * id = "7e90806f-2109-4321-cba9-87654321fed1"
 * specialty[0] = $vzp-odbornost#001 "Pracoviště praktického lékaře pro dospělé"
+* specialty[+] = $sctCZ#408443003
 * practitioner = Reference(urn:uuid:6d8f7e65-9a01-42b3-c4c5-e6f708192a34)
 * organization = Reference(urn:uuid:9ab2a281-4321-4543-edcb-a9876543210f)
 

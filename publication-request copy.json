@@ -1,0 +1,17 @@
+{
+  "package-id": "hl7.fhir.cz.img",
+  "version": "1.0.0",
+  "path": "https://hl7.cz/fhir/img/1.0.0",
+  "mode": "milestone",
+  "status": "release",
+  "sequence": "Release 1",
+  "first": true,
+  "ci-build": "https://build.fhir.org/ig/HL7-cz/img",
+  "category": "Imaging Report",
+  "desc": "This is the Edition 1 STU1 release.",
+  "introduction": "This guide defines profiles that represent a FHIR Imaging Report in the Czech Republic context fully compatible with the current version of the EHDS EEHRxF format. It covers all types of result reports of any type of imaging service. The report might also include metadata information about imaging studies.",
+  "title": "Czech FHIR Imaging Report",
+  "registry-description": "Czech National Imaging Report FHIR IG R4 version 1.0.0, derived from HL7 EU Imaging Report 1.0.0-ballot",
+  "registry-country": "cz",
+  "registry-authority": "HL7 Czech Republic"
+}

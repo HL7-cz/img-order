@@ -12,6 +12,7 @@ Alias: $drzar = https://ncez.mzcr.cz/terminology/CodeSystem/drzar
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $nclp_new = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $hl7-observation-category-cs =  http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $mkn10 = https://uzis.cz/terminology/CodeSystem/mkn-10
 Alias: $mime = urn:ietf:bcp:13
@@ -45,5 +46,7 @@ Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 Alias: $cz-organization-logo = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact|5.2.0
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
-Alias: $AccessionNumberIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AccessionNumberIdentifierEuImaging
 
+// Profiles:
+Alias: $vital-signs = http://hl7.org/fhir/StructureDefinition/vitalsigns
+Alias: $AccessionNumberIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AccessionNumberIdentifierEuImaging
