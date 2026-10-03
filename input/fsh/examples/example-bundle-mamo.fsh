@@ -132,7 +132,7 @@ Title: "PractitionerRole: Gynecology and Obstetrics"
 Description: "Context of the practice site of the referring gynaecologist"
 Usage: #example
 * id = "e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
-* specialty = $vzp-odbornost#603 //"Gynekologie a porodnictví"
+* specialty[0] = $vzp-odbornost#603 //"Gynekologie a porodnictví"
 * specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:3d60c2df-af65-4095-95f6-d3d9b61cb5e7)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)

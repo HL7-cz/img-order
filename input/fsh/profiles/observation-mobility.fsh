@@ -6,9 +6,12 @@ Description: "Profile of patient mobility observation for the scope of the Czech
 
 * identifier
 * title
-// * category.coding.system
-// * category.coding.code
-* category = $hl7-observation-category-cs#activity
+* category ^slicing.discriminator[0].type = #value
+* category ^slicing.discriminator[0].path = "$this"
+* category ^slicing.ordered = false
+* category ^slicing.rules = #open
+* category contains activity 1..1
+* category[activity] = $hl7-observation-category-cs#activity
 * code from CZ_MobilityTypeVs (required)
 // * code.coding ^slicing.discriminator.type = #value
 // * code.coding ^slicing.discriminator.path = "system"
@@ -22,9 +25,8 @@ Description: "Profile of patient mobility observation for the scope of the Czech
 //   * version = $sctCzEdition
 //   * code from CZ_MobilityTypeVs (required)
 
+* value[x] only CodeableConcept
 * valueCodeableConcept from CZ_MobilityValueVs (required)
-* valueQuantity 0..0
-//* valueCodeableConcept.system = "http://snomed.info/sct" (exactly)
 * effective[x] 1..1
 * effective[x] only dateTime
 * component 0..0

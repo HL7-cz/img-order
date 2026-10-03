@@ -30,7 +30,19 @@ Description: "Quantitative anthropometric measurement for the scope of the Czech
 
 * insert ImposeProfile($vital-signs, 0)
 * subject only Reference(CZ_PatientCore)
-* category = $hl7-observation-category-cs#vital-signs
+* category 1..* MS
+* category ^slicing.discriminator[0].type = #value
+* category ^slicing.discriminator[0].path = "coding.code"
+* category ^slicing.discriminator[1].type = #value
+* category ^slicing.discriminator[1].path = "coding.system"
+* category ^slicing.ordered = false
+* category ^slicing.rules = #open
+* category contains VSCat 1..1 MS
+* category[VSCat].coding 1..* MS
+* category[VSCat].coding.system 1..1 MS
+* category[VSCat].coding.system = $hl7-observation-category-cs (exactly)
+* category[VSCat].coding.code 1..1 MS
+* category[VSCat].coding.code = #vital-signs (exactly)
 
 * code.coding 1..*
 * code.coding ^slicing.discriminator[0].type = #value
