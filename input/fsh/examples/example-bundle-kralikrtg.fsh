@@ -245,13 +245,12 @@ Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"
 * id = "e0861d9f-4b04-465f-b15b-cb01e3a8b677"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-// * category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * code.coding[LOINC] = $loinc#29463-7
 * code.coding[SNOMEDCT].code = #27113001
 * code.coding[SNOMEDCT].system = $sct
 * code.coding[SNOMEDCT].version = $sctCzEdition
-//* code.coding[NCLP] = $nclp_new#20042
 * valueQuantity.value = 80
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $UCUM
@@ -267,8 +266,8 @@ Title: "Patient mobility of patient Kralik"
 Description: "Example of patient mobility of Patient Kralik"
 * id = "d70a725d-baa9-4553-a670-2609b0c0219f"
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #activity
+* category[activity].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[activity].coding.code = #activity
 * code = $sctCZ#710828008
 * valueCodeableConcept = $sctCZ#282147000
 * status = #final

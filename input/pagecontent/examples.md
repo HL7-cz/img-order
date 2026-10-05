@@ -25,3 +25,4 @@ All examples can also be found on the [Artifacts](artifacts.html) page.
 * [Patient](Patient-Mracena.html)
 * [Practitioner](Practitioner-practitionerExample.html)
 * [Requested examination](ServiceRequest-cz-imagingorder-example.html)
+* [Clinical question](Condition-ClinicalQuestionExample.html)
