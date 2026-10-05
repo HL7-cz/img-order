@@ -1829,7 +1829,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">Device Use Statement: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">Device Use Statement: Imaging Order (CZ)</a></td>
             <td>
             device.type
             </td>
@@ -1848,7 +1848,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">Device Use Statement: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">Device Use Statement: Imaging Order (CZ)</a></td>
             <td>
             device.identifier
             </td>
@@ -1867,7 +1867,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">Device Use Statement: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">Device Use Statement: Imaging Order (CZ)</a></td>
             <td>
             device.modelNumber
             </td>
@@ -1886,7 +1886,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">Device Use Statement: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">Device Use Statement: Imaging Order (CZ)</a></td>
             <td>
             bodySite
             </td>
