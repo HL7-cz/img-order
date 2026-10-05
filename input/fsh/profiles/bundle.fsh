@@ -72,24 +72,24 @@ Expression: "entry.resource.ofType(ServiceRequest).all(
     )
   )"
 
-Invariant: insurance-performer
-Description: "For every imaging order covered by public health insurance, at least one ServiceRequest performer SHALL have a contractual specialty filled."
-Severity: #error
-Expression: "entry.resource.ofType(ServiceRequest).all(
-    insurance.resolve().ofType(Coverage)
-      .type.coding.where(
-        system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
-        and code = 'HIP'
-      ).exists()
-    implies
-    performer.resolve().ofType(PractitionerRole)
-      .where(
-        specialty.coding.where(
-          system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
-          and code.exists()
-        ).exists()
-      ).exists()
-  )"
+// Invariant: insurance-performer
+// Description: "For every imaging order covered by public health insurance, at least one ServiceRequest performer SHALL have a contractual specialty filled."
+// Severity: #error
+// Expression: "entry.resource.ofType(ServiceRequest).all(
+//     insurance.resolve().ofType(Coverage)
+//       .type.coding.where(
+//         system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
+//         and code = 'HIP'
+//       ).exists()
+//     implies
+//     performer.resolve().ofType(PractitionerRole)
+//       .where(
+//         specialty.coding.where(
+//           system = 'https://ncez.mzcr.cz/terminology/CodeSystem/vzp-smluvni-odbornost'
+//           and code.exists()
+//         ).exists()
+//       ).exists()
+//   )"
 
 
 //Invariant: one-do

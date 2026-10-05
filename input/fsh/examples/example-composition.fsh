@@ -30,6 +30,7 @@ Description: "Standalone example of an imaging order Composition."
 * section[clinicalQuestion].code = $loinc#18785-6 "Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.status = #additional
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Is there structural damage to the right knee?</div>"
+* section[clinicalQuestion].entry = Reference(ClinicalQuestionExample)
 
 Instance: cz-coverage-example
 InstanceOf: CZ_CoverageOrder
