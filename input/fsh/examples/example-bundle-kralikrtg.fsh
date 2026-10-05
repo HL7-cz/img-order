@@ -486,7 +486,7 @@ Description: "Attachment for Plain X-ray"
 * creation = "2025-05-20T12:02:00+01:00"
 
 Instance: cz-deviceusestatement-example
-InstanceOf: CZ_DeviceUseStatement
+InstanceOf: CZ_DeviceUseStatementCore
 Usage: #example
 Title: "DeviceUseStatement: Implant"
 Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the imaging order."

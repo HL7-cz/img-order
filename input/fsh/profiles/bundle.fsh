@@ -180,7 +180,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[carePlan].resource only CZ_CarePlanCore
 * entry[observation].resource only CZ_MedicalTestResultCore
-* entry[deviceUse].resource only CZ_DeviceUseStatement
+* entry[deviceUse].resource only CZ_DeviceUseStatementCore
 * entry[device].resource only Device
 * entry[attachment].resource only DocumentReference
 * entry[organisation].resource only CZ_OrganizationCore

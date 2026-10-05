@@ -1809,7 +1809,7 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
             <td>
 
             </td>
@@ -1817,7 +1817,7 @@
             Composition (CZ_CompositionImageOrder).section[MedicalDevices]
             </td>
             <td>
-            Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)
+            Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatementCore)
             </td>
           </tr>
           <tr>
