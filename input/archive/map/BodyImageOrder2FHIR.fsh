@@ -467,31 +467,31 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-deviceUseStatement"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/deviceUseStatement-cz-core.html"
 * group[=].element[+].code = #Body.SupportingInformation.implant
 * group[=].element[=].display = "A.3.1.4 - Implant"
 * group[=].element[=].target.code = #Composition.section:MedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)"
+* group[=].element[=].target.comment = "Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatementCore)"
 * group[=].element[+].code = #SupportingInformation.implant.type
 * group[=].element[=].display = "A.3.1.4.1 - Type"
-* group[=].element[=].target.code = #CZ_DeviceUseStatement.device.type
+* group[=].element[=].target.code = #CZ_DeviceUseStatementCore.device.type
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.implant.identifier
 * group[=].element[=].display = "A.3.1.4.2 - Identifier"
-* group[=].element[=].target.code = #CZ_DeviceUseStatement.device.identifier
+* group[=].element[=].target.code = #CZ_DeviceUseStatementCore.device.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.implant.model
 * group[=].element[=].display = "A.3.1.4.3 - Model"
-* group[=].element[=].target.code = #CZ_DeviceUseStatement.device.modelNumber
+* group[=].element[=].target.code = #CZ_DeviceUseStatementCore.device.modelNumber
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.implant.bodyPart
 * group[=].element[=].display = "A.3.1.4.4 - Body Part"
-* group[=].element[=].target.code = #CZ_DeviceUseStatement.bodySite
+* group[=].element[=].target.code = #CZ_DeviceUseStatementCore.bodySite
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"

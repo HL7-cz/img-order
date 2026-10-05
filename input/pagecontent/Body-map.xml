@@ -1810,7 +1810,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">Device Use Statement: Imaging Order (CZ)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">Device Use Statement: Imaging Order (CZ)</a></td>
             <td>
 
             </td>
@@ -1818,7 +1818,7 @@
             Composition (CZ_CompositionImageOrder).section[MedicalDevices]
             </td>
             <td>
-            Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatement)
+            Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatementCore)
             </td>
           </tr>
           <tr>

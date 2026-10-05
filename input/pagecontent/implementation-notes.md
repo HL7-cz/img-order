@@ -20,7 +20,7 @@ classDiagram
   CZ_BundleImageOrder *-- "0..*" CZ_CarePlanCore
   CZ_BundleImageOrder *-- "0..*" CZ_PractionerCore
   CZ_BundleImageOrder *-- "0..*" CZ_OrganizationCore
-  CZ_BundleImageOrder *-- "0..*" CZ_DeviceUseStatement
+  CZ_BundleImageOrder *-- "0..*" CZ_DeviceUseStatementCore
   CZ_BundleImageOrder *-- "0..*" CZ_Attachment
 
   CZ_ImagingOrderInformation --> CZ_CompositionImageOrder: composition
@@ -34,7 +34,7 @@ classDiagram
   CZ_CompositionImageOrder --> CZ_Coverage: section[coverage]
   CZ_CompositionImageOrder --> CZ_Appointment: section[appointment]
   CZ_CompositionImageOrder --> CZ_CarePlanCore: section[carePlan]
-  CZ_CompositionImageOrder --> CZ_DeviceUseStatement: section[medicalDevices]
+  CZ_CompositionImageOrder --> CZ_DeviceUseStatementCore: section[medicalDevices]
   CZ_CompositionImageOrder --> CZ_Attachment: section[attachments]
 
 ```

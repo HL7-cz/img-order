@@ -162,7 +162,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#97813-0 //"Implant component"
   * entry 0..
-  * entry only Reference(CZ_DeviceUseStatement)
+  * entry only Reference(CZ_DeviceUseStatementCore)
 
  /////////////////////////////////// SUPPORTING INFORMATION SECTION /////////////////////////////////////////
 * section[supportingInformation]
