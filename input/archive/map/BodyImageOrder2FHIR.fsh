@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://hl7.cz/fhir/img-order/ConceptMap/BodyImagingOrder2FHIR-cz"
 * name = "BodyImagingOrder2FHIRcz"
 * title = "CZ Body Model to this guide Map"
-* status = #draft
+* status = #active
 * experimental = true
 * description = """CZ Imaging Order Body Model to this guide mapping"""
 

@@ -3,7 +3,7 @@ Id: BodyImageOrderCz
 Title: "A.2 and A.3 - Body Imaging Order"
 Description: """Body Imaging Order"""
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 //common elements
 * orderInformation 0..1 ImageOrderInformationCz "A.2.1 - Order and A.2.2 order reason"

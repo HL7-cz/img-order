@@ -12,7 +12,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * . ^short = "Imaging Order Composition"
 * . ^definition = "Imaging Order Composition.\r\n\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 * meta
   * security 0..* //MS

@@ -3,7 +3,7 @@ Id: logRequestedPerformerCz
 Title: "A.1.6 - Zpracovatel"
 Description: """Předpokládaný zpracovatel žádanky (u neadresné žádanky nebude zpracovatel uveden)."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 * id 0..1 Identifier "A.1.6.1 -ID zpracovatele" """Identifikátor, který se vztahuje na tuto osobu v této roli."""
 * jmeno 0..1 HumanName "A.1.6.2 - Jméno zpracovatele" """Jméno a příjmení osoby zpracovatele žádanky."""

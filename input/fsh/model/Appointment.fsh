@@ -3,7 +3,7 @@ Id: ImageAppointmentCz
 Title: "A.2.5 - Appointment"
 Description: """Appointment - Links to planned care order related to this request form"""
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 * id 0..1 Identifier "A.2.5.1 - Appointment identifier" """Appointment identifier"""
 * status 1..1 CodeableConcept "A.2.5.2 - Appointment status" """Appointment status (proposed, confirmed, cancelled)

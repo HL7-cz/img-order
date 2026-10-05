@@ -1828,7 +1828,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
             <td>
             device.type
             </td>
@@ -1847,7 +1847,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
             <td>
             device.identifier
             </td>
@@ -1866,7 +1866,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
             <td>
             device.modelNumber
             </td>
@@ -1885,7 +1885,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="StructureDefinition-cz-deviceUseStatement.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html">DeviceUseStatement (cz-deviceUseStatement)</a></td>
             <td>
             bodySite
             </td>
