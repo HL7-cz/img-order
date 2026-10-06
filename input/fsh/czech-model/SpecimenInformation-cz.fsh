@@ -1,23 +1,23 @@
-Logical: LogCzSpecimenInformationCz				
+Logical: LogCzSpecimenInformationCz
 Id: logSpecimenInformationCz
-Title: "A.2.6 - Informace o vzorku"				
+Title: "A.2.6 - Informace o vzorku"
 Description:  """Pro specifická obrazová vyšetření vzorku"""
 
-* insert SetFmmandStatusRule( 1, draft)	
+* insert SetFmmandStatusRule (2, trial-use)
 
 * id 1..* Identifier "A.2.6.1 - ID vzorku" """Identifikátor vzorku, který je jedinečný v rozsahu zvoleného rámce. Například: identifikátor přidělený objednávkovým systémem, identifikátor přidělený laboratoří apod. Možné je použití více identifikátorů."""
-* biologickyDruh 0..1 CodeableConcept "A.2.6.2 - Biologický druh" """Biologický druh - týká se vzorků odebraných nikoliv přímo pacientovi, ale subjektu s pacientem souvisejícím. 
+* biologickyDruh 0..1 CodeableConcept "A.2.6.2 - Biologický druh" """Biologický druh - týká se vzorků odebraných nikoliv přímo pacientovi, ale subjektu s pacientem souvisejícím.
 - Preferovaný systém: SNOMED CT"""
-* material 0..1 CodeableConcept "A.2.6.3 - Materiál" """Materiál vzorku.. 
+* material 0..1 CodeableConcept "A.2.6.3 - Materiál" """Materiál vzorku..
 - Preferovaný systém: SNOMED CT
 - Preferovaný systém: NCLPMAT"""
 * datumACasSberu 1..1 dateTime "A.2.6.4 - Datum a čas odběru, nebo čas ukončení  sběru a doba sběru" """Datum a čas odběru, nebo čas ukončení  sběru a doba sběru materiálu."""
 * datumACasTransportu 0..1 dateTime "A.2.6.5 - Datum a čas zahájení transportu vzorku do laboratoře" """Datum a čas zahájení transportu vzorku do laboratoře."""
 * typ 0..1 CodeableConcept "A.2.6.6 - Typ vzorku." """Entity odebrané za účelem vyšetření.
 - Preferovaný systém: SNOMED CT"""
-* anatomickeUmisteni 0..1 CodeableConcept "A.2.6.7 - Anatomické umístění" """Anatomické umístění (umístění v rámci těla, lateralita) odkud je materiál odebrán, například 'levý loket'. 
+* anatomickeUmisteni 0..1 CodeableConcept "A.2.6.7 - Anatomické umístění" """Anatomické umístění (umístění v rámci těla, lateralita) odkud je materiál odebrán, například 'levý loket'.
 - Preferovaný systém: SNOMED CT"""
-* morfologie 0..1 CodeableConcept "A.2.6.8 - Morfologie" """Morfologické abnormality anatomického umístění odkud je materiál odebrán, například rána nebo vřed. 
+* morfologie 0..1 CodeableConcept "A.2.6.8 - Morfologie" """Morfologické abnormality anatomického umístění odkud je materiál odebrán, například rána nebo vřed.
 - Preferovaný systém: SNOMED CT"""
 * zarizeni 0..1 CodeableConcept "A.2.6.9 - Zařízení" """V případě, že není materiál odebrán přímo z pacienta, ale pochází z předmětu, který s pacientem souvisí (například katetr).
 - Preferovaný systém: SNOMED CT"""

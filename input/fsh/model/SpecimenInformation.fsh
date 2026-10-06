@@ -1,23 +1,23 @@
-Logical: LogEnSpecimenInformationCz				
+Logical: LogEnSpecimenInformationCz
 Id: SpecimenInformationCz
-Title: "A.2.6 - Specimen Information"				
+Title: "A.2.6 - Specimen Information"
 Description:  """Information about specimen"""
 
-* insert SetFmmandStatusRule( 1, draft)	
+* insert SetFmmandStatusRule (2, trial-use)
 
 * identifier 1..* Identifier "A.2.6.1 - Sample identifier" """An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by Specimening system, identifier assigned by laboratory etc. Multiple identifiers can be used."""
-* species 0..1 CodeableConcept "A.2.6.2 - Type of species" """Biologic type of species for laboratory result reports bound to non-human subjects. 
+* species 0..1 CodeableConcept "A.2.6.2 - Type of species" """Biologic type of species for laboratory result reports bound to non-human subjects.
 - Preferred system(s): SNOMED CT"""
-* material 0..1 CodeableConcept "A.2.6.3 - Material" """Specimen material. 
+* material 0..1 CodeableConcept "A.2.6.3 - Material" """Specimen material.
 - Preferred system(s): SNOMED CT
 - Preferred system(s): NCLPMAT"""
 * collectionDate 1..1 dateTime "A.2.6.4 - Date and time of collection or end of collection and time of collection" """The date and time of collection, or the time of completion of collection and the time of collection of the material."""
 * transportDate 0..1 dateTime "A.2.6.5 - Date and time of commencement of transport of the sample to the laboratory" """Date and time of commencement of transport of the sample to the laboratory"""
 * type 0..1 CodeableConcept "A.2.6.6 - Sample type" """Entities collected for examination.
 - Preferred system(s): SNOMED CT"""
-* anatomicLocation 0..1 CodeableConcept "A.2.6.7 - Anatomic location" """Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left 
+* anatomicLocation 0..1 CodeableConcept "A.2.6.7 - Anatomic location" """Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left
 - Preferred system(s): SNOMED CT"""
-* morphology 0..1 CodeableConcept "A.2.6.8 - Morphology" """Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer. 
+* morphology 0..1 CodeableConcept "A.2.6.8 - Morphology" """Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer.
 - Preferred system(s): SNOMED CT"""
 * instrument 0..1 CodeableConcept "A.2.6.9 - Instrument" """Device, instrument, physical object (drain, electrode, catheter, etc.).
 - Preferred system(s): SNOMED CT"""

@@ -111,7 +111,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * . ^short = "Imaging Order Bundle"
 * . ^definition = "Imaging Order Bundle. \r\nA container for a collection of resources in the imaging order document."
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 //* obeys dr-comp-subj
 * obeys one-comp
