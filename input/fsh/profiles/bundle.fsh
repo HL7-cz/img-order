@@ -150,38 +150,61 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry contains
     composition 1..1 and
     patient 1..1 and
-    orderInformation 0..* and
-    appointment 0..1 and
+    coverage 1..* and
+    serviceRequest 0..* and
+    bodyStructure 0..* and
+    appointment 0..* and
     specimen 0..* and
     practitioner 0..* and
     practitionerRole 0..* and
-    coverage 1..* and
     medication 0..* and
+    medicationStatement 0..* and
+    medicationAdministration 0..* and
+    immunization 0..* and
     condition 0..* and
     allergyIntolerance 0..* and
+    flag 0..* and
     carePlan 0..* and
+    goal 0..* and
     observation 0..* and
     deviceUse 0..* and
     device 0..* and
     attachment 0..* and
     organisation 0..* and
-    encounter 0..*
+    location 0..* and
+    encounter 0..* and
+    diagnosticReport 0..* and
+    relatedPerson 0..* and
+    provenance 0..*
 
 * entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
-* entry[orderInformation].resource only CZ_ImagingOrderInformation
+* entry[coverage].resource only CZ_CoverageOrder
+* entry[serviceRequest].resource only CZ_ImagingOrderInformation
+* entry[bodyStructure].resource only BodyStructureCzCore
 * entry[appointment].resource only CZ_AppointmentCore
 * entry[specimen].resource only CZ_Specimen
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
-* entry[coverage].resource only CZ_CoverageOrder
-* entry[medication].resource only CZ_MedicationStatementCore
+* entry[medication].resource only CZ_MedicationCore
+* entry[medicationStatement].resource only CZ_MedicationStatementCore
+* entry[medicationAdministration].resource only CZ_MedicationAdministrationCore
+* entry[immunization].resource only CZ_ImmunizationCore
 * entry[condition].resource only CZ_ConditionCore
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
+* entry[flag].resource only CZ_FlagPatientCore
 * entry[carePlan].resource only CZ_CarePlanCore
 * entry[observation].resource only CZ_MedicalTestResultCore
+* entry[goal].resource only Goal
 * entry[deviceUse].resource only CZ_DeviceUseStatementCore
-* entry[device].resource only Device
+* entry[device].resource only CZ_MedicalDevice or CZ_DeviceObserver
 * entry[attachment].resource only DocumentReference
 * entry[organisation].resource only CZ_OrganizationCore
+* entry[location].resource only CZ_LocationCore
 * entry[encounter].resource only CZ_EncounterCore
+* entry[diagnosticReport].resource only CZ_DiagnosticReportCore
+* entry[relatedPerson].resource only CZ_RelatedPersonCore
+* entry[provenance].resource only CZ_Provenance
+* entry[provenance] ^short = "Provenance and signatures for resources in the document"
+* entry[provenance] ^definition = "Provenance resources recording the origin and signatures of document resources. Provenance.target identifies the signed resources; the Composition does not reference Provenance through a signature section."
+

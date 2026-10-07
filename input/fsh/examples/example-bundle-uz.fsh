@@ -14,11 +14,11 @@ Usage: #example
 * entry[patient].fullUrl = "urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70"
 * entry[patient].resource = cz-patient-malikova
 
-* entry[orderInformation].fullUrl = "urn:uuid:c3f4a5b6-e7d8-4c9a-8f23-4d5e6f7a8b92"
-* entry[orderInformation].resource = cz-uzplod-screening
+* entry[serviceRequest].fullUrl = "urn:uuid:c3f4a5b6-e7d8-4c9a-8f23-4d5e6f7a8b92"
+* entry[serviceRequest].resource = cz-uzplod-screening
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:d4a5b6c7-f8e9-4dab-8f34-5e6f7a8b9ca3"
-* entry[orderInformation][=].resource = cz-uzplod-foto-samoplatce
+* entry[serviceRequest][+].fullUrl = "urn:uuid:d4a5b6c7-f8e9-4dab-8f34-5e6f7a8b9ca3"
+* entry[serviceRequest][=].resource = cz-uzplod-foto-samoplatce
 
 * entry[coverage].fullUrl = "urn:uuid:e5b6c7d8-a9fa-4ebc-8f45-6f7a8b9cadb4"
 * entry[coverage].resource = cz-pojisteni-malikova
@@ -48,6 +48,8 @@ Description: "Request for ultrasound examination of the fetus (screening, covere
 Title: "Composition: Ultrasound of the fetus (screening) + 3D/4D photography - Malíková"
 Usage: #inline
 * id = "b2e3f4a5-d6c7-4b89-8f12-3c4d5e6f7a81"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:b2d8f965-229d-4d2a-88f5-1063e2721ab6"
 * status = #final
 * subject = Reference(urn:uuid:a1f2e3d4-c5b6-4a78-9f01-2b3c4d5e6f70)
 * date = "2026-08-31T10:30:00+02:00"

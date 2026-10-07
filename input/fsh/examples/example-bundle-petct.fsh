@@ -11,8 +11,8 @@ Usage: #example
 * entry[composition].resource = Composition-pet-ct-lymfom
 * entry[patient].fullUrl = "urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193"
 * entry[patient].resource = cz-patient-novak
-* entry[orderInformation].fullUrl = "urn:uuid:213859c2-ac9d-4166-a673-13a50640af90"
-* entry[orderInformation].resource = cz-petct-request
+* entry[serviceRequest].fullUrl = "urn:uuid:213859c2-ac9d-4166-a673-13a50640af90"
+* entry[serviceRequest].resource = cz-petct-request
 * entry[coverage].fullUrl = "urn:uuid:a0bd92b5-4112-4cac-86df-e6cb89b5fcff"
 * entry[coverage].resource = cz-insurance-coverage
 * entry[practitionerRole].fullUrl = "urn:uuid:8fd3a4cf-173a-43f0-a1f9-5b538d088c03"
@@ -34,6 +34,8 @@ Title: "Composition: PET/CT referral structure"
 Description: "Structure of the PET/CT request form for suspected lymphoma relapse"
 Usage: #inline
 * id = "70113bbe-fc88-4f90-9351-e88dc7866c5e"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:942f68db-3510-4d21-9ed1-eab57f99c28e"
 * status = #final
 * subject = Reference(urn:uuid:0c7366a1-54d2-41d3-aa78-3fbb81962193)
 * date = "2026-08-27T10:00:00+02:00"
