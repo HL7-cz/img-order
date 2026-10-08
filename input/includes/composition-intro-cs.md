@@ -1,12 +1,12 @@
-### Sekce a obsah
+#### Sekce a obsah
 
 Dokument je rozdělen do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, lze odůvodnění vyjádřit v `composition.section.emptyReason`.
 
-### Struktura dokumentu
+#### Struktura dokumentu
 
 Zobrazovací zpráva obsahuje následující sekce v tomto pořadí:
 
-#### Hlavička obrazové žádanky
+##### Hlavička obrazové žádanky
 
 Obecné informace o zprávě. Většina informačních prvků v této části zprávy se překrývá s jinými klinickými zprávami. Záhlaví dokumentu obsahuje informace o pacientovi, zdrojové organizaci, autorovi, ověřovateli a správci zprávy.
 
@@ -14,7 +14,7 @@ Obecné informace o zprávě. Většina informačních prvků v této části zp
 
 Tento profil umožňuje propojení žádanky s jednou konkrétní klinickou událostí, tj. například návštěvu ambulance, při které žádanka vznikla. 
 
-#### Tělo obrazové žádanky
+##### Tělo obrazové žádanky
 
 **Informace o objednávce**
 

@@ -61,6 +61,7 @@ No definition could be found for URL value 'http://gynekologie-malikova.cz/ris-o
 
 # Suppress warning on missing OID
 %should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
+%should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)%
 
 # this is an external url
 %Can't find 'http://example.org/viewer/KOS.dcm' in the bundle%
@@ -128,3 +129,10 @@ PIN_VERSION
 # Both references are allowed outside the anthropometric and mobility slices.
 %Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[2]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
 %Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[3]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+
+# Expected overlap of CZ_MedicalDevice and CZ_DeviceObserver in BundleKralikRTG.
+# The device slice allows either profile; the RTG device and pacemaker satisfy both.
+# Each resource already declares its intended profile in meta.profile.
+# Suppress only these two ambiguous-profile warnings; validation errors remain visible.
+%Bundle.entry[13].resource: Found multiple matching profiles among 2 choices: https://hl7.cz/fhir/core/StructureDefinition/cz-device-observer, https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device%
+%Bundle.entry[18].resource: Found multiple matching profiles among 2 choices: https://hl7.cz/fhir/core/StructureDefinition/cz-device-observer, https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device%

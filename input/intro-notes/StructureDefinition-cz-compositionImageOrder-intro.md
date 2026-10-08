@@ -1,7 +1,7 @@
-## Content (cs)
+### Content (cs)
 
 {% include composition-intro-cs.md %}
 
-## Content (en)
+### Content (en)
 
 {% include composition-intro.md %}
