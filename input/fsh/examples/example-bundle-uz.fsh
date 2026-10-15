@@ -180,8 +180,8 @@ Title: "PractitionerRole: gynecology and obstetrics"
 Description: "Role of gynecologist in the context of imaging order for patient Malíková"
 Usage: #example
 * id = "c9fabcde-edfe-4cfa-8f89-adbecfd0e1f8"
-* specialty[0] = $vzp-odbornost#603 //"Gynekologie a porodnictví"
-* specialty[+] = $sctCZ#394586005 //"gynekologie a porodnictví - specializace"
+* specialty[0] = $vzp-odbornost#603 "Gynekologie a porodnictví"
+* specialty[+] = $sctCZ#394586005 "gynekologie a porodnictví - specializace"
 * practitioner = Reference(urn:uuid:b8e9fabc-dcfd-4bef-8f78-9cadbecfd0e7)
 * organization = Reference(urn:uuid:21046dff-3219-487b-b9c0-8ff98429971a)
 

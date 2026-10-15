@@ -123,7 +123,7 @@ PIN_VERSION
 
 # Information will resolve after publication of new CZ core with proper binding to the CZ version of the valueset
 %None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set%
-%This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-compositionImageOrder|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+
 
 # Expected open supportingInfo slicing in BundleNovakovaCT: creatinine and allergy.
 # Both references are allowed outside the anthropometric and mobility slices.

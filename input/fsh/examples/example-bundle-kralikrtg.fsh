@@ -219,7 +219,7 @@ Usage: #example
 * communication[=].preferred = true
 
 Instance: HeightKralik
-InstanceOf: CZ_Anthropometric_Test_Result
+InstanceOf: CZ_VitalSign
 Usage: #inline
 Title: "Body height of patient Kralik"
 Description: "Example of body height of Patient Kralik"
@@ -241,7 +241,7 @@ Description: "Example of body height of Patient Kralik"
 * performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: WeightKralik
-InstanceOf: CZ_Anthropometric_Test_Result
+InstanceOf: CZ_VitalSign
 Usage: #inline
 Title: "Body weight of patient Kralik"
 Description: "Example of body weight of Patient Kralik"

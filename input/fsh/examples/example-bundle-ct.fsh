@@ -142,7 +142,7 @@ Usage: #example
 
 
 Instance: HeightNovakova
-InstanceOf: CZ_Anthropometric_Test_Result
+InstanceOf: CZ_VitalSign
 Usage: #inline
 Title: "Body Height: Patient Nováková"
 Description: "Example of body height of patient Nováková"
@@ -165,7 +165,7 @@ Description: "Example of body height of patient Nováková"
 
 
 Instance: WeightNovakova
-InstanceOf: CZ_Anthropometric_Test_Result
+InstanceOf: CZ_VitalSign
 Usage: #inline
 Title: "Body Weight: Patient Nováková"
 Description: "Example of body weight of patient Nováková"

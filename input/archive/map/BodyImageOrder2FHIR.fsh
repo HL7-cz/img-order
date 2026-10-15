@@ -343,57 +343,57 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-anthropometric-test-result"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-vital-sign"
 * group[=].element[+].code = #Body.SupportingInformation.weight
 * group[=].element[=].display = "A.3.1.1.2 - Weight"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.weight
 * group[=].element[=].display = "A.3.1.1.2 - Weight"
-* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_Anthropometric_Test_Result)
+* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_VitalSign)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #SupportingInformation.weight.valueQuantity
 * group[=].element[=].display = "A.3.1.1.2.1 - Value Quantity"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.valueQuantity
+* group[=].element[=].target.code = #CZ_VitalSign.valueQuantity
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.weight.code
 * group[=].element[=].display = "A.3.1.1.2.2 - Code"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.code
+* group[=].element[=].target.code = #CZ_VitalSign.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.weight.dateTime
 * group[=].element[=].display = "A.3.1.1.2.3 - DateTime"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.effectiveDateTime
+* group[=].element[=].target.code = #CZ_VitalSign.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-anthropometric-test-result"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-vital-sign"
 * group[=].element[+].code = #Body.SupportingInformation.height
 * group[=].element[=].display = "A.3.1.1.2 - Height"
-* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
+* group[=].element[=].target.code = #Composition.section:OrderInformation.ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Body.SupportingInformation.height
 * group[=].element[=].display = "A.3.1.1.2 - Height"
-* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_Anthropometric_Test_Result)
+* group[=].element[=].target.code = #Composition.section:SupportingInformation.ofType(CZ_VitalSign)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #SupportingInformation.height.valueQuantity
 * group[=].element[=].display = "A.3.1.1.2.1 - Value Quantity"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.valueQuantity
+* group[=].element[=].target.code = #CZ_VitalSign.valueQuantity
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.height.code
 * group[=].element[=].display = "A.3.1.1.2.2 - Code"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.code
+* group[=].element[=].target.code = #CZ_VitalSign.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SupportingInformation.height.dateTime
 * group[=].element[=].display = "A.3.1.1.2.3 - DateTime"
-* group[=].element[=].target.code = #CZ_Anthropometric_Test_Result.effectiveDateTime
+* group[=].element[=].target.code = #CZ_VitalSign.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img-order/StructureDefinition/ImageSupportingInformationCz"
