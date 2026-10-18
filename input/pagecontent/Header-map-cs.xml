@@ -848,7 +848,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[Coverage]
+            Composition (CZ_CompositionImageOrder).section[coverage]
             </td>
             <td>
             Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)
@@ -1035,7 +1035,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.identifier
+            practitioner.identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).author
@@ -1054,7 +1054,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.name
+            practitioner.name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).author
@@ -1073,7 +1073,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.address
+            practitioner.address
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).author
@@ -1149,7 +1149,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.identifier
+            practitioner.identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
@@ -1168,7 +1168,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.name
+            practitioner.name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
@@ -1263,7 +1263,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
             <td>
-            practictioner.name
+            practitioner.name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).extension[informationRecipient]
@@ -1535,7 +1535,7 @@
             Composition (CZ_CompositionImageOrder).extension[versionNumber].valueString
             </td>
             <td>
-            Verze dokumentu (bussiness version)
+            Verze dokumentu (business version)
             </td>
           </tr>
           <tr>

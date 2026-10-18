@@ -124,10 +124,10 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].entry.ofType(CZ_ImagingOrderInformation)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry.ofType(CZ_ImagingOrderInformation)
             </td>
           </tr>
           <tr>
@@ -352,7 +352,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[ClinicalQuestion].entry.ofType(CZ_ConditionClinicalQuestion).code
+            Composition (CZ_CompositionImageOrder).section[clinicalQuestion].entry.ofType(CZ_ConditionClinicalQuestion).code
             </td>
             <td>
 
@@ -371,7 +371,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[ClinicalQuestion].text
+            Composition (CZ_CompositionImageOrder).section[clinicalQuestion].text
             </td>
             <td>
 
@@ -561,7 +561,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[Coverage]
+            Composition (CZ_CompositionImageOrder).section[coverage]
             </td>
             <td>
             Composition.section:Coverage.entry.ofType(CZ_CoverageOrder)
@@ -941,7 +941,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].specimen.ofType(CZ_Specimen)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].specimen.ofType(CZ_Specimen)
             </td>
             <td>
 
@@ -1343,7 +1343,7 @@
             Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
             </td>
             <td>
-            The value determines the type of data stored in A.2.16.5.3 (SpecimenInformation.additionalData.value)
+            The value determines the type of data stored in A.2.6.15.3 (SpecimenInformation.additionalData.value)
             </td>
           </tr>
           <tr>
@@ -1530,7 +1530,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1549,7 +1549,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1568,7 +1568,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1587,7 +1587,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1663,7 +1663,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1682,7 +1682,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1758,7 +1758,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(Condition)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(Condition)
             </td>
             <td>
 
@@ -1777,7 +1777,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(Condition)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(Condition)
             </td>
             <td>
 
@@ -1834,7 +1834,7 @@
             medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -1853,7 +1853,7 @@
             medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
             </td>
             <td>
 
@@ -1929,7 +1929,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[MedicalDevices]
+            Composition (CZ_CompositionImageOrder).section[medicalDevices]
             </td>
             <td>
             Composition.section:MedicalDevices.entry.ofType(CZ_DeviceUseStatementCore)
@@ -2024,7 +2024,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_AllergyIntolerance)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_AllergyIntolerance)
             </td>
             <td>
 
@@ -2043,7 +2043,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_AllergyIntolerance)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_AllergyIntolerance)
             </td>
             <td>
 
@@ -2176,7 +2176,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_FlagPatientCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_FlagPatientCore)
             </td>
             <td>
 
@@ -2195,7 +2195,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_FlagPatientCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_FlagPatientCore)
             </td>
             <td>
 
@@ -2233,7 +2233,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_PatientMobility)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_PatientMobility)
             </td>
             <td>
 
@@ -2252,7 +2252,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_PatientMobility)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_PatientMobility)
             </td>
             <td>
 
@@ -2328,7 +2328,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2347,7 +2347,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2423,7 +2423,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
             Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
@@ -2442,7 +2442,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation]
+            Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
             Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
@@ -2613,7 +2613,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[CarePlan]
+            Composition (CZ_CompositionImageOrder).section[carePlan]
             </td>
             <td>
             Composition.section:CarePlan.entry.ofType(CZ_CarePlanImage)
@@ -2670,7 +2670,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
@@ -2689,7 +2689,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicalTestResultCore)
             </td>
             <td>
 
