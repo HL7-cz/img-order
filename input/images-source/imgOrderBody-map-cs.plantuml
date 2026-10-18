@@ -17,7 +17,7 @@ class "Tělo žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDef
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "condition-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html]]
 class "cz-encounter" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html]]
-class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html]]
+class "cz-coverage-order" <<Profile>> [[StructureDefinition-cz-coverage-order.html]]
 class "appointment-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html]]
 class "cz-specimen" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html]]
 class "medicalTestResult-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html]]
@@ -30,7 +30,7 @@ class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 
 "Tělo žádanky obrazového vyšetření" <|. "cz-imagingOrderInformation"
 "Tělo žádanky obrazového vyšetření" <|. "appointment-cz-core"
-"Tělo žádanky obrazového vyšetření" <|. "cz-coverage"
+"Tělo žádanky obrazového vyšetření" <|. "cz-coverage-order"
 "Tělo žádanky obrazového vyšetření" <|. "condition-cz-core"
 "Tělo žádanky obrazového vyšetření" <|. "cz-encounter"
 "Tělo žádanky obrazového vyšetření" <|. "cz-specimen"
@@ -45,8 +45,8 @@ class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "cz-imagingOrderInformation" -d[hidden]-> "cz-encounter"
 "cz-encounter" -d[hidden]-> "condition-cz-core"
 "condition-cz-core" -d[hidden]-> "appointment-cz-core"
-"appointment-cz-core" -d[hidden]-> "cz-coverage"
-"cz-coverage" -d[hidden]-> "cz-specimen"
+"appointment-cz-core" -d[hidden]-> "cz-coverage-order"
+"cz-coverage-order" -d[hidden]-> "cz-specimen"
 "cz-specimen" -d[hidden]-> "medicalTestResult-cz-core"
 "medicalTestResult-cz-core" -d[hidden]-> "cz-vital-sign"
 "cz-vital-sign" -d[hidden]-> "medicationStatement-cz-core"
