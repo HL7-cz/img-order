@@ -751,14 +751,14 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[Appointment]
+            Composition (CZ_CompositionImageOrder).section[appointment]
             </td>
             <td>
             Composition.section:Appointment.entry.ofType(CZ_Appointment)
             </td>
           </tr>
           <tr>
-            <td>Appointment.identifier</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.id</a></td>
             <td>
             A.2.5.1 - Appointment identifier
             </td>
@@ -777,7 +777,7 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.status</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.status</a></td>
             <td>
             A.2.5.2 - Appointment status
             </td>
@@ -796,7 +796,7 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.description</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.description</a></td>
             <td>
             A.2.5.3 - Description
             </td>
@@ -815,16 +815,16 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.dateTime</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.dateTime</a></td>
             <td>
-            A.2.5.4 - Scheduled appointmnet date and time
+            A.2.5.4 - Scheduled appointment date and time
             </td>
             <td>
             equivalent
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
             <td>
-            created
+            start
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[appointment].entry
@@ -834,7 +834,7 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.examDuration</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.examDuration</a></td>
             <td>
             A.2.5.5 - Duration of appointment
             </td>
@@ -853,7 +853,7 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.comment</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.comment</a></td>
             <td>
             A.2.5.6 - Comment
             </td>
@@ -872,7 +872,7 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.patientInstruction</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.patientInstruction</a></td>
             <td>
             A.2.5.7 - Instructions for the patient
             </td>
@@ -891,22 +891,41 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.address</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.place</a></td>
             <td>
             A.2.5.8 - Place
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-location-core.html">Location (CZ_LocationCore)</a></td>
             <td>
-            Location.address
+            name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
             </td>
             <td>
-
+            Name of the workplace
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.place</a></td>
+            <td>
+            A.2.5.8 - Place
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-location-core.html">Location (CZ_LocationCore)</a></td>
+            <td>
+            address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
+            </td>
+            <td>
+            Address of the workplace
             </td>
           </tr>
           <tr>

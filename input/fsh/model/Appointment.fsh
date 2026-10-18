@@ -9,7 +9,7 @@ Description: """Appointment - Links to planned care order related to this reques
 * status 1..1 CodeableConcept "A.2.5.2 - Appointment status" """Appointment status (proposed, confirmed, cancelled)
 Preferred system(s): hl7:valueset-appointmentstatus"""
 * description 0..1 string "A.2.5.3 - Description" """Brief description of the date of the visit for display in the list of appointments"""
-* dateTime 0..1 dateTime "A.2.5.4 - Scheduled appointmnet date and time" """Scheduled appointmnet date and time"""
+* dateTime 0..1 dateTime "A.2.5.4 - Scheduled appointment date and time" """Scheduled appointment date and time"""
 * examDuration 0..1 Duration "A.2.5.5 - Duration of appointment" """Duration of appointment"""
 * comment 0..1 string "A.2.5.6 - Comment" """Additional comment"""
 * patientInstruction 0..1 string "A.2.5.7 - Instructions for the patient" """Patient instructions (e.g. arrive 15 minutes early, fasting, arrange for a ride, etc.)"""

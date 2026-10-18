@@ -741,7 +741,7 @@
           <tr>
             <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.Appointment</a></td>
             <td>
-            A.2.5 - Informace o objednání
+            A.2.5 - Termín návštěvy
             </td>
             <td>
             související
@@ -751,16 +751,16 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[Appointment]
+            Composition (CZ_CompositionImageOrder).section[appointment]
             </td>
             <td>
             Composition.section:Appointment.entry.ofType(CZ_Appointment)
             </td>
           </tr>
           <tr>
-            <td>Appointment.identifier</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.id</a></td>
             <td>
-            A.2.5.1 - Identifikátor objednání
+            A.2.5.1 - Termín ID
             </td>
             <td>
             ekvivalentní
@@ -777,9 +777,9 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.status</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.status</a></td>
             <td>
-            A.2.5.2 - Stav objednání
+            A.2.5.2 - Stav termínu
             </td>
             <td>
             ekvivalentní
@@ -796,9 +796,9 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.description</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.description</a></td>
             <td>
-            A.2.5.3 - Popis objednání
+            A.2.5.3 - Popis
             </td>
             <td>
             ekvivalentní
@@ -815,16 +815,16 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.dateTime</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.dateTime</a></td>
             <td>
-            A.2.5.4 - Datum a čas
+            A.2.5.4 - Plánovaný čas
             </td>
             <td>
             ekvivalentní
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
             <td>
-            created
+            start
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[appointment].entry
@@ -834,9 +834,9 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.examDuration</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.examDuration</a></td>
             <td>
-            A.2.5.5 - Délka objednání
+            A.2.5.5 - Délka vyšetření
             </td>
             <td>
             ekvivalentní
@@ -853,9 +853,9 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.comment</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.comment</a></td>
             <td>
-            A.2.5.6 - Poznámka k objednání
+            A.2.5.6 - Komentář
             </td>
             <td>
             ekvivalentní
@@ -872,9 +872,9 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.patientInstruction</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.patientInstruction</a></td>
             <td>
-            A.2.5.7 - Pokyny pro pacienta
+            A.2.5.7 - Instrukce pro pacienta
             </td>
             <td>
             ekvivalentní
@@ -891,22 +891,41 @@
             </td>
           </tr>
           <tr>
-            <td>Appointment.address</td>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.place</a></td>
             <td>
-            A.2.5.8 - Adresa pracoviště
+            A.2.5.8 - Místo
             </td>
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html">Appointment (cz-appointment)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-location-core.html">Location (CZ_LocationCore)</a></td>
             <td>
-            Location.address
+            name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
             </td>
             <td>
-
+            Název pracoviště
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logImageAppointmentCz.html">Appointment.place</a></td>
+            <td>
+            A.2.5.8 - Místo
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-location-core.html">Location (CZ_LocationCore)</a></td>
+            <td>
+            address
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
+            </td>
+            <td>
+            Adresa pracoviště
             </td>
           </tr>
           <tr>

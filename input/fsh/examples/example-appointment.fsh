@@ -12,7 +12,6 @@ Description: "Appointment for a patient to attend a scheduled examination"
 * start = "2025-06-01T07:00:00+02:00"
 * end = "2025-06-01T07:30:00+02:00"
 
-* created = "2025-05-27"
 * participant[0].actor = Reference(LocationExample) "Ordinace - Jankovcova 2"
 * participant[=].required = #required
 * participant[=].status = #accepted
@@ -26,3 +25,12 @@ Description: "Example of location"
 * status = #active
 * name = "Ordinace - Jankovcova 2"
 * type.text = "Doctor's office"
+* address.use = #work
+* address.type = #physical
+* address.text = "Jankovcova 2, 170 00 Praha 7"
+* address.line[+] = "Jankovcova 2"
+* address.line[=].extension[streetName].valueString = "Jankovcova"
+* address.line[=].extension[houseNumber].valueString = "2"
+* address.city = "Praha"
+* address.postalCode = "17000"
+* address.country = "CZ"
