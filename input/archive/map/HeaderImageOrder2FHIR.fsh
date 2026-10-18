@@ -4,7 +4,7 @@ Usage: #definition
 * url = "https://hl7.cz/fhir/img-order/ConceptMap/HeaderImagingOrder2FHIR-cz"
 * name = "HeaderImagingOrder2FHIRcz"
 * title = "CZ Header Model to this guide Map"
-* status = #draft
+* status = #active
 * experimental = true
 * description = """CZ Imaging Order Header Model to this guide mapping"""
 
@@ -401,12 +401,12 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-provenance"
 * group[=].element[+].code = #Header.digitalSignatureCz.digitalSignature
 * group[=].element[=].display = "A.1.9.1 - Electronic signature or document seal"
-* group[=].element[=].target.code = #Provenance.signature.data		
+* group[=].element[=].target.code = #Provenance.signature.data
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.digitalSignatureCz.timestamp
 * group[=].element[=].display = "A.1.9.2 - Electronic time stamp"
-* group[=].element[=].target.code = #Provenance.signature.when					
+* group[=].element[=].target.code = #Provenance.signature.when
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = ""

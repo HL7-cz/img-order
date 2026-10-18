@@ -279,7 +279,7 @@
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-            CZ_ImagingOrderInformation.reasonReference.ofType(CZ_ConditionCore)
+            Condition (CZ_ConditionCore, včetně <a href="StructureDefinition-cz-conditionClinicalQuestion.html">CZ_ConditionClinicalQuestion</a>). Pokud klinická otázka přímo odůvodňuje danou službu, odkazuje se na stejnou instanci jako v Composition.section[clinicalQuestion].entry. Samotné uvedení v sekci ji nepřiřazuje jako důvod ke všem službám.
             </td>
           </tr>
           <tr>
@@ -292,7 +292,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
             <td>
-            reasonCode.coding/reasonReference.ofType(CZ_ConditionCore).code
+            reasonCode.coding / reasonReference.resolve().ofType(Condition).code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry

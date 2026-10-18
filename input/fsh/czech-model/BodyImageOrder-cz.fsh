@@ -3,7 +3,7 @@ Id: logBodyImageOrderCz
 Title: "A.2 a A.3 - Tělo dokumentu"
 Description: """Tělo dokumentu"""
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 //common elements
 * infoOObjednavce 0..1 logImageOrderInformationCz "A.2.1 - Informace o objednávce a A.2.2 Odůvodnění vyšetření"

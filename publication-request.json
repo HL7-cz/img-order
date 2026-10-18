@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "path": "https://hl7.cz/fhir/img-order/1.0.0",
   "mode": "milestone",
-  "status": "release",
-  "sequence": "Release 1",
+  "status": "trial-use",
+  "sequence": "STU 1",
   "first": true,
   "ci-build": "https://build.fhir.org/ig/HL7-cz/img-order",
   "category": "Imaging Order",
@@ -13,5 +13,5 @@
   "registry-description": "Czech National Imaging Order FHIR IG R4 version 1.0.0",
   "registry-country": "cz",
   "registry-authority": "HL7 Czech Republic",
-  "desc": "This is a first release of the Czech Imaging Order FHIR IG."
+  "desc": "This is the first STU 1 release of the Czech Imaging Order FHIR IG."
 }

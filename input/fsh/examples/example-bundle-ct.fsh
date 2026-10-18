@@ -14,8 +14,8 @@ Usage: #example
 * entry[patient].fullUrl = "urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0"
 * entry[patient].resource = cz-patient-novakova
 
-* entry[orderInformation].fullUrl = "urn:uuid:3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
-* entry[orderInformation].resource = cz-novakovact-example1
+* entry[serviceRequest].fullUrl = "urn:uuid:3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701"
+* entry[serviceRequest].resource = cz-novakovact-example1
 
 * entry[allergyIntolerance].fullUrl = "urn:uuid:4b6d5c43-7e8f-4091-a2a3-c4d5e6f70812"
 * entry[allergyIntolerance].resource = AllergyJodNovakova
@@ -57,6 +57,8 @@ Description: "Non-addressed request for CT abdomen with contrast in a patient wi
 Title: "Composition: Non-addressed request for CT abdomen with contrast"
 Usage: #inline
 * id = "1e3a2f10-4b5c-4d6e-8f70-9a1b2c3d4e5f"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:cea9f831-59a9-4fc5-b8b8-0f8d04d8a7e0"
 * status = #final
 * subject = Reference(urn:uuid:2f4b3a21-5c6d-4e7f-9081-a2b3c4d5e6f0)
 * date = "2025-08-27T09:15:00+02:00"

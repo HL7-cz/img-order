@@ -3,7 +3,7 @@ Id: HeaderImagingOrder
 Title: "A.1 - Imaging Order header data element"
 Description: """Imaging Order - Imaging Order header data element - A.1"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 * subject 1..1 SubjectCz "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject" """Identification of the patient/subject and Patient/subject related contact information"""
 * payer 1..1 PayerCz "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care." """Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""

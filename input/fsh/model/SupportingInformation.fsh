@@ -3,7 +3,7 @@ Id: ImageSupportingInformationCz
 Title: "A.3.1 - Supporting Information"
 Description: """Supporting Information - Information and data communicated by the imaging methods department that has an impact on the execution of the order or the interpretation of the examination results"""
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule (2, trial-use)
 
 *  biometricData 1..1 Base "A.3.1.1 - Bimetric Data" """If the required clinical data are available, it is mandatory."""
 *  biometricData.weight 1..1 Base "A.3.1.1.1 - Weight" """Subject weight"""
@@ -13,9 +13,9 @@ Description: """Supporting Information - Information and data communicated by th
 *  biometricData.height 1..1 Base "A.3.1.1.2 - Height" """Subject height"""
 *  biometricData.height.valueQuantity 1..1 Quantity "A.3.1.1.2.1 - Height value" """Data value including unit of measurement."""
 *  biometricData.height.code 1..1 CodeableConcept "A.3.1.1.2.2 - Height code" """Observation code identifying the meaning of the height data"""
-*  biometricData.height.dateTime  1..1 dateTime "A.3.1.1.2.3 - Height date and time" """The date of height discovery is stated if it is different from the date of order issuance.""" 
+*  biometricData.height.dateTime  1..1 dateTime "A.3.1.1.2.3 - Height date and time" """The date of height discovery is stated if it is different from the date of order issuance."""
 *  otherRelevantClinicalInformation 0..1 Base "A.3.1.2 - Other relevant clinical information" """Other relevant clinical information"""
-*  otherRelevantClinicalInformation.code 0..* CodeableConcept "A.3.1.2.1 - Code of other information" """Diagnoses and other clinical information that may affect the course or result of the examination or its interpretation (e.g. heart failure, claustrophobia, renal failure)""" 
+*  otherRelevantClinicalInformation.code 0..* CodeableConcept "A.3.1.2.1 - Code of other information" """Diagnoses and other clinical information that may affect the course or result of the examination or its interpretation (e.g. heart failure, claustrophobia, renal failure)"""
 *  otherRelevantClinicalInformation.text 0..1 string "A.3.1.2.2 - Text of other information" """Clinical information necessary for correct order execution or interpretation of results."""
 *  medication 0..* Base "A.3.1.3 - Medication" """Medication block containing information about medication that has an impact on the course or result of the examination or its interpretation."""
 *  medication.identifier 0..* Identifier "A.3.1.3.1 - Medication identifier" """Identifier of medication"""

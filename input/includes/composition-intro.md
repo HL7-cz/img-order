@@ -1,12 +1,12 @@
-### Sections and content
+#### Sections and content
 
 The document is divided into a set of mandatory and optional sections. In case no data is available for a mandatory section, the justification can be expressed in `composition.section.emptyReason`.
 
-### Document structure
+#### Document structure
 
 The Imaging order holds the following sections in this order:
 
-#### Imaging Order Header
+##### Imaging Order Header
 
 General information on the order. Most of the information elements in this part of the order overlap with other clinical orders. The document header includes information on the patient, source organization, author, attester and custodian of the order. 
 
@@ -14,7 +14,7 @@ General information on the order. Most of the information elements in this part 
 
 This profile allows for linking the order form to a specific clinical encounter, such as an outpatient visit during which the order was created.
 
-#### Body of the Imaging Order
+##### Body of the Imaging Order
 
 **Order Information**
 

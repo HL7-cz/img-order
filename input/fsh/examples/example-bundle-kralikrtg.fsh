@@ -14,26 +14,26 @@ Usage: #example
 * entry[patient].fullUrl = "urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc"
 * entry[patient].resource = cz-patient-kralik
 
-* entry[orderInformation].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[orderInformation].resource = cz-kralikrgt-example1
+* entry[serviceRequest].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[serviceRequest].resource = cz-kralikrgt-example1
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:fea1dbb8-9e16-4e11-beae-c12829c97381"
-* entry[orderInformation][=].resource = cz-kralikrgt-example2
+* entry[serviceRequest][+].fullUrl = "urn:uuid:fea1dbb8-9e16-4e11-beae-c12829c97381"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example2
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:210db397-977a-47a0-8a2e-febde6f9f92a"
-* entry[orderInformation][=].resource = cz-kralikrgt-example3
+* entry[serviceRequest][+].fullUrl = "urn:uuid:210db397-977a-47a0-8a2e-febde6f9f92a"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example3
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:ded5bee9-8a58-4676-919f-0b8e08eaede4"
-* entry[orderInformation][=].resource = cz-kralikrgt-example4
+* entry[serviceRequest][+].fullUrl = "urn:uuid:ded5bee9-8a58-4676-919f-0b8e08eaede4"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example4
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:158808ba-fcca-480e-8188-dec77920ec3c"
-* entry[orderInformation][=].resource = cz-kralikrgt-example5
+* entry[serviceRequest][+].fullUrl = "urn:uuid:158808ba-fcca-480e-8188-dec77920ec3c"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example5
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
-* entry[orderInformation][=].resource = cz-kralikrgt-example6
+* entry[serviceRequest][+].fullUrl = "urn:uuid:5ab3e344-4d0c-4786-bab2-7dd0d7b60cd9"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example6
 
-* entry[orderInformation][+].fullUrl = "urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
-* entry[orderInformation][=].resource = cz-kralikrgt-example7
+* entry[serviceRequest][+].fullUrl = "urn:uuid:c8d7d3d8-9007-45a7-8f09-0ae69f7d7fed"
+* entry[serviceRequest][=].resource = cz-kralikrgt-example7
 
 * entry[coverage].fullUrl = "urn:uuid:92fcdc96-95c0-4cc9-9857-afee3bed913c"
 * entry[coverage].resource = cz-kralikinsurance-example
@@ -85,6 +85,8 @@ InstanceOf: CZ_CompositionImageOrder
 Description: "Example of Imaging order (Composition) including a RTG order"
 Usage: #inline
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* identifier.system = "https://example.org/fhir/sid"
+* identifier.value = "Composition-dbd426a9"
 * status = #final
 * subject = Reference(urn:uuid:dd800c46-f71a-4628-b457-6ccaa27dd6bc)
 * date = "2025-05-20T12:02:00+01:00"

@@ -49,7 +49,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_MedicalTestResultCore or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_CarePlanCore or Goal)
+* supportingInfo only Reference(CZ_MedicationAdministrationCore or CZ_MedicationStatementCore or CZ_ImmunizationCore or CZ_MedicalTestResultCore or CZ_ConditionCore or CZ_AllergyIntolerance or CZ_DeviceUseStatementCore or CZ_FlagPatientCore or CZ_CarePlanCore or Goal)
 * supportingInfo ^slicing.discriminator[0].type = #profile
 * supportingInfo ^slicing.discriminator[0].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
@@ -58,6 +58,7 @@ Description: "Order information for the scope of the Czech national interoperabi
     mobility 0..1
 * supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
+
 * reasonCode 0..*
 * reasonCode.coding 1..*
 * reasonCode.coding ^slicing.discriminator[0].type = #value
@@ -75,7 +76,8 @@ Description: "Order information for the scope of the Czech national interoperabi
 * reasonCode.coding[orphacode].system = "https://www.orpha.net" (exactly)
 
 * reasonReference 0..*
-* reasonReference only Reference(CZ_ConditionClinicalQuestion or CZ_ConditionCore or CZ_MedicalTestResultCore or DiagnosticReport or DocumentReference)
+* reasonReference only Reference(CZ_ConditionCore or CZ_MedicalTestResultCore or CZ_DiagnosticReportCore or DocumentReference)
+* reasonReference ^comment = "A Condition reference may also target [CZ_ConditionClinicalQuestion](StructureDefinition-cz-conditionClinicalQuestion.html), which specializes CZ_ConditionCore. When the clinical question directly justifies this service, reference the same instance from ServiceRequest.reasonReference and Composition.section[clinicalQuestion].entry. Inclusion in the Composition section does not automatically assign it as the reason for every ServiceRequest."
 
 * orderDetail 1..*
 * orderDetail.coding ^slicing.discriminator[0].type = #value

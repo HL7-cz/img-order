@@ -11,8 +11,8 @@ Usage: #example
 * entry[composition].resource = Composition-mamografie-preventivni
 * entry[patient].fullUrl = "urn:uuid:43614302-1d18-4b04-929d-d762b16fd688"
 * entry[patient].resource = cz-patient-cerna
-* entry[orderInformation].fullUrl = "urn:uuid:60ea3958-7344-4969-a0b7-58f849473d05"
-* entry[orderInformation].resource = cz-mammo-request
+* entry[serviceRequest].fullUrl = "urn:uuid:60ea3958-7344-4969-a0b7-58f849473d05"
+* entry[serviceRequest].resource = cz-mammo-request
 * entry[coverage].fullUrl = "urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12"
 * entry[coverage].resource = cz-selfpay-coverage
 * entry[practitionerRole].fullUrl = "urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
@@ -32,6 +32,8 @@ Title: "Composition: Preventive mammography request"
 Description: "Structure of the referral form for a screening mammogram"
 Usage: #inline
 * id = "ebe537ba-7fe2-4b2a-8c56-3d100b67d9be"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:6f60dbe9-8d13-49e4-9336-7fced56c671c"
 * status = #final
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * date = "2026-08-27T11:15:00+02:00"

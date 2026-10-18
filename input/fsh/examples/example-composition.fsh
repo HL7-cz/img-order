@@ -4,6 +4,8 @@ Usage: #example
 Title: "Composition: Imaging Order"
 Description: "Standalone example of an imaging order Composition."
 
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:45485f18-2dd0-4ff0-ba9a-9f3fb1c70092"
 * status = #final
 * subject = Reference(Mracena)
 * date = "2025-04-01T09:00:00+01:00"
