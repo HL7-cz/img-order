@@ -425,10 +425,10 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
             <td>
-            class
+            type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).type
+            Composition (CZ_CompositionImageOrder).encounter
             </td>
             <td>
 
