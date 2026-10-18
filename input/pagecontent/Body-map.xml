@@ -347,7 +347,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td><a href="StructureDefinition-cz-conditionClinicalQuestion.html">Condition: Clinical question (CZ)</a></td>
             <td>
 
             </td>
@@ -366,7 +366,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td><a href="StructureDefinition-cz-conditionClinicalQuestion.html">Condition: Clinical question (CZ)</a></td>
             <td>
 
             </td>
@@ -2259,7 +2259,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.dateTime</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.dateTime</a></td>
             <td>
             A.3.1.6.1 - Date and time of information
             </td>
@@ -2268,7 +2268,7 @@
             </td>
             <td><a href="StructureDefinition-cz-patientMobility.html">Patient mobility: Imaging Order (CZ)</a></td>
             <td>
-            valueDateTime
+            effectiveDateTime
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
@@ -2278,9 +2278,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.code</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.code</a></td>
             <td>
-            A.3.1.6.1 - Code of information
+            A.3.1.6.2 - Code of information
             </td>
             <td>
             equivalent
@@ -2297,9 +2297,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.value</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.value</a></td>
             <td>
-            A.3.1.6.2 - Value of information
+            A.3.1.6.3 - Value of information
             </td>
             <td>
             equivalent
@@ -2477,7 +2477,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            text
+            code.text
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
@@ -2724,7 +2724,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation: Medical Test Result (CZ core)</a></td>
             <td>
-            title
+            code.text
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[supportingInformation].entry

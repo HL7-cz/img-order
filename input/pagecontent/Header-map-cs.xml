@@ -772,7 +772,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[order].insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
             </td>
             <td>
             Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_CoverageOrder)

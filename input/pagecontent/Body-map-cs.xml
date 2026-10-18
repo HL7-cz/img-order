@@ -347,7 +347,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td><a href="StructureDefinition-cz-conditionClinicalQuestion.html">Condition (cz-conditionClinicalQuestion)</a></td>
             <td>
 
             </td>
@@ -366,7 +366,7 @@
             <td>
             ekvivalentní
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html">Condition (cz-conditionCore)</a></td>
+            <td><a href="StructureDefinition-cz-conditionClinicalQuestion.html">Condition (cz-conditionClinicalQuestion)</a></td>
             <td>
 
             </td>
@@ -2258,7 +2258,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.dateTime</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.dateTime</a></td>
             <td>
             A.3.1.6.1 - Datum a čas informace
             </td>
@@ -2267,7 +2267,7 @@
             </td>
             <td><a href="StructureDefinition-cz-patientMobility.html">Observation (cz-patientMobility)</a></td>
             <td>
-            valueDateTime
+            effectiveDateTime
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
@@ -2277,9 +2277,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.code</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.code</a></td>
             <td>
-            A.3.1.6.1 - Kód informace
+            A.3.1.6.2 - Kód informace
             </td>
             <td>
             ekvivalentní
@@ -2296,9 +2296,9 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.imitationOfPatientMobility.value</a></td>
+            <td><a href="StructureDefinition-logImageSupportingInformationCz.html">SupportingInformation.limitationOfPatientMobility.value</a></td>
             <td>
-            A.3.1.6.2 - Hodnota informace
+            A.3.1.6.3 - Hodnota informace
             </td>
             <td>
             ekvivalentní
@@ -2476,7 +2476,7 @@
             </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
             <td>
-            text
+            code.text
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
@@ -2723,7 +2723,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
-            title
+            code.text
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
