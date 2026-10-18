@@ -1582,17 +1582,17 @@
             A.1.9.2 - Digitální časové razítko
             </td>
             <td>
-            ekvivalentní
+            související
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-provenance.html">Provenance (cz-provenance)</a></td>
             <td>
-            signature.when
+
             </td>
             <td>
             Provenance (CZ_Provenance).signature
             </td>
             <td>
-
+            Bez samostatného prvku FHIR. Časové razítko je součástí struktury JAdES v Provenance.signature.data (A.1.9.1); signature.when není časovým razítkem (viz standard Elektronické podepisování EHR).
             </td>
           </tr>
         </tbody>

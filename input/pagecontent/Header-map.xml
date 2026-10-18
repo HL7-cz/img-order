@@ -1582,17 +1582,17 @@
             A.1.9.2 - Electronic timestamp
             </td>
             <td>
-            equivalent
+            related-to
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-provenance.html">Provenance (cz-provenance)</a></td>
             <td>
-            signature.when
+
             </td>
             <td>
             Provenance (CZ_Provenance).signature
             </td>
             <td>
-
+            No separate FHIR element. The timestamp is part of the JAdES structure in Provenance.signature.data (A.1.9.1); signature.when is not a timestamp (see the EHR Electronic Signing standard).
             </td>
           </tr>
         </tbody>
