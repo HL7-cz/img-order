@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logický model |
 | <#TECHNOLOGY>  Profil |
 endlegend
-class "Tělo žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
+class "Tělo žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-logBodyImageOrderCz.html]]
 
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "condition-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html]]

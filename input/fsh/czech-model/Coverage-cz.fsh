@@ -5,7 +5,7 @@ Description: """Informace o způsobu úhrady objednávky vyšetření"""
 
 * insert SetFmmandStatusRule (2, trial-use)
 
-* method 1..1 CodeableConcept "A.1.4.1 - Způsob úhrady" """Způsob úhrady objednávky (zdravotní pojištění, hradí pacient, jiný)."""
+* zpusob 1..1 CodeableConcept "A.1.4.1 - Způsob úhrady" """Způsob úhrady objednávky (zdravotní pojištění, hradí pacient, jiný)."""
 * infoOPlatci 0..1 Base "A.1.4.2 - Informace o plátci" """Identifikační údaje plátce a doplňující informace, pokud jde o jinou úhradu než ze zdravotního pojištění. Identifikační údaje obsahují identifikátor, název organizace či jméno plátce, adresu plátce a telekomunikační spojení."""
 * infoOPlatci.jmeno 0..1 HumanName "A.1.4.2.1 - Jméno plátce" """Jméno a příjmení plátce"""
 * infoOPlatci.idOrganizace 0..* Identifier "A.1.4.2.2 - ID organizace" """Identifikátor organizace plátce"""

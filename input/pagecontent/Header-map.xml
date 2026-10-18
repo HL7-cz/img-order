@@ -79,7 +79,7 @@
       <strong>Mapping Context</strong>
 
       <ul>
-        <li><strong>Source logical model:</strong> <a href="StructureDefinition-logHeaderImagingOrder.html">logHeaderImagingOrder</a></li>
+        <li><strong>Source logical model:</strong> <a href="StructureDefinition-HeaderImagingOrder.html">HeaderImagingOrder</a></li>
         <li><strong>Source mapping file:</strong> <code>HeaderImageOrder2FHIR.fsh</code></li>
         <li><strong>Mapping scope:</strong> A.1 Header of the imaging order document</li>
       </ul>
@@ -114,7 +114,7 @@
 
         <tbody>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification</a></td>
             <td>
             A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject
             </td>
@@ -133,7 +133,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.givenName</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.givenName</a></td>
             <td>
             A.1.1.1 - Given name
             </td>
@@ -152,7 +152,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.familyName</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.familyName</a></td>
             <td>
             A.1.1.2 - Family name/surname
             </td>
@@ -171,7 +171,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.dateOfBirth</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.dateOfBirth</a></td>
             <td>
             A.1.1.3 - Date of birth
             </td>
@@ -190,7 +190,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.dateOfDeath</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.dateOfDeath</a></td>
             <td>
             A.1.1.4 - Date of death
             </td>
@@ -209,7 +209,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.identifier</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.identifier</a></td>
             <td>
             A.1.1.5 - National healthcare patient ID
             </td>
@@ -228,7 +228,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.citizenship</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.citizenship</a></td>
             <td>
             A.1.1.6 - Nationality
             </td>
@@ -247,7 +247,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.gender</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.gender</a></td>
             <td>
             A.1.1.7 - Gender
             </td>
@@ -266,7 +266,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.genderForClinicalUse</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.genderForClinicalUse</a></td>
             <td>
             A.1.1.8 - Gender for clinical use
             </td>
@@ -285,7 +285,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.languageOfCommunication</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.languageOfCommunication</a></td>
             <td>
             A.1.1.9 - Communication language
             </td>
@@ -304,7 +304,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.handicap</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.identification.handicap</a></td>
             <td>
             A.1.1.10 - Handicap
             </td>
@@ -323,7 +323,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo</a></td>
             <td>
             A.1.2 - Patient/subject related contact information
             </td>
@@ -342,7 +342,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.address</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.address</a></td>
             <td>
             A.1.2.1 - Address
             </td>
@@ -361,7 +361,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.telecom</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.telecom</a></td>
             <td>
             A.1.2.2 - Telecom
             </td>
@@ -380,7 +380,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
             A.1.2.3 - Preferred physician
             </td>
@@ -399,7 +399,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent</a></td>
             <td>
             A.1.2.4 - Contact person/ legal guardian (multiple contacts could be provided)
             </td>
@@ -418,7 +418,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.type</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.type</a></td>
             <td>
             A.1.2.4.1 - Type of contact
             </td>
@@ -437,7 +437,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.relationToSubject</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.relationToSubject</a></td>
             <td>
             A.1.2.4.2 - Relationship level
             </td>
@@ -456,7 +456,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.identifier</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.identifier</a></td>
             <td>
             A.1.2.4.3 - Identifier
             </td>
@@ -475,7 +475,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.givenName</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.givenName</a></td>
             <td>
             A.1.2.4.4 - Given name
             </td>
@@ -494,7 +494,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.familyName</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.familyName</a></td>
             <td>
             A.1.2.4.5 - Family name/surname
             </td>
@@ -513,7 +513,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.address</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.address</a></td>
             <td>
             A.1.2.4.6 - Address
             </td>
@@ -532,7 +532,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.telecom</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.legalRepresent.telecom</a></td>
             <td>
             A.1.2.4.7 - Telecom
             </td>
@@ -551,7 +551,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
             A.1.2.3 - Preferred physician
             </td>
@@ -570,7 +570,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
             <td>
             A.1.2.3.1 - Identifier
             </td>
@@ -589,7 +589,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
             <td>
             A.1.2.3.2 - Name
             </td>
@@ -608,7 +608,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
             <td>
             A.1.2.3.6 - Telecom
             </td>
@@ -627,7 +627,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
             <td>
             A.1.2.3 - Preferred physician
             </td>
@@ -646,7 +646,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
             <td>
             A.1.2.3.1 - Identifier
             </td>
@@ -665,7 +665,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
             <td>
             A.1.2.3.2 - Name
             </td>
@@ -684,7 +684,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Specialization</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.Specialization</a></td>
             <td>
             A.1.2.3.3 - Specialization
             </td>
@@ -703,7 +703,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.providerIdentifierName</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.providerIdentifierName</a></td>
             <td>
             A.1.2.3.4 - Organisation
             </td>
@@ -722,7 +722,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.providerAddress</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.providerAddress</a></td>
             <td>
             A.1.2.3.5 - Address
             </td>
@@ -741,7 +741,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
             <td>
             A.1.2.3.6 - Telecom
             </td>
@@ -760,7 +760,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer</a></td>
+            <td><a href="StructureDefinition-PayerCz.html">Header.payer</a></td>
             <td>
             A.1.3 - Health insurance and payment information
             </td>
@@ -779,7 +779,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceCode</a></td>
+            <td><a href="StructureDefinition-PayerCz.html">Header.payer.insuranceCode</a></td>
             <td>
             A.1.3.1 - Health insurance code
             </td>
@@ -798,7 +798,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceName</a></td>
+            <td><a href="StructureDefinition-PayerCz.html">Header.payer.insuranceName</a></td>
             <td>
             A.1.3.2 - Health insurance name
             </td>
@@ -817,7 +817,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceNumber</a></td>
+            <td><a href="StructureDefinition-PayerCz.html">Header.payer.insuranceNumber</a></td>
             <td>
             A.1.3.3 - Health insurance number
             </td>
@@ -836,7 +836,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage</a></td>
             <td>
             A.1.4 - Information about coverage
             </td>
@@ -855,7 +855,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.method</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.method</a></td>
             <td>
             A.1.4.1 - Method of coverage
             </td>
@@ -874,7 +874,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor</a></td>
             <td>
             A.1.4.2 - Information about payor
             </td>
@@ -893,7 +893,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.name</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.name</a></td>
             <td>
             A.1.4.2.1 - Payor name
             </td>
@@ -912,7 +912,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organizationId</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.organizationId</a></td>
             <td>
             A.1.4.2.2 - Organization id
             </td>
@@ -931,7 +931,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organization</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.organization</a></td>
             <td>
             A.1.4.2.3 - Organization
             </td>
@@ -950,7 +950,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.address</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.address</a></td>
             <td>
             A.1.4.2.4 - Address
             </td>
@@ -969,7 +969,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.country</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.country</a></td>
             <td>
             A.1.4.2.5 - Country
             </td>
@@ -988,7 +988,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.telecom</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.informationPayor.telecom</a></td>
             <td>
             A.1.4.2.6 - Telecom
             </td>
@@ -1007,7 +1007,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.reimbursementCode</a></td>
+            <td><a href="StructureDefinition-CoverageOrderCz.html">Header.coverage.reimbursementCode</a></td>
             <td>
             A.1.4.3 - Reimbursement code
             </td>
@@ -1026,7 +1026,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">Header.author</a></td>
             <td>
             A.1.5 - Author
             </td>
@@ -1045,7 +1045,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.identifier</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">Header.author.identifier</a></td>
             <td>
             A.1.5.1 - Author identifier
             </td>
@@ -1064,7 +1064,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.name</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">Header.author.name</a></td>
             <td>
             A.1.5.2 - Author name
             </td>
@@ -1083,7 +1083,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.address</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">Header.author.address</a></td>
             <td>
             A.1.5.3 - Author's address
             </td>
@@ -1102,7 +1102,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.organization</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">Header.author.organization</a></td>
             <td>
             A.1.5.4 - Author organisation
             </td>
@@ -1121,7 +1121,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">AuthorCz.organization</a></td>
+            <td><a href="StructureDefinition-AuthorCz.html">AuthorCz.organization</a></td>
             <td>
             A.1.5.4 - Author organisation
             </td>
@@ -1140,7 +1140,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer</a></td>
+            <td><a href="StructureDefinition-RequestedPerformerCz.html">Header.requestedPerformer</a></td>
             <td>
             A.1.6 - Requested Performer
             </td>
@@ -1159,7 +1159,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.identifier</a></td>
+            <td><a href="StructureDefinition-RequestedPerformerCz.html">Header.requestedPerformer.identifier</a></td>
             <td>
             A.1.6.1 -Requested Performer identifier
             </td>
@@ -1178,7 +1178,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.name</a></td>
+            <td><a href="StructureDefinition-RequestedPerformerCz.html">Header.requestedPerformer.name</a></td>
             <td>
             A.1.6.2 - Requested Performer name
             </td>
@@ -1197,7 +1197,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organizationID</a></td>
+            <td><a href="StructureDefinition-RequestedPerformerCz.html">Header.requestedPerformer.organizationID</a></td>
             <td>
             A.1.6.3 - Requested Performer organisation ID
             </td>
@@ -1216,7 +1216,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organization</a></td>
+            <td><a href="StructureDefinition-RequestedPerformerCz.html">Header.requestedPerformer.organization</a></td>
             <td>
             A.1.6.4 - Requested Performer organisation
             </td>
@@ -1235,7 +1235,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient</a></td>
+            <td><a href="StructureDefinition-AdditionalRecipientCz.html">Header.additionalRecipient</a></td>
             <td>
             A.1.7 - Additional Recipient
             </td>
@@ -1254,7 +1254,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.identifier</a></td>
+            <td><a href="StructureDefinition-AdditionalRecipientCz.html">Header.additionalRecipient.identifier</a></td>
             <td>
             A.1.7.1 - Additional Recipient identifier
             </td>
@@ -1273,7 +1273,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.name</a></td>
+            <td><a href="StructureDefinition-AdditionalRecipientCz.html">Header.additionalRecipient.name</a></td>
             <td>
             A.1.7.2 - Name
             </td>
@@ -1292,7 +1292,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organizationID</a></td>
+            <td><a href="StructureDefinition-AdditionalRecipientCz.html">Header.additionalRecipient.organizationID</a></td>
             <td>
             A.1.7.3 - Organization Identifier
             </td>
@@ -1311,7 +1311,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organization</a></td>
+            <td><a href="StructureDefinition-AdditionalRecipientCz.html">Header.additionalRecipient.organization</a></td>
             <td>
             A.1.7.4 - Organization name
             </td>
@@ -1330,7 +1330,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.identifier</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.identifier</a></td>
             <td>
             A.1.8.1 - Document Identifier
             </td>
@@ -1349,7 +1349,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
             A.1.8.4 - Date and Time of the Order
             </td>
@@ -1368,7 +1368,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Header.subject</a></td>
+            <td><a href="StructureDefinition-SubjectCz.html">Header.subject</a></td>
             <td>
             A.1.1 - Patient Identification A.1.2 - Related Contact Information about the Patient
             </td>
@@ -1387,7 +1387,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata</a></td>
             <td>
             A.1.8 - Document metadata
             </td>
@@ -1406,7 +1406,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.category</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.category</a></td>
             <td>
             A.1.8.2 - Document Category
             </td>
@@ -1425,7 +1425,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.status</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.status</a></td>
             <td>
             A.1.8.3 - Document Status
             </td>
@@ -1444,7 +1444,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
             <td>
             A.1.8.4 - Date and Time of the Order
             </td>
@@ -1463,7 +1463,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.title</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.title</a></td>
             <td>
             A.1.8.5 - Document Title
             </td>
@@ -1482,7 +1482,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.custodian</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.custodian</a></td>
             <td>
             A.1.8.6 - Custodian of the Order
             </td>
@@ -1501,7 +1501,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.confidentiality</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.confidentiality</a></td>
             <td>
             A.1.8.7 - Confidentiality
             </td>
@@ -1520,7 +1520,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.language</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.language</a></td>
             <td>
             A.1.8.8 - Language
             </td>
@@ -1539,7 +1539,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.version</a></td>
+            <td><a href="StructureDefinition-DocumentMetadataCz.html">Header.documentMetadata.version</a></td>
             <td>
             A.1.8.9 - Version
             </td>
