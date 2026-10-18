@@ -1525,7 +1525,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1544,7 +1544,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1563,7 +1563,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1582,7 +1582,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1601,7 +1601,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             valueQuantity
             </td>
@@ -1620,7 +1620,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             code
             </td>
@@ -1639,7 +1639,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             effectiveDateTime
             </td>
@@ -1658,7 +1658,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1677,7 +1677,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
 
             </td>
@@ -1696,7 +1696,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             valueQuantity
             </td>
@@ -1715,7 +1715,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             code
             </td>
@@ -1734,7 +1734,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Vital Sign (CZ)</a></td>
             <td>
             effectiveDateTime
             </td>
