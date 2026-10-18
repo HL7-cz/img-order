@@ -21,7 +21,7 @@ class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-c
 class "appointment-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-appointment-cz-core.html]]
 class "cz-specimen" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-specimen.html]]
 class "medicalTestResult-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html]]
-class "cz-anthropometric-test-result" <<Profile>> [[StructureDefinition-cz-anthropometric-test-result.html]]
+class "cz-vital-sign" <<Profile>> [[StructureDefinition-cz-vital-sign.html]]
 class "medicationStatement-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html]]
 class "immmunization-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html]]
 class "deviceUseStatement-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html]]
@@ -35,7 +35,7 @@ class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "Tělo žádanky obrazového vyšetření" <|. "cz-encounter"
 "Tělo žádanky obrazového vyšetření" <|. "cz-specimen"
 "Tělo žádanky obrazového vyšetření" <|. "medicalTestResult-cz-core"
-"Tělo žádanky obrazového vyšetření" <|. "cz-anthropometric-test-result"
+"Tělo žádanky obrazového vyšetření" <|. "cz-vital-sign"
 "Tělo žádanky obrazového vyšetření" <|. "cz-MedicationStatement"
 "Tělo žádanky obrazového vyšetření" <|. "cz-Immunization"
 "Tělo žádanky obrazového vyšetření" <|. "cz-deviceUseStatement"
@@ -48,8 +48,8 @@ class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "cz-appointment" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-specimen"
 "cz-specimen" -d[hidden]-> "medicalTestResult-cz-core"
-"medicalTestResult-cz-core" -d[hidden]-> "cz-anthropometric-test-result"
-"cz-anthropometric-test-result" -d[hidden]-> "cz-MedicationStatement"
+"medicalTestResult-cz-core" -d[hidden]-> "cz-vital-sign"
+"cz-vital-sign" -d[hidden]-> "cz-MedicationStatement"
 "cz-MedicationStatement" -d[hidden]-> "cz-Immunization"
 "cz-Immunization" -d[hidden]-> "cz-deviceUseStatement"
 "cz-deviceUseStatement" -d[hidden]-> "cz-allergyIntolerance"

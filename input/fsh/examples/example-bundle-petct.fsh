@@ -139,8 +139,8 @@ Title: "PractitionerRole: Clinical Oncology"
 Description: "Context of the practice site of the referring oncologist"
 Usage: #example
 * id = "8fd3a4cf-173a-43f0-a1f9-5b538d088c03"
-* specialty[0] = $vzp-odbornost#403 //"Klinická onkologie"
-* specialty[+] = $sctCZ#394592004 //"klinická onkologie - specializace"
+* specialty[0] = $vzp-odbornost#403 "Klinická onkologie"
+* specialty[+] = $sctCZ#394592004 "klinická onkologie - specializace"
 * practitioner = Reference(urn:uuid:6918f12d-318b-4fa7-9462-16a60d6fdfe4)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 

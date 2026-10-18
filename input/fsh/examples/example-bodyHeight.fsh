@@ -1,5 +1,5 @@
 Instance: ExampleBodyHeight
-InstanceOf: CZ_Anthropometric_Test_Result
+InstanceOf: CZ_VitalSign
 Usage: #example
 Title: "Body height: Patient Mracena"
 Description: "Example of body height of Patient Mracena"

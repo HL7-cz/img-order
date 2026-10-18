@@ -1525,12 +1525,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1544,31 +1544,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Anthropometric_Test_Result)
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.weight</a></td>
-            <td>
-            A.3.1.1.1 - Weight
-            </td>
-            <td>
-            related-to
-            </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1582,12 +1563,31 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Anthropometric_Test_Result)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.SupportingInformation.weight</a></td>
+            <td>
+            A.3.1.1.1 - Weight
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
+            <td>
+
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1601,7 +1601,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             valueQuantity
             </td>
@@ -1620,7 +1620,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             code
             </td>
@@ -1639,7 +1639,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             effectiveDateTime
             </td>
@@ -1658,12 +1658,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_Anthropometric_Test_Result)
+            Composition (CZ_CompositionImageOrder).section[OrderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1677,12 +1677,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_Anthropometric_Test_Result)
+            Composition (CZ_CompositionImageOrder).section[SupportingInformation].ofType(CZ_VitalSign)
             </td>
             <td>
 
@@ -1696,7 +1696,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             valueQuantity
             </td>
@@ -1715,7 +1715,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             code
             </td>
@@ -1734,7 +1734,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-anthropometric-test-result.html">Anthropometric Test Result (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-vital-sign.html">Anthropometric Test Result (CZ)</a></td>
             <td>
             effectiveDateTime
             </td>

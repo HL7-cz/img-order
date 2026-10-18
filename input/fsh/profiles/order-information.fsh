@@ -56,7 +56,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * supportingInfo contains
     anthropometric 0..* and
     mobility 0..1
-* supportingInfo[anthropometric] only Reference(CZ_Anthropometric_Test_Result)
+* supportingInfo[anthropometric] only Reference(CZ_VitalSign)
 * supportingInfo[mobility] only Reference(CZ_PatientMobility)
 
 * reasonCode 0..*
