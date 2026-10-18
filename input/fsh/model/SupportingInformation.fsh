@@ -5,7 +5,7 @@ Description: """Supporting Information - Information and data communicated by th
 
 * insert SetFmmandStatusRule (2, trial-use)
 
-*  biometricData 1..1 Base "A.3.1.1 - Bimetric Data" """If the required clinical data are available, it is mandatory."""
+*  biometricData 0..1 Base "A.3.1.1 - Bimetric Data" """If the required clinical data are available, it is mandatory."""
 *  biometricData.weight 1..1 Base "A.3.1.1.1 - Weight" """Subject weight"""
 *  biometricData.weight.valueQuantity 1..1 Quantity "A.3.1.1.1.1 - Weight value" """Data value including unit of measurement."""
 *  biometricData.weight.code 1..1 CodeableConcept "A.3.1.1.1.2 - Weight code" """Observation code identifying the meaning of the weight data"""
@@ -30,10 +30,10 @@ Description: """Supporting Information - Information and data communicated by th
 *  urgentInformation.allergyIntolerance 1..* Base "A.3.1.5.1 - Allergy intolerance" """Allergies and intolerances that may affect order fulfillment or interpretation of results"""
 *  urgentInformation.warnings 0..* string "A.3.1.5.2 - Warning" """Warnings and notices that may affect order fulfillment or interpretation of results"""
 *  limitationOfPatientMobility 1..1 Base "A.3.1.6 - Limitation of patient mobility" """Describes the patient's mobility limitations"""
-*  limitationOfPatientMobility.dateTime 0..1 dateTime "A.3.1.6.1 - Date and time of information" """Date of information discovery, stated if different from the date of order"""
+*  limitationOfPatientMobility.dateTime 1..1 dateTime "A.3.1.6.1 - Date and time of information" """Date of information discovery, stated if different from the date of order"""
 *  limitationOfPatientMobility.code 1..1 CodeableConcept "A.3.1.6.2 - Code of information" """Observation code identifying the meaning of the observation (limitation of patient mobility)"""
 *  limitationOfPatientMobility.value 0..1 CodeableConcept "A.3.1.6.3 - Value of information" """Coded value describing the patient's mobility limitation"""
 *  otherInformation 0..* Base "A.3.1.7 - Other information" """Other formalized observation communicated to the implementing workplace"""
-*  otherInformation.dateTime 0..1 dateTime "A.3.1.7.1 - Date and time of information" """Date of information discovery, stated if different from the date of order"""
+*  otherInformation.dateTime 1..1 dateTime "A.3.1.7.1 - Date and time of information" """Date of information discovery, stated if different from the date of order"""
 *  otherInformation.code 1..1 CodeableConcept "A.3.1.7.2 - Code of information" """Observation code identifying the meaning of the observation (week of gestation, etc.)"""
 *  otherInformation.value 0..1 Quantity "A.3.1.7.3 - Value of information" """Observation value including unit of measurement."""

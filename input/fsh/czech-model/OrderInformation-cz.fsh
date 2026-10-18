@@ -6,7 +6,7 @@ Description:  """Informace o objednávce a Odůvodnění vyšetření (důvod ob
 * insert SetFmmandStatusRule (2, trial-use)
 
 * detailyObjednavky 0..* Base "A.2.1 - Informace o objednávce" """Informace o objednávce"""
-* detailyObjednavky.id 1..* Identifier "A.2.1.1 - ID objednávky" """Identifikátor objednávky vyšetření."""
+* detailyObjednavky.id 0..* Identifier "A.2.1.1 - ID objednávky" """Identifikátor objednávky vyšetření."""
 * detailyObjednavky.datumACas 1..1 dateTime "A.2.1.2 - Datum a čas objednávky" """Datum a čas zadání objednávky."""
 * detailyObjednavky.datumPozadovanehoProvedeni 0..1 dateTime "A.2.1.3 - Datum a čas požadovaného provedení" """Datum a čas požadovaného provedení"""
 * detailyObjednavky.urgentnost 0..1 CodeableConcept "A.2.1.4 - Urgentnost objednávky" """Urgentnost objednávky (rutinní, urgentní, statim).

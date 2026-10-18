@@ -5,7 +5,7 @@ Description: """Informace a údaje sdělované pracovišti zobrazovacích metod,
 
 * insert SetFmmandStatusRule (2, trial-use)
 
-*  biometrickaData 1..1 Base "A.3.1.1 - Biometrické údaje" """"""
+*  biometrickaData 0..1 Base "A.3.1.1 - Biometrické údaje" """"""
 *  biometrickaData.vaha 1..1 Base "A.3.1.1.1 - Váha" """Váha subjektu"""
 *  biometrickaData.vaha.hodnota 1..1 Quantity "A.3.1.1.1.1 - Hodnota" """Hodnota údaje včetně jednotky měření."""
 *  biometrickaData.vaha.kod 1..1 CodeableConcept "A.3.1.1.1.2 - Kód" """Kód pozorování identifikující význam údaje váha"""
@@ -30,10 +30,10 @@ Description: """Informace a údaje sdělované pracovišti zobrazovacích metod,
 *  urgentniInformace.allergie 1..* Base "A.3.1.5.1 - Alergie a intolerance" """Alergie a intolerance, které mohou ovlivnit realizaci objednávky či interpretaci výsledků."""
 *  urgentniInformace.varovani 0..* string "A.3.1.5.2 - Varování" """Varování a upozornění, která mohou vlivní realizaci objednávky či interpretaci výsledků."""
 *  omezeniPohyblivostiPacienta 1..1 Base "A.3.1.6 - Omezení pohyblivosti pacienta" """Omezení pohyblivosti pacienta"""
-*  omezeniPohyblivostiPacienta.datumACas 0..1 dateTime "A.3.1.6.1 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
+*  omezeniPohyblivostiPacienta.datumACas 1..1 dateTime "A.3.1.6.1 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
 *  omezeniPohyblivostiPacienta.kod 1..1 CodeableConcept "A.3.1.6.2 - Kód" """Kód pozorování identifikující význam údaje (omezení pohyblivosti pacienta)."""
 *  omezeniPohyblivostiPacienta.hodnota 0..1 CodeableConcept "A.3.1.6.3 - Hodnota" """Kódovaná hodnota popisující omezení pohyblivosti pacienta."""
 *  dalsiUdaje 0..* Base "A.3.1.7 - Další formalizované údaje" """Další formalizované údaje sdělované provádějícímu pracovišti"""
-*  dalsiUdaje.datumACas 0..1 dateTime "A.3.1.7.1 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
+*  dalsiUdaje.datumACas 1..1 dateTime "A.3.1.7.1 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
 *  dalsiUdaje.kod 1..1 CodeableConcept "A.3.1.7.2 - Kód" """Kód pozorování identifikující význam údaje (týden gravidity apod.)."""
 *  dalsiUdaje.hodnota 0..1 Quantity "A.3.1.7.3 - Hodnota" """Hodnota údaje včetně jednotky měření."""

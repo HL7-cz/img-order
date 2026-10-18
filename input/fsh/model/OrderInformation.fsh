@@ -6,7 +6,7 @@ Description:  """Information about order and order reason"""
 * insert SetFmmandStatusRule (2, trial-use)
 
 * orderDetails 0..* Base "A.2.1 - Order information" """Order information could respond to multiple test orders """
-* orderDetails.identifier 1..* Identifier "A.2.1.1 - Order Id" """An identifier of the imaging order."""
+* orderDetails.identifier 0..* Identifier "A.2.1.1 - Order Id" """An identifier of the imaging order."""
 * orderDetails.dateTime 1..1 dateTime "A.2.1.2 - Order date and time" """Date and time of the order placement."""
 * orderDetails.requestedExecdateTime 0..1 dateTime "A.2.1.3 - Date and time of requested execution" """Date and time of requested execution"""
 * orderDetails.urgency 0..1 CodeableConcept "A.2.1.4 - Urgency of the order" """Urgency of the order (routine, urgent, statim).
