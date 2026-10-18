@@ -425,13 +425,32 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
             <td>
+            class
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+            Základní třída klinické události (např. AMB ambulantní péče, IMP hospitalizace, EMER urgentní péče); v CZ_EncounterCore povinná
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.type</a></td>
+            <td>
+            A.2.3.2 - Typ klinické události
+            </td>
+            <td>
+            související
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
             type
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).encounter
             </td>
             <td>
-
+            Podrobnější typ klinické události, pokud je k dispozici
             </td>
           </tr>
           <tr>
@@ -444,10 +463,86 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
             <td>
-            type.text
+
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.serviceType</a></td>
+            <td>
+            A.2.3.3.1 - Typ poskytovaných služeb
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            serviceType
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.period</a></td>
+            <td>
+            A.2.3.3.2 - Období
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            period
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.length</a></td>
+            <td>
+            A.2.3.3.3 - Délka
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            length
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.relatedEvent</a></td>
+            <td>
+            A.2.3.3.4 - Vazba na další klinickou událost
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter -> CZ_EncounterCore.partOf
             </td>
             <td>
 

@@ -425,13 +425,32 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
             <td>
+            class
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+            Basic class of the clinical event (e.g. AMB outpatient, IMP inpatient/hospitalization, EMER emergency); mandatory in CZ_EncounterCore
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.type</a></td>
+            <td>
+            A.2.3.2 - Type of clinical event
+            </td>
+            <td>
+            related-to
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
             type
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).encounter
             </td>
             <td>
-
+            More specific type of the clinical event, if available
             </td>
           </tr>
           <tr>
@@ -444,10 +463,86 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
             <td>
-            type.text
+
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.serviceType</a></td>
+            <td>
+            A.2.3.3.1 - Type of services
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            serviceType
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.period</a></td>
+            <td>
+            A.2.3.3.2 - Period
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            period
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.length</a></td>
+            <td>
+            A.2.3.3.3 - Duration
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            length
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logClinicalEventCz.html">ClinicalEvent.otherInformation.relatedEvent</a></td>
+            <td>
+            A.2.3.3.4 - Related clinical event
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html">Encounter (cz-encounter)</a></td>
+            <td>
+            identifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).encounter -> CZ_EncounterCore.partOf
             </td>
             <td>
 
