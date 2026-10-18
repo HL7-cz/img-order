@@ -31,7 +31,7 @@ Samostatně jsou obory hodnot dostupné jako [mkn-10](https://uzis.cz/terminolog
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
 | A.2.2.2 | Klinická otázka kódem | SNOMED CT |
-| A.2.2.4 | Důvod objednávky kódem | SNOMED CT `243796009` |
+| A.2.2.4 | Důvod objednávky kódem | [condition-sct](ValueSet-condition-sct.html) — klinické nálezy SNOMED CT (potomci konceptu `404684003` Clinical finding); povoleny jsou také MKN-10 a Orphacode |
 | A.2.6.6 | Typ vzorku | [lab-specimenType](https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType) |
 | A.2.6.7 | Anatomické umístění vzorku | SNOMED CT, Body structure |
 | A.2.6.8 | Morfologie vzorku | SNOMED CT |

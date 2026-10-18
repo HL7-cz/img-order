@@ -21,6 +21,6 @@ Description:  """Information about order and order reason"""
 * orderReason.questionCode 0..* CodeableConcept "A.2.2.2 - Clinical question by code" """Coded information from 2.2.3, if entered
 - Preferred system(s): SNOMED CT"""
 * orderReason.questionText 1..1 string "A.2.2.3 - Clinical question by text" """The clinical question to be answered by imaging. Example: Does the patient have a lung tumour ?"""
-* orderReason.reasonCode 0..* CodeableConcept "A.2.2.4 - Reason for ordering by code" """Coded information from 2.2.5, if entered
-- Preferred system(s): SNOMED CT ReasonCodelist 243796009 (Situation with explicit context (situation)"""
+* orderReason.reasonCode 0..* CodeableConcept "A.2.2.4 - Reason for ordering by code" """Coded information from A.2.2.5, if entered
+- Preferred system(s): SNOMED CT clinical findings (descendants of 404684003 Clinical finding), value set condition-sct; ICD-10 (MKN-10) and Orphacode are also allowed"""
 * orderReason.reasonText 0..1 string "A.2.2.5 - Reason for order by text" """Reason for the examination order expressed in free text (e.g. 3 weeks of persistent cough)"""
