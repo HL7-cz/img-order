@@ -13,16 +13,16 @@ National value sets are published by [HL7 Czech Terminology Implementation Guide
 
 | Item code | Item description                                                       | Value                                                                                                                   |
 | --------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| A.2.2.1   | Problem / diagnosis / condition – indicating diagnosis                | [condition-cz](https://ncez.mzcr.cz/terminology/ValueSet/condition-cz)  — ICD-10, ORPHA and SNOMED CT clinical findings |
-| A.3.1.2.1 | Problem / diagnosis / condition – other relevant clinical information | [condition-cz](https://ncez.mzcr.cz/terminology/ValueSet/condition-cz)                                                   |
+| A.2.2.1   | Problem / diagnosis / condition – indicating diagnosis                | [condition-cz](https://hl7.cz/terminology/ValueSet-condition-cz.html)  — ICD-10, ORPHA and SNOMED CT clinical findings |
+| A.3.1.2.1 | Problem / diagnosis / condition – other relevant clinical information | [condition-cz](https://hl7.cz/terminology/ValueSet-condition-cz.html)                                                   |
 
-The value sets are also available separately as [mkn-10](https://www.uzis.cz/terminology/ValueSet/mkn-10) and [orphanet-rare-diseases](https://ncez.mzcr.cz/terminology/ValueSet/orphanet-rare-diseases).
+The value sets are also available separately as [mkn-10](https://hl7.cz/terminology/ValueSet-mkn-10.html) and [orphanet-rare-diseases](https://hl7.cz/terminology/ValueSet-orphanet-rare-diseases.html).
 
 ### ATC/DLP
 
 | Item code   | Item description | Value                                                                                                                                            |
 | ----------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| A.3.1.3.2 | Medication code  | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
+| A.3.1.3.2 | Medication code  | [dlp-atc](https://hl7.cz/terminology/ValueSet-dlp-atc.html), [dlp-lecivepripravky](https://hl7.cz/terminology/ValueSet-dlp-lecivepripravky.html) |
 
 ### Snomed-CT
 
@@ -30,17 +30,17 @@ The value sets are also available separately as [mkn-10](https://www.uzis.cz/ter
 | ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A.2.2.2    | Clinical question, coded           | SNOMED CT                                                                                                                                                                                                                  |
 | A.2.2.4    | Order reason, coded                | [condition-sct](ValueSet-condition-sct.html) — SNOMED CT clinical findings (descendants of `404684003` Clinical finding); ICD-10 (MKN-10) and Orphacode are also allowed |
-| A.2.6.6    | Specimen type                      | [lab-specimenType](https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType)                                                                                                                                              |
+| A.2.6.6    | Specimen type                      | [lab-specimenType](https://hl7.cz/terminology/ValueSet-lab-specimenType.html)                                                                                                                                              |
 | A.2.6.7    | Specimen anatomical location       | SNOMED CT, Body structure                                                                                                                                                                                                  |
 | A.2.6.8    | Specimen morphology                | SNOMED CT                                                                                                                                                                                                                  |
 | A.2.6.10   | Specimen collection procedure      | SNOMED CT                                                                                                                                                                                                                  |
-| A.2.6.14.1 | Container – type                  | [cz-specimencontainer](https://ncez.mzcr.cz/terminology/ValueSet/cz-specimencontainer)                                                                                                                                      |
+| A.2.6.14.1 | Container – type                  | [cz-specimencontainer](https://hl7.cz/terminology/ValueSet-cz-specimencontainer.html)                                                                                                                                      |
 | A.3.1.4.1  | Implant type                       | SNOMED CT`303607000` and descendants                                                                                                                                                                                     |
 | A.3.1.4.4  | Implant – body part               | SNOMED CT, Body structure                                                                                                                                                                                                  |
 | A.3.1.6    | Patient mobility restriction       | [cz-mobility-value](ValueSet-cz-mobility-value.html) — eight codes for walking, standing up, standing and moving in bed. The type of the assessed activity is carried by [cz-mobility-type](ValueSet-cz-mobility-type.html) |
 | A.3.2.1.1  | Requested examination code         | [cz-imaging-procedure-vs](ValueSet-cz-imaging-procedure-vs.html) — descendants of the concept `363679005` Imaging (procedure)                                                                                            |
 | A.3.2.1.4  | Requested examination – body part | SNOMED CT, Body structure within the range defined by the DICOM standard                                                                                                                                                   |
-| A.3.2.1.5  | Laterality                         | [laterality-cz-lab](https://ncez.mzcr.cz/terminology/ValueSet/cz-specimen-laterality)                                                                                                                                       |
+| A.3.2.1.5  | Laterality                         | [laterality-cz-lab](https://hl7.cz/terminology/ValueSet-cz-specimen-laterality.html)                                                                                                                                       |
 
 The preferred way of expressing the requested examination is SNOMED CT, the preference is expressed by the strength of the binding in the profile. For laterality note that SNOMED CT and FHIR do not handle the concept of bilaterality the same way as the DASTA code system — where both sides are to be examined, separate values for the left and the right side are created.
 
@@ -55,10 +55,10 @@ The preferred way of expressing the requested examination is SNOMED CT, the pref
 | Item code | Item description         | Value                                                                                                                                                                                                                                                                        |
 | --------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A.1.1.6   | Citizenship              | [v3-Country2](https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html)                                                                                                                                                                                                    |
-| A.1.1.7   | Gender                   | [administrative-gender-cz](https://terminology.hl7.org/4.0.0/ValueSet-v3-AdministrativeGender.html)                                                                                                                                                                           |
+| A.1.1.7   | Gender                   | [administrative-gender-cz](https://hl7.cz/terminology/ValueSet-administrative-gender-cz.html)                                                                                                                                                                           |
 | A.1.1.9   | Communication language   | [all-languages](https://hl7.org/fhir/valueset-all-languages.html)                                                                                                                                                                                                             |
 | A.1.2.1   | Address - country        | [v3-Country2](https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html)                                                                                                                                                                                                    |
-| A.1.2.4.1 | Contact type             | [	contactrole-cz](https://ncez.mzcr.cz/terminology/ValueSet/contactrole-cz)                                                                                                                                                                                                   |
+| A.1.2.4.1 | Contact type             | [contactrole-cz](https://hl7.cz/terminology/ValueSet-contactrole-cz.html)                                                                                                                                                                                                   |
 | A.1.4.1   | Coverage type            | [cz-coverage-type](http://hl7.org/fhir/ValueSet/coverage-kind) — `HIP` health insurance, `pay`, self-payer, `WCBPOL` Workers' Compensation Policy, `PUBLICPOL` Public Healthcare Policy, `EHCPOL` Extended Healthcare Policy, `SUBSIZ` Subsidized Health Program |
 | A.1.4.3   | Reimbursement code       | [nzis-nahradyzazdravotnipeci](https://hl7.cz/terminology/ValueSet-nzis-nahradyzazdravotnipeci.html) — VZP code list "Compensation for healthcare" (Náhrady za zdravotní péči); binding of the `kodNahrady` extension inherited from CZ_Coverage |
 | A.1.8.3   | Document status          | [composition-status](https://hl7.org/fhir/valueset-request-status.html) — preliminary, final, amended, entered-in-error. The element maps to Composition.status, where the binding is required already in the base resource and the profile does not narrow it.              |
@@ -74,8 +74,8 @@ The element `A.1.8.3 Document status` expresses the status of the document at th
 
 | Item code | Item description                | Value                                                                                                                               |
 | --------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| A.1.8.2   | Document category               | [document-category](https://ncez.mzcr.cz/terminology/ValueSet/document-category)                                                     |
-| —        | Order type,`Composition.type` | [referralorder-types](https://ncez.mzcr.cz/terminology/ValueSet/referralorder-typesy) — for type Z the SNOMED CT code `721964003` |
+| A.1.8.2   | Document category               | [document-category](https://hl7.cz/terminology/ValueSet-document-category.html)                                                     |
+| —        | Order type,`Composition.type` | [referralorder-types](https://hl7.cz/terminology/ValueSet-referralorder-types.html) — for type Z the SNOMED CT code `721964003` |
 
 The element `Composition.type` carries the order type from the national Referral Order Types value set. No `A.x` element is defined for it in the logical model, which is why the table gives it no number.
 
