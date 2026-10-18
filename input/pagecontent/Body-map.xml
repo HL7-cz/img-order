@@ -454,7 +454,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage</a></td>
             <td>
             A.2.4 - Coverage
             </td>
@@ -473,7 +473,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.method</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.method</a></td>
             <td>
             A.2.4.1 - Method of coverage
             </td>
@@ -492,7 +492,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor</a></td>
             <td>
             A.2.4.2 - Information about payor
             </td>
@@ -511,16 +511,16 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.name</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.name</a></td>
             <td>
             A.2.4.2.1 - Payor name
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.name
+            name
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
@@ -530,7 +530,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.organizationId</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.organizationId</a></td>
             <td>
             A.2.4.2.2 - Organization id
             </td>
@@ -539,7 +539,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (cz-organization-core)</a></td>
             <td>
-            organization.identifier
+            identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
@@ -549,7 +549,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.organization</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.organization</a></td>
             <td>
             A.2.4.2.3 - Organization
             </td>
@@ -568,16 +568,16 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.address</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.address</a></td>
             <td>
             A.2.4.2.4 - Address
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.address
+            address
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
@@ -587,16 +587,16 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.country</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.country</a></td>
             <td>
             A.2.4.2.5 - Country
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.address.country
+            address.country
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
@@ -606,16 +606,16 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.informationPayor.telecom</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.informationPayor.telecom</a></td>
             <td>
             A.2.4.2.6 - Telecom
             </td>
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (cz-patient-core)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
-            patient.telecom
+            telecom
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
@@ -625,7 +625,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logBodyImageOrderCz.html">Body.coverage.comment</a></td>
+            <td><a href="StructureDefinition-logCoverageBodyCz.html">Body.coverage.comment</a></td>
             <td>
             A.2.4.3 - Comment
             </td>

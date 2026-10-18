@@ -957,7 +957,7 @@
             <td>
             equivalent
             </td>
-            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">Organization (CZ_OrganizationCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">Patient (CZ_PatientCore)</a> / <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-relatedPerson-core.html">RelatedPerson (CZ_RelatedPersonCore)</a></td>
             <td>
             address
             </td>
