@@ -1007,6 +1007,25 @@
             </td>
           </tr>
           <tr>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.reimbursementCode</a></td>
+            <td>
+            A.1.4.3 - Reimbursement code
+            </td>
+            <td>
+            equivalent
+            </td>
+            <td><a href="StructureDefinition-cz-coverage-order.html">CoverageOrder (cz-coverage-order)</a></td>
+            <td>
+            extension:kodNahrady.valueCodeableConcept
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            </td>
+            <td>
+            VZP code list „Náhrady za zdravotní péči“ (nzis-nahradyzazdravotnipeci); extension inherited from CZ_Coverage
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
             <td>
             A.1.5 - Author

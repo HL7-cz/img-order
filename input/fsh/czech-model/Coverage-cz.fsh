@@ -13,6 +13,7 @@ Description: """Informace o způsobu úhrady objednávky vyšetření"""
 * infoOPlatci.adresa 0..1 Address "A.1.4.2.4 - Adresa" """Adresa plátce"""
 * infoOPlatci.zeme 1..1 CodeableConcept "A.1.4.2.5 - Země" """Země plátce"""
 * infoOPlatci.telekom 0..* ContactPoint "A.1.4.2.6 - Telekom" """Telekomunikační spojení na plátce."""
+* kodNahrady 0..1 CodeableConcept "A.1.4.3 - Kód náhrady" """PZS je povinno indikovat úrazy a jiná poškození zdraví osob, kterým poskytlo zdravotní péči, pokud má důvodné podezření, že úraz nebo jiné poškození zdraví byly způsobeny jednáním právnické nebo fyzické osoby, dle číselníku VZP „Náhrady za zdravotní péči“."""
 
 
 
