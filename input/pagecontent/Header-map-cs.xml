@@ -114,7 +114,7 @@
 
         <tbody>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace</a></td>
             <td>
             A.1.1 Identifikace pacienta/subjektu
             </td>
@@ -133,7 +133,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.givenName</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.jmeno</a></td>
             <td>
             A.1.1.1 Jméno
             </td>
@@ -152,7 +152,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.familyName</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.prijmeni</a></td>
             <td>
             A.1.1.2 Příjmení
             </td>
@@ -171,7 +171,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.dateOfBirth</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.datumNarozeni</a></td>
             <td>
             A.1.1.3 Datum narození
             </td>
@@ -190,7 +190,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.dateOfDeath</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.datumUmrti</a></td>
             <td>
             A.1.1.4 Datum úmrtí
             </td>
@@ -209,7 +209,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.identifier</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.identifikator</a></td>
             <td>
             A.1.1.5 Identifikátor pacienta
             </td>
@@ -228,7 +228,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.citizenship</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.statniObcanstvi</a></td>
             <td>
             A.1.1.6 Státní občanství
             </td>
@@ -247,7 +247,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.gender</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.pohlavi</a></td>
             <td>
             A.1.1.7 Pohlaví
             </td>
@@ -266,7 +266,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.genderForClinicalUse</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.pohlaviProKlinickeUcely</a></td>
             <td>
             A.1.1.8 Pohlaví
             </td>
@@ -285,7 +285,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.languageOfCommunication</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.komunikacniJazyk</a></td>
             <td>
             A.1.1.9 Komunikační jazyk
             </td>
@@ -304,7 +304,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.identification.handicap</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">identifikace.handicap</a></td>
             <td>
             A.1.1.10 Handicap
             </td>
@@ -323,7 +323,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt</a></td>
             <td>
             A.1.2 Kontaktní informace pacienta/subjektu
             </td>
@@ -342,7 +342,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.address</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.adresa</a></td>
             <td>
             A.1.2.1 Adresa
             </td>
@@ -361,7 +361,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.telecom</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.telekom</a></td>
             <td>
             A.1.2.2 Telekom
             </td>
@@ -380,7 +380,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar</a></td>
             <td>
             A.1.2.3 Preferovaný lékař
             </td>
@@ -399,7 +399,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba</a></td>
             <td>
             A.1.2.4 Kontaktní osoba
             </td>
@@ -418,7 +418,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.type</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.typ</a></td>
             <td>
             A.1.2.4.1 Typ kontaktu
             </td>
@@ -437,7 +437,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.relationToSubject</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.vztah</a></td>
             <td>
             A.1.2.4.2 Vztah k pacientovi
             </td>
@@ -456,7 +456,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.identifier</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.identifikator</a></td>
             <td>
             A.1.2.4.3 Identifikátor osoby
             </td>
@@ -475,7 +475,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.givenName</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.jmeno</a></td>
             <td>
             A.1.2.4.4 Jméno
             </td>
@@ -494,7 +494,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.familyName</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.prijmeni</a></td>
             <td>
             A.1.2.4.5 Family name/surname
             </td>
@@ -513,7 +513,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.address</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.adresa</a></td>
             <td>
             A.1.2.4.6 Adresa kontaktní osoby
             </td>
@@ -532,7 +532,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.legalRepresent.telecom</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.kontaktniOsoba.telekom</a></td>
             <td>
             A.1.2.4.7 Telekom
             </td>
@@ -551,7 +551,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar</a></td>
             <td>
             A.1.2.3 Preferovaný lékař
             </td>
@@ -570,7 +570,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.identifikator</a></td>
             <td>
             A.1.2.3.1 Identifikace preferovaného lékaře
             </td>
@@ -589,7 +589,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.jmeno</a></td>
             <td>
             A.1.2.3.2 Jméno preferovaného lékaře
             </td>
@@ -608,7 +608,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.telekom</a></td>
             <td>
             A.1.2.3.6 Telekom
             </td>
@@ -627,7 +627,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar</a></td>
             <td>
             A.1.2.3 Preferovaný lékař
             </td>
@@ -646,7 +646,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Identifier</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.identifikator</a></td>
             <td>
             A.1.2.3.1 Identifikace preferovaného lékaře
             </td>
@@ -665,7 +665,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Name</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.jmeno</a></td>
             <td>
             A.1.2.3.2 Jméno preferovaného lékaře
             </td>
@@ -684,7 +684,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.Specialization</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.specializace</a></td>
             <td>
             A.1.2.3.3 Specializace preferovaného lékaře
             </td>
@@ -703,7 +703,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.providerIdentifierName</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.organizace</a></td>
             <td>
             A.1.2.3.4 Identifikace a název poskytovatele, kterého lékař zastupuje
             </td>
@@ -722,7 +722,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.providerAdresa</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.adresa</a></td>
             <td>
             A.1.2.3.5 Adresa poskytovatele
             </td>
@@ -741,7 +741,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logSubjectCz.html">Subject.contactInfo.preferedPhysician.telecom</a></td>
+            <td><a href="StructureDefinition-logSubjectCz.html">kontakt.preferovanyLekar.telekom</a></td>
             <td>
             A.1.2.3.6 Telekom
             </td>
@@ -760,7 +760,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">zdravotniPojisteni</a></td>
             <td>
             A.1.3 - Informace o zdravotním pojištění a úhradě
             </td>
@@ -779,7 +779,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceCode</a></td>
+            <td><a href="StructureDefinition-logPayerCz.html">kod</a></td>
             <td>
             A.1.3.1 - Kód zdravotní pojišťovny
             </td>
@@ -798,7 +798,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceName</a></td>
+            <td><a href="StructureDefinition-logPayerCz.html">nazev</a></td>
             <td>
             A.1.3.2 - Název zdravotní pojišťovny
             </td>
@@ -817,7 +817,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPayerCz.html">Header.payer.insuranceNumber</a></td>
+            <td><a href="StructureDefinition-logPayerCz.html">cisloPojistence</a></td>
             <td>
             A.1.3.3 - Číslo zdravotního pojištění
             </td>
@@ -836,7 +836,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">uhrada</a></td>
             <td>
             A.1.4 - Úhrada
             </td>
@@ -855,7 +855,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.method</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">zpusob</a></td>
             <td>
             A.1.4.1 - Způsob úhrady
             </td>
@@ -874,7 +874,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci</a></td>
             <td>
             A.1.4.2 - Informace o plátci
             </td>
@@ -893,7 +893,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.name</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.jmeno</a></td>
             <td>
             A.1.4.2.1 - Jméno plátce
             </td>
@@ -912,7 +912,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organizationId</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.idOrganizace</a></td>
             <td>
             A.1.4.2.2 - ID organizace
             </td>
@@ -931,7 +931,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.organization</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.organizace</a></td>
             <td>
             A.1.4.2.3 - Organizace plátce
             </td>
@@ -950,7 +950,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.address</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.adresa</a></td>
             <td>
             A.1.4.2.4 - Adresa
             </td>
@@ -969,7 +969,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.country</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.zeme</a></td>
             <td>
             A.1.4.2.5 - Země
             </td>
@@ -988,7 +988,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.informationPayor.telecom</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">infoOPlatci.telekom</a></td>
             <td>
             A.1.4.2.6 - Telekom
             </td>
@@ -1007,7 +1007,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logCoverageOrderCz.html">Header.coverage.reimbursementCode</a></td>
+            <td><a href="StructureDefinition-logCoverageOrderCz.html">kodNahrady</a></td>
             <td>
             A.1.4.3 - Kód náhrady
             </td>
@@ -1026,7 +1026,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">objednatel</a></td>
             <td>
             A.1.5 - Autor (objednatel)
             </td>
@@ -1045,7 +1045,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.identifier</a></td>
+            <td><a href="StructureDefinition-logAuthorCz.html">identifikator</a></td>
             <td>
             A.1.5.1 - Identifikátor objednatele
             </td>
@@ -1064,7 +1064,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.name</a></td>
+            <td><a href="StructureDefinition-logAuthorCz.html">jmeno</a></td>
             <td>
             A.1.5.2 - Jméno objednatele
             </td>
@@ -1083,7 +1083,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.address</a></td>
+            <td><a href="StructureDefinition-logAuthorCz.html">adresa</a></td>
             <td>
             A.1.5.3 - Adresa objednatele
             </td>
@@ -1102,7 +1102,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.organization</a></td>
+            <td><a href="StructureDefinition-logAuthorCz.html">organizace</a></td>
             <td>
             A.1.5.4 - Organizace objednatele
             </td>
@@ -1121,7 +1121,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">AuthorCz.organization</a></td>
+            <td><a href="StructureDefinition-logAuthorCz.html">organizace</a></td>
             <td>
             A.1.5.4 - Organizace objednatele
             </td>
@@ -1140,7 +1140,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">zpracovatel</a></td>
             <td>
             A.1.6 - Požadovaný zpracovatel
             </td>
@@ -1159,7 +1159,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.identifier</a></td>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">id</a></td>
             <td>
             A.1.6.1 - Identifikátor požadovaného zpracovatele
             </td>
@@ -1178,7 +1178,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.name</a></td>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">jmeno</a></td>
             <td>
             A.1.6.2 - Jméno požadovaného zpracovatele
             </td>
@@ -1197,7 +1197,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organizationID</a></td>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">idOrganizace</a></td>
             <td>
             A.1.6.3 - Identifikátor organizace požadovaného zpracovatele
             </td>
@@ -1216,7 +1216,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logRequestedPerformerCz.html">Header.requestedPerformer.organization</a></td>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">organizace</a></td>
             <td>
             A.1.6.4 - Organizace požadovaného zpracovatele
             </td>
@@ -1235,7 +1235,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">dodatecniPrijemci</a></td>
             <td>
             A.1.7 - Dodatečný příjemce
             </td>
@@ -1254,7 +1254,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.identifier</a></td>
+            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">identifikator</a></td>
             <td>
             A.1.7.1 - Identifikátor dodatečného příjemce
             </td>
@@ -1273,7 +1273,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.name</a></td>
+            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">jmeno</a></td>
             <td>
             A.1.7.2 - Dodatečný příjemce name
             </td>
@@ -1292,7 +1292,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organizationID</a></td>
+            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">idOrganizace</a></td>
             <td>
             A.1.7.3 - Dodatečný příjemce organisation ID
             </td>
@@ -1311,7 +1311,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">Header.additionalRecipient.organization</a></td>
+            <td><a href="StructureDefinition-logAdditionalRecipientCz.html">organizace</a></td>
             <td>
             A.1.7.4 - Dodatečný příjemce organisation
             </td>
@@ -1330,7 +1330,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.identifier</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">idDokumentu</a></td>
             <td>
             A.1.8.1 - Dokument ID
             </td>
@@ -1349,7 +1349,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">datumACas</a></td>
             <td>
             A.1.8.4 - Datum a čas objednávky
             </td>
@@ -1368,7 +1368,7 @@
             </td>
           </tr>
           <tr>
-            <td>Header.subject</td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">subjekt</a></td>
             <td>
             A.1.1 - Identifikace a kontaktní informace pacienta/subjektu
             </td>
@@ -1387,7 +1387,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata</a></td>
+            <td><a href="StructureDefinition-logHeaderImagingOrder.html">metadataDokumentu</a></td>
             <td>
             A.1.8 - Metadata dokumentu
             </td>
@@ -1406,7 +1406,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.category</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">kategorie</a></td>
             <td>
             A.1.8.2 - Kategorie dokumentu
             </td>
@@ -1425,7 +1425,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.status</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">stav</a></td>
             <td>
             A.1.8.3 - Stav dokumentu
             </td>
@@ -1444,7 +1444,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.dateTime</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">datumACas</a></td>
             <td>
             A.1.8.4 - Datum a čas vytvoření dokumentu
             </td>
@@ -1463,7 +1463,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.title</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">nazev</a></td>
             <td>
             A.1.8.5 - Název dokumentu
             </td>
@@ -1482,7 +1482,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.custodian</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">spravce</a></td>
             <td>
             A.1.8.6 - Správce dokumentu
             </td>
@@ -1501,7 +1501,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.confidentiality</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">duvernost</a></td>
             <td>
             A.1.8.7 - Důvěrnost
             </td>
@@ -1520,7 +1520,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.language</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">jazyk</a></td>
             <td>
             A.1.8.8 - Jazyk
             </td>
@@ -1539,7 +1539,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata.version</a></td>
+            <td><a href="StructureDefinition-logDocumentMetadataCz.html">verze</a></td>
             <td>
             A.1.8.9 - Verze
             </td>
@@ -1558,7 +1558,7 @@
             </td>
           </tr>
           <tr>
-            <td>Header.digitalSignatureCz.digitalSignature</td>
+            <td><a href="StructureDefinition-logdigitalSignatureCz.html">elektronickyPodpis</a></td>
             <td>
             A.1.9.1 - Digitální podpis
             </td>
@@ -1577,7 +1577,7 @@
             </td>
           </tr>
           <tr>
-            <td>Header.digitalSignatureCz.timestamp</td>
+            <td><a href="StructureDefinition-logdigitalSignatureCz.html">casoveRazitko</a></td>
             <td>
             A.1.9.2 - Digitální časové razítko
             </td>
