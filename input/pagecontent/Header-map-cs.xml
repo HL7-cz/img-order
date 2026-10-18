@@ -1368,25 +1368,6 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAuthorCz.html">Header.author.dateTime</a></td>
-            <td>
-            A.1.5.5 - Datum a čas
-            </td>
-            <td>
-            ekvivalentní
-            </td>
-            <td><a href="StructureDefinition-cz-compositionImageOrder.html">Composition (cz-compositionImageOrder)</a></td>
-            <td>
-
-            </td>
-            <td>
-            Composition (CZ_CompositionImageOrder).date
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
             <td><a href="StructureDefinition-logDocumentMetadataCz.html">Header.documentMetadata</a></td>
             <td>
             A.1.8 - Metadata dokumentu
