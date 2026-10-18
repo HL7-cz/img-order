@@ -23,36 +23,36 @@ class "cz-specimen" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-c
 class "medicalTestResult-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html]]
 class "cz-vital-sign" <<Profile>> [[StructureDefinition-cz-vital-sign.html]]
 class "medicationStatement-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html]]
-class "immmunization-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html]]
+class "immunization-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-immunization-cz-core.html]]
 class "deviceUseStatement-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-deviceUseStatement-cz-core.html]]
 class "allergyIntolerance-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html]]
 class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html]]
 
 "Tělo žádanky obrazového vyšetření" <|. "cz-imagingOrderInformation"
-"Tělo žádanky obrazového vyšetření" <|. "cz-appointment"
+"Tělo žádanky obrazového vyšetření" <|. "appointment-cz-core"
 "Tělo žádanky obrazového vyšetření" <|. "cz-coverage"
-"Tělo žádanky obrazového vyšetření" <|. "cz-conditionCore"
+"Tělo žádanky obrazového vyšetření" <|. "condition-cz-core"
 "Tělo žádanky obrazového vyšetření" <|. "cz-encounter"
 "Tělo žádanky obrazového vyšetření" <|. "cz-specimen"
 "Tělo žádanky obrazového vyšetření" <|. "medicalTestResult-cz-core"
 "Tělo žádanky obrazového vyšetření" <|. "cz-vital-sign"
-"Tělo žádanky obrazového vyšetření" <|. "cz-MedicationStatement"
-"Tělo žádanky obrazového vyšetření" <|. "cz-Immunization"
-"Tělo žádanky obrazového vyšetření" <|. "cz-deviceUseStatement"
-"Tělo žádanky obrazového vyšetření" <|. "cz-allergyIntolerance"
-"Tělo žádanky obrazového vyšetření" <|. "cz-carePlanImage"
+"Tělo žádanky obrazového vyšetření" <|. "medicationStatement-cz-core"
+"Tělo žádanky obrazového vyšetření" <|. "immunization-cz-core"
+"Tělo žádanky obrazového vyšetření" <|. "deviceUseStatement-cz-core"
+"Tělo žádanky obrazového vyšetření" <|. "allergyIntolerance-cz-core"
+"Tělo žádanky obrazového vyšetření" <|. "carePlan-cz-core"
 
 "cz-imagingOrderInformation" -d[hidden]-> "cz-encounter"
-"cz-encounter" -d[hidden]-> "cz-conditionCore"
-"cz-conditionCore" -d[hidden]-> "cz-appointment"
-"cz-appointment" -d[hidden]-> "cz-coverage"
+"cz-encounter" -d[hidden]-> "condition-cz-core"
+"condition-cz-core" -d[hidden]-> "appointment-cz-core"
+"appointment-cz-core" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-specimen"
 "cz-specimen" -d[hidden]-> "medicalTestResult-cz-core"
 "medicalTestResult-cz-core" -d[hidden]-> "cz-vital-sign"
-"cz-vital-sign" -d[hidden]-> "cz-MedicationStatement"
-"cz-MedicationStatement" -d[hidden]-> "cz-Immunization"
-"cz-Immunization" -d[hidden]-> "cz-deviceUseStatement"
-"cz-deviceUseStatement" -d[hidden]-> "cz-allergyIntolerance"
-"cz-allergyIntolerance" -d[hidden]-> "cz-carePlanImage"
+"cz-vital-sign" -d[hidden]-> "medicationStatement-cz-core"
+"medicationStatement-cz-core" -d[hidden]-> "immunization-cz-core"
+"immunization-cz-core" -d[hidden]-> "deviceUseStatement-cz-core"
+"deviceUseStatement-cz-core" -d[hidden]-> "allergyIntolerance-cz-core"
+"allergyIntolerance-cz-core" -d[hidden]-> "carePlan-cz-core"
 
 @enduml
