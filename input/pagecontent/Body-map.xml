@@ -2513,15 +2513,34 @@
             <td>
             equivalent
             </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-BodyStructure-cz-core.html">BodyStructure (BodyStructureCzCore)</a></td>
+            <td>
+            location
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            </td>
+            <td>
+            Structured form via the BodyStructure resource referenced from the bodySite extension (procedure-targetBodyStructure)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.bodyPart</a></td>
+            <td>
+            A.3.2.1.4 - Body Part
+            </td>
+            <td>
+            related-to
+            </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            extension:bodySite.location
+            bodySite
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-
+            Alternative: code of the body part directly in the order
             </td>
           </tr>
           <tr>
@@ -2532,15 +2551,34 @@
             <td>
             equivalent
             </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-BodyStructure-cz-core.html">BodyStructure (BodyStructureCzCore)</a></td>
+            <td>
+            locationQualifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            </td>
+            <td>
+            Laterality as a separate code via BodyStructure (FHIR R4; the R5 element includedStructure is not available in CZ Core)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.laterality</a></td>
+            <td>
+            A.3.2.1.5 - Laterality
+            </td>
+            <td>
+            related-to
+            </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            extension:bodySite.extension:laterality
+            bodySite
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-
+            Alternative: laterality is part of the SNOMED CT code in bodySite (e.g. right knee region)
             </td>
           </tr>
           <tr>

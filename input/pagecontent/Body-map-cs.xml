@@ -2512,15 +2512,34 @@
             <td>
             ekvivalentní
             </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-BodyStructure-cz-core.html">BodyStructure (BodyStructureCzCore)</a></td>
+            <td>
+            location
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            </td>
+            <td>
+            Strukturovaný zápis přes zdroj BodyStructure, na který odkazuje rozšíření bodySite (procedure-targetBodyStructure)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.bodyPart</a></td>
+            <td>
+            A.3.2.1.4 - Část těla
+            </td>
+            <td>
+            související
+            </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
             <td>
-            extension:bodySite.location
+            bodySite
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-
+            Alternativa: kód části těla přímo v žádance
             </td>
           </tr>
           <tr>
@@ -2531,15 +2550,34 @@
             <td>
             ekvivalentní
             </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-BodyStructure-cz-core.html">BodyStructure (BodyStructureCzCore)</a></td>
+            <td>
+            locationQualifier
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            </td>
+            <td>
+            Lateralita jako samostatný kód přes BodyStructure (FHIR R4; prvek includedStructure z R5 není v CZ Core k dispozici)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logOrderDataElementsCz.html">OrderDataElements.laterality</a></td>
+            <td>
+            A.3.2.1.5 - Lateralita
+            </td>
+            <td>
+            související
+            </td>
             <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
             <td>
-            extension:bodySite.extension:laterality
+            bodySite
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry
             </td>
             <td>
-
+            Alternativa: lateralita je součástí kódu SNOMED CT v bodySite (např. oblast pravého kolene)
             </td>
           </tr>
           <tr>
