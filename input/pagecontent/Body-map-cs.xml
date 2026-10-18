@@ -2362,7 +2362,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicalTestResult-cz-core.html">Observation (medicalTestResult-cz-core)</a></td>
             <td>
-            valueDateTime
+            effectiveDateTime
             </td>
             <td>
             Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
