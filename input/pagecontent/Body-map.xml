@@ -1869,7 +1869,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            medication[x].identifier
+            medicationReference.resolve().identifier
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1888,7 +1888,7 @@
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            medication[x].code
+            medicationCodeableConcept / medicationReference.resolve().code
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
@@ -1900,14 +1900,14 @@
           <tr>
             <td>Medication.amount</td>
             <td>
-            A.3.1.3.3 - Ratio
+            A.3.1.3.3 - Amount
             </td>
             <td>
             equivalent
             </td>
             <td><a href="https://hl7.cz/fhir/core/StructureDefinition-medicationStatement-cz-core.html">MedicationStatement (cz-MedicationStatement)</a>/<a href="https://hl7.cz/fhir/core/StructureDefinition-MedicationAdministration-cz-core.html">MedicationAdministration (cz-MedicationAdministration)</a></td>
             <td>
-            medication[x].amount
+            dosage.doseAndRate.doseQuantity (MedicationStatement) / dosage.dose (MedicationAdministration)
             </td>
             <td>
             Composition (CZ_CompositionImageOrder)
