@@ -22,7 +22,7 @@ The value sets are also available separately as [mkn-10](https://www.uzis.cz/ter
 
 | Item code   | Item description | Value                                                                                                                                            |
 | ----------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| A.3.1.3.1.2 | Medication code  | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
+| A.3.1.3.2 | Medication code  | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
 
 ### Snomed-CT
 

@@ -24,7 +24,7 @@ Samostatně jsou obory hodnot dostupné jako [mkn-10](https://uzis.cz/terminolog
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.1.3.1.2 | Kód medikace | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
+| A.3.1.3.2 | Kód medikace | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
 
 ### Snomed-CT
 
