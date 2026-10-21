@@ -76,7 +76,7 @@
       <strong>Mapping Context</strong>
 
       <ul>
-        <li><strong>Source logical models:</strong> <a href="StructureDefinition-logPresentedFormCz.html">logPresentedFormCz</a>, <a href="StructureDefinition-logAttachmentsCz.html">logAttachmentsCz</a></li>
+        <li><strong>Source logical models:</strong> <a href="StructureDefinition-PresentedFormCz.html">PresentedFormCz</a>, <a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz</a></li>
         <li><strong>Source mapping file:</strong> <code>AttachmentImageOrder2FHIR.fsh</code></li>
         <li><strong>Mapping scope:</strong> A.4 to A.5 Presented form and attachments</li>
       </ul>
@@ -111,7 +111,7 @@
 
         <tbody>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm</a></td>
             <td>
             A.4 - Presented form
             </td>
@@ -130,7 +130,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.contentType</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.contentType</a></td>
             <td>
             A.4.1 - Type of content
             </td>
@@ -149,7 +149,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.language</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.language</a></td>
             <td>
             A.4.2 - Language of content
             </td>
@@ -168,7 +168,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.data</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.data</a></td>
             <td>
             A.4.3 - Data of content
             </td>
@@ -187,7 +187,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.url</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.url</a></td>
             <td>
             A.4.4 - URL of content
             </td>
@@ -206,7 +206,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.title</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.title</a></td>
             <td>
             A.4.5 - Title of content
             </td>
@@ -225,7 +225,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.creation</a></td>
+            <td><a href="StructureDefinition-PresentedFormCz.html">PresentedForm.creation</a></td>
             <td>
             A.4.6 - Date of creation
             </td>
@@ -244,7 +244,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz</a></td>
             <td>
             A.5 - Attachments
             </td>
@@ -263,7 +263,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.contentType</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.contentType</a></td>
             <td>
             A.5.1 - Type of content
             </td>
@@ -282,7 +282,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.language</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.language</a></td>
             <td>
             A.5.2 - Language of content
             </td>
@@ -301,7 +301,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.data</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.data</a></td>
             <td>
             A.5.3 - Data of content
             </td>
@@ -320,7 +320,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.url</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.url</a></td>
             <td>
             A.5.4 - URL of content
             </td>
@@ -339,7 +339,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.title</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.title</a></td>
             <td>
             A.5.5 - Title of content
             </td>
@@ -358,7 +358,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.creation</a></td>
+            <td><a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz.creation</a></td>
             <td>
             A.5.6 - Date of creation
             </td>

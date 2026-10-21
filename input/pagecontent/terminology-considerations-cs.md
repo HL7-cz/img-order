@@ -8,41 +8,41 @@ Národní obory hodnot publikuje [HL7 Czech Terminology Implementation Guide](ht
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.1.1.1.2 | Váha – kód | [nclppol](https://ncez.mzcr.cz/nclp/ValueSet/nclppol) `20042`, alternativně SNOMED CT `27113001` |
-| A.3.1.1.2.2 | Výška – kód | [nclppol](https://ncez.mzcr.cz/nclp/ValueSet/nclppol) `20411`, alternativně SNOMED CT `1153637007` |
+| A.3.1.1.1.2 | Váha – kód | `https://ncez.mzcr.cz/nclp/ValueSet/nclppol` `20042`, alternativně SNOMED CT `27113001` |
+| A.3.1.1.2.2 | Výška – kód | `https://ncez.mzcr.cz/nclp/ValueSet/nclppol` `20411`, alternativně SNOMED CT `1153637007` |
 
 ### MKN-10 / Orphacode
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.2.2.1 | Popis problému / diagnózy / stavu – indikační diagnóza | [condition-cz](https://ncez.mzcr.cz/terminology/ValueSet/condition-cz) — MKN-10, ORPHA a klinické nálezy SNOMED CT |
-| A.3.1.2.1 | Popis problému / diagnózy / stavu – další relevantní klinické informace | [condition-cz](https://ncez.mzcr.cz/terminology/ValueSet/condition-cz) |
+| A.2.2.1 | Popis problému / diagnózy / stavu – indikační diagnóza | `https://ncez.mzcr.cz/terminology/ValueSet/condition-cz` — MKN-10, ORPHA a klinické nálezy SNOMED CT |
+| A.3.1.2.1 | Popis problému / diagnózy / stavu – další relevantní klinické informace | `https://ncez.mzcr.cz/terminology/ValueSet/condition-cz` |
 
-Samostatně jsou obory hodnot dostupné jako [mkn-10](https://uzis.cz/terminology/ValueSet/mkn-10) a [orphanet-rare-diseases](https://ncez.mzcr.cz/terminology/ValueSet/orphanet-rare-diseases).
+Samostatně jsou obory hodnot dostupné jako `https://uzis.cz/terminology/ValueSet/mkn-10` a `https://ncez.mzcr.cz/terminology/ValueSet/orphanet-rare-diseases`.
 
 ### ATC/DLP
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.1.3.1.2 | Kód medikace | [dlp-atc](https://ncez.mzcr.cz/terminology/ValueSet/dlp-atc), [dlp-lecivepripravky](https://ncez.mzcr.cz/terminology/ValueSet/dlp-lecivepripravky) |
+| A.3.1.3.2 | Kód medikace | `https://sukl.cz/terminology/ValueSet/dlp-atc`, `https://sukl.cz/terminology/ValueSet/dlp-lecivepripravky` |
 
 ### Snomed-CT
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
 | A.2.2.2 | Klinická otázka kódem | SNOMED CT |
-| A.2.2.4 | Důvod objednávky kódem | SNOMED CT `243796009` |
-| A.2.6.6 | Typ vzorku | [lab-specimenType](https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType) |
+| A.2.2.4 | Důvod objednávky kódem | `https://ncez.mzcr.cz/terminology/ValueSet/condition-sct` — klinické nálezy SNOMED CT (potomci konceptu `404684003` Clinical finding); povoleny jsou také MKN-10 a Orphacode |
+| A.2.6.6 | Typ vzorku | `https://ncez.mzcr.cz/terminology/ValueSet/lab-specimenType` |
 | A.2.6.7 | Anatomické umístění vzorku | SNOMED CT, Body structure |
 | A.2.6.8 | Morfologie vzorku | SNOMED CT |
 | A.2.6.10 | Procedura sběru vzorku | SNOMED CT |
-| A.2.6.14.1 | Kontejner – typ | [cz-specimencontainer](https://ncez.mzcr.cz/terminology/ValueSet/cz-specimencontainer) |
+| A.2.6.14.1 | Kontejner – typ | `https://ncez.mzcr.cz/terminology/ValueSet/cz-specimencontainer` |
 | A.3.1.4.1 | Druh implantátu | SNOMED CT `303607000` a potomci |
 | A.3.1.4.4 | Implantát – část těla | SNOMED CT, Body structure |
-| A.3.1.6 | Omezení pohyblivosti pacienta | [cz-mobility-value](ValueSet-cz-mobility-value.html) — osm kódů pro chůzi, vstávání, stání a pohyb na lůžku. Typ hodnoceného úkonu nese [cz-mobility-type](ValueSet-cz-mobility-type.html) |
-| A.3.2.1.1 | Kód požadovaného vyšetření | [cz-imaging-procedure-vs](ValueSet-cz-imaging-procedure-vs.html) — potomci konceptu `363679005` Imaging (procedure) |
+| A.3.1.6 | Omezení pohyblivosti pacienta | `https://ncez.mzcr.cz/terminology/ValueSet/cz-mobility-value` — osm kódů pro chůzi, vstávání, stání a pohyb na lůžku. Typ hodnoceného úkonu nese `https://ncez.mzcr.cz/terminology/ValueSet/cz-mobility-type` |
+| A.3.2.1.1 | Kód požadovaného vyšetření | `https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedures` — potomci konceptu `363679005` Imaging (procedure) |
 | A.3.2.1.4 | Požadované vyšetření – část těla | SNOMED CT, Body structure v rozsahu definovaném standardem DICOM |
-| A.3.2.1.5 | Lateralita | [laterality-cz-lab](https://ncez.mzcr.cz/terminology/ValueSet/cz-specimen-laterality) |
+| A.3.2.1.5 | Lateralita | `https://ncez.mzcr.cz/terminology/ValueSet/cz-specimen-laterality` |
 
 Preferovaným způsobem vyjádření požadovaného vyšetření je SNOMED CT, preference je vyjádřena silou vazby v profilu. U laterality je třeba počítat s tím, že SNOMED CT a FHIR nepracují s konceptem oboustrannosti stejně jako číselník DASTA — má-li být vyšetřena obě strany, vytvoří se zvlášť hodnoty pro levou a pravou.
 
@@ -50,24 +50,25 @@ Preferovaným způsobem vyjádření požadovaného vyšetření je SNOMED CT, p
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.2.1.3 | Modalita | [cz-modality-vs](ValueSet-cz-modality-vs.html) — DICOM `ModalityCodelist` |
+| A.3.2.1.3 | Modalita | `https://ncez.mzcr.cz/terminology/ValueSet/cz-modality` — DICOM `ModalityCodelist` |
 
 ### FHIR
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.1.1.6 | Státní občanství | [v3-Country2](https://terminology.hl7.org/ValueSet-v3-Country2.html) |
-| A.1.1.7 | Pohlaví | [administrative-gender-cz](https://hl7.cz/terminology/ValueSet/administrative-gender-cz) |
-| A.1.1.9 | Komunikační jazyk | [all-languages](https://hl7.org/fhir/valueset-all-languages.html) |
-| A.1.2.1 | Adresa – země | [v3-Country2](https://terminology.hl7.org/ValueSet-v3-Country2.html) |
-| A.1.2.4.1 | Typ kontaktu | [contactrole-cz](https://ncez.mzcr.cz/terminology/ValueSet/contactrole-cz) |
-| A.1.4.1   | Způsob úhrady  | [cz-coverage-type](https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type) - `HIP` veřejné zdravotní pojištění, `pay` samoplátce, `EHCPOL` komerční pojištění, `WCBPOL` pracovní lékařství / úhrada zaměstnavatelem, `PUBLICPOL` státní zdravotní program - státní orgán / policie ČR / soud, `SUBSIZ` dotovaná péče/výzkum |
-| A.1.8.3 | Stav dokumentu | [composition-status](https://hl7.org/fhir/valueset-composition-status.html) — `preliminary`, `final`, `amended`, `entered-in-error`. Prvek se mapuje na `Composition.status`, kde je vazba povinná už v základním zdroji, a profil ji nezužuje. |
-| A.1.8.7 | Důvěrnost dokumentu | [v3-Confidentiality](https://terminology.hl7.org/ValueSet-v3-Confidentiality.html) |
-| A.1.8.8 | Jazyk dokumentu | [all-languages](https://hl7.org/fhir/valueset-all-languages.html) |
-| A.2.1.4 | Urgentnost objednávky | [request-priority](https://hl7.org/fhir/valueset-request-priority.html) — `routine`, `urgent`, `asap`, `stat` |
-| A.2.4.1 | Způsob úhrady | [cz-coverage-type](https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type) |
-| A.2.5.2 | Stav termínu | [appointmentstatus](https://hl7.org/fhir/valueset-appointmentstatus.html) |
+| A.1.1.6 | Státní občanství | `http://terminology.hl7.org/ValueSet/v3-Country2` |
+| A.1.1.7 | Pohlaví | `https://hl7.cz/terminology/ValueSet/administrative-gender-cz` |
+| A.1.1.9 | Komunikační jazyk | `http://hl7.org/fhir/ValueSet/all-languages` |
+| A.1.2.1 | Adresa – země | `http://terminology.hl7.org/ValueSet/v3-Country2` |
+| A.1.2.4.1 | Typ kontaktu | `https://hl7.cz/terminology/ValueSet/contactrole-cz` |
+| A.1.4.1   | Způsob úhrady  | `https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type` - `HIP` veřejné zdravotní pojištění, `pay` samoplátce, `EHCPOL` komerční pojištění, `WCBPOL` pracovní lékařství / úhrada zaměstnavatelem, `PUBLICPOL` státní zdravotní program - státní orgán / policie ČR / soud, `SUBSIZ` dotovaná péče/výzkum |
+| A.1.4.3 | Kód náhrady | `https://uzis.cz/terminology/ValueSet/nzis-nahradyzazdravotnipeci` — číselník VZP „Náhrady za zdravotní péči“; vazba rozšíření `kodNahrady` zděděná z CZ_Coverage |
+| A.1.8.3 | Stav dokumentu | `http://hl7.org/fhir/ValueSet/composition-status` — `preliminary`, `final`, `amended`, `entered-in-error`. Prvek se mapuje na `Composition.status`, kde je vazba povinná už v základním zdroji, a profil ji nezužuje. |
+| A.1.8.7 | Důvěrnost dokumentu | `http://terminology.hl7.org/ValueSet/v3-Confidentiality` |
+| A.1.8.8 | Jazyk dokumentu | `http://hl7.org/fhir/ValueSet/all-languages` |
+| A.2.1.4 | Urgentnost objednávky | `http://hl7.org/fhir/ValueSet/request-priority` — `routine`, `urgent`, `asap`, `stat` |
+| A.2.4.1 | Způsob úhrady | `https://ncez.mzcr.cz/terminology/ValueSet/cz-coverage-type` |
+| A.2.5.2 | Stav termínu | `http://hl7.org/fhir/ValueSet/appointmentstatus` |
 
 Prvek `A.1.8.3 Stav dokumentu` vyjadřuje stav dokumentu v okamžiku vystavení, nikoli stav eŽádanky v systému. Ten je vlastností systému, ne dokumentu, viz [Workflow](workflow-cs.html).
 
@@ -75,8 +76,8 @@ Prvek `A.1.8.3 Stav dokumentu` vyjadřuje stav dokumentu v okamžiku vystavení,
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.1.8.2 | Kategorie dokumentu | [document-category](https://ncez.mzcr.cz/terminology/ValueSet/document-category) |
-| — | Typ žádanky, `Composition.type` | [referralorder-types](https://ncez.mzcr.cz/terminology/ValueSet/referralorder-types) — pro typ Z kód SNOMED CT `721964003` |
+| A.1.8.2 | Kategorie dokumentu | `https://ncez.mzcr.cz/terminology/ValueSet/document-category` |
+| — | Typ žádanky, `Composition.type` | `https://ncez.mzcr.cz/terminology/ValueSet/referralorder-types` — pro typ Z kód SNOMED CT `721964003` |
 
 Prvek `Composition.type` nese typ žádanky z národního oboru hodnot Typy žádanek. V logickém modelu pro něj není definován prvek `A.x`, proto je v tabulce uveden bez čísla.
 
@@ -84,4 +85,4 @@ Prvek `Composition.type` nese typ žádanky z národního oboru hodnot Typy žá
 
 | Kód položky | Popis položky | Hodnota |
 | :--- | :--- | :--- |
-| A.3.1.1.1 | Antropometrická metrika a jednotka | [sct-vital-signs](ValueSet-sct-vital-signs.html) a [loinc-vital-signs](ValueSet-loinc-vital-signs.html) — výška/obvod hlavy: `m`, `cm`, `mm`; hmotnost: `kg`, `g`; BMI: `kg/m2`; tělesný povrch: `m2` |
+| A.3.1.1.1 | Antropometrická metrika a jednotka | `https://ncez.mzcr.cz/terminology/ValueSet/sct-vital-signs` a `https://ncez.mzcr.cz/terminology/ValueSet/cz-anthropometric-metric` — výška/obvod hlavy: `m`, `cm`, `mm`; hmotnost: `kg`, `g`; BMI: `kg/m2`; tělesný povrch: `m2` |

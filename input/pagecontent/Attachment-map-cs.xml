@@ -111,7 +111,7 @@
 
         <tbody>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm</a></td>
+            <td><a href="StructureDefinition-logImagingOrderCz.html">presentacniForma</a></td>
             <td>
             A.4 - Vizuální podoba dokumentu
             </td>
@@ -130,7 +130,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.contentType</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">typObsahu</a></td>
             <td>
             A.4.1 - Typ obsahu vizuální podoby
             </td>
@@ -149,7 +149,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.language</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">jazyk</a></td>
             <td>
             A.4.2 - Jazyk vizuální podoby
             </td>
@@ -168,7 +168,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.data</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">data</a></td>
             <td>
             A.4.3 - Data vizuální podoby
             </td>
@@ -187,7 +187,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.url</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">url</a></td>
             <td>
             A.4.4 - URL vizuální podoby
             </td>
@@ -206,7 +206,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.title</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">nazev</a></td>
             <td>
             A.4.5 - Název vizuální podoby
             </td>
@@ -225,7 +225,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logPresentedFormCz.html">PresentedForm.creation</a></td>
+            <td><a href="StructureDefinition-logPresentedFormCz.html">vytvoreni</a></td>
             <td>
             A.4.6 - Datum a čas vytvoření
             </td>
@@ -244,7 +244,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz</a></td>
+            <td><a href="StructureDefinition-logImagingOrderCz.html">prilohy</a></td>
             <td>
             A.5 - Další přílohy
             </td>
@@ -263,7 +263,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.contentType</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">typObsahu</a></td>
             <td>
             A.5.1 - Typ obsahu dalších příloh
             </td>
@@ -282,7 +282,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.language</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">jazyk</a></td>
             <td>
             A.5.2 - Jazyk dalších příloh
             </td>
@@ -301,7 +301,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.data</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">data</a></td>
             <td>
             A.5.3 - Data dalších příloh
             </td>
@@ -320,7 +320,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.url</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">url</a></td>
             <td>
             A.5.4 - URL dalších příloh
             </td>
@@ -339,7 +339,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.title</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">nazev</a></td>
             <td>
             A.5.5 - Název dalších příloh
             </td>
@@ -358,7 +358,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="StructureDefinition-logAttachmentsCz.html">AttachmentsCz.creation</a></td>
+            <td><a href="StructureDefinition-logAttachmentsCz.html">vytvoreni</a></td>
             <td>
             A.5.6 - Datum a čas vytvoření
             </td>

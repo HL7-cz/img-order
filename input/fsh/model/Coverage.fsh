@@ -13,6 +13,7 @@ Description: """Coverage information - Information about method of coverage, pay
 * informationPayor.address 0..1 Address "A.1.4.2.4 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
 * informationPayor.country 1..1 CodeableConcept "A.1.4.2.5 - Country" """Country of the intended recipient as part of the address."""
 * informationPayor.telecom 0..* ContactPoint "A.1.4.2.6 - Telecom" """Telecommunication contact information (addresses) associated to a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided."""
+* reimbursementCode 0..1 CodeableConcept "A.1.4.3 - Reimbursement code" """The healthcare provider is obliged to report injuries and other damage to the health of persons to whom it provided healthcare if it has reasonable suspicion that the injury or other damage to health was caused by the conduct of a legal or natural person, according to the VZP code list 'Compensation for healthcare' (Náhrady za zdravotní péči)."""
 
 
 
