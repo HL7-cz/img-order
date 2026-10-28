@@ -14,7 +14,7 @@ Description: """Informace a údaje sdělované pracovišti zobrazovacích metod,
 *  biometrickaData.vyska.hodnota 1..1 Quantity "A.3.1.1.2.1 - Hodnota" """Hodnota údaje včetně jednotky měření."""
 *  biometrickaData.vyska.kod 1..1 CodeableConcept "A.3.1.1.2.2 - Kód" """Kód pozorování identifikující význam údaje výška"""
 *  biometrickaData.vyska.datumACas  1..1 dateTime "A.3.1.1.2.3 - Datum" """Datum zjištění údaje, uvádí se, pokud je odlišné od data vystavení objednávky."""
-*  dalsiRelevantniUdaje 0..1 Base "A.3.1.2 - Další relevantní klinické informace" """Další relevantní klinické informace"""
+*  dalsiRelevantniUdaje 0..1 Base "A.3.1.2 - Další relevantní klinické informace" """Další klinické informace relevantní pro provedení žádanky nebo interpretaci výsledků. Uvádějí se zde mimo jiné vedlejší diagnózy."""
 *  dalsiRelevantniUdaje.kod 0..* CodeableConcept "A.3.1.2.1 - Popis problému / diagnózy / stavu" """Diagnózy a dalších klinických informací mající vliv na průběh či výsledek vyšetření či jeho interpretaci (např. srdeční selhávání, klaustrofobie, renální selhání)"""
 *  dalsiRelevantniUdaje.text 0..1 string "A.3.1.2.2 - Klinické informace volným textem" """Klinické informace nezbytné pro správné provedení objednávky či interpretaci výsledků."""
 *  medikace 0..* Base "A.3.1.3 - Medikace" """Blok medikace obsahující informace o medikaci mající vliv na průběh či výsledek vyšetření či jeho interpretaci."""

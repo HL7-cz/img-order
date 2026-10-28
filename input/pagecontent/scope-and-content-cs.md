@@ -103,7 +103,7 @@ Následující oddíly uvádějí prvky jednotlivých sekcí kostry. Úplný sez
 | Číslo | Prvek | Co nese |
 |---|---|---|
 | A.2.1 | Informace o objednávce | Identifikátor a datum objednávky, požadovaný termín provedení, urgentnost, text objednávky a informace pro pacienta. |
-| A.2.2 | Odůvodnění vyšetření | Indikační diagnózu, klinickou otázku a důvod objednávky, kódem i textem. |
+| A.2.2 | Odůvodnění vyšetření | Indikační diagnózu, klinickou otázku a důvod objednávky, kódem i textem. Uvádí se zde indikační diagnóza, vedlejší diagnózy patří do A.3.1.2.|
 | A.2.3 | Klinická událost | Kontext poskytnutí péče, ke kterému se žádanka váže, například návštěvu ambulance, při níž žádanka vznikla. |
 | A.2.4 | Úhrada | Údaje ke způsobu platby za požadované vyšetření v těle dokumentu, včetně upřesnění, je-li část vyšetření hrazena jinak než většina. |
 | A.2.5 | Termín návštěvy | Požadovaný nebo dohodnutý termín provedení. |
@@ -113,7 +113,7 @@ Následující oddíly uvádějí prvky jednotlivých sekcí kostry. Úplný sez
 
 | Číslo | Prvek | Co nese |
 |---|---|---|
-| A.3.1 | Klinické informace | Údaje sdělované pracovišti zobrazovacích metod, které mají vliv na provedení objednávky nebo na interpretaci výsledku: biometrické údaje, urgentní informace, medikaci, implantáty, omezení pohyblivosti pacienta a další relevantní klinické informace. |
+| A.3.1 | Klinické informace | Údaje sdělované pracovišti zobrazovacích metod, které mají vliv na provedení objednávky nebo na interpretaci výsledku: biometrické údaje, urgentní informace, medikaci, implantáty, omezení pohyblivosti pacienta a další relevantní klinické informace. Vedlejší diagnózy se uvádějí mezi dalšími relevantními klinickými informacemi (A.3.1.2).|
 | A.3.2 | Datové elementy objednávky / vyšetření | Vymezení požadovaného vyšetření: jeho kód, název, modalitu, část těla, lateralitu a poznámku. Blok se může opakovat, jedna eŽádanka tedy může nést více požadovaných vyšetření. |
 | A.3.3 | Objednávky plánované péče | Odkazy na objednávky plánované péče navazující na tuto žádanku. |
 | A.3.4 | Další podpůrné informace | Ostatní podpůrné informace, například termín, ke kterému je výsledek potřebný. |

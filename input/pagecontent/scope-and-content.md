@@ -103,7 +103,7 @@ The sections below list the elements of the individual sections of the skeleton.
 | Number | Element | What it carries |
 |---|---|---|
 | A.2.1 | Order information | The identifier and date of the order, the requested date of performance, the urgency, the order text and information for the patient. |
-| A.2.2 | Order reason | The indicating diagnosis, the clinical question and the reason for the order, both coded and as text. |
+| A.2.2 | Order reason | The indicating diagnosis, the clinical question and the reason for the order, both coded and as text. The indication diagnosis is stated here, secondary diagnoses belong in A.3.1.2.|
 | A.2.3 | Clinical event | The context of care provision to which the order relates, for example the outpatient visit at which the order was created. |
 | A.2.4 | Coverage | Payment details for the requested examination in the body of the document, including a clarification where part of the examination is paid for differently from the rest. |
 | A.2.5 | Appointment | The requested or agreed date of performance. |
@@ -113,7 +113,7 @@ The sections below list the elements of the individual sections of the skeleton.
 
 | Number	 | Element | What it carries |
 |---|---|---|
-| A.3.1 | Clinical information | Data communicated to the imaging workplace that affect the performance of the order or the interpretation of its result: biometric data, urgent information, medication, implants, patient mobility restrictions and other relevant clinical information. |
+| A.3.1 | Clinical information | Data communicated to the imaging workplace that affect the performance of the order or the interpretation of its result: biometric data, urgent information, medication, implants, patient mobility restrictions and other relevant clinical information. Secondary diagnoses are stated among the other relevant clinical information (A.3.1.2).|
 | A.3.2 | Order / examination data elements | The definition of the requested examination: its code, name, modality, body part, laterality and note. The block may repeat, so one eReferral may carry several requested examinations. |
 | A.3.3 | Planned care orders | References to planned care orders following on from this order. |
 | A.3.4 | Other supporting information | Other supporting information, for example the date by which the result is needed. |
