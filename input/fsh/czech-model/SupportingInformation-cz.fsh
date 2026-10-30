@@ -20,7 +20,7 @@ Description: """Informace a údaje sdělované pracovišti zobrazovacích metod,
 *  medikace 0..* Base "A.3.1.3 - Medikace" """Blok medikace obsahující informace o medikaci mající vliv na průběh či výsledek vyšetření či jeho interpretaci."""
 *  medikace.id 0..* Identifier "A.3.1.3.1 - ID medikace" """ID medikace"""
 *  medikace.kod 0..* CodeableConcept "A.3.1.3.2 - Kód medikace" """Kód medikace"""
-*  medikace.mnozstvi 0..1 Ratio "A.3.1.3.3 - Množství" """Množství nebo dávka medikace"""
+*  medikace.davka 0..1 Quantity "A.3.1.3.3 - Dávka" """Dávka medikace (např. 500 mg)"""
 *  implantat 0..* Base "A.3.1.4 - Implantat" """Seznam implantátů či pomůcek majících vliv na průběh vyšetření či jeho interpretaci."""
 *  implantat.typ 1..1 CodeableConcept "A.3.1.4.1 - Druh implantátu" """Druh implantátu"""
 *  implantat.id 0..* Identifier "A.3.1.4.2 - ID implantátu" """Normalizovaný identifikátor, např. UDI, dle nařízení EU 2017/745, kód ZP dle katalogu zdravotní pojišťovny"""

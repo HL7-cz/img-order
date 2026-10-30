@@ -20,7 +20,7 @@ Description: """Supporting Information - Information and data communicated by th
 *  medication 0..* Base "A.3.1.3 - Medication" """Medication block containing information about medication that has an impact on the course or result of the examination or its interpretation."""
 *  medication.identifier 0..* Identifier "A.3.1.3.1 - Medication identifier" """Identifier of medication"""
 *  medication.code 0..* CodeableConcept "A.3.1.3.2 - Medication code" """Code of medication"""
-*  medication.amount 0..1 Ratio "A.3.1.3.3 - Amount" """Amount or dose of medication"""
+*  medication.dose 0..1 Quantity "A.3.1.3.3 - Dose" """Dose of medication (e.g. 500 mg)"""
 *  implant 0..* Base "A.3.1.4 - Implant" """List of implants or devices that affect the course of the examination or its interpretation."""
 *  implant.type 1..1 CodeableConcept "A.3.1.4.1 - Implant type" """Type of implant"""
 *  implant.identifier 0..* Identifier "A.3.1.4.2 - Implant identifier" """Standardized identifier, e.g. UDI, according to EU Regulation 2017/745, ZP code according to the health insurance company catalog"""
