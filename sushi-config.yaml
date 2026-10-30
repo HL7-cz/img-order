@@ -106,10 +106,6 @@ pages:
     title: Obligations
   obligations-cs.md:
     title: Obligations
-  terminology-considerations.md:
-    title: Terminology considerations
-  terminology-considerations-cs.md:
-    title: Terminologické aspekty
   use-cases.md:
     title: Use cases
   use-cases-cs.md:
@@ -250,8 +246,6 @@ menu:
     Workflow (cs): workflow-cs.html
     Logical models (en): logical-models.html
     Logical models (cs): logical-models-cs.html
-    Terminology considerations (en): terminology-considerations.html
-    Terminology considerations (cs): terminology-considerations-cs.html
   Implementation:
     Mapping to profiles (en): model-map.html
     Mapping to profiles (cs): model-map-cs.html
