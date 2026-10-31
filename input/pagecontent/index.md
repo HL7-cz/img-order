@@ -45,7 +45,6 @@ This guide is divided into several pages listed in the menu bar at the top of ev
   - [Use cases](use-cases.html): This segment lists the clinical scenarios and points to the instances that realise them.
   - [Workflow](workflow.html): This segment projects the eReferral process flow onto FHIR artifacts.
   - [Logical models](logical-models.html): This segment contains the list of logical models with element numbers and names.
-  - [Terminology considerations](terminology-considerations.html): This segment contains information about the code systems and value sets used.
 - Implementation:
   - [Mapping to profiles](model-map.html): This segment contains the mapping of the logical model to profiles.
   - [Examples](examples.html): This segment contains the example instances.

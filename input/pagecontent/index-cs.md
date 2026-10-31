@@ -45,7 +45,6 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
   - [Případy užití](use-cases-cs.html): Tento segment vyjmenovává klinické scénáře a odkazuje na instance, které je realizují.
   - [Workflow](workflow-cs.html): Tento segment promítá procesní tok eŽádanky na FHIR artefakty.
   - [Logické modely](logical-models-cs.html): Tento segment obsahuje seznam logických modelů s čísly a názvy prvků.
-  - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o použitých code systémech a oborech hodnot.
 - Implementation:
   - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje mapování logického modelu na profily.
   - [Příklady](examples-cs.html): Tento segment obsahuje příklady instancí.

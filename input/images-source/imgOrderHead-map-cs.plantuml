@@ -12,20 +12,20 @@ legend right
 | <#APPLICATION>  Logický model |
 | <#TECHNOLOGY>  Profil |
 endlegend
-class "Hlavička žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-HeaderImagingOrder.html]]
+class "Hlavička žádanky obrazového vyšetření" <<LogicalModel>> [[StructureDefinition-logHeaderImagingOrder.html]]
 
 /'
-class "Additional Recipient" <<LogicalModel>> [[StructureDefinition-AdditionalRecipientCz.html]]
-class "Author" <<LogicalModel>> [[StructureDefinition-AuthorCz.html]]
-class "Information about coverage" <<LogicalModel>> [[StructureDefinition-CoverageOrderCz.html]]
-class "Document metadata" <<LogicalModel>> [[StructureDefinition-DocumentMetadataCz.html]]
-class "Health insurance and payment information" <<LogicalModel>> [[StructureDefinition-PayerCz.html]]
-class "Requested Performer" <<LogicalModel>> [[StructureDefinition-RequestedPerformerCz.html]]
-class "Identification" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
-class "Related contact information of the Patient/subject" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
+class "Příjemce nálezu" <<LogicalModel>> [[StructureDefinition-logAdditionalRecipientCz.html]]
+class "Objednatel" <<LogicalModel>> [[StructureDefinition-logAuthorCz.html]]
+class "Úhrada" <<LogicalModel>> [[StructureDefinition-logCoverageOrderCz.html]]
+class "Metadata dokumentu" <<LogicalModel>> [[StructureDefinition-logDocumentMetadataCz.html]]
+class "Zdravotní pojištění" <<LogicalModel>> [[StructureDefinition-logPayerCz.html]]
+class "Zpracovatel" <<LogicalModel>> [[StructureDefinition-logRequestedPerformerCz.html]]
+class "Identifikace pacienta/subjektu" <<LogicalModel>> [[StructureDefinition-logSubjectCz.html]]
+class "Kontaktní informace pacienta" <<LogicalModel>> [[StructureDefinition-logSubjectCz.html]]
 '/
 class "cz-encounter" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html]]
-class "cz-coverage" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html]]
+class "cz-coverage-order" <<Profile>> [[StructureDefinition-cz-coverage-order.html]]
 class "cz-patient-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-practitioner-core.html]]
 class "cz-bundleImageOrder" <<Profile>> [[StructureDefinition-cz-bundleImageOrder.html]]
@@ -35,13 +35,13 @@ class "cz-compositionImageOrder" <<Profile>> [[StructureDefinition-cz-compositio
 "Hlavička žádanky obrazového vyšetření" <|. "cz-bundleImageOrder"
 "Hlavička žádanky obrazového vyšetření" <|. "cz-provenance"
 "Hlavička žádanky obrazového vyšetření" <|. "cz-patient-core"
-"Hlavička žádanky obrazového vyšetření" <|. "cz-coverage"
+"Hlavička žádanky obrazového vyšetření" <|. "cz-coverage-order"
 "Hlavička žádanky obrazového vyšetření" <|. "cz-practitioner-core"
 "Hlavička žádanky obrazového vyšetření" <|. "cz-encounter"
 "cz-bundleImageOrder" -d[hidden]-> "cz-compositionImageOrder"
 "cz-compositionImageOrder" -d[hidden]-> "cz-patient-core"
-"cz-patient-core" -d[hidden]-> "cz-coverage"
-"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-patient-core" -d[hidden]-> "cz-coverage-order"
+"cz-coverage-order" -d[hidden]-> "cz-practitioner-core"
 "cz-practitioner-core" -d[hidden]-> "cz-encounter"
 "cz-encounter" -d[hidden]-> "cz-provenance"
 @enduml

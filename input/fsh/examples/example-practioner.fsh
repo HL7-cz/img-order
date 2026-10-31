@@ -17,8 +17,8 @@ InstanceOf: CZ_PractitionerRoleCore
 Title: "PractitionerRole: Radiology"
 Description: "Context of the practice site of the referring radiologist"
 Usage: #example
-* specialty = $vzp-odbornost#809 "Radiodiagnostika"
-* specialty[+] = $sctCZ#394914008 "radiodiagnostika - specializace"
+* specialty = $vzp-odbornost#809 "Pracoviště radiodiagnostiky"
+* specialty[+] = $sctCZ#394914008 "radiologie - specializace"
 * practitioner = Reference(practitionerExample)
 * organization = Reference(organizationExample)
 

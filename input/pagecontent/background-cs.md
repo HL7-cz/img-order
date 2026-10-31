@@ -1,6 +1,6 @@
 V oboru zobrazovacích metod se pro archivaci a výměnu dat standardně používá protokol a formát Digital Imaging and Communications in Medicine (DICOM). Ten definuje mimo jiné jednotlivé obrazové modality a je využit k archivaci dat v systému Picture Archiving and Communication System (PACS).
 
-DICOM je propojen se systémem klinické terminologie SNOMED CT. Ostatní standardy a číselníky sdílí zobrazovací metody s dalšími dokumenty pacientské dokumentace. Jde zejména o HL7 FHIR, SNOMED CT, MKN-10, DICOM a národní číselníky a identifikátory. Přehled použitých code systémů a oborů hodnot je na stránce [Terminologické aspekty](terminology-considerations-cs.html).
+DICOM je propojen se systémem klinické terminologie SNOMED CT. Ostatní standardy a číselníky sdílí zobrazovací metody s dalšími dokumenty pacientské dokumentace. Jde zejména o HL7 FHIR, SNOMED CT, MKN-10, DICOM a národní číselníky a identifikátory.
 
 <div>
 <img src="paper-order.png" class="figure-img img-responsive img-rounded center-block" width="40%">
@@ -20,4 +20,4 @@ e) údaje o dosavadní léčbě a reakci pacienta na ni,
 f) pracovní diagnózu,
 g) uvedení zásadních anamnestických údajů souvisejících s požadovanými zdravotními službami.
 
-Tato implementační příručka převádí uvedené legislativní požadavky do interoperabilní elektronické podoby založené na standardu HL7 FHIR R4. Které prvky logického modelu jednotlivé požadavky naplňují, uvádí Speciální funkční specifikace eŽádanky typu Z.
+Tato implementační příručka převádí uvedené legislativní požadavky do interoperabilní elektronické podoby založené na standardu HL7 FHIR R4. Které prvky logického modelu jednotlivé požadavky naplňují, uvádí Speciální funkční specifikace eŽádanky typu Z.

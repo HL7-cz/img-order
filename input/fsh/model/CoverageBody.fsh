@@ -12,6 +12,6 @@ Description: """Additional coverage information - Information about method of co
 * informationPayor.organization 0..1 Base "A.2.4.2.3 - Payor organisation" """The healthcare provider organisation information."""
 * informationPayor.address 0..1 Address "A.2.4.2.4 - Address" """Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose."""
 * informationPayor.country 1..1 CodeableConcept "A.2.4.2.5 - Country" """Country of the intended recipient as part of the address."""
-* informationPayor.telecom 0..* ContactPoint "A.4.7.2.6 - Telecom" """Telecommunication contact information (addresses) associated to a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided."""
+* informationPayor.telecom 0..* ContactPoint "A.2.4.2.6 - Telecom" """Telecommunication contact information (addresses) associated to a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided."""
 * comment 0..1 string "A.2.4.3 - Comment" """Possible payment details"""
 

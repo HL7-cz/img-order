@@ -12,6 +12,6 @@ Description: """Informace o způsobu úhrady objednávky vyšetření"""
 * infoOPlatci.organizace 0..1 Base "A.2.4.2.3 - Organizace plátce" """Organizace plátce"""
 * infoOPlatci.adresa 0..1 Address "A.2.4.2.4 - Adresa" """Adresa plátce"""
 * infoOPlatci.zeme 1..1 CodeableConcept "A.2.4.2.5 - Země" """Země, ze které úhrada pochází"""
-* infoOPlatci.telekom 0..* ContactPoint "A.4.7.2.6 - Telekom" """Telekomunikační spojení na osobu zodpovědnou za úhrady."""
+* infoOPlatci.telekom 0..* ContactPoint "A.2.4.2.6 - Telekom" """Telekomunikační spojení na osobu zodpovědnou za úhrady."""
 * komentar 0..1 string "A.2.4.3 - Komentář" """Případné upřesnění platby"""
 

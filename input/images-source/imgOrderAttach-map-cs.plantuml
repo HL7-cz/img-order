@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profil |
 endlegend
 
-class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-PresentedFormCz.html]]
+class "Vizuální podoba dokumentu" <<LogicalModel>> [[StructureDefinition-logPresentedFormCz.html]]
 
-class "Přílohy" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
+class "Přílohy" <<LogicalModel>> [[StructureDefinition-logAttachmentsCz.html]]
 
 class "cz-compositionImageOrder.extension:presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#ac]]
 class "cz-attachment" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html]]

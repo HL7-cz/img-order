@@ -13,6 +13,8 @@ Usage: #example
 * entry[patient].resource = cz-patient-cerna
 * entry[serviceRequest].fullUrl = "urn:uuid:60ea3958-7344-4969-a0b7-58f849473d05"
 * entry[serviceRequest].resource = cz-mammo-request
+* entry[bodyStructure].fullUrl = "urn:uuid:2f6b8c1e-4a3d-4e7b-9c5a-8d1f0e2b7a64"
+* entry[bodyStructure].resource = cz-mammo-bodystructure
 * entry[coverage].fullUrl = "urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12"
 * entry[coverage].resource = cz-selfpay-coverage
 * entry[practitionerRole].fullUrl = "urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
@@ -88,14 +90,14 @@ Instance: cz-mammo-request
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
 Title: "ServiceRequest: Request for screening mammography"
-Description: "Request for bilateral screening mammography (MG) of both breasts"
+Description: "Request for bilateral screening mammography (MG) of both breasts. The body site is expressed through a BodyStructure resource (bodySite extension) instead of the ServiceRequest.bodySite element."
 * id = "60ea3958-7344-4969-a0b7-58f849473d05"
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005 // Imaging
 * subject = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
 * insurance = Reference(urn:uuid:db6858e6-8d8b-4952-832b-9124cd103b12) // Odkaz na samoplátecké krytí
-* bodySite = $sctCZ#76752008 //"Breast structure"
+* extension[bodySite].valueReference = Reference(urn:uuid:2f6b8c1e-4a3d-4e7b-9c5a-8d1f0e2b7a64) // BodyStructure místo elementu bodySite
 * code.coding = $sctCZ#71651007 //"screeningová mamografie"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"cs\" lang=\"cs\">Požadované vyšetření: Screeningová mamografie oboustranná, 2 projekce (kraniokaudální a šikmá) z každého prsu. Vyšetření hrazeno pacientkou.</div>"
@@ -103,6 +105,17 @@ Description: "Request for bilateral screening mammography (MG) of both breasts"
 * reasonReference = Reference(urn:uuid:8d570541-52af-4f8a-886c-fb732a218b68)
 * requester = Reference(urn:uuid:e004e1a9-cbaf-466a-b5b6-f89a4dbaa757)
 * orderDetail.coding[modality] = $dicom#MG "Mammography"
+
+Instance: cz-mammo-bodystructure
+InstanceOf: BodyStructureCzCore
+Usage: #inline
+Title: "BodyStructure: Both breasts"
+Description: "Body structure for the mammography request (both breasts), shown as an alternative to the ServiceRequest.bodySite element"
+* id = "2f6b8c1e-4a3d-4e7b-9c5a-8d1f0e2b7a64"
+* patient = Reference(urn:uuid:43614302-1d18-4b04-929d-d762b16fd688)
+* extension[includedStructure].extension[structure].valueCodeableConcept = $sctCZ#76752008 //"Breast structure"
+* extension[includedStructure].extension[laterality].valueCodeableConcept = $sctCZ#51440002 //"Right and left"
+* description = "Oba prsy"
 
 Instance: PreventionCondition
 InstanceOf: CZ_ConditionCore
@@ -134,8 +147,8 @@ Title: "PractitionerRole: Gynecology and Obstetrics"
 Description: "Context of the practice site of the referring gynaecologist"
 Usage: #example
 * id = "e004e1a9-cbaf-466a-b5b6-f89a4dbaa757"
-* specialty[0] = $vzp-odbornost#603 "Gynekologie a porodnictví"
-* specialty[+] = $sctCZ#394586005 "gynekologie a porodnictví - specializace"
+* specialty[0] = $vzp-odbornost#603 "Pracoviště gynekologie a porodnictví"
+* specialty[+] = $sctCZ#394586005 "gynekologie"
 * practitioner = Reference(urn:uuid:3d60c2df-af65-4095-95f6-d3d9b61cb5e7)
 * organization = Reference(urn:uuid:5bdedd9b-27c5-4593-ae3a-968c5f25d253)
 
