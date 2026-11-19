@@ -772,7 +772,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance
             </td>
             <td>
             Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_CoverageOrder)
@@ -791,7 +791,7 @@
             payor.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance
             </td>
             <td>
 
@@ -810,7 +810,7 @@
             payor.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance
             </td>
             <td>
 
@@ -829,7 +829,7 @@
             subscriberId
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance
             </td>
             <td>
 
@@ -1140,6 +1140,25 @@
             </td>
           </tr>
           <tr>
+            <td><a href="StructureDefinition-logAuthorCz.html">odbornost</a></td>
+            <td>
+            A.1.5.5 - Odbornost autora
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td>
+            specialty
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).author
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logHeaderImagingOrder.html">zpracovatel</a></td>
             <td>
             A.1.6 - Požadovaný zpracovatel
@@ -1171,7 +1190,7 @@
             practitioner.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer
             </td>
             <td>
 
@@ -1190,7 +1209,7 @@
             practitioner.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer
             </td>
             <td>
 
@@ -1209,7 +1228,7 @@
             organization.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer
             </td>
             <td>
 
@@ -1228,7 +1247,26 @@
             organization.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">odbornost</a></td>
+            <td>
+            A.1.6.5 - Odbornost zpracovatele
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td>
+            specialty
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer
             </td>
             <td>
 

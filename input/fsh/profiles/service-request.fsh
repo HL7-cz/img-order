@@ -3,9 +3,9 @@ Description: "Each Order must have a reason or reasonReference."
 Severity: #error
 Expression: "reasonCode.exists() or reasonReference.exists()"
 
-Profile: CZ_ImagingOrderInformation
+Profile: CZ_ServiceRequestImageOrder
 Parent: ServiceRequest
-Id: cz-imagingOrderInformation
+Id: cz-serviceRequestImageOrder
 Title: "Service Request: Imaging Order (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
@@ -18,8 +18,8 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier[accessionNumber] only CZ_AccessionNumberIdentifier
 * identifier[accessionNumber].type = $v2-0203#ACSN
 
-* basedOn only Reference(CZ_CarePlanCore or CZ_ImagingOrderInformation or ServiceRequest or CZ_MedicationRequestCore)
-* replaces only Reference(CZ_ImagingOrderInformation or ServiceRequest)
+* basedOn only Reference(CZ_CarePlanCore or CZ_ServiceRequestImageOrder or ServiceRequest or CZ_MedicationRequestCore)
+* replaces only Reference(CZ_ServiceRequestImageOrder or ServiceRequest)
 
 * category 1..*
   * insert SliceElement( #value, $this )
@@ -41,7 +41,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code 1..1
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerRoleCore)
+* requester only Reference(CZ_PractitionerRoleOrder)
 
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CareTeam or HealthcareService or CZ_RelatedPersonCore or CZ_DeviceObserver)
 //* performer.type from $sct-device-type  // performer type

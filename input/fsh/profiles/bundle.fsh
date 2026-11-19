@@ -180,7 +180,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
 * entry[composition].resource only CZ_CompositionImageOrder
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 * entry[coverage].resource only CZ_CoverageOrder
-* entry[serviceRequest].resource only CZ_ImagingOrderInformation
+* entry[serviceRequest].resource only CZ_ServiceRequestImageOrder
 * entry[bodyStructure].resource only BodyStructureCzCore
 * entry[appointment].resource only CZ_AppointmentCore
 * entry[specimen].resource only CZ_Specimen

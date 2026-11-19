@@ -89,7 +89,7 @@ Usage: #example
 * address[=].country.extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 Instance: cz-petct-request
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "ServiceRequest: Referral for hybrid PET/CT examination"
 Description: "Multimodal request combining positron emission tomography and computed tomography"

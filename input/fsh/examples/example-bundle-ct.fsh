@@ -214,7 +214,7 @@ Description: "Serum creatinine laboratory results as a basis for assessing the s
 // kterou lze realizovat na libovolném přijímajícím pracovišti.
 // -----------------------------------------------------------------
 Instance: cz-novakovact-example1
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "ServiceRequest: CT abdomen with contrast (non-addressed)"
 Description: "Planned CT examination of the abdomen with intravenous administration of contrast medium - non-addressed request, clinical contraindication (allergy to iodine)"

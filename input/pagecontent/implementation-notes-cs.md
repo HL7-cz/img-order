@@ -13,7 +13,7 @@ classDiagram
   }
   CZ_BundleImageOrder *-- "1" CZ_CompositionImageOrder
   CZ_BundleImageOrder *-- "1" CZ_PatientCore
-  CZ_BundleImageOrder *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImageOrder *-- "0..*" CZ_ServiceRequestImageOrder
   CZ_BundleImageOrder *-- "0..*" CZ_ConditionCore
   CZ_BundleImageOrder *-- "0..*" CZ_Coverage
   CZ_BundleImageOrder *-- "0..*" CZ_Encounter
@@ -24,9 +24,9 @@ classDiagram
   CZ_BundleImageOrder *-- "0..*" CZ_DeviceUseStatementCore
   CZ_BundleImageOrder *-- "0..*" CZ_Attachment
 
-  CZ_ImagingOrderInformation --> CZ_CompositionImageOrder: composition
+  CZ_ServiceRequestImageOrder --> CZ_CompositionImageOrder: composition
   
-  CZ_CompositionImageOrder --> CZ_ImagingOrderInformation: section[orderInformation]
+  CZ_CompositionImageOrder --> CZ_ServiceRequestImageOrder: section[orderInformation]
   CZ_CompositionImageOrder --> CZ_ConditionCore: section[clinicalQuestion]
   CZ_CompositionImageOrder --> CZ_PractionerCore: author[author]
   CZ_CompositionImageOrder --> CZ_Encounter: encounter

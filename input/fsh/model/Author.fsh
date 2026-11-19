@@ -9,4 +9,4 @@ Description: """Author (by whom the Imaging order was/were authored). Multiple a
 * name 1..1 HumanName "A.1.5.2 - Author name" """Person name [the structure of the name will be the same as for the patient (given name, family name / surname)]."""
 * address 0..* Base "A.1.5.3 - Author's address" """Contact details of the person placing the order (address and telecommunication details)."""
 * organization 1..1 Base "A.1.5.4 - Author organisation" """The healthcare provider organisation information."""
-
+* specialty 0..1 CodeableConcept "A.1.5.5 - Author specialty" """The specialty of the healthcare professional who issued the order. It is always stated when the order is covered by public health insurance."""

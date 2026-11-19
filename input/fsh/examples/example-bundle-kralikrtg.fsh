@@ -277,7 +277,7 @@ Description: "Example of patient mobility of Patient Kralik"
 * performer = Reference (urn:uuid:16793b99-aecc-482d-8283-0e4885e0ca25)
 
 Instance: cz-kralikrgt-example1
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Knee, right"
 Description: "Imaging order for Plain X-ray - Knee, right"
@@ -301,7 +301,7 @@ Description: "Imaging order for Plain X-ray - Knee, right"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example2
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Leg, right"
 Description: "Imaging order for Plain X-ray - Leg, right"
@@ -325,7 +325,7 @@ Description: "Imaging order for Plain X-ray - Leg, right"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example3
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
@@ -349,7 +349,7 @@ Description: "Imaging order for Plain X-ray - Lumbosacral junction of spine"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example4
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Structure of right talus bone"
 Description: "Imaging order for Plain X-ray - Structure of right talus bone"
@@ -373,7 +373,7 @@ Description: "Imaging order for Plain X-ray - Structure of right talus bone"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example5
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Pelvis"
 Description: "Imaging order for Plain X-ray - Pelvis"
@@ -397,7 +397,7 @@ Description: "Imaging order for Plain X-ray - Pelvis"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example6
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Right hip"
 Description: "Imaging order for Plain X-ray - Right hip"
@@ -421,7 +421,7 @@ Description: "Imaging order for Plain X-ray - Right hip"
 * orderDetail.coding[modality] = $dicom#DX "Digital Radiography"
 
 Instance: cz-kralikrgt-example7
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "Imaging order for Plain X-ray - Left hip"
 Description: "Imaging order for Plain X-ray - Left hip"

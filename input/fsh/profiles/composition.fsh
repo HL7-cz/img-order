@@ -109,7 +109,7 @@ Description: "Clinical document used to represent a Imaging Order for the scope 
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 //"Requested imaging studies information Document"
   * entry 1..
-  * entry only Reference(CZ_ImagingOrderInformation)
+  * entry only Reference(CZ_ServiceRequestImageOrder)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
