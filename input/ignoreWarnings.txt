@@ -127,8 +127,8 @@ PIN_VERSION
 
 # Expected open supportingInfo slicing in BundleNovakovaCT: creatinine and allergy.
 # Both references are allowed outside the anthropometric and mobility slices.
-%Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[2]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
-%Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[3]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+%Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[2]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-serviceRequestImageOrder|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+%Bundle.entry[2].resource/*ServiceRequest/3a5c4b32-6d7e-4f80-9192-b3c4d5e6f701*/.supportingInfo[3]: This element does not match any known slice defined in the profile https://hl7.cz/fhir/img-order/StructureDefinition/cz-serviceRequestImageOrder|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
 
 # Expected overlap of CZ_MedicalDevice and CZ_DeviceObserver.
 # A device may legitimately conform to both profiles. Medical devices and implants

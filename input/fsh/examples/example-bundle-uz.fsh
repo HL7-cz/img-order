@@ -111,7 +111,7 @@ Usage: #example
   * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 Instance: cz-uzplod-screening
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "ServiceRequest: Screening ultrasound of the fetus (II. trimester)"
 Description: "Screening ultrasound examination of the fetus in the second trimester (20+3 weeks gestation) - biometric measurements, morphological screening, placenta, amniotic fluid"
@@ -136,7 +136,7 @@ Description: "Screening ultrasound examination of the fetus in the second trimes
 
 
 Instance: cz-uzplod-foto-samoplatce
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "ServiceRequest: 3D/4D photography of the fetus (self-pay)"
 Description: "Nadstandard 3D/4D photography of the fetus, requested by the patient, paid directly by the patient, not a diagnostic procedure."

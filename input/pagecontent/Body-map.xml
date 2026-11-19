@@ -119,7 +119,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
 
             </td>
@@ -127,7 +127,7 @@
             Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry.ofType(CZ_ImagingOrderInformation)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry.ofType(CZ_ServiceRequestImageOrder)
             </td>
           </tr>
           <tr>
@@ -138,12 +138,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
-            CZ_ImagingOrderInformation
+            CZ_ServiceRequestImageOrder
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -157,12 +157,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -176,12 +176,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             authoredOn
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -195,12 +195,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             occurrenceDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -214,12 +214,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             priority
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -233,12 +233,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             note
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -252,12 +252,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             patientInstruction
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -271,12 +271,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             reasonCode
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
             Condition (CZ_ConditionCore, including <a href="StructureDefinition-cz-conditionClinicalQuestion.html">CZ_ConditionClinicalQuestion</a>). When the clinical question directly justifies this service, reference the same instance as in Composition.section[clinicalQuestion].entry. Inclusion in the section does not automatically assign it as the reason for every service.
@@ -290,12 +290,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             reasonCode.coding / reasonReference.resolve().ofType(Condition).code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -309,12 +309,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             reasonCode.coding
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -328,12 +328,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             reasonCode.text
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -352,7 +352,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[clinicalQuestion].entry.ofType(CZ_ConditionClinicalQuestion).code
+            Composition (CZ_CompositionImageOrder).section[clinicalQuestion].entry -> CZ_ConditionClinicalQuestion.code
             </td>
             <td>
 
@@ -580,7 +580,7 @@
             type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -599,7 +599,7 @@
             payor
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -618,7 +618,7 @@
             name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -637,7 +637,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore
             </td>
             <td>
 
@@ -656,7 +656,7 @@
             organization
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore
             </td>
             <td>
 
@@ -675,7 +675,7 @@
             address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -694,7 +694,7 @@
             address.country
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -713,7 +713,7 @@
             telecom
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -732,7 +732,7 @@
             comment
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -770,7 +770,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -789,7 +789,7 @@
             status
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -808,7 +808,7 @@
             description
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -827,7 +827,7 @@
             start
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -846,7 +846,7 @@
             minutesDuration
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -865,7 +865,7 @@
             comment
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -884,7 +884,7 @@
             patientInstruction
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore
             </td>
             <td>
 
@@ -903,7 +903,7 @@
             name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore.participant.actor -> CZ_LocationCore
             </td>
             <td>
             Name of the workplace
@@ -922,7 +922,7 @@
             address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[appointment].entry -> Appointment.participant.actor.resolve().ofType(Location)
+            Composition (CZ_CompositionImageOrder).section[appointment].entry -> CZ_AppointmentCore.participant.actor -> CZ_LocationCore
             </td>
             <td>
             Address of the workplace
@@ -941,7 +941,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].specimen.ofType(CZ_Specimen)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.specimen -> CZ_Specimen
             </td>
             <td>
 
@@ -960,7 +960,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -979,7 +979,7 @@
             subject.species
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -998,7 +998,7 @@
             type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1017,7 +1017,7 @@
             collection.collectionDate
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1036,7 +1036,7 @@
             collection.receivedTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1055,7 +1055,7 @@
             type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1074,7 +1074,7 @@
             collection.bodySite
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1093,7 +1093,7 @@
             collection.extension:bodySite:bodyStructure.morphology
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1112,7 +1112,7 @@
             subject
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1131,7 +1131,7 @@
             collection.method
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1150,7 +1150,7 @@
             subject.type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             Device or Location
@@ -1169,7 +1169,7 @@
             subject.type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             Location
@@ -1188,7 +1188,7 @@
             note
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1207,7 +1207,7 @@
             container
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1226,7 +1226,7 @@
             container.type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1245,7 +1245,7 @@
             container.specimenQuantity
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1264,7 +1264,7 @@
             container.extension:Device:identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1283,7 +1283,7 @@
             collector.description
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1302,7 +1302,7 @@
             collection
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1321,7 +1321,7 @@
             collection.collectedDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1340,7 +1340,7 @@
             collection
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             The value determines the type of data stored in A.2.6.15.3 (SpecimenInformation.additionalData.value)
@@ -1359,7 +1359,7 @@
             collection.collectedPeriod
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             If #SpecimenInformation.additionalData.code = 08017 or 09056 (NCLPPOL - Collection time in minutes or seconds)
@@ -1378,7 +1378,7 @@
             collection.quantity
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             If #SpecimenInformation.additionalData.code = 03142 (NCLPPOL - Volume)
@@ -1397,7 +1397,7 @@
             condition
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             If #SpecimenInformation.additionalData.code = 20293 (NCLPPOL - Material status)
@@ -1416,7 +1416,7 @@
             note
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
             If #SpecimenInformation.additionalData.code = 20206 (NCLPPOL - Notes-specification-other)
@@ -1435,7 +1435,7 @@
             collector
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1454,7 +1454,7 @@
             collector.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1473,7 +1473,7 @@
             collector.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1492,7 +1492,7 @@
             collector.address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1511,7 +1511,7 @@
             collector.organization
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_Specimen
             </td>
             <td>
 
@@ -1530,7 +1530,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1549,7 +1549,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_VitalSign
             </td>
             <td>
 
@@ -1568,7 +1568,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1587,7 +1587,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_VitalSign
             </td>
             <td>
 
@@ -1606,7 +1606,7 @@
             valueQuantity
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1625,7 +1625,7 @@
             code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1644,7 +1644,7 @@
             effectiveDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1663,7 +1663,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1682,7 +1682,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_VitalSign)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_VitalSign
             </td>
             <td>
 
@@ -1701,7 +1701,7 @@
             valueQuantity
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1720,7 +1720,7 @@
             code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1739,7 +1739,7 @@
             effectiveDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_VitalSign
             </td>
             <td>
 
@@ -1758,7 +1758,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(Condition)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_ConditionCore
             </td>
             <td>
 
@@ -1777,7 +1777,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(Condition)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_ConditionCore
             </td>
             <td>
 
@@ -1796,7 +1796,7 @@
             code.coding
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_ConditionCore
             </td>
             <td>
 
@@ -1815,7 +1815,7 @@
             code.text
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_ConditionCore
             </td>
             <td>
 
@@ -1834,7 +1834,7 @@
             medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_MedicationStatementCore / CZ_MedicationAdministrationCore
             </td>
             <td>
 
@@ -1853,7 +1853,7 @@
             medication[x]
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicationStatementCore)/ofType(CZ_MedicationAdministrationCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicationStatementCore / CZ_MedicationAdministrationCore
             </td>
             <td>
 
@@ -1948,7 +1948,7 @@
             device.type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_DeviceUseStatementCore
             </td>
             <td>
 
@@ -1967,7 +1967,7 @@
             device.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_DeviceUseStatementCore
             </td>
             <td>
 
@@ -1986,7 +1986,7 @@
             device.modelNumber
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_DeviceUseStatementCore
             </td>
             <td>
 
@@ -2005,7 +2005,7 @@
             bodySite
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_DeviceUseStatementCore
             </td>
             <td>
 
@@ -2024,7 +2024,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_AllergyIntolerance)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_AllergyIntolerance
             </td>
             <td>
 
@@ -2043,7 +2043,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_AllergyIntolerance)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_AllergyIntolerance
             </td>
             <td>
 
@@ -2176,7 +2176,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_FlagPatientCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_FlagPatientCore
             </td>
             <td>
 
@@ -2195,7 +2195,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_FlagPatientCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_FlagPatientCore
             </td>
             <td>
 
@@ -2214,7 +2214,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_PatientMobility)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_PatientMobility
             </td>
             <td>
 
@@ -2233,7 +2233,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_PatientMobility)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_PatientMobility
             </td>
             <td>
 
@@ -2252,7 +2252,7 @@
             effectiveDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_PatientMobility
             </td>
             <td>
 
@@ -2271,7 +2271,7 @@
             code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_PatientMobility
             </td>
             <td>
 
@@ -2290,7 +2290,7 @@
             valueCodeableConcept
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_PatientMobility
             </td>
             <td>
 
@@ -2309,7 +2309,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2328,7 +2328,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2347,7 +2347,7 @@
             effectiveDateTime
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2366,7 +2366,7 @@
             code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2385,7 +2385,7 @@
             valueQuantity
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.supportingInfo
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2399,7 +2399,7 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
 
             </td>
@@ -2407,7 +2407,7 @@
             Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
-            Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            Composition.section:OrderInformation.entry.ofType(CZ_ServiceRequestImageOrder)
             </td>
           </tr>
           <tr>
@@ -2418,7 +2418,7 @@
             <td>
             související
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">ServiceRequest (cz-imagingOrderInformation)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">ServiceRequest (cz-serviceRequestImageOrder)</a></td>
             <td>
 
             </td>
@@ -2426,7 +2426,7 @@
             Composition (CZ_CompositionImageOrder).section[orderInformation]
             </td>
             <td>
-            Composition.section:OrderInformation.entry.ofType(CZ_ImagingOrderInformation)
+            Composition.section:OrderInformation.entry.ofType(CZ_ServiceRequestImageOrder)
             </td>
           </tr>
           <tr>
@@ -2437,12 +2437,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             code
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -2456,12 +2456,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             code.text
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -2475,12 +2475,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             orderDetail.coding:modality
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -2499,7 +2499,7 @@
             location
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.extension:bodySite.value[x] -> BodyStructureCzCore
             </td>
             <td>
             Structured form via the BodyStructure resource referenced from the bodySite extension (procedure-targetBodyStructure)
@@ -2513,12 +2513,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             bodySite
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
             Alternative: code of the body part directly in the order
@@ -2537,7 +2537,7 @@
             locationQualifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.extension:bodySite.value[x]
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.extension:bodySite.value[x] -> BodyStructureCzCore
             </td>
             <td>
             Laterality as a separate code via BodyStructure (FHIR R4; the R5 element includedStructure is not available in CZ Core)
@@ -2551,12 +2551,12 @@
             <td>
             related-to
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             bodySite
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
             Alternative: laterality is part of the SNOMED CT code in bodySite (e.g. right knee region)
@@ -2570,12 +2570,12 @@
             <td>
             equivalent
             </td>
-            <td><a href="StructureDefinition-cz-imagingOrderInformation.html">Service Request: Imaging Order (CZ)</a></td>
+            <td><a href="StructureDefinition-cz-serviceRequestImageOrder.html">Service Request: Imaging Order (CZ)</a></td>
             <td>
             note
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder
             </td>
             <td>
 
@@ -2613,7 +2613,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[carePlan].entry
+            Composition (CZ_CompositionImageOrder).section[carePlan].entry -> CZ_CarePlanCore
             </td>
             <td>
 
@@ -2632,7 +2632,7 @@
             title
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[carePlan].entry
+            Composition (CZ_CompositionImageOrder).section[carePlan].entry -> CZ_CarePlanCore
             </td>
             <td>
 
@@ -2651,7 +2651,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].ofType(CZ_ImagingOrderInformation).supportingInfo.ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.supportingInfo -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2670,7 +2670,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].ofType(CZ_MedicalTestResultCore)
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2689,7 +2689,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_MedicalTestResultCore
             </td>
             <td>
 
@@ -2708,7 +2708,7 @@
             code.text
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry
+            Composition (CZ_CompositionImageOrder).section[supportingInformation].entry -> CZ_MedicalTestResultCore
             </td>
             <td>
 

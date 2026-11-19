@@ -14,7 +14,7 @@ legend right
 endlegend
 class "Imaging Order Body" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
 
-class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
+class "cz-serviceRequestImageOrder" <<Profile>> [[StructureDefinition-cz-serviceRequestImageOrder.html]]
 class "condition-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-condition-cz-core.html]]
 class "cz-encounter" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage-order" <<Profile>> [[StructureDefinition-cz-coverage-order.html]]
@@ -28,7 +28,7 @@ class "deviceUseStatement-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/Struct
 class "allergyIntolerance-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-allergyIntolerance-cz-core.html]]
 class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-carePlan-cz-core.html]]
 
-"Imaging Order Body" <|. "cz-imagingOrderInformation"
+"Imaging Order Body" <|. "cz-serviceRequestImageOrder"
 "Imaging Order Body" <|. "appointment-cz-core"
 "Imaging Order Body" <|. "cz-coverage-order"
 "Imaging Order Body" <|. "condition-cz-core"
@@ -42,7 +42,7 @@ class "carePlan-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinit
 "Imaging Order Body" <|. "allergyIntolerance-cz-core"
 "Imaging Order Body" <|. "carePlan-cz-core"
 
-"cz-imagingOrderInformation" -d[hidden]-> "cz-encounter"
+"cz-serviceRequestImageOrder" -d[hidden]-> "cz-encounter"
 "cz-encounter" -d[hidden]-> "condition-cz-core"
 "condition-cz-core" -d[hidden]-> "appointment-cz-core"
 "appointment-cz-core" -d[hidden]-> "cz-coverage-order"

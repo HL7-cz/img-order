@@ -87,7 +87,7 @@ Usage: #example
 * address[=].country.extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 Instance: cz-mammo-request
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ServiceRequestImageOrder
 Usage: #inline
 Title: "ServiceRequest: Request for screening mammography"
 Description: "Request for bilateral screening mammography (MG) of both breasts. The body site is expressed through a BodyStructure resource (bodySite extension) instead of the ServiceRequest.bodySite element."

@@ -772,7 +772,7 @@
 
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance -> CZ_CoverageOrder
             </td>
             <td>
             Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_CoverageOrder)
@@ -791,7 +791,7 @@
             payor.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -810,7 +810,7 @@
             payor.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -829,7 +829,7 @@
             subscriberId
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.insurance
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.insurance -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -867,7 +867,7 @@
             type
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -886,7 +886,7 @@
             payor
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
 
@@ -905,7 +905,7 @@
             name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -924,7 +924,7 @@
             identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore
             </td>
             <td>
 
@@ -943,7 +943,7 @@
             organization
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore
             </td>
             <td>
 
@@ -962,7 +962,7 @@
             address
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -981,7 +981,7 @@
             address.country
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -1000,7 +1000,7 @@
             telecom
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder.payor -> CZ_OrganizationCore / CZ_PatientCore / CZ_RelatedPersonCore
             </td>
             <td>
 
@@ -1019,7 +1019,7 @@
             extension:kodNahrady.valueCodeableConcept
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[coverage].entry
+            Composition (CZ_CompositionImageOrder).section[coverage].entry -> CZ_CoverageOrder
             </td>
             <td>
             Číselník VZP „Náhrady za zdravotní péči“ (nzis-nahradyzazdravotnipeci); rozšíření je zděděné z CZ_Coverage
@@ -1140,6 +1140,25 @@
             </td>
           </tr>
           <tr>
+            <td><a href="StructureDefinition-logAuthorCz.html">odbornost</a></td>
+            <td>
+            A.1.5.5 - Odbornost autora
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td>
+            specialty
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).author
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
             <td><a href="StructureDefinition-logHeaderImagingOrder.html">zpracovatel</a></td>
             <td>
             A.1.6 - Požadovaný zpracovatel
@@ -1171,7 +1190,7 @@
             practitioner.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer -> CZ_PractitionerRoleCore
             </td>
             <td>
 
@@ -1190,7 +1209,7 @@
             practitioner.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer -> CZ_PractitionerRoleCore
             </td>
             <td>
 
@@ -1209,7 +1228,7 @@
             organization.identifier
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer -> CZ_PractitionerRoleCore
             </td>
             <td>
 
@@ -1228,7 +1247,26 @@
             organization.name
             </td>
             <td>
-            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ImagingOrderInformation.performer
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer -> CZ_PractitionerRoleCore
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td><a href="StructureDefinition-logRequestedPerformerCz.html">odbornost</a></td>
+            <td>
+            A.1.6.5 - Odbornost zpracovatele
+            </td>
+            <td>
+            ekvivalentní
+            </td>
+            <td><a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">PractitionerRole (cz-practitionerRole-core)</a></td>
+            <td>
+            specialty
+            </td>
+            <td>
+            Composition (CZ_CompositionImageOrder).section[orderInformation].entry -> CZ_ServiceRequestImageOrder.performer -> CZ_PractitionerRoleCore
             </td>
             <td>
 
